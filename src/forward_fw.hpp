@@ -1,20 +1,29 @@
 #pragma once
 #include <ap_fixed.h>
+#include <ap_int.h> 
+#include <cstdint>   // Para uint32_t
 
-// Dimensiones de la red
-constexpr int N_INPUT  = 784;
-constexpr int N_HIDDEN = 128;
-constexpr int N_OUTPUT = 1;
+// ---------------------------------------------------------------------------
+// INCLUYE EL DATASET -> define NUM_IMAGES y N_INPUT de forma automática
+// ---------------------------------------------------------------------------
+#include "d:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp" 
 
-// Tipos de datos
+// Dimensiones de la red (oculta y salida)
+constexpr int N_HIDDEN  = 4;
+constexpr int N_OUTPUT  = 1;
+
+// Tipos de datos (definiciones coherentes con .cpp)
 using bin_t = ap_fixed<8,8>;
 using acc_t = ap_fixed<12,12>;
 
-// Matrices de pesos (definidas en forward_fw.cpp)
+// Declaraciones de matrices de pesos (definidas en forward_fw.cpp)
 extern bin_t W1[N_HIDDEN][N_INPUT];
 extern bin_t W2[N_OUTPUT][N_HIDDEN];
 
-// Funciones de la librería
+// Puerto LED (salida de 4 bits)
+extern volatile ap_uint<4> leds;
+
+// API de la librería
 bin_t signum(acc_t x);
 
 void forwardHidden(const bin_t input[N_INPUT],    // in
@@ -30,6 +39,9 @@ void updateHidden(const bin_t input[N_INPUT],
                   const bin_t out_neg[N_HIDDEN]);
 
 // --- TOP-LEVEL para síntesis ---
-void train_step(const bin_t  img_pos[N_INPUT],
-                const bin_t  img_neg[N_INPUT],
-                int          last_sample);
+void train_step(const bin_t img_pos[N_INPUT],
+                const bin_t img_neg[N_INPUT],
+                int         last_sample,
+                bin_t       W1_out[N_HIDDEN][N_INPUT],
+                bin_t       W2_out[N_OUTPUT][N_HIDDEN],
+                int         sample_idx);
