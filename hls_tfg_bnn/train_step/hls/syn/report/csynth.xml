@@ -1,0 +1,1454 @@
+<profile>
+    <ReportVersion>
+        <Version>2024.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>artix7</ProductFamily>
+        <Part>xc7a100t-csg324-1</Part>
+        <TopModelName>train_step</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>6.860</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>29</Best-caseLatency>
+            <Average-caseLatency>29</Average-caseLatency>
+            <Worst-caseLatency>29</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.290 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.290 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.290 us</Worst-caseRealTimeLatency>
+            <Interval-min>30</Interval-min>
+            <Interval-max>30</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>../src/forward_fw.cpp:105</SourceLocation>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>68</DSP>
+            <FF>1440</FF>
+            <LUT>3368</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>270</BRAM_18K>
+            <DSP>240</DSP>
+            <FF>126800</FF>
+            <LUT>63400</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>s_axi_CTRL_AWVALID</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_AWREADY</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_AWADDR</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_WVALID</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_WREADY</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_WDATA</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_WSTRB</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_ARVALID</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_ARREADY</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_ARADDR</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_RVALID</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_RREADY</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_RDATA</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_RRESP</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_BVALID</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_BREADY</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_CTRL_BRESP</name>
+            <Object>CTRL</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>train_step</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>train_step</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>interrupt</name>
+            <Object>train_step</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>leds_port</name>
+            <Object>leds_port</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>leds_port_ap_vld</name>
+            <Object>leds_port</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_vld</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>W1_out_address0</name>
+            <Object>W1_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>5</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>W1_out_ce0</name>
+            <Object>W1_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>W1_out_we0</name>
+            <Object>W1_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>W1_out_d0</name>
+            <Object>W1_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>W1_out_address1</name>
+            <Object>W1_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>5</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>W1_out_ce1</name>
+            <Object>W1_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>W1_out_we1</name>
+            <Object>W1_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>W1_out_d1</name>
+            <Object>W1_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>W2_out_address0</name>
+            <Object>W2_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>W2_out_ce0</name>
+            <Object>W2_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>W2_out_we0</name>
+            <Object>W2_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>W2_out_d0</name>
+            <Object>W2_out</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>train_step</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_forwardHidden_fu_325</InstName>
+                    <ModuleName>forwardHidden</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>325</ID>
+                    <BindInstances>mac_muladd_8s_2s_10s_11_4_1_U17 mac_muladd_8s_2s_10s_11_4_1_U17 mul_2s_8s_10_1_1_U1 mul_2s_8s_10_1_1_U2 mac_muladd_8s_2s_10s_11_4_1_U18 mac_muladd_8s_2s_10s_11_4_1_U18 mul_2s_8s_10_1_1_U3 mac_muladd_8s_2s_10s_11_4_1_U19 mac_muladd_8s_2s_10s_11_4_1_U19 mul_2s_8s_10_1_1_U4 mac_muladd_8s_2s_10s_11_4_1_U20 mac_muladd_8s_2s_10s_11_4_1_U20 mac_muladd_8s_2s_10s_11_4_1_U17 mac_muladd_8s_2s_10s_11_4_1_U18 mac_muladd_8s_2s_10s_11_4_1_U19 mac_muladd_8s_2s_10s_11_4_1_U20 add_ln56_5_fu_598_p2 select_ln53_fu_665_p3 mac_muladd_8s_2s_10s_11_4_1_U21 mac_muladd_8s_2s_10s_11_4_1_U21 mul_2s_8s_10_1_1_U5 mul_2s_8s_10_1_1_U6 mac_muladd_8s_2s_10s_11_4_1_U22 mac_muladd_8s_2s_10s_11_4_1_U22 mul_2s_8s_10_1_1_U7 mac_muladd_8s_2s_10s_11_4_1_U23 mac_muladd_8s_2s_10s_11_4_1_U23 mul_2s_8s_10_1_1_U8 mac_muladd_8s_2s_10s_11_4_1_U24 mac_muladd_8s_2s_10s_11_4_1_U24 mac_muladd_8s_2s_10s_11_4_1_U21 mac_muladd_8s_2s_10s_11_4_1_U22 mac_muladd_8s_2s_10s_11_4_1_U23 mac_muladd_8s_2s_10s_11_4_1_U24 add_ln56_12_fu_610_p2 select_ln56_fu_698_p3 mac_muladd_8s_2s_10s_11_4_1_U25 mac_muladd_8s_2s_10s_11_4_1_U25 mul_2s_8s_10_1_1_U9 mul_2s_8s_10_1_1_U10 mac_muladd_8s_2s_10s_11_4_1_U26 mac_muladd_8s_2s_10s_11_4_1_U26 mul_2s_8s_10_1_1_U11 mac_muladd_8s_2s_10s_11_4_1_U27 mac_muladd_8s_2s_10s_11_4_1_U27 mul_2s_8s_10_1_1_U12 mac_muladd_8s_2s_10s_11_4_1_U28 mac_muladd_8s_2s_10s_11_4_1_U28 mac_muladd_8s_2s_10s_11_4_1_U25 mac_muladd_8s_2s_10s_11_4_1_U26 mac_muladd_8s_2s_10s_11_4_1_U27 mac_muladd_8s_2s_10s_11_4_1_U28 add_ln56_19_fu_622_p2 select_ln56_1_fu_731_p3 mac_muladd_8s_2s_10s_11_4_1_U29 mac_muladd_8s_2s_10s_11_4_1_U29 mul_2s_8s_10_1_1_U13 mul_2s_8s_10_1_1_U14 mac_muladd_8s_2s_10s_11_4_1_U30 mac_muladd_8s_2s_10s_11_4_1_U30 mul_2s_8s_10_1_1_U15 mac_muladd_8s_2s_10s_11_4_1_U31 mac_muladd_8s_2s_10s_11_4_1_U31 mul_2s_8s_10_1_1_U16 mac_muladd_8s_2s_10s_11_4_1_U32 mac_muladd_8s_2s_10s_11_4_1_U32 mac_muladd_8s_2s_10s_11_4_1_U29 mac_muladd_8s_2s_10s_11_4_1_U30 mac_muladd_8s_2s_10s_11_4_1_U31 mac_muladd_8s_2s_10s_11_4_1_U32 add_ln56_26_fu_634_p2 select_ln61_fu_764_p3</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_forwardHidden_fu_409</InstName>
+                    <ModuleName>forwardHidden</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>409</ID>
+                    <BindInstances>mac_muladd_8s_2s_10s_11_4_1_U17 mac_muladd_8s_2s_10s_11_4_1_U17 mul_2s_8s_10_1_1_U1 mul_2s_8s_10_1_1_U2 mac_muladd_8s_2s_10s_11_4_1_U18 mac_muladd_8s_2s_10s_11_4_1_U18 mul_2s_8s_10_1_1_U3 mac_muladd_8s_2s_10s_11_4_1_U19 mac_muladd_8s_2s_10s_11_4_1_U19 mul_2s_8s_10_1_1_U4 mac_muladd_8s_2s_10s_11_4_1_U20 mac_muladd_8s_2s_10s_11_4_1_U20 mac_muladd_8s_2s_10s_11_4_1_U17 mac_muladd_8s_2s_10s_11_4_1_U18 mac_muladd_8s_2s_10s_11_4_1_U19 mac_muladd_8s_2s_10s_11_4_1_U20 add_ln56_5_fu_598_p2 select_ln53_fu_665_p3 mac_muladd_8s_2s_10s_11_4_1_U21 mac_muladd_8s_2s_10s_11_4_1_U21 mul_2s_8s_10_1_1_U5 mul_2s_8s_10_1_1_U6 mac_muladd_8s_2s_10s_11_4_1_U22 mac_muladd_8s_2s_10s_11_4_1_U22 mul_2s_8s_10_1_1_U7 mac_muladd_8s_2s_10s_11_4_1_U23 mac_muladd_8s_2s_10s_11_4_1_U23 mul_2s_8s_10_1_1_U8 mac_muladd_8s_2s_10s_11_4_1_U24 mac_muladd_8s_2s_10s_11_4_1_U24 mac_muladd_8s_2s_10s_11_4_1_U21 mac_muladd_8s_2s_10s_11_4_1_U22 mac_muladd_8s_2s_10s_11_4_1_U23 mac_muladd_8s_2s_10s_11_4_1_U24 add_ln56_12_fu_610_p2 select_ln56_fu_698_p3 mac_muladd_8s_2s_10s_11_4_1_U25 mac_muladd_8s_2s_10s_11_4_1_U25 mul_2s_8s_10_1_1_U9 mul_2s_8s_10_1_1_U10 mac_muladd_8s_2s_10s_11_4_1_U26 mac_muladd_8s_2s_10s_11_4_1_U26 mul_2s_8s_10_1_1_U11 mac_muladd_8s_2s_10s_11_4_1_U27 mac_muladd_8s_2s_10s_11_4_1_U27 mul_2s_8s_10_1_1_U12 mac_muladd_8s_2s_10s_11_4_1_U28 mac_muladd_8s_2s_10s_11_4_1_U28 mac_muladd_8s_2s_10s_11_4_1_U25 mac_muladd_8s_2s_10s_11_4_1_U26 mac_muladd_8s_2s_10s_11_4_1_U27 mac_muladd_8s_2s_10s_11_4_1_U28 add_ln56_19_fu_622_p2 select_ln56_1_fu_731_p3 mac_muladd_8s_2s_10s_11_4_1_U29 mac_muladd_8s_2s_10s_11_4_1_U29 mul_2s_8s_10_1_1_U13 mul_2s_8s_10_1_1_U14 mac_muladd_8s_2s_10s_11_4_1_U30 mac_muladd_8s_2s_10s_11_4_1_U30 mul_2s_8s_10_1_1_U15 mac_muladd_8s_2s_10s_11_4_1_U31 mac_muladd_8s_2s_10s_11_4_1_U31 mul_2s_8s_10_1_1_U16 mac_muladd_8s_2s_10s_11_4_1_U32 mac_muladd_8s_2s_10s_11_4_1_U32 mac_muladd_8s_2s_10s_11_4_1_U29 mac_muladd_8s_2s_10s_11_4_1_U30 mac_muladd_8s_2s_10s_11_4_1_U31 mac_muladd_8s_2s_10s_11_4_1_U32 add_ln56_26_fu_634_p2 select_ln61_fu_764_p3</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_updateHidden_fu_493</InstName>
+                    <ModuleName>updateHidden</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>493</ID>
+                    <BindInstances>delta_fu_170_p2 mac_muladd_8s_8s_2s_12_4_1_U75 mac_muladd_8s_8s_2s_12_4_1_U75 select_ln97_fu_529_p3 mac_muladd_8s_8s_2s_12_4_1_U76 mac_muladd_8s_8s_2s_12_4_1_U77 mac_muladd_8s_8s_2s_12_4_1_U78 mac_muladd_8s_8s_2s_12_4_1_U79 mac_muladd_8s_8s_2s_12_4_1_U80 mac_muladd_8s_8s_2s_12_4_1_U81 mac_muladd_8s_8s_2s_12_4_1_U82 delta_4_fu_228_p2 mac_muladd_8s_8s_2s_12_4_1_U83 mac_muladd_8s_8s_2s_12_4_1_U84 mac_muladd_8s_8s_2s_12_4_1_U85 mac_muladd_8s_8s_2s_12_4_1_U86 mac_muladd_8s_8s_2s_12_4_1_U87 mac_muladd_8s_8s_2s_12_4_1_U88 mac_muladd_8s_8s_2s_12_4_1_U89 mac_muladd_8s_8s_2s_12_4_1_U90 delta_5_fu_242_p2 mac_muladd_8s_8s_2s_12_4_1_U91 mac_muladd_8s_8s_2s_12_4_1_U92 mac_muladd_8s_8s_2s_12_4_1_U93 mac_muladd_8s_8s_2s_12_4_1_U94 mac_muladd_8s_8s_2s_12_4_1_U95 mac_muladd_8s_8s_2s_12_4_1_U96 mac_muladd_8s_8s_2s_12_4_1_U97 mac_muladd_8s_8s_2s_12_4_1_U98 delta_3_fu_256_p2 mac_muladd_8s_8s_2s_12_4_1_U99 mac_muladd_8s_8s_2s_12_4_1_U100 mac_muladd_8s_8s_2s_12_4_1_U101 mac_muladd_8s_8s_2s_12_4_1_U102 mac_muladd_8s_8s_2s_12_4_1_U103 mac_muladd_8s_8s_2s_12_4_1_U104 mac_muladd_8s_8s_2s_12_4_1_U105 mac_muladd_8s_8s_2s_12_4_1_U106 mac_muladd_8s_8s_2s_12_4_1_U76 select_ln97_1_fu_544_p3 mac_muladd_8s_8s_2s_12_4_1_U77 select_ln97_2_fu_559_p3 mac_muladd_8s_8s_2s_12_4_1_U78 select_ln97_3_fu_574_p3 mac_muladd_8s_8s_2s_12_4_1_U79 select_ln97_4_fu_589_p3 mac_muladd_8s_8s_2s_12_4_1_U80 select_ln97_5_fu_604_p3 mac_muladd_8s_8s_2s_12_4_1_U81 select_ln97_6_fu_619_p3 mac_muladd_8s_8s_2s_12_4_1_U82 select_ln97_7_fu_634_p3 mac_muladd_8s_8s_2s_12_4_1_U83 select_ln97_8_fu_649_p3 mac_muladd_8s_8s_2s_12_4_1_U84 select_ln97_9_fu_664_p3 mac_muladd_8s_8s_2s_12_4_1_U85 select_ln97_10_fu_679_p3 mac_muladd_8s_8s_2s_12_4_1_U86 select_ln97_11_fu_694_p3 mac_muladd_8s_8s_2s_12_4_1_U87 select_ln97_12_fu_709_p3 mac_muladd_8s_8s_2s_12_4_1_U88 select_ln97_13_fu_724_p3 mac_muladd_8s_8s_2s_12_4_1_U89 select_ln97_14_fu_739_p3 mac_muladd_8s_8s_2s_12_4_1_U90 select_ln97_15_fu_754_p3 mac_muladd_8s_8s_2s_12_4_1_U91 select_ln97_16_fu_769_p3 mac_muladd_8s_8s_2s_12_4_1_U92 select_ln97_17_fu_784_p3 mac_muladd_8s_8s_2s_12_4_1_U93 select_ln97_18_fu_799_p3 mac_muladd_8s_8s_2s_12_4_1_U94 select_ln97_19_fu_814_p3 mac_muladd_8s_8s_2s_12_4_1_U95 select_ln97_20_fu_829_p3 mac_muladd_8s_8s_2s_12_4_1_U96 select_ln97_21_fu_844_p3 mac_muladd_8s_8s_2s_12_4_1_U97 select_ln97_22_fu_859_p3 mac_muladd_8s_8s_2s_12_4_1_U98 select_ln97_23_fu_874_p3 mac_muladd_8s_8s_2s_12_4_1_U99 select_ln97_24_fu_889_p3 mac_muladd_8s_8s_2s_12_4_1_U100 select_ln97_25_fu_904_p3 mac_muladd_8s_8s_2s_12_4_1_U101 select_ln97_26_fu_919_p3 mac_muladd_8s_8s_2s_12_4_1_U102 select_ln97_27_fu_934_p3 mac_muladd_8s_8s_2s_12_4_1_U103 select_ln97_28_fu_949_p3 mac_muladd_8s_8s_2s_12_4_1_U104 select_ln97_29_fu_964_p3 mac_muladd_8s_8s_2s_12_4_1_U105 select_ln97_30_fu_979_p3 mac_muladd_8s_8s_2s_12_4_1_U106 select_ln97_31_fu_994_p3</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_train_step_Pipeline_VITIS_LOOP_136_1_fu_585</InstName>
+                    <ModuleName>train_step_Pipeline_VITIS_LOOP_136_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>585</ID>
+                    <BindInstances>icmp_ln136_fu_399_p2 add_ln136_fu_405_p2 sparsemux_9_2_2_1_1_U156 sparsemux_9_2_2_1_1_U157 sparsemux_9_2_2_1_1_U158 sparsemux_9_2_2_1_1_U159 sparsemux_9_2_2_1_1_U160 sparsemux_9_2_2_1_1_U161 sparsemux_9_2_2_1_1_U162 sparsemux_9_2_2_1_1_U163</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_train_step_Pipeline_VITIS_LOOP_141_4_fu_623</InstName>
+                    <ModuleName>train_step_Pipeline_VITIS_LOOP_141_4</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>623</ID>
+                    <BindInstances>icmp_ln141_fu_60_p2 add_ln141_fu_66_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>sub_ln145_fu_640_p2 mul_32ns_34ns_42_2_1_U199 icmp_ln146_fu_646_p2 xor_ln146_fu_666_p2 leds_port CTRL_s_axi_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>forwardHidden</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>6.470</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>4</Best-caseLatency>
+                    <Average-caseLatency>4</Average-caseLatency>
+                    <Worst-caseLatency>4</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>40.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>40.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>40.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>5</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../src/forward_fw.cpp:46</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>16</DSP>
+                    <AVAIL_DSP>240</AVAIL_DSP>
+                    <UTIL_DSP>6</UTIL_DSP>
+                    <FF>328</FF>
+                    <AVAIL_FF>126800</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>852</LUT>
+                    <AVAIL_LUT>63400</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>270</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U17" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sum" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U17" SOURCE="../src/forward_fw.cpp:53" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln53" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U1" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U2" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U18" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U18" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_10" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U3" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U19" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U19" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_16" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U4" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_5" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U20" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_6" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U20" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_22" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U17" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U18" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U19" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U20" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln56_5_fu_598_p2" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_5" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln53_fu_665_p3" SOURCE="../src/forward_fw.cpp:53" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln53" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U21" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sum_4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U21" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_28" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U5" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_8" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U6" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_9" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U22" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_10" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U22" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_34" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U7" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_11" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U23" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_12" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U23" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_38" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U8" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_13" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U24" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_14" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U24" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_42" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U21" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_7" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U22" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_8" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U23" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_10" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U24" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_11" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln56_12_fu_610_p2" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_12" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln56_fu_698_p3" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln56" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U25" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sum_5" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U25" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_48" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U9" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_16" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U10" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_17" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U26" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_18" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U26" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_54" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U11" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_19" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U27" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_20" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U27" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_58" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U12" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_21" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U28" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_22" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U28" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_62" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U25" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_14" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U26" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_15" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U27" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_17" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U28" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_18" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln56_19_fu_622_p2" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_19" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln56_1_fu_731_p3" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln56_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U29" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sum_6" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U29" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_68" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U13" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_24" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U14" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_25" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U30" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_26" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U30" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_74" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U15" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_27" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U31" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_28" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U31" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_78" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_2s_8s_10_1_1_U16" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_29" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U32" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln56_30" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sext" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="sext" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U32" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="sext_ln56_82" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U29" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_21" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U30" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_22" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U31" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_24" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_2s_10s_11_4_1_U32" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_25" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln56_26_fu_634_p2" SOURCE="../src/forward_fw.cpp:56" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln56_26" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln61_fu_764_p3" SOURCE="../src/forward_fw.cpp:61" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln61" VISIBLE="false"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>updateHidden</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>3.565</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3</Best-caseLatency>
+                    <Average-caseLatency>3</Average-caseLatency>
+                    <Worst-caseLatency>3</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>30.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>30.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>30.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>4</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../src/forward_fw.cpp:93</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>32</DSP>
+                    <AVAIL_DSP>240</AVAIL_DSP>
+                    <UTIL_DSP>13</UTIL_DSP>
+                    <FF>4</FF>
+                    <AVAIL_FF>126800</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>702</LUT>
+                    <AVAIL_LUT>63400</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>270</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="delta_fu_170_p2" SOURCE="../src/forward_fw.cpp:93" STORAGESUBTYPE="" URAM="0" VARIABLE="delta" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U75" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U75" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_fu_529_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U76" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U77" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U78" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U79" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U80" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_5" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U81" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_6" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U82" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_7" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="delta_4_fu_228_p2" SOURCE="../src/forward_fw.cpp:93" STORAGESUBTYPE="" URAM="0" VARIABLE="delta_4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U83" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_8" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U84" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_9" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U85" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_10" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U86" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_11" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U87" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_12" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U88" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_13" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U89" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_14" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U90" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_15" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="delta_5_fu_242_p2" SOURCE="../src/forward_fw.cpp:93" STORAGESUBTYPE="" URAM="0" VARIABLE="delta_5" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U91" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_16" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U92" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_17" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U93" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_18" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U94" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_19" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U95" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_20" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U96" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_21" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U97" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_22" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U98" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_23" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="delta_3_fu_256_p2" SOURCE="../src/forward_fw.cpp:93" STORAGESUBTYPE="" URAM="0" VARIABLE="delta_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U99" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_24" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U100" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_25" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U101" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_26" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U102" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_27" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U103" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_28" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U104" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_29" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U105" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_30" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U106" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln95_31" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U76" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_32" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_1_fu_544_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U77" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_33" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_2_fu_559_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U78" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_34" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_3_fu_574_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U79" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_35" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_4_fu_589_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U80" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_36" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_5_fu_604_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U81" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_37" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_6_fu_619_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U82" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_38" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_7_fu_634_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U83" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_39" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_8_fu_649_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U84" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_40" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_9_fu_664_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_9" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U85" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_41" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_10_fu_679_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_10" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U86" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_42" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_11_fu_694_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_11" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U87" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_43" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_12_fu_709_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_12" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U88" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_44" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_13_fu_724_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_13" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U89" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_45" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_14_fu_739_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_14" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U90" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_46" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_15_fu_754_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_15" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U91" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_47" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_16_fu_769_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_16" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U92" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_48" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_17_fu_784_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_17" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U93" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_49" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_18_fu_799_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_18" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U94" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_50" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_19_fu_814_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_19" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U95" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_51" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_20_fu_829_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_20" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U96" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_52" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_21_fu_844_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_21" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U97" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_53" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_22_fu_859_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_22" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U98" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_54" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_23_fu_874_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_23" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U99" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_55" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_24_fu_889_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_24" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U100" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_56" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_25_fu_904_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_25" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U101" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_57" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_26_fu_919_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_26" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U102" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_58" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_27_fu_934_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_27" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U103" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_59" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_28_fu_949_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_28" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U104" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_60" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_29_fu_964_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_29" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U105" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_61" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_30_fu_979_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_30" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp_slice" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_8s_8s_2s_12_4_1_U106" SOURCE="../src/forward_fw.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="w_new_62" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln97_31_fu_994_p3" SOURCE="../src/forward_fw.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln97_31" VISIBLE="false"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>train_step_Pipeline_VITIS_LOOP_136_1</Name>
+            <Loops>
+                <VITIS_LOOP_136_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>5.442</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>18</Best-caseLatency>
+                    <Average-caseLatency>18</Average-caseLatency>
+                    <Worst-caseLatency>18</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.180 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.180 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.180 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>17</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_136_1>
+                        <Name>VITIS_LOOP_136_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>4</TripCount>
+                        <Latency>16</Latency>
+                        <AbsoluteTimeLatency>0.160 us</AbsoluteTimeLatency>
+                        <PipelineII>4</PipelineII>
+                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_136_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../src/forward_fw.cpp:136</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_136_1>
+                            <Name>VITIS_LOOP_136_1</Name>
+                            <IssueType>II Violation</IssueType>
+                            <ViolationType>Resource Limitation</ViolationType>
+                            <SourceLocation>../src/forward_fw.cpp:136</SourceLocation>
+                        </VITIS_LOOP_136_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>22</FF>
+                    <AVAIL_FF>126800</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>292</LUT>
+                    <AVAIL_LUT>63400</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>270</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>240</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_136_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln136_fu_399_p2" SOURCE="../src/forward_fw.cpp:136" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln136" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_136_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln136_fu_405_p2" SOURCE="../src/forward_fw.cpp:136" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln136" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="VITIS_LOOP_136_1" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_9_2_2_1_1_U156" SOURCE="../src/forward_fw.cpp:136" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="VITIS_LOOP_136_1" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_9_2_2_1_1_U157" SOURCE="../src/forward_fw.cpp:136" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="VITIS_LOOP_136_1" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_9_2_2_1_1_U158" SOURCE="../src/forward_fw.cpp:136" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="VITIS_LOOP_136_1" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_9_2_2_1_1_U159" SOURCE="../src/forward_fw.cpp:136" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="VITIS_LOOP_136_1" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_9_2_2_1_1_U160" SOURCE="../src/forward_fw.cpp:136" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="VITIS_LOOP_136_1" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_9_2_2_1_1_U161" SOURCE="../src/forward_fw.cpp:136" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="VITIS_LOOP_136_1" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_9_2_2_1_1_U162" SOURCE="../src/forward_fw.cpp:136" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="VITIS_LOOP_136_1" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_9_2_2_1_1_U163" SOURCE="../src/forward_fw.cpp:136" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_7" VISIBLE="false"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>train_step_Pipeline_VITIS_LOOP_141_4</Name>
+            <Loops>
+                <VITIS_LOOP_141_4/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>5.442</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>6</Best-caseLatency>
+                    <Average-caseLatency>6</Average-caseLatency>
+                    <Worst-caseLatency>6</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>60.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>60.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>5</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_141_4>
+                        <Name>VITIS_LOOP_141_4</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>4</TripCount>
+                        <Latency>4</Latency>
+                        <AbsoluteTimeLatency>40.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_141_4>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../src/forward_fw.cpp:141</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_141_4>
+                            <Name>VITIS_LOOP_141_4</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../src/forward_fw.cpp:141</SourceLocation>
+                        </VITIS_LOOP_141_4>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>5</FF>
+                    <AVAIL_FF>126800</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>51</LUT>
+                    <AVAIL_LUT>63400</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>270</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>240</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_141_4" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln141_fu_60_p2" SOURCE="../src/forward_fw.cpp:141" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln141" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_141_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln141_fu_66_p2" SOURCE="../src/forward_fw.cpp:141" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln141" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>train_step</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.860</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>29</Best-caseLatency>
+                    <Average-caseLatency>29</Average-caseLatency>
+                    <Worst-caseLatency>29</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.290 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.290 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.290 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>30</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../src/forward_fw.cpp:105</SourceLocation>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>270</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>68</DSP>
+                    <AVAIL_DSP>240</AVAIL_DSP>
+                    <UTIL_DSP>28</UTIL_DSP>
+                    <FF>1440</FF>
+                    <AVAIL_FF>126800</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>3368</LUT>
+                    <AVAIL_LUT>63400</AVAIL_LUT>
+                    <UTIL_LUT>5</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln145_fu_640_p2" SOURCE="../src/forward_fw.cpp:145" STORAGESUBTYPE="" URAM="0" VARIABLE="sub_ln145" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32ns_34ns_42_2_1_U199" SOURCE="../src/forward_fw.cpp:145" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln145" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln146_fu_646_p2" SOURCE="../src/forward_fw.cpp:146" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln146" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op xor" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="xor" PRAGMA="" RTLNAME="xor_ln146_fu_666_p2" SOURCE="../src/forward_fw.cpp:146" STORAGESUBTYPE="" URAM="0" VARIABLE="xor_ln146" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="leds_port" SOURCE="../src/forward_fw.cpp:146" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln146" VISIBLE="false"/>
+                <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="CTRL" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="CTRL_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="img_pos" index="0" direction="in" srcType="ap_fixed&lt;8, 8, AP_TRN, AP_WRAP, 0&gt; const *" srcSize="8">
+            <hwRefs>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="img_neg" index="1" direction="in" srcType="ap_fixed&lt;8, 8, AP_TRN, AP_WRAP, 0&gt; const *" srcSize="8">
+            <hwRefs>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+                <hwRef type="interface" interface="s_axi_CTRL" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="last_sample" index="2" direction="in" srcType="int" srcSize="32">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_CTRL" name="last_sample" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="sample_idx" index="3" direction="in" srcType="int" srcSize="32">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_CTRL" name="sample_idx" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="leds_port" index="4" direction="out" srcType="&amp;" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="leds_port" name="leds_port" usage="data" direction="out"/>
+                <hwRef type="port" interface="leds_port_ap_vld" name="leds_port_ap_vld" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="W1_out" index="5" direction="out" srcType="ap_fixed&lt;8, 8, AP_TRN, AP_WRAP, 0&gt;*" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="W1_out_address0" name="W1_out_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="W1_out_ce0" name="W1_out_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="W1_out_we0" name="W1_out_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="W1_out_d0" name="W1_out_d0" usage="data" direction="out"/>
+                <hwRef type="port" interface="W1_out_address1" name="W1_out_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="W1_out_ce1" name="W1_out_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="W1_out_we1" name="W1_out_we1" usage="control" direction="out"/>
+                <hwRef type="port" interface="W1_out_d1" name="W1_out_d1" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="W2_out" index="6" direction="out" srcType="ap_fixed&lt;8, 8, AP_TRN, AP_WRAP, 0&gt;*" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="W2_out_address0" name="W2_out_address0" usage="address" direction="out"/>
+                <hwRef type="port" interface="W2_out_ce0" name="W2_out_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="W2_out_we0" name="W2_out_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="W2_out_d0" name="W2_out_d0" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="s_axi_CTRL" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="8" portPrefix="s_axi_CTRL_" paramPrefix="C_S_AXI_CTRL_">
+            <ports>
+                <port>s_axi_CTRL_ARADDR</port>
+                <port>s_axi_CTRL_ARREADY</port>
+                <port>s_axi_CTRL_ARVALID</port>
+                <port>s_axi_CTRL_AWADDR</port>
+                <port>s_axi_CTRL_AWREADY</port>
+                <port>s_axi_CTRL_AWVALID</port>
+                <port>s_axi_CTRL_BREADY</port>
+                <port>s_axi_CTRL_BRESP</port>
+                <port>s_axi_CTRL_BVALID</port>
+                <port>s_axi_CTRL_RDATA</port>
+                <port>s_axi_CTRL_RREADY</port>
+                <port>s_axi_CTRL_RRESP</port>
+                <port>s_axi_CTRL_RVALID</port>
+                <port>s_axi_CTRL_WDATA</port>
+                <port>s_axi_CTRL_WREADY</port>
+                <port>s_axi_CTRL_WSTRB</port>
+                <port>s_axi_CTRL_WVALID</port>
+            </ports>
+            <registers>
+                <register offset="0x00" name="CTRL" access="RW" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="3" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="9" width="1" name="INTERRUPT" access="R" description="Control signal Register for 'interrupt'."/>
+                        <field offset="10" width="22" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="RTOW" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="RTOW" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x10" name="img_pos_0" access="W" description="Data signal of img_pos_0" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_pos_0" access="W" description="Bit 7 to 0 of img_pos_0"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x18" name="img_pos_1" access="W" description="Data signal of img_pos_1" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_pos_1" access="W" description="Bit 7 to 0 of img_pos_1"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x20" name="img_pos_2" access="W" description="Data signal of img_pos_2" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_pos_2" access="W" description="Bit 7 to 0 of img_pos_2"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x28" name="img_pos_3" access="W" description="Data signal of img_pos_3" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_pos_3" access="W" description="Bit 7 to 0 of img_pos_3"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x30" name="img_pos_4" access="W" description="Data signal of img_pos_4" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_pos_4" access="W" description="Bit 7 to 0 of img_pos_4"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x38" name="img_pos_5" access="W" description="Data signal of img_pos_5" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_pos_5" access="W" description="Bit 7 to 0 of img_pos_5"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x40" name="img_pos_6" access="W" description="Data signal of img_pos_6" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_pos_6" access="W" description="Bit 7 to 0 of img_pos_6"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x48" name="img_pos_7" access="W" description="Data signal of img_pos_7" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_pos_7" access="W" description="Bit 7 to 0 of img_pos_7"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x50" name="img_neg_0" access="W" description="Data signal of img_neg_0" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_neg_0" access="W" description="Bit 7 to 0 of img_neg_0"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x58" name="img_neg_1" access="W" description="Data signal of img_neg_1" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_neg_1" access="W" description="Bit 7 to 0 of img_neg_1"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x60" name="img_neg_2" access="W" description="Data signal of img_neg_2" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_neg_2" access="W" description="Bit 7 to 0 of img_neg_2"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x68" name="img_neg_3" access="W" description="Data signal of img_neg_3" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_neg_3" access="W" description="Bit 7 to 0 of img_neg_3"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x70" name="img_neg_4" access="W" description="Data signal of img_neg_4" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_neg_4" access="W" description="Bit 7 to 0 of img_neg_4"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x78" name="img_neg_5" access="W" description="Data signal of img_neg_5" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_neg_5" access="W" description="Bit 7 to 0 of img_neg_5"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x80" name="img_neg_6" access="W" description="Data signal of img_neg_6" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_neg_6" access="W" description="Bit 7 to 0 of img_neg_6"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x88" name="img_neg_7" access="W" description="Data signal of img_neg_7" range="32">
+                    <fields>
+                        <field offset="0" width="8" name="img_neg_7" access="W" description="Bit 7 to 0 of img_neg_7"/>
+                        <field offset="8" width="24" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x90" name="last_sample" access="W" description="Data signal of last_sample" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="last_sample" access="W" description="Bit 31 to 0 of last_sample"/>
+                    </fields>
+                </register>
+                <register offset="0x98" name="sample_idx" access="W" description="Data signal of sample_idx" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="sample_idx" access="W" description="Bit 31 to 0 of sample_idx"/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="img_pos"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="24" argName="img_pos"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="32" argName="img_pos"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40" argName="img_pos"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="48" argName="img_pos"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="56" argName="img_pos"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="64" argName="img_pos"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="72" argName="img_pos"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="80" argName="img_neg"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="88" argName="img_neg"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="96" argName="img_neg"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="104" argName="img_neg"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="112" argName="img_neg"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="120" argName="img_neg"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="128" argName="img_neg"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="136" argName="img_neg"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="144" argName="last_sample"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="152" argName="sample_idx"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_CTRL</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="interrupt" type="interrupt" busTypeName="interrupt" mode="master" dataWidth="1">
+            <busParams>
+                <busParam busParamName="SENSITIVITY">LEVEL_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="interrupt">INTERRUPT</portMap>
+            </portMaps>
+            <ports>
+                <port>interrupt</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="leds_port" type="data" busTypeName="data" protocol="ap_vld" mode="master" dataWidth="4">
+            <portMaps>
+                <portMap portMapName="leds_port">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>leds_port</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_vld" register_option="0" argName="leds_port"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="W1_out_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="5">
+            <portMaps>
+                <portMap portMapName="W1_out_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>W1_out_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="W1_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="W1_out_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="W1_out_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>W1_out_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="W1_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="W1_out_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="5">
+            <portMaps>
+                <portMap portMapName="W1_out_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>W1_out_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="W1_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="W1_out_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="W1_out_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>W1_out_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="W1_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="W2_out_address0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="2">
+            <portMaps>
+                <portMap portMapName="W2_out_address0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>W2_out_address0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="W2_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="W2_out_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="W2_out_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>W2_out_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="W2_out"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="S_AXILITE Interfaces">
+                <table>
+                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
+                    <column name="s_axi_CTRL">32, 8, 16, 0</column>
+                </table>
+            </item>
+            <item name="S_AXILITE Registers">
+                <table>
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_CTRL">CTRL, 0x00, 32, RW, Control signals, 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT</column>
+                    <column name="s_axi_CTRL">GIER, 0x04, 32, RW, Global Interrupt Enable Register, 0=Enable</column>
+                    <column name="s_axi_CTRL">IP_IER, 0x08, 32, RW, IP Interrupt Enable Register, 0=CHAN0_INT_EN 1=CHAN1_INT_EN</column>
+                    <column name="s_axi_CTRL">IP_ISR, 0x0c, 32, RW, IP Interrupt Status Register, 0=CHAN0_INT_ST 1=CHAN1_INT_ST</column>
+                    <column name="s_axi_CTRL">img_pos_0, 0x10, 32, W, Data signal of img_pos_0, </column>
+                    <column name="s_axi_CTRL">img_pos_1, 0x18, 32, W, Data signal of img_pos_1, </column>
+                    <column name="s_axi_CTRL">img_pos_2, 0x20, 32, W, Data signal of img_pos_2, </column>
+                    <column name="s_axi_CTRL">img_pos_3, 0x28, 32, W, Data signal of img_pos_3, </column>
+                    <column name="s_axi_CTRL">img_pos_4, 0x30, 32, W, Data signal of img_pos_4, </column>
+                    <column name="s_axi_CTRL">img_pos_5, 0x38, 32, W, Data signal of img_pos_5, </column>
+                    <column name="s_axi_CTRL">img_pos_6, 0x40, 32, W, Data signal of img_pos_6, </column>
+                    <column name="s_axi_CTRL">img_pos_7, 0x48, 32, W, Data signal of img_pos_7, </column>
+                    <column name="s_axi_CTRL">img_neg_0, 0x50, 32, W, Data signal of img_neg_0, </column>
+                    <column name="s_axi_CTRL">img_neg_1, 0x58, 32, W, Data signal of img_neg_1, </column>
+                    <column name="s_axi_CTRL">img_neg_2, 0x60, 32, W, Data signal of img_neg_2, </column>
+                    <column name="s_axi_CTRL">img_neg_3, 0x68, 32, W, Data signal of img_neg_3, </column>
+                    <column name="s_axi_CTRL">img_neg_4, 0x70, 32, W, Data signal of img_neg_4, </column>
+                    <column name="s_axi_CTRL">img_neg_5, 0x78, 32, W, Data signal of img_neg_5, </column>
+                    <column name="s_axi_CTRL">img_neg_6, 0x80, 32, W, Data signal of img_neg_6, </column>
+                    <column name="s_axi_CTRL">img_neg_7, 0x88, 32, W, Data signal of img_neg_7, </column>
+                    <column name="s_axi_CTRL">last_sample, 0x90, 32, W, Data signal of last_sample, </column>
+                    <column name="s_axi_CTRL">sample_idx, 0x98, 32, W, Data signal of sample_idx, </column>
+                </table>
+            </item>
+            <item name="AP_MEMORY">
+                <table>
+                    <keys size="3">Port, Direction, Bitwidth</keys>
+                    <column name="W1_out_address0">out, 5</column>
+                    <column name="W1_out_address1">out, 5</column>
+                    <column name="W1_out_d0">out, 8</column>
+                    <column name="W1_out_d1">out, 8</column>
+                    <column name="W2_out_address0">out, 2</column>
+                    <column name="W2_out_d0">out, 8</column>
+                </table>
+            </item>
+            <item name="Other Ports">
+                <table>
+                    <keys size="4">Port, Mode, Direction, Bitwidth</keys>
+                    <column name="leds_port">ap_vld, out, 4</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="interrupt">interrupt, interrupt</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="img_pos">in, ap_fixed&lt;8 8 AP_TRN AP_WRAP 0&gt; const *</column>
+                    <column name="img_neg">in, ap_fixed&lt;8 8 AP_TRN AP_WRAP 0&gt; const *</column>
+                    <column name="last_sample">in, int</column>
+                    <column name="sample_idx">in, int</column>
+                    <column name="leds_port">out, &amp;</column>
+                    <column name="W1_out">out, ap_fixed&lt;8 8 AP_TRN AP_WRAP 0&gt;*</column>
+                    <column name="W2_out">out, ap_fixed&lt;8 8 AP_TRN AP_WRAP 0&gt;*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="5">Argument, HW Interface, HW Type, HW Usage, HW Info</keys>
+                    <column name="img_pos">s_axi_CTRL, interface, , </column>
+                    <column name="img_pos">s_axi_CTRL, interface, , </column>
+                    <column name="img_pos">s_axi_CTRL, interface, , </column>
+                    <column name="img_pos">s_axi_CTRL, interface, , </column>
+                    <column name="img_pos">s_axi_CTRL, interface, , </column>
+                    <column name="img_pos">s_axi_CTRL, interface, , </column>
+                    <column name="img_pos">s_axi_CTRL, interface, , </column>
+                    <column name="img_pos">s_axi_CTRL, interface, , </column>
+                    <column name="img_neg">s_axi_CTRL, interface, , </column>
+                    <column name="img_neg">s_axi_CTRL, interface, , </column>
+                    <column name="img_neg">s_axi_CTRL, interface, , </column>
+                    <column name="img_neg">s_axi_CTRL, interface, , </column>
+                    <column name="img_neg">s_axi_CTRL, interface, , </column>
+                    <column name="img_neg">s_axi_CTRL, interface, , </column>
+                    <column name="img_neg">s_axi_CTRL, interface, , </column>
+                    <column name="img_neg">s_axi_CTRL, interface, , </column>
+                    <column name="last_sample">s_axi_CTRL, register, , name=last_sample offset=0x90 range=32</column>
+                    <column name="sample_idx">s_axi_CTRL, register, , name=sample_idx offset=0x98 range=32</column>
+                    <column name="leds_port">leds_port, port, , </column>
+                    <column name="leds_port">leds_port_ap_vld, port, , </column>
+                    <column name="W1_out">W1_out_address0, port, offset, </column>
+                    <column name="W1_out">W1_out_ce0, port, , </column>
+                    <column name="W1_out">W1_out_we0, port, , </column>
+                    <column name="W1_out">W1_out_d0, port, , </column>
+                    <column name="W1_out">W1_out_address1, port, offset, </column>
+                    <column name="W1_out">W1_out_ce1, port, , </column>
+                    <column name="W1_out">W1_out_we1, port, , </column>
+                    <column name="W1_out">W1_out_d1, port, , </column>
+                    <column name="W2_out">W2_out_address0, port, offset, </column>
+                    <column name="W2_out">W2_out_ce0, port, , </column>
+                    <column name="W2_out">W2_out_we0, port, , </column>
+                    <column name="W2_out">W2_out_d0, port, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <PragmaReport>
+        <Pragma type="array_partition" location="../src/forward_fw.cpp:47" status="valid" parentFunction="forwardhidden" variable="input" isDirective="0" options="variable=input complete dim=1"/>
+        <Pragma type="array_partition" location="../src/forward_fw.cpp:48" status="valid" parentFunction="forwardhidden" variable="W1" isDirective="0" options="variable=W1 complete dim=2"/>
+        <Pragma type="pipeline" location="../src/forward_fw.cpp:49" status="valid" parentFunction="forwardhidden" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="array_partition" location="../src/forward_fw.cpp:65" status="valid" parentFunction="forwardoutput" variable="hidden" isDirective="0" options="variable=hidden complete dim=1"/>
+        <Pragma type="array_partition" location="../src/forward_fw.cpp:66" status="valid" parentFunction="forwardoutput" variable="W2" isDirective="0" options="variable=W2 complete dim=2"/>
+        <Pragma type="pipeline" location="../src/forward_fw.cpp:67" status="valid" parentFunction="forwardoutput" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="array_partition" location="../src/forward_fw.cpp:88" status="valid" parentFunction="updatehidden" variable="input" isDirective="0" options="variable=input complete dim=1"/>
+        <Pragma type="array_partition" location="../src/forward_fw.cpp:89" status="valid" parentFunction="updatehidden" variable="W1" isDirective="0" options="variable=W1 complete dim=2"/>
+        <Pragma type="pipeline" location="../src/forward_fw.cpp:90" status="valid" parentFunction="updatehidden" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="interface" location="../src/forward_fw.cpp:113" status="valid" parentFunction="train_step" variable="img_pos" isDirective="0" options="s_axilite port=img_pos bundle=CTRL"/>
+        <Pragma type="interface" location="../src/forward_fw.cpp:114" status="valid" parentFunction="train_step" variable="img_neg" isDirective="0" options="s_axilite port=img_neg bundle=CTRL"/>
+        <Pragma type="interface" location="../src/forward_fw.cpp:115" status="valid" parentFunction="train_step" variable="last_sample" isDirective="0" options="s_axilite port=last_sample bundle=CTRL"/>
+        <Pragma type="interface" location="../src/forward_fw.cpp:116" status="valid" parentFunction="train_step" variable="sample_idx" isDirective="0" options="s_axilite port=sample_idx bundle=CTRL"/>
+        <Pragma type="interface" location="../src/forward_fw.cpp:117" status="valid" parentFunction="train_step" variable="return" isDirective="0" options="s_axilite port=return bundle=CTRL"/>
+        <Pragma type="interface" location="../src/forward_fw.cpp:118" status="valid" parentFunction="train_step" variable="leds_port" isDirective="0" options="ap_vld port=leds_port"/>
+    </PragmaReport>
+</profile>
+

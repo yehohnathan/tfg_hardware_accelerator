@@ -1,0 +1,246 @@
+<ENTRY>
+{
+ "thisFile": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\train_step.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "05/14/25 09:48:28",
+ "timestampMillis": "1747237708281",
+ "buildStep": {
+  "cmdId": "012275fb-7aba-465d-90ba-e9b87c9fb682",
+  "name": "v++",
+  "logFile": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\logs\\train_step.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config D:\\Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\hls_config.cfg --work_dir train_step ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "D:\\Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\hls_config.cfg",
+   "--work_dir",
+   "train_step"
+  ],
+  "iniFiles": [
+   {
+    "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\hls_config.cfg",
+    "content": "part=xc7a100tcsg324-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.top=train_step\ntb.file=D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp\ntb.file=D:/Proyectos/tfg_hardware_accelerator/data/mnist_test_data.hpp\ntb.file=D:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp\nsyn.file=D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.cpp\nsyn.file=D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.hpp"
+   }
+  ],
+  "cwd": "D:\\Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/14/25 09:48:28",
+ "timestampMillis": "1747237708282",
+ "status": {
+  "cmdId": "012275fb-7aba-465d-90ba-e9b87c9fb682",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "05/14/25 09:48:40",
+ "timestampMillis": "1747237720779",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "train_step",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "D:/Proyectos\\tfg_hardware_accelerator\\src\\forward_fw.cpp",
+     "D:/Proyectos\\tfg_hardware_accelerator\\src\\forward_fw.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "05/14/25 09:48:40",
+ "timestampMillis": "1747237720781",
+ "buildStep": {
+  "cmdId": "3a7da450-c525-4bf2-89ec-668f5debf5cb",
+  "name": "",
+  "logFile": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "D:\\Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/14/25 09:48:40",
+ "timestampMillis": "1747237720781",
+ "status": {
+  "cmdId": "3a7da450-c525-4bf2-89ec-668f5debf5cb",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/14/25 09:48:40",
+ "timestampMillis": "1747237720781",
+ "report": {
+  "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls\\hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/14/25 09:48:40",
+ "timestampMillis": "1747237720782",
+ "report": {
+  "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls\\syn\\report\\csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/14/25 09:48:40",
+ "timestampMillis": "1747237720782",
+ "report": {
+  "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls\\syn\\report\\csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/14/25 09:49:25",
+ "timestampMillis": "1747237765476",
+ "report": {
+  "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/14/25 09:49:25",
+ "timestampMillis": "1747237765476",
+ "report": {
+  "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/14/25 09:49:25",
+ "timestampMillis": "1747237765477",
+ "report": {
+  "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/14/25 09:49:25",
+ "timestampMillis": "1747237765477",
+ "status": {
+  "cmdId": "3a7da450-c525-4bf2-89ec-668f5debf5cb",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "05/14/25 09:49:25",
+ "timestampMillis": "1747237765846",
+ "status": {
+  "cmdId": "012275fb-7aba-465d-90ba-e9b87c9fb682",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/14/25 09:49:25",
+ "timestampMillis": "1747237765883",
+ "report": {
+  "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\reports\\v++_compile_train_step_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "05/14/25 09:49:25",
+ "timestampMillis": "1747237765883",
+ "report": {
+  "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\reports\\.db\\v++_compile_train_step_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

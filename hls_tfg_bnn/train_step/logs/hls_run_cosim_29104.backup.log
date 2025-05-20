@@ -1,0 +1,206 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step 
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.cpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.hpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file 'D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding test bench file 'D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=D:/Proyectos/tfg_hardware_accelerator/data/mnist_test_data.hpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'D:/Proyectos/tfg_hardware_accelerator/data/mnist_test_data.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=D:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'D:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=train_step' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7a100tcsg324-1' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(5)
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vitis/2024.2/vcxx/libexec/clang++"
+   Compiling apatb_train_step.cpp
+   Compiling train_tb.cpp_pre.cpp.tb.cpp
+   Compiling forward_fw.cpp_pre.cpp.tb.cpp
+   Compiling apatb_train_step_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+== Epoca 0 ==
+img  0 -> LED=0x0, W1[0][0]=1
+img 10 -> LED=0x3, W1[0][0]=1
+img 20 -> LED=0x6, W1[0][0]=-1
+img 30 -> LED=0x9, W1[0][0]=1
+img 40 -> LED=0xC, W1[0][0]=1
+Simulacion C finalizo OK. Pesos actualizados y LEDs generados.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\sim\verilog>set PATH= 
+
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\sim\verilog>call C:/Xilinx/Vivado/2024.2/bin/xelab xil_defaultlib.apatb_train_step_top glbl -Oenable_linking_all_libraries  -prj train_step.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_24 -L floating_point_v7_1_19 --lib "ieee_proposed=./ieee_proposed" -s train_step  
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_train_step_top glbl -Oenable_linking_all_libraries -prj train_step.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_24 -L floating_point_v7_1_19 --lib ieee_proposed=./ieee_proposed -s train_step 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/AESL_automem_W1_out.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_W1_out
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/AESL_automem_W2_out.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_W2_out
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/AESL_axi_slave_CTRL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_CTRL
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_train_step_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module train_step
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step_CTRL_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module train_step_CTRL_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module train_step_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step_forwardHidden.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module train_step_forwardHidden
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step_mac_muladd_8s_2s_10s_11_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module train_step_mac_muladd_8s_2s_10s_11_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step_mac_muladd_8s_8s_2s_12_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module train_step_mac_muladd_8s_8s_2s_12_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step_mul_2s_8s_10_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module train_step_mul_2s_8s_10_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step_mul_32ns_34ns_42_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module train_step_mul_32ns_34ns_42_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step_sparsemux_9_2_2_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module train_step_sparsemux_9_2_2_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step_train_step_Pipeline_VITIS_LOOP_136_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module train_step_train_step_Pipeline_VITIS_LOOP_136_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step_train_step_Pipeline_VITIS_LOOP_141_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module train_step_train_step_Pipeline_VITIS_LOOP_141_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step_updateHidden.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module train_step_updateHidden
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.train_step_mul_2s_8s_10_1_1(NUM_...
+Compiling module xil_defaultlib.train_step_mac_muladd_8s_2s_10s_...
+Compiling module xil_defaultlib.train_step_mac_muladd_8s_2s_10s_...
+Compiling module xil_defaultlib.train_step_forwardHidden
+Compiling module xil_defaultlib.train_step_mac_muladd_8s_8s_2s_1...
+Compiling module xil_defaultlib.train_step_mac_muladd_8s_8s_2s_1...
+Compiling module xil_defaultlib.train_step_updateHidden
+Compiling module xil_defaultlib.train_step_sparsemux_9_2_2_1_1(d...
+Compiling module xil_defaultlib.train_step_flow_control_loop_pip...
+Compiling module xil_defaultlib.train_step_train_step_Pipeline_V...
+Compiling module xil_defaultlib.train_step_train_step_Pipeline_V...
+Compiling module xil_defaultlib.train_step_CTRL_s_axi
+Compiling module xil_defaultlib.train_step_mul_32ns_34ns_42_2_1(...
+Compiling module xil_defaultlib.train_step
+Compiling module xil_defaultlib.AESL_automem_W1_out
+Compiling module xil_defaultlib.AESL_automem_W2_out
+Compiling module xil_defaultlib.AESL_axi_slave_CTRL
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=4)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_train_step_top
+Compiling module work.glbl
+Built simulation snapshot train_step
+
+****** xsim v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Wed May 14 11:25:46 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/train_step/xsim_script.tcl
+# xsim {train_step} -autoloadwcfg -tclbatch {train_step.tcl}
+Time resolution is 1 ps
+source train_step.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 50 [0.00%] @ "125000"
+// RTL Simulation : 1 / 50 [0.00%] @ "1505000"
+// RTL Simulation : 2 / 50 [0.00%] @ "2025000"
+// RTL Simulation : 3 / 50 [0.00%] @ "2645000"
+// RTL Simulation : 4 / 50 [0.00%] @ "3265000"
+// RTL Simulation : 5 / 50 [0.00%] @ "3785000"
+// RTL Simulation : 6 / 50 [0.00%] @ "4905000"
+// RTL Simulation : 7 / 50 [0.00%] @ "5525000"
+// RTL Simulation : 8 / 50 [0.00%] @ "6145000"
+// RTL Simulation : 9 / 50 [0.00%] @ "6765000"
+// RTL Simulation : 10 / 50 [0.00%] @ "7285000"
+// RTL Simulation : 11 / 50 [0.00%] @ "8205000"
+// RTL Simulation : 12 / 50 [0.00%] @ "9325000"
+// RTL Simulation : 13 / 50 [0.00%] @ "10445000"
+// RTL Simulation : 14 / 50 [0.00%] @ "11365000"
+// RTL Simulation : 15 / 50 [0.00%] @ "12285000"
+// RTL Simulation : 16 / 50 [0.00%] @ "13005000"
+// RTL Simulation : 17 / 50 [0.00%] @ "13725000"
+// RTL Simulation : 18 / 50 [0.00%] @ "14245000"
+// RTL Simulation : 19 / 50 [0.00%] @ "14765000"
+// RTL Simulation : 20 / 50 [0.00%] @ "15485000"
+// RTL Simulation : 21 / 50 [0.00%] @ "16305000"
+// RTL Simulation : 22 / 50 [0.00%] @ "17325000"
+// RTL Simulation : 23 / 50 [0.00%] @ "18145000"
+// RTL Simulation : 24 / 50 [0.00%] @ "19065000"
+// RTL Simulation : 25 / 50 [0.00%] @ "19985000"
+// RTL Simulation : 26 / 50 [0.00%] @ "20805000"
+// RTL Simulation : 27 / 50 [0.00%] @ "22025000"
+// RTL Simulation : 28 / 50 [0.00%] @ "22845000"
+// RTL Simulation : 29 / 50 [0.00%] @ "23865000"
+// RTL Simulation : 30 / 50 [0.00%] @ "24485000"
+// RTL Simulation : 31 / 50 [0.00%] @ "25105000"
+// RTL Simulation : 32 / 50 [0.00%] @ "25925000"
+// RTL Simulation : 33 / 50 [0.00%] @ "26745000"
+// RTL Simulation : 34 / 50 [0.00%] @ "27865000"
+// RTL Simulation : 35 / 50 [0.00%] @ "28985000"
+// RTL Simulation : 36 / 50 [0.00%] @ "29705000"
+// RTL Simulation : 37 / 50 [0.00%] @ "30625000"
+// RTL Simulation : 38 / 50 [0.00%] @ "31345000"
+// RTL Simulation : 39 / 50 [0.00%] @ "32165000"
+// RTL Simulation : 40 / 50 [0.00%] @ "32785000"
+// RTL Simulation : 41 / 50 [0.00%] @ "34105000"
+// RTL Simulation : 42 / 50 [0.00%] @ "34625000"
+// RTL Simulation : 43 / 50 [0.00%] @ "35245000"
+// RTL Simulation : 44 / 50 [0.00%] @ "36065000"
+// RTL Simulation : 45 / 50 [0.00%] @ "36785000"
+// RTL Simulation : 46 / 50 [0.00%] @ "37505000"
+// RTL Simulation : 47 / 50 [0.00%] @ "38225000"
+// RTL Simulation : 48 / 50 [0.00%] @ "39045000"
+// RTL Simulation : 49 / 50 [0.00%] @ "39965000"
+// RTL Simulation : 50 / 50 [100.00%] @ "40835000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 40895 ns : File "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step.autotb.v" Line 536
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed May 14 11:25:50 2025...
+INFO: [COSIM 212-316] Starting C post checking ...
+== Epoca 0 ==
+img  0 -> LED=0x0, W1[0][0]=1
+img 10 -> LED=0x3, W1[0][0]=1
+img 20 -> LED=0x6, W1[0][0]=-1
+img 30 -> LED=0x9, W1[0][0]=1
+img 40 -> LED=0xC, W1[0][0]=1
+Simulacion C finalizo OK. Pesos actualizados y LEDs generados.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-112] Total CPU user time: 7 seconds. Total CPU system time: 3 seconds. Total elapsed time: 72.394 seconds; peak allocated memory: 333.543 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 1m 19s

@@ -1,0 +1,197 @@
+
+
+================================================================
+== Vitis HLS Report for 'train_step_Pipeline_VITIS_LOOP_136_1'
+================================================================
+* Date:           Wed May 14 09:49:19 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        train_step
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a100t-csg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.442 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |       18|       18|  0.180 us|  0.180 us|   17|   17|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_136_1  |       16|       16|         4|          4|          1|     4|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     24|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       0|    136|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|    132|    -|
+|Register         |        -|    -|      22|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      22|    292|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      270|  240|  126800|  63400|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+---------------------+---------+----+---+----+-----+
+    |         Instance         |        Module       | BRAM_18K| DSP| FF| LUT| URAM|
+    +--------------------------+---------------------+---------+----+---+----+-----+
+    |sparsemux_9_2_2_1_1_U156  |sparsemux_9_2_2_1_1  |        0|   0|  0|  17|    0|
+    |sparsemux_9_2_2_1_1_U157  |sparsemux_9_2_2_1_1  |        0|   0|  0|  17|    0|
+    |sparsemux_9_2_2_1_1_U158  |sparsemux_9_2_2_1_1  |        0|   0|  0|  17|    0|
+    |sparsemux_9_2_2_1_1_U159  |sparsemux_9_2_2_1_1  |        0|   0|  0|  17|    0|
+    |sparsemux_9_2_2_1_1_U160  |sparsemux_9_2_2_1_1  |        0|   0|  0|  17|    0|
+    |sparsemux_9_2_2_1_1_U161  |sparsemux_9_2_2_1_1  |        0|   0|  0|  17|    0|
+    |sparsemux_9_2_2_1_1_U162  |sparsemux_9_2_2_1_1  |        0|   0|  0|  17|    0|
+    |sparsemux_9_2_2_1_1_U163  |sparsemux_9_2_2_1_1  |        0|   0|  0|  17|    0|
+    +--------------------------+---------------------+---------+----+---+----+-----+
+    |Total                     |                     |        0|   0|  0| 136|    0|
+    +--------------------------+---------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln136_fu_405_p2   |         +|   0|  0|  11|           3|           1|
+    |icmp_ln136_fu_399_p2  |      icmp|   0|  0|  13|           3|           4|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  24|           6|           5|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |W1_out_address0_local  |  21|          5|    5|         25|
+    |W1_out_address1_local  |  21|          5|    5|         25|
+    |W1_out_d0_local        |  21|          5|    8|         40|
+    |W1_out_d1_local        |  21|          5|    8|         40|
+    |ap_NS_fsm              |  21|          5|    1|          5|
+    |ap_done_int            |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j_2   |   9|          2|    3|          6|
+    |j_fu_122               |   9|          2|    3|          6|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 132|         31|   34|        149|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------+---+----+-----+-----------+
+    |         Name        | FF| LUT| Bits| Const Bits|
+    +---------------------+---+----+-----+-----------+
+    |ap_CS_fsm            |  4|   0|    4|          0|
+    |ap_done_reg          |  1|   0|    1|          0|
+    |j_fu_122             |  3|   0|    3|          0|
+    |tmp_2_reg_764        |  2|   0|    2|          0|
+    |tmp_3_reg_769        |  2|   0|    2|          0|
+    |tmp_4_reg_774        |  2|   0|    2|          0|
+    |tmp_5_reg_779        |  2|   0|    2|          0|
+    |tmp_6_reg_784        |  2|   0|    2|          0|
+    |tmp_7_reg_789        |  2|   0|    2|          0|
+    |trunc_ln136_reg_754  |  2|   0|    2|          0|
+    +---------------------+---+----+-----+-----------+
+    |Total                | 22|   0|   22|          0|
+    +---------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+--------------------------------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++-----------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk           |   in|    1|  ap_ctrl_hs|  train_step_Pipeline_VITIS_LOOP_136_1|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|  train_step_Pipeline_VITIS_LOOP_136_1|  return value|
+|ap_start         |   in|    1|  ap_ctrl_hs|  train_step_Pipeline_VITIS_LOOP_136_1|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|  train_step_Pipeline_VITIS_LOOP_136_1|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|  train_step_Pipeline_VITIS_LOOP_136_1|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|  train_step_Pipeline_VITIS_LOOP_136_1|  return value|
+|W1_out_address0  |  out|    5|   ap_memory|                                W1_out|         array|
+|W1_out_ce0       |  out|    1|   ap_memory|                                W1_out|         array|
+|W1_out_we0       |  out|    1|   ap_memory|                                W1_out|         array|
+|W1_out_d0        |  out|    8|   ap_memory|                                W1_out|         array|
+|W1_out_address1  |  out|    5|   ap_memory|                                W1_out|         array|
+|W1_out_ce1       |  out|    1|   ap_memory|                                W1_out|         array|
+|W1_out_we1       |  out|    1|   ap_memory|                                W1_out|         array|
+|W1_out_d1        |  out|    8|   ap_memory|                                W1_out|         array|
+|W1_0_0_load      |   in|    2|     ap_none|                           W1_0_0_load|        scalar|
+|W1_0_1_load      |   in|    2|     ap_none|                           W1_0_1_load|        scalar|
+|W1_0_2_load      |   in|    2|     ap_none|                           W1_0_2_load|        scalar|
+|W1_0_3_load      |   in|    2|     ap_none|                           W1_0_3_load|        scalar|
+|W1_1_0_load      |   in|    2|     ap_none|                           W1_1_0_load|        scalar|
+|W1_1_1_load      |   in|    2|     ap_none|                           W1_1_1_load|        scalar|
+|W1_1_2_load      |   in|    2|     ap_none|                           W1_1_2_load|        scalar|
+|W1_1_3_load      |   in|    2|     ap_none|                           W1_1_3_load|        scalar|
+|W1_2_0_load      |   in|    2|     ap_none|                           W1_2_0_load|        scalar|
+|W1_2_1_load      |   in|    2|     ap_none|                           W1_2_1_load|        scalar|
+|W1_2_2_load      |   in|    2|     ap_none|                           W1_2_2_load|        scalar|
+|W1_2_3_load      |   in|    2|     ap_none|                           W1_2_3_load|        scalar|
+|W1_3_0_load      |   in|    2|     ap_none|                           W1_3_0_load|        scalar|
+|W1_3_1_load      |   in|    2|     ap_none|                           W1_3_1_load|        scalar|
+|W1_3_2_load      |   in|    2|     ap_none|                           W1_3_2_load|        scalar|
+|W1_3_3_load      |   in|    2|     ap_none|                           W1_3_3_load|        scalar|
+|W1_4_0_load      |   in|    2|     ap_none|                           W1_4_0_load|        scalar|
+|W1_4_1_load      |   in|    2|     ap_none|                           W1_4_1_load|        scalar|
+|W1_4_2_load      |   in|    2|     ap_none|                           W1_4_2_load|        scalar|
+|W1_4_3_load      |   in|    2|     ap_none|                           W1_4_3_load|        scalar|
+|W1_5_0_load      |   in|    2|     ap_none|                           W1_5_0_load|        scalar|
+|W1_5_1_load      |   in|    2|     ap_none|                           W1_5_1_load|        scalar|
+|W1_5_2_load      |   in|    2|     ap_none|                           W1_5_2_load|        scalar|
+|W1_5_3_load      |   in|    2|     ap_none|                           W1_5_3_load|        scalar|
+|W1_6_0_load      |   in|    2|     ap_none|                           W1_6_0_load|        scalar|
+|W1_6_1_load      |   in|    2|     ap_none|                           W1_6_1_load|        scalar|
+|W1_6_2_load      |   in|    2|     ap_none|                           W1_6_2_load|        scalar|
+|W1_6_3_load      |   in|    2|     ap_none|                           W1_6_3_load|        scalar|
+|W1_7_0_load      |   in|    2|     ap_none|                           W1_7_0_load|        scalar|
+|W1_7_1_load      |   in|    2|     ap_none|                           W1_7_1_load|        scalar|
+|W1_7_2_load      |   in|    2|     ap_none|                           W1_7_2_load|        scalar|
+|W1_7_3_load      |   in|    2|     ap_none|                           W1_7_3_load|        scalar|
++-----------------+-----+-----+------------+--------------------------------------+--------------+
+

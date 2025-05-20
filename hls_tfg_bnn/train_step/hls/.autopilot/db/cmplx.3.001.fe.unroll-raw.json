@@ -1,0 +1,73 @@
+{
+  "0": {
+    "basicblocks": 16,
+    "calls": "2 4 2 4 3",
+    "file": "forward_fw.cpp",
+    "fileloc": 105,
+    "instructions": 61,
+    "loads": {
+      "G": 1
+    },
+    "name": "train_step",
+    "stores": {
+      "T": 3
+    },
+    "total_instructions": 6186
+  },
+  "1": {
+    "basicblocks": 9,
+    "calls": "",
+    "file": "forward_fw.cpp",
+    "fileloc": 27,
+    "instructions": 12,
+    "name": "signum",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "2": {
+    "basicblocks": 848,
+    "calls": "1 1 1 1",
+    "file": "forward_fw.cpp",
+    "fileloc": 46,
+    "instructions": 1893,
+    "loads": {
+      "G": 96,
+      "L": 100
+    },
+    "name": "forwardHidden",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 1941
+  },
+  "3": {
+    "basicblocks": 1184,
+    "calls": "",
+    "file": "forward_fw.cpp",
+    "fileloc": 85,
+    "instructions": 2229,
+    "loads": {
+      "G": 120,
+      "L": 96
+    },
+    "name": "updateHidden",
+    "stores": {
+      "G": 32
+    },
+    "total_instructions": 2229
+  },
+  "4": {
+    "basicblocks": 6,
+    "calls": "",
+    "file": "forward_fw.cpp",
+    "fileloc": 64,
+    "instructions": 7,
+    "name": "forwardOutput",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 7
+  }
+}

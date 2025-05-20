@@ -1,0 +1,4 @@
+dict set slaves CTRL {ports {img_pos_0 {type i_ap_none width 8} img_pos_1 {type i_ap_none width 8} img_pos_2 {type i_ap_none width 8} img_pos_3 {type i_ap_none width 8} img_pos_4 {type i_ap_none width 8} img_pos_5 {type i_ap_none width 8} img_pos_6 {type i_ap_none width 8} img_pos_7 {type i_ap_none width 8} img_neg_0 {type i_ap_none width 8} img_neg_1 {type i_ap_none width 8} img_neg_2 {type i_ap_none width 8} img_neg_3 {type i_ap_none width 8} img_neg_4 {type i_ap_none width 8} img_neg_5 {type i_ap_none width 8} img_neg_6 {type i_ap_none width 8} img_neg_7 {type i_ap_none width 8} last_sample {type i_ap_none width 32} sample_idx {type i_ap_none width 32} ap_start {type ap_ctrl width 1} ap_done {type ap_ctrl width 1} ap_ready {type ap_ctrl width 1} ap_idle {type ap_ctrl width 1}} mems {} has_ctrl 1}
+set datawidth 32
+set addrwidth 64
+set intr_clr_mode TOW

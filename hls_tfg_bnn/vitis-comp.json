@@ -1,0 +1,12 @@
+{
+  "name": "hls_tfg_bnn",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "train_step"
+  },
+  "template": "empty_hls_component"
+}

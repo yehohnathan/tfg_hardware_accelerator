@@ -1,0 +1,10 @@
+{
+  "workspaceRoot": "D:\\Proyectos\\tfg_hardware_accelerator",
+  "mapping": {
+    "src\\forward_fw.hpp": "hls_tfg_bnn",
+    "src\\forward_fw.cpp": "hls_tfg_bnn",
+    "data\\mnist_train_data.hpp": "hls_tfg_bnn",
+    "tb\\train_tb.cpp": "hls_tfg_bnn",
+    "data\\mnist_test_data.hpp": "hls_tfg_bnn"
+  }
+}

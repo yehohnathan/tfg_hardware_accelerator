@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "D:\\Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\common\\technology\\autopilot",
+      "-fhlstoplevel=train_step",
+      "-c",
+      "D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.cpp"
+    ],
+    "file": "D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.cpp"
+  },
+  {
+    "directory": "D:\\Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\include",
+      "-c",
+      "D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp"
+    ],
+    "file": "D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp"
+  }
+]

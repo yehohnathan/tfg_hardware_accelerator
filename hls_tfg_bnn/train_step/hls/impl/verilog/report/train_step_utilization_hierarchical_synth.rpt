@@ -1,0 +1,207 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Wed May 14 09:58:46 2025
+| Host         : Yehoh running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 6 -file ./report/train_step_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------------------------------------------------+----------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|                           Instance                           |                                Module                                | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++--------------------------------------------------------------+----------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| bd_0_wrapper                                                 |                                                                (top) |       1523 |       1459 |       0 |   64 | 1620 |      0 |      0 |         36 |
+|   bd_0_i                                                     |                                                                 bd_0 |       1523 |       1459 |       0 |   64 | 1620 |      0 |      0 |         36 |
+|     hls_inst                                                 |                                                      bd_0_hls_inst_0 |       1523 |       1459 |       0 |   64 | 1620 |      0 |      0 |         36 |
+|       (hls_inst)                                             |                                                      bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          0 |
+|       inst                                                   |                                           bd_0_hls_inst_0_train_step |       1523 |       1459 |       0 |   64 | 1620 |      0 |      0 |         36 |
+|         (inst)                                               |                                           bd_0_hls_inst_0_train_step |          2 |          2 |       0 |    0 |   92 |      0 |      0 |          0 |
+|         CTRL_s_axi_U                                         |                                bd_0_hls_inst_0_train_step_CTRL_s_axi |        260 |        260 |       0 |    0 |  247 |      0 |      0 |          0 |
+|         grp_forwardHidden_fu_325                             |                             bd_0_hls_inst_0_train_step_forwardHidden |        772 |        740 |       0 |   32 |  664 |      0 |      0 |          0 |
+|           (grp_forwardHidden_fu_325)                         |                             bd_0_hls_inst_0_train_step_forwardHidden |        124 |         92 |       0 |   32 |  264 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U17                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_109 |         55 |         55 |       0 |    0 |   31 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_156 |         55 |         55 |       0 |    0 |   31 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U18                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_110 |         55 |         55 |       0 |    0 |   31 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_155 |         55 |         55 |       0 |    0 |   31 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U19                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_111 |         55 |         55 |       0 |    0 |   31 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_154 |         55 |         55 |       0 |    0 |   31 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U20                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_112 |         56 |         56 |       0 |    0 |   31 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_153 |         56 |         56 |       0 |    0 |   31 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U21                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_113 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_152 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U22                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_114 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_151 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U23                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_115 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_150 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U24                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_116 |         32 |         32 |       0 |    0 |   23 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_149 |         32 |         32 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U25                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_117 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_148 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U26                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_118 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_147 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U27                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_119 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_146 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U28                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_120 |         32 |         32 |       0 |    0 |   23 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_145 |         32 |         32 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U29                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_121 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_144 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U30                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_122 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_143 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U31                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_123 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_142 |         31 |         31 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U32                    |           bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_124 |         32 |         32 |       0 |    0 |   23 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_141 |         32 |         32 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U1                                |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_125 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U10                               |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_126 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U11                               |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_127 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U12                               |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_128 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U13                               |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_129 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U14                               |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_130 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U15                               |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_131 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U16                               |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_132 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U2                                |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_133 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U3                                |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_134 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U4                                |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_135 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U5                                |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_136 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U6                                |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_137 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U7                                |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_138 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U8                                |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_139 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U9                                |                      bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_140 |          8 |          8 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         grp_forwardHidden_fu_409                             |                           bd_0_hls_inst_0_train_step_forwardHidden_0 |        516 |        484 |       0 |   32 |  568 |      0 |      0 |          0 |
+|           (grp_forwardHidden_fu_409)                         |                           bd_0_hls_inst_0_train_step_forwardHidden_0 |        124 |         92 |       0 |   32 |  200 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U17                    |               bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1 |         44 |         44 |       0 |    0 |   29 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_108 |         44 |         44 |       0 |    0 |   29 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U18                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_64 |         44 |         44 |       0 |    0 |   29 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_107 |         44 |         44 |       0 |    0 |   29 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U19                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_65 |         44 |         44 |       0 |    0 |   29 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_106 |         44 |         44 |       0 |    0 |   29 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U20                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_66 |         45 |         45 |       0 |    0 |   29 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_105 |         45 |         45 |       0 |    0 |   29 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U21                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_67 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_104 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U22                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_68 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_103 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U23                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_69 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_102 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U24                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_70 |         15 |         15 |       0 |    0 |   21 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_101 |         15 |         15 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U25                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_71 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |   bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_100 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U26                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_72 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |    bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_99 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U27                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_73 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |    bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_98 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U28                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_74 |         15 |         15 |       0 |    0 |   21 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |    bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_97 |         15 |         15 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U29                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_75 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |    bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_96 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U30                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_76 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |    bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_95 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U31                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_77 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |    bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_94 |         14 |         14 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           mac_muladd_8s_2s_10s_11_4_1_U32                    |            bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_78 |         15 |         15 |       0 |    0 |   21 |      0 |      0 |          0 |
+|             train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0_U |       bd_0_hls_inst_0_train_step_mac_muladd_8s_2s_10s_11_4_1_DSP48_0 |         15 |         15 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U1                                |                          bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U10                               |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_79 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U11                               |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_80 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U12                               |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_81 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U13                               |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_82 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U14                               |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_83 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U15                               |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_84 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U16                               |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_85 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U2                                |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_86 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U3                                |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_87 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U4                                |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_88 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U5                                |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_89 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U6                                |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_90 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U7                                |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_91 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U8                                |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_92 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|           mul_2s_8s_10_1_1_U9                                |                       bd_0_hls_inst_0_train_step_mul_2s_8s_10_1_1_93 |          3 |          3 |       0 |    0 |    0 |      0 |      0 |          0 |
+|         grp_train_step_Pipeline_VITIS_LOOP_136_1_fu_585      |      bd_0_hls_inst_0_train_step_train_step_Pipeline_VITIS_LOOP_136_1 |         41 |         41 |       0 |    0 |   23 |      0 |      0 |          0 |
+|           (grp_train_step_Pipeline_VITIS_LOOP_136_1_fu_585)  |      bd_0_hls_inst_0_train_step_train_step_Pipeline_VITIS_LOOP_136_1 |          7 |          7 |       0 |    0 |   21 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U           | bd_0_hls_inst_0_train_step_flow_control_loop_pipe_sequential_init_63 |         34 |         34 |       0 |    0 |    2 |      0 |      0 |          0 |
+|         grp_train_step_Pipeline_VITIS_LOOP_141_4_fu_623      |      bd_0_hls_inst_0_train_step_train_step_Pipeline_VITIS_LOOP_141_4 |          6 |          6 |       0 |    0 |    5 |      0 |      0 |          0 |
+|           (grp_train_step_Pipeline_VITIS_LOOP_141_4_fu_623)  |      bd_0_hls_inst_0_train_step_train_step_Pipeline_VITIS_LOOP_141_4 |          0 |          0 |       0 |    0 |    3 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U           |    bd_0_hls_inst_0_train_step_flow_control_loop_pipe_sequential_init |          6 |          6 |       0 |    0 |    2 |      0 |      0 |          0 |
+|         grp_updateHidden_fu_493                              |                              bd_0_hls_inst_0_train_step_updateHidden |         93 |         93 |       0 |    0 |    3 |      0 |      0 |         32 |
+|           (grp_updateHidden_fu_493)                          |                              bd_0_hls_inst_0_train_step_updateHidden |          1 |          1 |       0 |    0 |    3 |      0 |      0 |          0 |
+|           mac_muladd_8s_8s_2s_12_4_1_U100                    |                bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_62 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U101                    |              bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_1 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_61 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U102                    |              bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_2 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_60 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U103                    |              bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_3 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_59 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U104                    |              bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_4 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_58 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U105                    |              bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_5 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_57 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U106                    |              bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_6 |          9 |          9 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_56 |          9 |          9 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U75                     |              bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_7 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_55 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U76                     |              bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_8 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_54 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U77                     |              bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_9 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_53 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U78                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_10 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_52 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U79                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_11 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_51 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U80                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_12 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_50 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U81                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_13 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_49 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U82                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_14 |          9 |          9 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_48 |          9 |          9 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U83                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_15 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_47 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U84                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_16 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_46 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U85                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_17 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_45 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U86                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_18 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_44 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U87                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_19 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_43 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U88                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_20 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_42 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U89                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_21 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_41 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U90                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_22 |          9 |          9 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_40 |          9 |          9 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U91                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_23 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_39 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U92                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_24 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_38 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U93                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_25 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_37 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U94                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_26 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_36 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U95                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_27 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_35 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U96                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_28 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_34 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U97                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_29 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_33 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U98                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_30 |          9 |          9 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |     bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_32 |          9 |          9 |       0 |    0 |    0 |      0 |      0 |          1 |
+|           mac_muladd_8s_8s_2s_12_4_1_U99                     |             bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_31 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|             train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0_U  |        bd_0_hls_inst_0_train_step_mac_muladd_8s_8s_2s_12_4_1_DSP48_0 |          2 |          2 |       0 |    0 |    0 |      0 |      0 |          1 |
+|         mul_32ns_34ns_42_2_1_U199                            |                      bd_0_hls_inst_0_train_step_mul_32ns_34ns_42_2_1 |         25 |         25 |       0 |    0 |   18 |      0 |      0 |          4 |
++--------------------------------------------------------------+----------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+
+

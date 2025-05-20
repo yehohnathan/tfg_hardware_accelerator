@@ -1,0 +1,135 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:47:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="forwardHidden" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:48:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="forwardHidden" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=W1 complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:49:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="forwardHidden" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:65:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="forwardOutput" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=hidden complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:66:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="forwardOutput" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=W2 complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:67:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="forwardOutput" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:88:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="updateHidden" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:89:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="updateHidden" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=W1 complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:90:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="updateHidden" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=train_step" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:113:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=img_pos bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:114:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=img_neg bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:115:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=last_sample bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:116:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=sample_idx bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:117:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:118:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_vld port=leds_port" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:92:19" msg_body="Loop 'VITIS_LOOP_92_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_92_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:94:26" msg_body="Loop 'VITIS_LOOP_94_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_94_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:70:19" msg_body="Loop 'VITIS_LOOP_70_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_70_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:52:19" msg_body="Loop 'VITIS_LOOP_52_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_52_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:55:26" msg_body="Loop 'VITIS_LOOP_55_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_55_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:87:0" msg_body="Unrolling loop 'VITIS_LOOP_92_1' (../src/forward_fw.cpp:92:19) in function 'updateHidden' completely with a factor of 4">
+        <args Factor="4" LoopLoc="../src/forward_fw.cpp:92:19" LoopName="VITIS_LOOP_92_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:87:0" msg_body="Unrolling loop 'VITIS_LOOP_94_2' (../src/forward_fw.cpp:94:26) in function 'updateHidden' completely with a factor of 8">
+        <args Factor="8" LoopLoc="../src/forward_fw.cpp:94:26" LoopName="VITIS_LOOP_94_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:64:0" msg_body="Unrolling loop 'VITIS_LOOP_70_1' (../src/forward_fw.cpp:70:19) in function 'forwardOutput' completely with a factor of 1">
+        <args Factor="1" LoopLoc="../src/forward_fw.cpp:70:19" LoopName="VITIS_LOOP_70_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:46:0" msg_body="Unrolling loop 'VITIS_LOOP_52_1' (../src/forward_fw.cpp:52:19) in function 'forwardHidden' completely with a factor of 4">
+        <args Factor="4" LoopLoc="../src/forward_fw.cpp:52:19" LoopName="VITIS_LOOP_52_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:46:0" msg_body="Unrolling loop 'VITIS_LOOP_55_2' (../src/forward_fw.cpp:55:26) in function 'forwardHidden' completely with a factor of 8">
+        <args Factor="8" LoopLoc="../src/forward_fw.cpp:55:26" LoopName="VITIS_LOOP_55_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:46:0" msg_body="Inlining function 'signum(ap_fixed&lt;12, 12, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'forwardHidden(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)'">
+        <args Callee="signum(ap_fixed&lt;12, 12, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File ../src/forward_fw.cpp Line 27 Column 0" Caller="forwardHidden(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)" Caller-DebugLoc="File ../src/forward_fw.cpp Line 46 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:17:0" msg_body="Applying array_partition to 'W1': Complete partitioning on dimension 2.">
+        <args Dim="2" Mode="Complete" UOName="W1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:121:0" msg_body="Applying array_partition to '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E10hidden_neg': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E10hidden_neg"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:121:0" msg_body="Applying array_partition to '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E10hidden_pos': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E10hidden_pos"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:111:0" msg_body="Applying array_partition to 'img_pos': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="img_pos"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:111:0" msg_body="Applying array_partition to 'img_neg': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="img_neg"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:111:0" msg_body="Aggregating bram variable 'W2_out' with compact=bit mode in 8-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="8" HwTyName="bram" Name="W2_out"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:111:0" msg_body="Aggregating bram variable 'W1_out' with compact=bit mode in 8-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="8" HwTyName="bram" Name="W1_out"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:137:27" msg_body="Loop 'VITIS_LOOP_137_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_137_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:111:0" msg_body="Unrolling loop 'VITIS_LOOP_137_2' (../src/forward_fw.cpp:137:27) in function 'train_step' completely with a factor of 8">
+        <args Factor="8" LoopLoc="../src/forward_fw.cpp:137:27" LoopName="VITIS_LOOP_137_2"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:122:0" msg_body="Automatically partitioning small array '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_pos' completely based on array size.">
+        <args Value="_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_pos"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:122:0" msg_body="Automatically partitioning small array '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_neg' completely based on array size.">
+        <args Value="_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_neg"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:122:0" msg_body="array_partition dim=1 type=complete  variable=_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_neg 1 train_step ../src/forward_fw.cpp:122:0 train_step(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, int, int, ap_uint&lt;4&gt; volatile&amp;, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [8], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [4])::out_neg">
+        <args PragmaFunction="train_step" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_neg" PragmaType="array_partition" VarName="train_step(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, int, int, ap_uint&lt;4&gt; volatile&amp;, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [8], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [4])::out_neg" varLoc="../src/forward_fw.cpp:122:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:122:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'train_step(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, int, int, ap_uint&lt;4&gt; volatile&amp;, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [8], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [4])::out_neg' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="train_step(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, int, int, ap_uint&lt;4&gt; volatile&amp;, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [8], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [4])::out_neg" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:122:0" msg_body="array_partition dim=1 type=complete  variable=_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_pos 1 train_step ../src/forward_fw.cpp:122:0 train_step(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, int, int, ap_uint&lt;4&gt; volatile&amp;, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [8], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [4])::out_pos">
+        <args PragmaFunction="train_step" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_pos" PragmaType="array_partition" VarName="train_step(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, int, int, ap_uint&lt;4&gt; volatile&amp;, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [8], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [4])::out_pos" varLoc="../src/forward_fw.cpp:122:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:122:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'train_step(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, int, int, ap_uint&lt;4&gt; volatile&amp;, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [8], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [4])::out_pos' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="train_step(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, int, int, ap_uint&lt;4&gt; volatile&amp;, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [8], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [4])::out_pos" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:122:0" msg_body="Applying array_partition to '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_pos': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_pos"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:122:0" msg_body="Applying array_partition to '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_neg': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_neg"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

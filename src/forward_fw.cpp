@@ -1,67 +1,51 @@
-#include <ap_fixed.h>
-#include <ap_int.h>
-#include <cstdint>
 #include "forward_fw.hpp"
 
-
 // ---------------------------------------------------------------------------
-// TIPOS Y CONSTANTES
+// Definición de variables globales de pesos y LEDs (si se quisieran usar)
 // ---------------------------------------------------------------------------
-// bin_t = pesos/activaciones binarias; acc_t = acumuladores (punto fijo)
-typedef ap_fixed<8,8>   bin_t;   // 8 bits totales, 8 bits enteros (±128)
-typedef ap_fixed<12,12> acc_t;   // 12 bits totales, 12 bits enteros (±2048)
-
-// Aprendizaje (Forward-Forward local)
-const bin_t ALPHA = 1;           // tasa de aprendizaje fija
-
-// Puerto LED (simulado en HLS; se conectará a AXI-GPIO en Vivado)
-volatile ap_uint<4> leds;
-
-// Matrices de pesos (inicializadas externamente a +1/-1); se coloca preferentemente en BRAM
 bin_t W1[N_HIDDEN][N_INPUT];
 bin_t W2[N_OUTPUT][N_HIDDEN];
- 
+
 // ---------------------------------------------------------------------------
-// FUNCIONES AUXILIARES
+// Función de signo: binariza a +1 o -1
 // ---------------------------------------------------------------------------
-// Función de signo: devuelve +1 o -1
 bin_t signum(acc_t x) {
     return (x >= 0) ? (bin_t)1 : (bin_t)-1;
 }
 
-// Cálculo de bondad de una capa: suma de cuadrados de activaciones
+// ---------------------------------------------------------------------------
+// Calcula la "bondad" (goodness) de un vector binario: suma de cuadrados
+// ---------------------------------------------------------------------------
 acc_t computeGoodness(const bin_t vec[], int size) {
-    acc_t sq = 0;
+    acc_t acc = 0;
     for(int i = 0; i < size; i++) {
-        #pragma HLS pipeline II=1
-        acc_t v = (acc_t)vec[i];
-        sq += v * v;
+        acc += (acc_t)vec[i] * (acc_t)vec[i];
     }
-    return sq;
+    return acc;
 }
 
 // ---------------------------------------------------------------------------
-// PROPAGACIÓN HACIA ADELANTE
+// Propagación hacia adelante: capa oculta
 // ---------------------------------------------------------------------------
-// Forward propagación: capa oculta
-void forwardHidden(const bin_t input[N_INPUT], bin_t hidden[N_HIDDEN]) {
-    // Para cada neurona oculta...
-    #pragma HLS pipeline II=1       // Pipeline SOLO en bucle exterior -> evita warning HLS 211-200
+void forwardHidden(const bin_t input[N_INPUT],
+                   bin_t       hidden[N_HIDDEN]) {
+    // Para cada neurona j de la capa oculta...
     for(int j = 0; j < N_HIDDEN; j++) {
         acc_t sum = 0;
-        // Producto punto: sum += input[i] * W1[j][i]
+        // Producto punto input · W1[j]
         for(int i = 0; i < N_INPUT; i++) {
             sum += (acc_t)input[i] * (acc_t)W1[j][i];
         }
-        // Activación binaria (+1/-1)
+        // Binariza la salida
         hidden[j] = signum(sum);
     }
 }
 
-// Forward propagación: capa de salida
-void forwardOutput(const bin_t hidden[N_HIDDEN], bin_t output[N_OUTPUT]) {
-    // (En este caso N_OUTPUT=1, pero se generaliza para otras pruebas)
-    #pragma HLS pipeline II=1       // Lo mismo que en la capa oculta
+// ---------------------------------------------------------------------------
+// Propagación hacia adelante: capa de salida
+// ---------------------------------------------------------------------------
+void forwardOutput(const bin_t hidden[N_HIDDEN],
+                   bin_t       output[N_OUTPUT]) {
     for(int k = 0; k < N_OUTPUT; k++) {
         acc_t sum = 0;
         for(int j = 0; j < N_HIDDEN; j++) {
@@ -72,85 +56,85 @@ void forwardOutput(const bin_t hidden[N_HIDDEN], bin_t output[N_OUTPUT]) {
 }
 
 // ---------------------------------------------------------------------------
-// ACTUALIZACIÓN LOCAL (Forward-Forward)
+// Actualización local de pesos (Forward-Forward)
+// delta = out_pos - out_neg
+// W_new = sign( W_old + α * delta * input )
 // ---------------------------------------------------------------------------
-// Actualización de pesos (regla de gradiente local Forward-Forward)
-// Ejemplo: W_new = sign(W_old + ALPHA * delta * input)
-// Donde delta = (salida_pos - salida_neg) para cada neurona
 void updateHidden(const bin_t input[N_INPUT],
                   const bin_t out_pos[N_HIDDEN],
                   const bin_t out_neg[N_HIDDEN]) {
-    #pragma HLS pipeline II=1
+    const bin_t ALPHA = 1;  // tasa de aprendizaje
     for(int j = 0; j < N_HIDDEN; j++) {
         bin_t delta = out_pos[j] - out_neg[j];
         for(int i = 0; i < N_INPUT; i++) {
-            acc_t w_new = (acc_t)W1[j][i] + ALPHA * (acc_t)delta * (acc_t)input[i];
-            // Re-binarizar: solo +1 o -1
+            acc_t w_new = (acc_t)W1[j][i]
+                          + ALPHA * (acc_t)delta * (acc_t)input[i];
+            // Rebinariza a ±1
             W1[j][i] = (w_new >= 0) ? (bin_t)1 : (bin_t)-1;
         }
     }
 }
 
 // ---------------------------------------------------------------------------
-// FUNCIÓN TOP-LEVEL (entrenamiento paso a paso)
+// Actualización local de pesos (Forward-Forward) para W2
+// delta = out_pos - out_neg
+// W2_new = sign( W2_old + α * delta * hidden )
 // ---------------------------------------------------------------------------
-void train_step(const bin_t img_pos[N_INPUT],
-                const bin_t img_neg[N_INPUT],
-                int         last_sample,
-                bin_t       W1_out[N_HIDDEN][N_INPUT],
-                bin_t       W2_out[N_OUTPUT][N_HIDDEN],
-                int         sample_idx) {
-    // --- Interfaz AXI4-Lite control bundle para inputs y control ---
-    #pragma HLS INTERFACE mode=s_axilite port=img_pos     bundle=CTRL
-    #pragma HLS INTERFACE mode=s_axilite port=img_neg     bundle=CTRL
-    #pragma HLS INTERFACE mode=s_axilite port=last_sample bundle=CTRL
-    #pragma HLS INTERFACE mode=s_axilite port=sample_idx  bundle=CTRL
-    #pragma HLS INTERFACE mode=s_axilite port=return      bundle=CTRL
+void updateOutput(const bin_t hidden[N_HIDDEN],
+                  const bin_t out_pos[N_OUTPUT],
+                  const bin_t out_neg[N_OUTPUT]) {
+    const bin_t ALPHA = 1;
+    for(int k = 0; k < N_OUTPUT; k++) {
+        bin_t delta = out_pos[k] - out_neg[k];
+        for(int j = 0; j < N_HIDDEN; j++) {
+            acc_t w_new = (acc_t)W2[k][j]
+                          + ALPHA * (acc_t)delta * (acc_t)hidden[j];
+            W2[k][j] = (w_new >= 0) ? (bin_t)1 : (bin_t)-1;
+        }
+    }
+}
 
-    // --- Directiva para exponer 'leds' como puerto simple sin handshake ---
-    #pragma HLS INTERFACE ap_none port=leds
+// ---------------------------------------------------------------------------
+// Top-level train_step
+//   - img_pos: muestra real del dataset
+//   - img_neg: muestra aleatoria de ruido
+//   - sample_idx: índice de la iteración actual
+// ---------------------------------------------------------------------------
+void train_step(const uint8_t img_pos[N_INPUT],
+                const uint8_t img_neg[N_INPUT],
+                int           sample_idx) {
+    // Mapeo de memorias globales a AXI-Master (pesos externos)
+    #pragma HLS INTERFACE m_axi port=W1 offset=slave bundle=WEIGHTS depth=N_HIDDEN*N_INPUT
+    #pragma HLS INTERFACE m_axi port=W2 offset=slave bundle=WEIGHTS depth=N_OUTPUT*N_HIDDEN
 
-    // --- AXI master for weights ---
-    #pragma HLS INTERFACE mode=m_axi port=W1_out offset=slave depth=N_HIDDEN*N_INPUT bundle=WEIGHTS
-    #pragma HLS INTERFACE mode=m_axi port=W2_out offset=slave depth=N_OUTPUT*N_HIDDEN bundle=WEIGHTS
+    // Interfaces de control por AXI-Lite
+    #pragma HLS INTERFACE s_axilite port=img_pos     bundle=CTRL
+    #pragma HLS INTERFACE s_axilite port=img_neg     bundle=CTRL
+    #pragma HLS INTERFACE s_axilite port=sample_idx  bundle=CTRL
+    #pragma HLS INTERFACE s_axilite port=return      bundle=CTRL
 
-    // --- Mantener binding de BRAM en scope de función ---
-    #pragma HLS bind_storage variable=W1 type=RAM_1P
-    #pragma HLS bind_storage variable=W2 type=RAM_1P
-    
-    // --- Paraleliza etapas
-    #pragma HLS DATAFLOW
+    // 1) Binarizar internamente los vectores de entrada
+    bin_t in_pos[N_INPUT], in_neg[N_INPUT];
+    for(int i = 0; i < N_INPUT; i++) {
+        in_pos[i] = (img_pos[i] > 127) ? (bin_t)1 : (bin_t)-1;
+        in_neg[i] = (img_neg[i] > 127) ? (bin_t)1 : (bin_t)-1;
+    }
 
-    // --- Buffers internos ---
-    static bin_t hidden_pos[N_HIDDEN], hidden_neg[N_HIDDEN];
-    static bin_t out_pos[N_OUTPUT],    out_neg[N_OUTPUT];
+    // Buffers temporales en BRAM
+    bin_t hidden_pos[N_HIDDEN], hidden_neg[N_HIDDEN];
+    bin_t out_pos[N_OUTPUT],    out_neg[N_OUTPUT];
 
     // --- Fase positiva ---
-    forwardHidden(img_pos, hidden_pos);
+    forwardHidden(in_pos,    hidden_pos);
     forwardOutput(hidden_pos, out_pos);
 
     // --- Fase negativa ---
-    forwardHidden(img_neg, hidden_neg);
+    forwardHidden(in_neg,    hidden_neg);
     forwardOutput(hidden_neg, out_neg);
 
-    // --- Actualiza pesos ---
-    updateHidden(img_pos, hidden_pos, hidden_neg);
+    // --- Actualiza los pesos de la capa oculta ---
+    updateHidden(in_pos,    out_pos, out_neg);
+    updateOutput(hidden_pos, out_pos, out_neg);
 
-    // --- Después de actualizar W1 y W2, copiarlos a las salidas AXI-Master ---
-    for(int j=0; j < N_HIDDEN; j++)
-        for(int i=0; i<N_INPUT; i++)
-            W1_out[j][i] = W1[j][i];
-
-    for(int k=0; k < N_OUTPUT; k++)
-        for(int j=0; j < N_HIDDEN; j++)
-            W2_out[k][j] = W2[k][j];
-
-    // --- Actualiza LEDs para mostrar progreso ---
-    // Mapea sample_idx [0..NUM_IMAGES-1] a 4 bits [0..15]
-    unsigned int level = (sample_idx * 15) / (NUM_IMAGES - 1);
-    leds = (uint32_t)level;             // mapeo directo [0..15]
-
-    // Al final de todas las muestras, parpadeo
-    if (last_sample)
-        leds = (uint32_t)(~level) & 0xF;        // evita error de tipo :contentReference[oaicite:12]{index=12}
+    // (podrías añadir aquí updateHidden para W2 de forma análoga)
 }

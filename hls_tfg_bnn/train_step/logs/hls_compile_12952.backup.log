@@ -1,0 +1,382 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.cpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.hpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file 'D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:\Proyectos\tfg_hardware_accelerator\data\mnist_preparation.py' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file 'D:/Proyectos/tfg_hardware_accelerator/data/mnist_preparation.py' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding test bench file 'D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=D:/Proyectos/tfg_hardware_accelerator/data/mnist_test_data.hpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'D:/Proyectos/tfg_hardware_accelerator/data/mnist_test_data.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=D:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'D:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=train_step' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7a100tcsg324-1' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(5)
+WARNING: [HLS 200-40] Skipped source file 'mnist_preparation.py'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 3.302 seconds; current allocated memory: 264.922 MB.
+INFO: [HLS 200-10] Analyzing design file '../src/forward_fw.cpp' ... 
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (../src/forward_fw.cpp:117:15)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables (../src/forward_fw.cpp:118:18)
+Resolution: For help on HLS 214-111 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-111.html
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (../src/forward_fw.cpp:134:17)
+Resolution: For help on HLS 214-113 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-113.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (../src/forward_fw.cpp:114:9)
+Resolution: For help on HLS 214-114 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file ../src/forward_fw.cpp
+Resolution: For help on HLS 200-471 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-471.html
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.759 seconds; current allocated memory: 268.137 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 3,579 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,145 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,263 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,139 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,105 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,104 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,104 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,104 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,104 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,104 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,104 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,104 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,119 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,119 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,128 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,151 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_81_1' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:81:19)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_83_2' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:83:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_62_1' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:62:19)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_47_1' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:47:19)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_50_2' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:50:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_81_1' (../src/forward_fw.cpp:81:19) in function 'updateHidden' completely with a factor of 4 (../src/forward_fw.cpp:79:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_83_2' (../src/forward_fw.cpp:83:26) in function 'updateHidden' completely with a factor of 8 (../src/forward_fw.cpp:79:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_62_1' (../src/forward_fw.cpp:62:19) in function 'forwardOutput' completely with a factor of 1 (../src/forward_fw.cpp:59:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_47_1' (../src/forward_fw.cpp:47:19) in function 'forwardHidden' completely with a factor of 4 (../src/forward_fw.cpp:44:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_50_2' (../src/forward_fw.cpp:50:26) in function 'forwardHidden' completely with a factor of 8 (../src/forward_fw.cpp:44:0)
+INFO: [HLS 214-178] Inlining function 'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../src/forward_fw.cpp:44:0)
+INFO: [HLS 214-449] Automatically partitioning array '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEE10hidden_pos' dimension 1 completely based on constant index. (../src/forward_fw.cpp:117:0)
+INFO: [HLS 214-449] Automatically partitioning array '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEE7out_pos' dimension 1 completely based on constant index. (../src/forward_fw.cpp:118:0)
+INFO: [HLS 214-449] Automatically partitioning array '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEE10hidden_neg' dimension 1 completely based on constant index. (../src/forward_fw.cpp:117:0)
+INFO: [HLS 214-449] Automatically partitioning array '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEE7out_neg' dimension 1 completely based on constant index. (../src/forward_fw.cpp:118:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array 'W1' due to pipeline pragma (../src/forward_fw.cpp:46:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&)::hidden_neg' due to pipeline pragma (../src/forward_fw.cpp:117:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&)::hidden_pos' due to pipeline pragma (../src/forward_fw.cpp:117:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&)::out_neg' due to pipeline pragma (../src/forward_fw.cpp:118:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&)::out_pos' due to pipeline pragma (../src/forward_fw.cpp:118:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEE7out_pos': Complete partitioning on dimension 1. (../src/forward_fw.cpp:118:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEE7out_neg': Complete partitioning on dimension 1. (../src/forward_fw.cpp:118:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEE10hidden_pos': Complete partitioning on dimension 1. (../src/forward_fw.cpp:117:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEE10hidden_neg': Complete partitioning on dimension 1. (../src/forward_fw.cpp:117:0)
+INFO: [HLS 214-248] Applying array_partition to 'W1': Complete partitioning on dimension 2. (../src/forward_fw.cpp:18:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.812 seconds; current allocated memory: 270.141 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 270.141 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.196 seconds; current allocated memory: 274.457 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 276.617 MB.
+INFO: [XFORM 203-712] Applying dataflow to function 'train_step' (../src/forward_fw.cpp:94:1), detected/extracted 3 process function(s): 
+	 'Block_entry_img_pos_rd_hidden_neg_fb_proc'
+	 'Block_entry_proc.1'
+	 'Block_entry_leds_port_wr_proc'.
+INFO: [XFORM 203-11] Balancing expressions in function 'forwardHidden.1' (../src/forward_fw.cpp:26:19)...20 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'forwardHidden' (../src/forward_fw.cpp:26:19)...20 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.229 seconds; current allocated memory: 298.246 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.218 seconds; current allocated memory: 344.793 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'train_step' ...
+WARNING: [SYN 201-103] Legalizing function name 'forwardHidden.1' to 'forwardHidden_1'.
+WARNING: [SYN 201-103] Legalizing function name 'Block_entry_proc.1' to 'Block_entry_proc_1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_0' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_1' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_2' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_3' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_4' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_5' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_6' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_7' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_0' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_1' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_2' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_3' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_4' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_5' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_6' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_1P': 'W1_7' does not exist or is optimized away.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'forwardHidden' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_50) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_48) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_46) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_45) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_28) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_42) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_34) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_30) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=sum_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'forwardHidden'.
+WARNING: [HLS 200-885] The II Violation in module 'forwardHidden' (function 'forwardHidden'): Unable to schedule 'load' operation 8 bit ('img_pos_load_9', ../src/forward_fw.cpp:51) on array 'img_pos' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'img_pos'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'forwardHidden' (function 'forwardHidden'): Unable to schedule 'load' operation 2 bit ('W1_2_load_7', ../src/forward_fw.cpp:51) on array 'W1_2' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'W1_2'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'forwardHidden' (function 'forwardHidden'): Unable to schedule 'load' operation 2 bit ('W1_2_load_8', ../src/forward_fw.cpp:51) on array 'W1_2' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'W1_2'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'forwardHidden' (function 'forwardHidden'): Unable to schedule 'load' operation 8 bit ('img_pos_load_8', ../src/forward_fw.cpp:51) on array 'img_pos' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'img_pos'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'forwardHidden' (function 'forwardHidden'): Unable to schedule 'load' operation 8 bit ('img_pos_load_13', ../src/forward_fw.cpp:51) on array 'img_pos' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'img_pos'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 8, Depth = 14, function 'forwardHidden'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.454 seconds; current allocated memory: 350.723 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.187 seconds; current allocated memory: 351.902 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'forwardHidden_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=sum_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln51) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'forwardHidden.1'.
+WARNING: [HLS 200-885] The II Violation in module 'forwardHidden_1' (function 'forwardHidden.1'): Unable to schedule 'load' operation 8 bit ('img_neg_load_2', ../src/forward_fw.cpp:51) on array 'img_neg' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'img_neg'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'forwardHidden_1' (function 'forwardHidden.1'): Unable to schedule 'load' operation 2 bit ('W1_2_load_4', ../src/forward_fw.cpp:51) on array 'W1_2' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'W1_2'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'forwardHidden_1' (function 'forwardHidden.1'): Unable to schedule 'load' operation 2 bit ('W1_2_load_5', ../src/forward_fw.cpp:51) on array 'W1_2' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'W1_2'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'forwardHidden_1' (function 'forwardHidden.1'): Unable to schedule 'load' operation 8 bit ('img_neg_load_1', ../src/forward_fw.cpp:51) on array 'img_neg' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'img_neg'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'forwardHidden_1' (function 'forwardHidden.1'): Unable to schedule 'load' operation 8 bit ('img_neg_load_6', ../src/forward_fw.cpp:51) on array 'img_neg' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'img_neg'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 8, Depth = 14, function 'forwardHidden.1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.82 seconds; current allocated memory: 353.938 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 354.176 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'updateHidden' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_30) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_28) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln84) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'updateHidden'.
+WARNING: [HLS 200-880] The II Violation in module 'updateHidden' (function 'updateHidden'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation 0 bit ('0_write_ln86', ../src/forward_fw.cpp:86) of variable 'select_ln86', ../src/forward_fw.cpp:86 on array 'W1_0' and 'load' operation 2 bit ('W1_0_load', ../src/forward_fw.cpp:84) on array 'W1_0'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'updateHidden' (function 'updateHidden'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation 0 bit ('0_write_ln86', ../src/forward_fw.cpp:86) of variable 'select_ln86', ../src/forward_fw.cpp:86 on array 'W1_0' and 'load' operation 2 bit ('W1_0_load', ../src/forward_fw.cpp:84) on array 'W1_0'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-885] The II Violation in module 'updateHidden' (function 'updateHidden'): Unable to schedule 'load' operation 8 bit ('img_pos_load_2', ../src/forward_fw.cpp:84) on array 'img_pos' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'img_pos'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'updateHidden' (function 'updateHidden'): Unable to schedule 'load' operation 8 bit ('img_pos_load_3', ../src/forward_fw.cpp:84) on array 'img_pos' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'img_pos'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'updateHidden' (function 'updateHidden'): Unable to schedule 'load' operation 8 bit ('img_pos_load_3', ../src/forward_fw.cpp:84) on array 'img_pos' due to limited memory ports (II = 11). Please consider using a memory core with more ports or partitioning the array 'img_pos'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'updateHidden' (function 'updateHidden'): Unable to schedule 'load' operation 2 bit ('W1_7_load_3', ../src/forward_fw.cpp:84) on array 'W1_7' due to limited memory ports (II = 13). Please consider using a memory core with more ports or partitioning the array 'W1_7'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'updateHidden' (function 'updateHidden'): Unable to schedule 'load' operation 2 bit ('W1_0_load_1', ../src/forward_fw.cpp:84) on array 'W1_0' due to limited memory ports (II = 14). Please consider using a memory core with more ports or partitioning the array 'W1_0'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 15, Depth = 15, function 'updateHidden'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 7.039 seconds; current allocated memory: 356.816 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.146 seconds; current allocated memory: 357.324 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_entry_img_pos_rd_hidden_neg_fb_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.146 seconds; current allocated memory: 357.602 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 357.953 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_entry_proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 358.145 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 358.402 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_entry_leds_port_wr_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 358.613 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 358.664 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'train_step' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 358.820 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 358.988 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'forwardHidden' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'forwardHidden' pipeline 'forwardHidden' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_10s_11_4_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_11s_11_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_2s_10_1_1': 12 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forwardHidden'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.313 seconds; current allocated memory: 362.773 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'forwardHidden_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'forwardHidden_1' pipeline 'forwardHidden.1' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_10s_11_4_1': 12 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_11s_11_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_2s_10_1_1': 12 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forwardHidden_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.456 seconds; current allocated memory: 368.422 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'updateHidden' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_3s_2s_10_4_1': 32 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'updateHidden'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.87 seconds; current allocated memory: 373.992 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_entry_img_pos_rd_hidden_neg_fb_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'train_step_ap_fixed_const_ap_fixed_const_int_int_ap_uint_volatile_hidden_pos_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'train_step_ap_fixed_const_ap_fixed_const_int_int_ap_uint_volatile_hidden_pos_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'train_step_ap_fixed_const_ap_fixed_const_int_int_ap_uint_volatile_hidden_pos_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'train_step_ap_fixed_const_ap_fixed_const_int_int_ap_uint_volatile_hidden_pos' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'train_step_ap_fixed_const_ap_fixed_const_int_int_ap_uint_volatile_hidden_neg_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'train_step_ap_fixed_const_ap_fixed_const_int_int_ap_uint_volatile_hidden_neg_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'train_step_ap_fixed_const_ap_fixed_const_int_int_ap_uint_volatile_hidden_neg_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'train_step_ap_fixed_const_ap_fixed_const_int_int_ap_uint_volatile_hidden_neg' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_entry_img_pos_rd_hidden_neg_fb_proc'.
+INFO: [RTMG 210-278] Implementing memory 'train_step_Block_entry_img_pos_rd_hidden_neg_fb_proc_W1_0_RAM_1P_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.548 seconds; current allocated memory: 380.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_entry_proc_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_34ns_65_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_entry_proc_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 382.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_entry_leds_port_wr_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_entry_leds_port_wr_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.119 seconds; current allocated memory: 382.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'train_step' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'train_step/img_pos' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'train_step/img_neg' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'train_step/last_sample' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'train_step/sample_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'train_step/leds_port' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'leds_port' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'train_step' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'img_pos', 'img_neg', 'last_sample', 'sample_idx' and 'return' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step'.
+INFO: [RTMG 210-285] Implementing FIFO 'div_loc_channel_U(train_step_fifo_w4_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'tobool_loc_channel_U(train_step_fifo_w1_d2_S)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.195 seconds; current allocated memory: 383.152 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.657 seconds; current allocated memory: 385.855 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.007 seconds; current allocated memory: 393.410 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for train_step.
+INFO: [VLOG 209-307] Generating Verilog RTL for train_step.
+INFO: [HLS 200-789] **** Estimated Fmax: 145.77 MHz
+INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 2 seconds. Total elapsed time: 40.897 seconds; peak allocated memory: 394.293 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 46s
