@@ -55084,22 +55084,18 @@ using acc_t = ap_fixed<12,12>;
 
 
 
-extern bin_t W1[N_HIDDEN][N_INPUT];
-extern bin_t W2[N_OUTPUT][N_HIDDEN];
-
-
-
-
 bin_t signum(acc_t x);
-void forwardHidden (const bin_t input[N_INPUT], bin_t hidden[N_HIDDEN]);
-void forwardOutput (const bin_t hidden[N_HIDDEN], bin_t output[N_OUTPUT]);
+void forwardHidden (const bin_t input[N_INPUT], bin_t hidden[N_HIDDEN], bin_t W1[N_HIDDEN][N_INPUT]);
+void forwardOutput (const bin_t hidden[N_HIDDEN], bin_t output[N_OUTPUT], bin_t W2[N_OUTPUT][N_HIDDEN]);
 acc_t computeGoodness(const bin_t vec[], int size);
 void updateHidden (const bin_t input[N_INPUT],
                     const bin_t out_pos[N_HIDDEN],
-                    const bin_t out_neg[N_HIDDEN]);
+                    const bin_t out_neg[N_HIDDEN],
+                    bin_t W1[N_HIDDEN][N_INPUT]);
 void updateOutput (const bin_t hidden[N_HIDDEN],
                     const bin_t out_pos[N_OUTPUT],
-                    const bin_t out_neg[N_OUTPUT]);
+                    const bin_t out_neg[N_OUTPUT],
+                    bin_t W2[N_OUTPUT][N_HIDDEN]);
 
 
 
@@ -55109,14 +55105,10 @@ void updateOutput (const bin_t hidden[N_HIDDEN],
 
 void train_step(const uint8_t img_pos[N_INPUT],
                 const uint8_t img_neg[N_INPUT],
-                int sample_idx);
+                int sample_idx,
+                bin_t W1[N_HIDDEN][N_INPUT],
+                bin_t W2[N_OUTPUT][N_HIDDEN]);
 # 2 "D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.cpp" 2
-
-
-
-
-bin_t W1[N_HIDDEN][N_INPUT];
-bin_t W2[N_OUTPUT][N_HIDDEN];
 
 
 
@@ -55140,7 +55132,8 @@ acc_t computeGoodness(const bin_t vec[], int size) {
 
 
 void forwardHidden(const bin_t input[N_INPUT],
-                   bin_t hidden[N_HIDDEN]) {
+                   bin_t hidden[N_HIDDEN],
+                   bin_t W1[N_HIDDEN][N_INPUT]) {
 
     for(int j = 0; j < N_HIDDEN; j++) {
         acc_t sum = 0;
@@ -55157,7 +55150,8 @@ void forwardHidden(const bin_t input[N_INPUT],
 
 
 void forwardOutput(const bin_t hidden[N_HIDDEN],
-                   bin_t output[N_OUTPUT]) {
+                   bin_t output[N_OUTPUT],
+                   bin_t W2[N_OUTPUT][N_HIDDEN]) {
     for(int k = 0; k < N_OUTPUT; k++) {
         acc_t sum = 0;
         for(int j = 0; j < N_HIDDEN; j++) {
@@ -55174,7 +55168,8 @@ void forwardOutput(const bin_t hidden[N_HIDDEN],
 
 void updateHidden(const bin_t input[N_INPUT],
                   const bin_t out_pos[N_HIDDEN],
-                  const bin_t out_neg[N_HIDDEN]) {
+                  const bin_t out_neg[N_HIDDEN],
+                  bin_t W1[N_HIDDEN][N_INPUT]) {
     const bin_t ALPHA = 1;
     for(int j = 0; j < N_HIDDEN; j++) {
         bin_t delta = out_pos[j] - out_neg[j];
@@ -55194,7 +55189,8 @@ void updateHidden(const bin_t input[N_INPUT],
 
 void updateOutput(const bin_t hidden[N_HIDDEN],
                   const bin_t out_pos[N_OUTPUT],
-                  const bin_t out_neg[N_OUTPUT]) {
+                  const bin_t out_neg[N_OUTPUT],
+                  bin_t W2[N_OUTPUT][N_HIDDEN]) {
     const bin_t ALPHA = 1;
     for(int k = 0; k < N_OUTPUT; k++) {
         bin_t delta = out_pos[k] - out_neg[k];
@@ -55214,14 +55210,16 @@ void updateOutput(const bin_t hidden[N_HIDDEN],
 
 void train_step(const uint8_t img_pos[N_INPUT],
                 const uint8_t img_neg[N_INPUT],
-                int sample_idx) {
+                int sample_idx,
+                bin_t W1[N_HIDDEN][N_INPUT],
+                bin_t W2[N_OUTPUT][N_HIDDEN]) {
 
 #pragma HLS INTERFACE m_axi port=W1 offset=slave bundle=WEIGHTS depth=N_HIDDEN*N_INPUT
 #pragma HLS INTERFACE m_axi port=W2 offset=slave bundle=WEIGHTS depth=N_OUTPUT*N_HIDDEN
 
 
-#pragma HLS INTERFACE s_axilite port=img_pos bundle=CTRL
-#pragma HLS INTERFACE s_axilite port=img_neg bundle=CTRL
+#pragma HLS INTERFACE s_axilite port=img_pos bundle=CTRL depth=N_INPUT
+#pragma HLS INTERFACE s_axilite port=img_neg bundle=CTRL depth=N_INPUT
 #pragma HLS INTERFACE s_axilite port=sample_idx bundle=CTRL
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL
 
@@ -55237,16 +55235,16 @@ void train_step(const uint8_t img_pos[N_INPUT],
     bin_t out_pos[N_OUTPUT], out_neg[N_OUTPUT];
 
 
-    forwardHidden(in_pos, hidden_pos);
-    forwardOutput(hidden_pos, out_pos);
+    forwardHidden(in_pos, hidden_pos, W1);
+    forwardOutput(hidden_pos, out_pos, W2);
 
 
-    forwardHidden(in_neg, hidden_neg);
-    forwardOutput(hidden_neg, out_neg);
+    forwardHidden(in_neg, hidden_neg, W1);
+    forwardOutput(hidden_neg, out_neg, W2);
 
 
-    updateHidden(in_pos, out_pos, out_neg);
-    updateOutput(hidden_pos, out_pos, out_neg);
+    updateHidden(in_pos, out_pos, out_neg, W1);
+    updateOutput(hidden_pos, out_pos, out_neg, W2);
 
 
 }
@@ -55254,12 +55252,12 @@ void train_step(const uint8_t img_pos[N_INPUT],
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_train_step_ir(const unsigned char *, const unsigned char *, int);
+void apatb_train_step_ir(const unsigned char *, const unsigned char *, int, ap_fixed<8, 8, AP_TRN, AP_WRAP, 0> (*)[64], ap_fixed<8, 8, AP_TRN, AP_WRAP, 0> (*)[32]);
 #ifdef __cplusplus
 extern "C"
 #endif
-void train_step_hw_stub(const unsigned char *img_pos, const unsigned char *img_neg, int sample_idx){
-train_step(img_pos, img_neg, sample_idx);
+void train_step_hw_stub(const unsigned char *img_pos, const unsigned char *img_neg, int sample_idx, ap_fixed<8, 8, AP_TRN, AP_WRAP, 0> (*W1)[64], ap_fixed<8, 8, AP_TRN, AP_WRAP, 0> (*W2)[32]){
+train_step(img_pos, img_neg, sample_idx, W1, W2);
 return ;
 }
 #ifdef __cplusplus
@@ -55269,9 +55267,9 @@ void refine_signal_handler();
 #ifdef __cplusplus
 extern "C"
 #endif
-void apatb_train_step_sw(const unsigned char *img_pos, const unsigned char *img_neg, int sample_idx){
+void apatb_train_step_sw(const unsigned char *img_pos, const unsigned char *img_neg, int sample_idx, ap_fixed<8, 8, AP_TRN, AP_WRAP, 0> (*W1)[64], ap_fixed<8, 8, AP_TRN, AP_WRAP, 0> (*W2)[32]){
 refine_signal_handler();
-apatb_train_step_ir(img_pos, img_neg, sample_idx);
+apatb_train_step_ir(img_pos, img_neg, sample_idx, W1, W2);
 return ;
 }
 #endif

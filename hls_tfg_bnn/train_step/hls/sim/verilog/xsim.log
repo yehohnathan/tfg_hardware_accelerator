@@ -1,0 +1,91 @@
+#-----------------------------------------------------------
+# xsim v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue May 20 21:02:03 2025
+# Process ID         : 20180
+# Current directory  : D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog
+# Command line       : xsim.exe -mode tcl -source {xsim.dir/train_step/xsim_script.tcl}
+# Log file           : D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/xsim.log
+# Journal file       : D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog\xsim.jou
+# Running On         : Yehoh
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz
+# CPU Frequency      : 2592 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16945 MB
+# Swap memory        : 13958 MB
+# Total Virtual      : 30903 MB
+# Available Virtual  : 12065 MB
+#-----------------------------------------------------------
+source xsim.dir/train_step/xsim_script.tcl
+# xsim {train_step} -autoloadwcfg -tclbatch {train_step.tcl}
+Time resolution is 1 ps
+source train_step.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 50 [0.00%] @ "125000"
+// RTL Simulation : 1 / 50 [0.00%] @ "143105000"
+// RTL Simulation : 2 / 50 [0.00%] @ "285895000"
+// RTL Simulation : 3 / 50 [0.00%] @ "428685000"
+// RTL Simulation : 4 / 50 [0.00%] @ "571475000"
+// RTL Simulation : 5 / 50 [0.00%] @ "714265000"
+// RTL Simulation : 6 / 50 [0.00%] @ "857055000"
+// RTL Simulation : 7 / 50 [0.00%] @ "999845000"
+// RTL Simulation : 8 / 50 [0.00%] @ "1142635000"
+// RTL Simulation : 9 / 50 [0.00%] @ "1285425000"
+// RTL Simulation : 10 / 50 [0.00%] @ "1428215000"
+// RTL Simulation : 11 / 50 [0.00%] @ "1571005000"
+// RTL Simulation : 12 / 50 [0.00%] @ "1713795000"
+// RTL Simulation : 13 / 50 [0.00%] @ "1856585000"
+// RTL Simulation : 14 / 50 [0.00%] @ "1999375000"
+// RTL Simulation : 15 / 50 [0.00%] @ "2142165000"
+// RTL Simulation : 16 / 50 [0.00%] @ "2284955000"
+// RTL Simulation : 17 / 50 [0.00%] @ "2427745000"
+// RTL Simulation : 18 / 50 [0.00%] @ "2570535000"
+// RTL Simulation : 19 / 50 [0.00%] @ "2713325000"
+// RTL Simulation : 20 / 50 [0.00%] @ "2856115000"
+// RTL Simulation : 21 / 50 [0.00%] @ "2998905000"
+// RTL Simulation : 22 / 50 [0.00%] @ "3141695000"
+// RTL Simulation : 23 / 50 [0.00%] @ "3284485000"
+// RTL Simulation : 24 / 50 [0.00%] @ "3427275000"
+// RTL Simulation : 25 / 50 [0.00%] @ "3570065000"
+// RTL Simulation : 26 / 50 [0.00%] @ "3712855000"
+// RTL Simulation : 27 / 50 [0.00%] @ "3855645000"
+// RTL Simulation : 28 / 50 [0.00%] @ "3998435000"
+// RTL Simulation : 29 / 50 [0.00%] @ "4141225000"
+// RTL Simulation : 30 / 50 [0.00%] @ "4284015000"
+// RTL Simulation : 31 / 50 [0.00%] @ "4426805000"
+// RTL Simulation : 32 / 50 [0.00%] @ "4569595000"
+// RTL Simulation : 33 / 50 [0.00%] @ "4712385000"
+// RTL Simulation : 34 / 50 [0.00%] @ "4855175000"
+// RTL Simulation : 35 / 50 [0.00%] @ "4997965000"
+// RTL Simulation : 36 / 50 [0.00%] @ "5140755000"
+// RTL Simulation : 37 / 50 [0.00%] @ "5283545000"
+// RTL Simulation : 38 / 50 [0.00%] @ "5426335000"
+// RTL Simulation : 39 / 50 [0.00%] @ "5569125000"
+// RTL Simulation : 40 / 50 [0.00%] @ "5711915000"
+// RTL Simulation : 41 / 50 [0.00%] @ "5854705000"
+// RTL Simulation : 42 / 50 [0.00%] @ "5997495000"
+// RTL Simulation : 43 / 50 [0.00%] @ "6140285000"
+// RTL Simulation : 44 / 50 [0.00%] @ "6283075000"
+// RTL Simulation : 45 / 50 [0.00%] @ "6425865000"
+// RTL Simulation : 46 / 50 [0.00%] @ "6568655000"
+// RTL Simulation : 47 / 50 [0.00%] @ "6711445000"
+// RTL Simulation : 48 / 50 [0.00%] @ "6854235000"
+// RTL Simulation : 49 / 50 [0.00%] @ "6997025000"
+// RTL Simulation : 50 / 50 [100.00%] @ "7139815000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 7139875 ns : File "D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/sim/verilog/train_step.autotb.v" Line 595
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:56 . Memory (MB): peak = 204.316 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 37864 KB (Peak: 37864 KB), Simulation CPU Usage: 56342 ms
+INFO: [Common 17-206] Exiting xsim at Tue May 20 21:03:04 2025...

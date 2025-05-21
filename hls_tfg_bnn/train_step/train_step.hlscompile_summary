@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "05/14/25 09:48:28",
- "timestampMillis": "1747237708281",
+ "dateTimestamp": "05/20/25 20:59:44",
+ "timestampMillis": "1747796384853",
  "buildStep": {
-  "cmdId": "012275fb-7aba-465d-90ba-e9b87c9fb682",
+  "cmdId": "e9c5c9c4-c198-419c-9654-ce2091f0a797",
   "name": "v++",
   "logFile": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\logs\\train_step.steps.log",
   "commandLine": "C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config D:\\Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\hls_config.cfg --work_dir train_step ",
@@ -38,10 +38,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "05/14/25 09:48:28",
- "timestampMillis": "1747237708282",
+ "dateTimestamp": "05/20/25 20:59:44",
+ "timestampMillis": "1747796384854",
  "status": {
-  "cmdId": "012275fb-7aba-465d-90ba-e9b87c9fb682",
+  "cmdId": "e9c5c9c4-c198-419c-9654-ce2091f0a797",
   "state": "CS_RUNNING"
  }
 }
@@ -49,8 +49,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "05/14/25 09:48:40",
- "timestampMillis": "1747237720779",
+ "dateTimestamp": "05/20/25 20:59:51",
+ "timestampMillis": "1747796391584",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -86,10 +86,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "05/14/25 09:48:40",
- "timestampMillis": "1747237720781",
+ "dateTimestamp": "05/20/25 20:59:51",
+ "timestampMillis": "1747796391586",
  "buildStep": {
-  "cmdId": "3a7da450-c525-4bf2-89ec-668f5debf5cb",
+  "cmdId": "91290e9b-5eb2-442d-a8a7-9a94fdf2d8fc",
   "name": "",
   "logFile": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls\\hls.log",
   "commandLine": "",
@@ -102,10 +102,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "05/14/25 09:48:40",
- "timestampMillis": "1747237720781",
+ "dateTimestamp": "05/20/25 20:59:51",
+ "timestampMillis": "1747796391586",
  "status": {
-  "cmdId": "3a7da450-c525-4bf2-89ec-668f5debf5cb",
+  "cmdId": "91290e9b-5eb2-442d-a8a7-9a94fdf2d8fc",
   "state": "CS_RUNNING"
  }
 }
@@ -113,8 +113,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "05/14/25 09:48:40",
- "timestampMillis": "1747237720781",
+ "dateTimestamp": "05/20/25 20:59:51",
+ "timestampMillis": "1747796391586",
  "report": {
   "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls\\hls_data.json",
   "name": "",
@@ -127,8 +127,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "05/14/25 09:48:40",
- "timestampMillis": "1747237720782",
+ "dateTimestamp": "05/20/25 20:59:51",
+ "timestampMillis": "1747796391587",
  "report": {
   "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls\\syn\\report\\csynth.rpt",
   "name": "",
@@ -141,8 +141,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "05/14/25 09:48:40",
- "timestampMillis": "1747237720782",
+ "dateTimestamp": "05/20/25 20:59:51",
+ "timestampMillis": "1747796391587",
  "report": {
   "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls\\syn\\report\\csynth.xml",
   "name": "",
@@ -155,8 +155,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "05/14/25 09:49:25",
- "timestampMillis": "1747237765476",
+ "dateTimestamp": "05/20/25 21:00:55",
+ "timestampMillis": "1747796455599",
  "report": {
   "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls",
   "name": "",
@@ -169,8 +169,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "05/14/25 09:49:25",
- "timestampMillis": "1747237765476",
+ "dateTimestamp": "05/20/25 21:00:55",
+ "timestampMillis": "1747796455599",
  "report": {
   "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls",
   "name": "",
@@ -183,8 +183,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "05/14/25 09:49:25",
- "timestampMillis": "1747237765477",
+ "dateTimestamp": "05/20/25 21:00:55",
+ "timestampMillis": "1747796455599",
  "report": {
   "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\hls",
   "name": "",
@@ -197,10 +197,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "05/14/25 09:49:25",
- "timestampMillis": "1747237765477",
+ "dateTimestamp": "05/20/25 21:00:55",
+ "timestampMillis": "1747796455600",
  "status": {
-  "cmdId": "3a7da450-c525-4bf2-89ec-668f5debf5cb",
+  "cmdId": "91290e9b-5eb2-442d-a8a7-9a94fdf2d8fc",
   "state": "CS_PASSED"
  }
 }
@@ -208,10 +208,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "05/14/25 09:49:25",
- "timestampMillis": "1747237765846",
+ "dateTimestamp": "05/20/25 21:00:55",
+ "timestampMillis": "1747796455930",
  "status": {
-  "cmdId": "012275fb-7aba-465d-90ba-e9b87c9fb682",
+  "cmdId": "e9c5c9c4-c198-419c-9654-ce2091f0a797",
   "state": "CS_PASSED"
  }
 }
@@ -219,8 +219,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "05/14/25 09:49:25",
- "timestampMillis": "1747237765883",
+ "dateTimestamp": "05/20/25 21:00:55",
+ "timestampMillis": "1747796455967",
  "report": {
   "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\reports\\v++_compile_train_step_guidance.html",
   "name": "",
@@ -233,8 +233,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "05/14/25 09:49:25",
- "timestampMillis": "1747237765883",
+ "dateTimestamp": "05/20/25 21:00:55",
+ "timestampMillis": "1747796455967",
  "report": {
   "path": "D:/Proyectos\\tfg_hardware_accelerator\\hls_tfg_bnn\\train_step\\reports\\.db\\v++_compile_train_step_guidance.pb3",
   "name": "",

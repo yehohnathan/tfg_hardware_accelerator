@@ -21,24 +21,20 @@ using bin_t = ap_fixed<8,8>;
 using acc_t = ap_fixed<12,12>;
 
 // ---------------------------------------------------------------------------
-// Variables globales de pesos (se mapean a memoria externa via AXI-Master)
-// ---------------------------------------------------------------------------
-extern bin_t W1[N_HIDDEN][N_INPUT];    // matriz de pesos capa oculta
-extern bin_t W2[N_OUTPUT][N_HIDDEN];   // matriz de pesos capa de salida
-
-// ---------------------------------------------------------------------------
 // API de la librería
 // ---------------------------------------------------------------------------
 bin_t signum(acc_t x);
-void forwardHidden (const bin_t input[N_INPUT],    bin_t hidden[N_HIDDEN]);
-void forwardOutput (const bin_t hidden[N_HIDDEN], bin_t output[N_OUTPUT]);
+void forwardHidden (const bin_t input[N_INPUT],    bin_t hidden[N_HIDDEN], bin_t W1[N_HIDDEN][N_INPUT]);
+void forwardOutput (const bin_t hidden[N_HIDDEN], bin_t output[N_OUTPUT], bin_t W2[N_OUTPUT][N_HIDDEN]);
 acc_t computeGoodness(const bin_t vec[], int size);
 void updateHidden  (const bin_t input[N_INPUT],
                     const bin_t out_pos[N_HIDDEN],
-                    const bin_t out_neg[N_HIDDEN]);
+                    const bin_t out_neg[N_HIDDEN],
+                    bin_t W1[N_HIDDEN][N_INPUT]);
 void updateOutput  (const bin_t hidden[N_HIDDEN],
                     const bin_t out_pos[N_OUTPUT],
-                    const bin_t out_neg[N_OUTPUT]);
+                    const bin_t out_neg[N_OUTPUT],
+                    bin_t W2[N_OUTPUT][N_HIDDEN]);
 
 // ---------------------------------------------------------------------------
 // Top-level para síntesis en Vitis HLS
@@ -48,4 +44,6 @@ void updateOutput  (const bin_t hidden[N_HIDDEN],
 // El mapeo a AXI-Master se hace con pragmas en la implementación .cpp.
 void train_step(const uint8_t img_pos[N_INPUT],
                 const uint8_t img_neg[N_INPUT],
-                int           sample_idx);
+                int           sample_idx,
+                bin_t         W1[N_HIDDEN][N_INPUT],
+                bin_t         W2[N_OUTPUT][N_HIDDEN]);

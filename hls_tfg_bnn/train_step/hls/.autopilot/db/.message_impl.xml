@@ -2,5 +2,4 @@
 <Messages>
 	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP." resolution=""/>
 	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1773" tag="" content="Starting RTL evaluation using Vivado ..." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-802]" key="HLS 200-802" tag="" content="Generated output file train_step/train_step.zip" resolution=""/>
 </Messages>

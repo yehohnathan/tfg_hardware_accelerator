@@ -30,6 +30,9 @@ inline void genNegativeData(uint8_t neg[N_INPUT]) {
 // Main
 // ---------------------------------------------------------------------------
 int main() {
+    // Variables de pesos
+    bin_t W1[N_HIDDEN][N_INPUT];    // matriz de pesos capa oculta
+    bin_t W2[N_OUTPUT][N_HIDDEN];   // matriz de pesos capa de salida
     // Buffers de salida para pesos (mapeados desde AXI-Master)
     bin_t W1_out[N_HIDDEN][N_INPUT];
     bin_t W2_out[N_OUTPUT][N_HIDDEN];
@@ -54,7 +57,7 @@ int main() {
             genNegativeData(neg);
 
             // 2.2) Ejecutar paso de entrenamiento (actualiza W1 y W2 en HLS)
-            train_step(pos, neg, img);
+            train_step(pos, neg, img, W1, W2);
 
             // 2.3) Leer pesos recién actualizados
             for (int j = 0; j < N_HIDDEN; ++j)
@@ -98,17 +101,32 @@ int main() {
         }
     }
 
-    // 4) Verificación de cambio en los pesos
+    // 4) Verificación de cambio en los pesos (global, no por fila)
     bool changed1 = false, changed2 = false;
-    for (int j = 0; j < N_HIDDEN && !changed1; ++j)
-        for (int i = 0; i < N_INPUT; ++i)
-            if (W1_out[j][i] != bin_t(1)) changed1 = true;
-    for (int k = 0; k < N_OUTPUT && !changed2; ++k)
-        for (int j = 0; j < N_HIDDEN; ++j)
-            if (W2_out[k][j] != bin_t(1)) changed2 = true;
 
-    assert(changed1 && "Ningún peso de W1 cambio durante el entrenamiento");
-    assert(changed2 && "Ningún peso de W2 cambio durante el entrenamiento");
+    // Recorremos todo W1 y ponemos a true changed1 en cuanto encontremos alguna diferencia
+    for (int j = 0; j < N_HIDDEN && !changed1; ++j) {
+        for (int i = 0; i < N_INPUT; ++i) {
+            if (W1_out[j][i] != bin_t(1)) {
+                changed1 = true;
+                break;
+            }
+        }
+    }
+
+    // Recorremos todo W2 y ponemos a true changed2 en cuanto encontremos alguna diferencia
+    for (int k = 0; k < N_OUTPUT && !changed2; ++k) {
+        for (int j = 0; j < N_HIDDEN; ++j) {
+            if (W2_out[k][j] != bin_t(1)) {
+                changed2 = true;
+                break;
+            }
+        }
+    }
+
+    // Ahora sólo comprobamos dos booleans, no uno por cada fila
+    assert(changed1 && "Ningun peso de W1 cambio durante el entrenamiento");
+    assert(changed2 && "Ningun peso de W2 cambio durante el entrenamiento");
 
     std::puts("Simulacion finalizada OK. Pesos actualizados correctamente.");
     return 0;

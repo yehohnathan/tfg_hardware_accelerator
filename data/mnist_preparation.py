@@ -189,7 +189,7 @@ if __name__ == '__main__':
                                    rows=8,
                                    method='mean')
 
-    # Creación de la variable para los datos positivos de testeo 
+    # Creación de la variable para los datos positivos de testeo
     # -> Esto no lo veo muy necesario
     create_mnist_header(data_test_resize,
                         header_filename='mnist_test_data.hpp',

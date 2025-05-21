@@ -243,33 +243,55 @@ class AESL_RUNTIME_BC {
     string mName;
 };
 using hls::sim::Byte;
-extern "C" void train_step(volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, int, int, volatile void *, Byte<1>*, Byte<1>*);
-extern "C" void apatb_train_step_hw(volatile void * __xlx_apatb_param_img_pos_0, volatile void * __xlx_apatb_param_img_pos_1, volatile void * __xlx_apatb_param_img_pos_2, volatile void * __xlx_apatb_param_img_pos_3, volatile void * __xlx_apatb_param_img_pos_4, volatile void * __xlx_apatb_param_img_pos_5, volatile void * __xlx_apatb_param_img_pos_6, volatile void * __xlx_apatb_param_img_pos_7, volatile void * __xlx_apatb_param_img_neg_0, volatile void * __xlx_apatb_param_img_neg_1, volatile void * __xlx_apatb_param_img_neg_2, volatile void * __xlx_apatb_param_img_neg_3, volatile void * __xlx_apatb_param_img_neg_4, volatile void * __xlx_apatb_param_img_neg_5, volatile void * __xlx_apatb_param_img_neg_6, volatile void * __xlx_apatb_param_img_neg_7, int __xlx_apatb_param_last_sample, int __xlx_apatb_param_sample_idx, volatile void * __xlx_apatb_param_leds_port, volatile void * __xlx_apatb_param_W1_out, volatile void * __xlx_apatb_param_W2_out) {
+extern "C" void train_step(Byte<1>*, Byte<1>*, Byte<1>*, int, int, int);
+extern "C" void apatb_train_step_hw(volatile void * __xlx_apatb_param_img_pos, volatile void * __xlx_apatb_param_img_neg, int __xlx_apatb_param_sample_idx, volatile void * __xlx_apatb_param_W1, volatile void * __xlx_apatb_param_W2) {
 using hls::sim::createStream;
-  // Collect __xlx_W1_out__tmp_vec
-std::vector<Byte<1>> __xlx_W1_out__tmp_vec;
-for (size_t i = 0; i < 32; ++i){
-__xlx_W1_out__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_W1_out)[i]);
+  // Collect __xlx_W1_W2__tmp_vec
+std::vector<Byte<1>> __xlx_W1_W2__tmp_vec;
+for (size_t i = 0; i < 2048; ++i){
+__xlx_W1_W2__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_W1)[i]);
 }
-  int __xlx_size_param_W1_out = 32;
-  int __xlx_offset_param_W1_out = 0;
-  int __xlx_offset_byte_param_W1_out = 0*1;
-  // Collect __xlx_W2_out__tmp_vec
-std::vector<Byte<1>> __xlx_W2_out__tmp_vec;
-for (size_t i = 0; i < 4; ++i){
-__xlx_W2_out__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_W2_out)[i]);
+  int __xlx_size_param_W1 = 2048;
+  int __xlx_offset_param_W1 = 0;
+  int __xlx_offset_byte_param_W1 = 0*1;
+for (size_t i = 0; i < 320; ++i){
+__xlx_W1_W2__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_W2)[i]);
 }
-  int __xlx_size_param_W2_out = 4;
-  int __xlx_offset_param_W2_out = 0;
-  int __xlx_offset_byte_param_W2_out = 0*1;
+  int __xlx_size_param_W2 = 320;
+  int __xlx_offset_param_W2 = 2048;
+  int __xlx_offset_byte_param_W2 = 2048*1;
+  // Collect __xlx_img_pos__tmp_vec
+std::vector<Byte<1>> __xlx_img_pos__tmp_vec;
+for (size_t i = 0; i < 64; ++i){
+__xlx_img_pos__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_img_pos)[i]);
+}
+  int __xlx_size_param_img_pos = 64;
+  int __xlx_offset_param_img_pos = 0;
+  int __xlx_offset_byte_param_img_pos = 0*1;
+  // Collect __xlx_img_neg__tmp_vec
+std::vector<Byte<1>> __xlx_img_neg__tmp_vec;
+for (size_t i = 0; i < 64; ++i){
+__xlx_img_neg__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_img_neg)[i]);
+}
+  int __xlx_size_param_img_neg = 64;
+  int __xlx_offset_param_img_neg = 0;
+  int __xlx_offset_byte_param_img_neg = 0*1;
   // DUT call
-  train_step(__xlx_apatb_param_img_pos_0, __xlx_apatb_param_img_pos_1, __xlx_apatb_param_img_pos_2, __xlx_apatb_param_img_pos_3, __xlx_apatb_param_img_pos_4, __xlx_apatb_param_img_pos_5, __xlx_apatb_param_img_pos_6, __xlx_apatb_param_img_pos_7, __xlx_apatb_param_img_neg_0, __xlx_apatb_param_img_neg_1, __xlx_apatb_param_img_neg_2, __xlx_apatb_param_img_neg_3, __xlx_apatb_param_img_neg_4, __xlx_apatb_param_img_neg_5, __xlx_apatb_param_img_neg_6, __xlx_apatb_param_img_neg_7, __xlx_apatb_param_last_sample, __xlx_apatb_param_sample_idx, __xlx_apatb_param_leds_port, __xlx_W1_out__tmp_vec.data(), __xlx_W2_out__tmp_vec.data());
-// print __xlx_apatb_param_W1_out
-for (size_t i = 0; i < __xlx_size_param_W1_out; ++i) {
-((Byte<1>*)__xlx_apatb_param_W1_out)[i] = __xlx_W1_out__tmp_vec[__xlx_offset_param_W1_out+i];
+  train_step(__xlx_W1_W2__tmp_vec.data(), __xlx_img_pos__tmp_vec.data(), __xlx_img_neg__tmp_vec.data(), __xlx_apatb_param_sample_idx, __xlx_offset_byte_param_W1, __xlx_offset_byte_param_W2);
+// print __xlx_apatb_param_W1
+for (size_t i = 0; i < __xlx_size_param_W1; ++i) {
+((Byte<1>*)__xlx_apatb_param_W1)[i] = __xlx_W1_W2__tmp_vec[__xlx_offset_param_W1+i];
 }
-// print __xlx_apatb_param_W2_out
-for (size_t i = 0; i < __xlx_size_param_W2_out; ++i) {
-((Byte<1>*)__xlx_apatb_param_W2_out)[i] = __xlx_W2_out__tmp_vec[__xlx_offset_param_W2_out+i];
+// print __xlx_apatb_param_W2
+for (size_t i = 0; i < __xlx_size_param_W2; ++i) {
+((Byte<1>*)__xlx_apatb_param_W2)[i] = __xlx_W1_W2__tmp_vec[__xlx_offset_param_W2+i];
+}
+// print __xlx_apatb_param_img_pos
+for (size_t i = 0; i < __xlx_size_param_img_pos; ++i) {
+((Byte<1>*)__xlx_apatb_param_img_pos)[i] = __xlx_img_pos__tmp_vec[__xlx_offset_param_img_pos+i];
+}
+// print __xlx_apatb_param_img_neg
+for (size_t i = 0; i < __xlx_size_param_img_neg; ++i) {
+((Byte<1>*)__xlx_apatb_param_img_neg)[i] = __xlx_img_neg__tmp_vec[__xlx_offset_param_img_neg+i];
 }
 }

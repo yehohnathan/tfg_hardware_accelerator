@@ -22,7 +22,40 @@ INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Pro
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
-make: 'csim.exe' is up to date.
+   Compiling ../../../../../tb/train_tb.cpp in debug mode
+   Compiling ../../../../../src/forward_fw.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../../tb/train_tb.cpp:4:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_int.h:10:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis/2024.2/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../../../src/forward_fw.cpp:1:
+In file included from ../../../../../src/forward_fw.hpp:2:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_fixed.h:9:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis/2024.2/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
 == Epoca 1 ==
 
 Pesos finales tras la epoca:
@@ -37,7 +70,7 @@ Pesos finales tras la epoca:
  W1[8]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 -1 -1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
  W1[9]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 -1 -1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
  W1[10]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[11]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 1 1 1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+ W1[11]: 1 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 -1 -1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 1 1 1 1 1 1 1
  W1[12]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
  W1[13]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
  W1[14]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
@@ -58,18 +91,18 @@ Pesos finales tras la epoca:
  W1[29]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
  W1[30]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
  W1[31]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- W2[0]: 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
- W2[1]: 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
- W2[2]: 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
- W2[3]: 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
- W2[4]: 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
- W2[5]: 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
- W2[6]: 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
- W2[7]: 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
- W2[8]: 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
- W2[9]: 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
+ W2[0]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
+ W2[1]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
+ W2[2]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
+ W2[3]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
+ W2[4]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
+ W2[5]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
+ W2[6]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
+ W2[7]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
+ W2[8]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
+ W2[9]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1
 Simulacion finalizada OK. Pesos actualizados correctamente.
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 4.774 seconds; peak allocated memory: 265.148 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 9s
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 10.756 seconds; peak allocated memory: 265.320 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 16s

@@ -55092,22 +55092,18 @@ using acc_t = ap_fixed<12,12>;
 
 
 
-extern bin_t W1[N_HIDDEN][N_INPUT];
-extern bin_t W2[N_OUTPUT][N_HIDDEN];
-
-
-
-
 bin_t signum(acc_t x);
-void forwardHidden (const bin_t input[N_INPUT], bin_t hidden[N_HIDDEN]);
-void forwardOutput (const bin_t hidden[N_HIDDEN], bin_t output[N_OUTPUT]);
+void forwardHidden (const bin_t input[N_INPUT], bin_t hidden[N_HIDDEN], bin_t W1[N_HIDDEN][N_INPUT]);
+void forwardOutput (const bin_t hidden[N_HIDDEN], bin_t output[N_OUTPUT], bin_t W2[N_OUTPUT][N_HIDDEN]);
 acc_t computeGoodness(const bin_t vec[], int size);
 void updateHidden (const bin_t input[N_INPUT],
                     const bin_t out_pos[N_HIDDEN],
-                    const bin_t out_neg[N_HIDDEN]);
+                    const bin_t out_neg[N_HIDDEN],
+                    bin_t W1[N_HIDDEN][N_INPUT]);
 void updateOutput (const bin_t hidden[N_HIDDEN],
                     const bin_t out_pos[N_OUTPUT],
-                    const bin_t out_neg[N_OUTPUT]);
+                    const bin_t out_neg[N_OUTPUT],
+                    bin_t W2[N_OUTPUT][N_HIDDEN]);
 
 
 
@@ -55117,7 +55113,9 @@ void updateOutput (const bin_t hidden[N_HIDDEN],
 
 void train_step(const uint8_t img_pos[N_INPUT],
                 const uint8_t img_neg[N_INPUT],
-                int sample_idx);
+                int sample_idx,
+                bin_t W1[N_HIDDEN][N_INPUT],
+                bin_t W2[N_OUTPUT][N_HIDDEN]);
 # 8 "D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp" 2
 
 
@@ -55145,6 +55143,9 @@ inline void genNegativeData(uint8_t neg[N_INPUT]) {
 
 int main() {
 
+    bin_t W1[N_HIDDEN][N_INPUT];
+    bin_t W2[N_OUTPUT][N_HIDDEN];
+
     bin_t W1_out[N_HIDDEN][N_INPUT];
     bin_t W2_out[N_OUTPUT][N_HIDDEN];
 
@@ -55168,7 +55169,7 @@ int main() {
             genNegativeData(neg);
 
 
-            train_step(pos, neg, img);
+            train_step(pos, neg, img, W1, W2);
 
 
             for (int j = 0; j < N_HIDDEN; ++j)
@@ -55177,21 +55178,7 @@ int main() {
             for (int k = 0; k < N_OUTPUT; ++k)
                 for (int j = 0; j < N_HIDDEN; ++j)
                     W2_out[k][j] = W2[k][j];
-
-
-            std::printf("-- Despues de img %2d --\n", img);
-            for (int j = 0; j < N_HIDDEN; ++j) {
-                std::printf(" W1[%d]:", j);
-                for (int i = 0; i < N_INPUT; ++i)
-                    std::printf(" %d", static_cast<int>(W1_out[j][i]));
-                std::printf("\n");
-            }
-            for (int k = 0; k < N_OUTPUT; ++k) {
-                std::printf(" W2[%d]:", k);
-                for (int j = 0; j < N_HIDDEN; ++j)
-                    std::printf(" %d", static_cast<int>(W2_out[k][j]));
-                std::printf("\n");
-            }
+# 86 "D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp"
         }
 
 
@@ -55212,15 +55199,30 @@ int main() {
 
 
     bool changed1 = false, changed2 = false;
-    for (int j = 0; j < N_HIDDEN && !changed1; ++j)
-        for (int i = 0; i < N_INPUT; ++i)
-            if (W1_out[j][i] != bin_t(1)) changed1 = true;
-    for (int k = 0; k < N_OUTPUT && !changed2; ++k)
-        for (int j = 0; j < N_HIDDEN; ++j)
-            if (W2_out[k][j] != bin_t(1)) changed2 = true;
 
-    (void) ((!!(changed1 && "Ningún peso de W1 cambio durante el entrenamiento")) || (_assert("changed1 && \"Ningún peso de W1 cambio durante el entrenamiento\"","D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp",108),0));
-    (void) ((!!(changed2 && "Ningún peso de W2 cambio durante el entrenamiento")) || (_assert("changed2 && \"Ningún peso de W2 cambio durante el entrenamiento\"","D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp",109),0));
+
+    for (int j = 0; j < N_HIDDEN && !changed1; ++j) {
+        for (int i = 0; i < N_INPUT; ++i) {
+            if (W1_out[j][i] != bin_t(1)) {
+                changed1 = true;
+                break;
+            }
+        }
+    }
+
+
+    for (int k = 0; k < N_OUTPUT && !changed2; ++k) {
+        for (int j = 0; j < N_HIDDEN; ++j) {
+            if (W2_out[k][j] != bin_t(1)) {
+                changed2 = true;
+                break;
+            }
+        }
+    }
+
+
+    (void) ((!!(changed1 && "Ningun peso de W1 cambio durante el entrenamiento")) || (_assert("changed1 && \"Ningun peso de W1 cambio durante el entrenamiento\"","D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp",128),0));
+    (void) ((!!(changed2 && "Ningun peso de W2 cambio durante el entrenamiento")) || (_assert("changed2 && \"Ningun peso de W2 cambio durante el entrenamiento\"","D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp",129),0));
 
     std::puts("Simulacion finalizada OK. Pesos actualizados correctamente.");
     return 0;

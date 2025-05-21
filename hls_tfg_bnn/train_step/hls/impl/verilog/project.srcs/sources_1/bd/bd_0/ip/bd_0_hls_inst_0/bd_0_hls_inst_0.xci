@@ -4,20 +4,45 @@
     "xci_name": "bd_0_hls_inst_0",
     "cell_name": "hls_inst",
     "component_reference": "xilinx.com:hls:train_step:1.0",
-    "ip_revision": "2114082713",
+    "ip_revision": "2114092025",
     "gen_directory": "../../../../../../project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0",
     "parameters": {
       "component_parameters": {
+        "C_M_AXI_WEIGHTS_ENABLE_ID_PORTS": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_ID_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_DATA_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_ENABLE_USER_PORTS": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_AWUSER_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_WUSER_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_BUSER_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_ARUSER_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_RUSER_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_USER_VALUE": [ { "value": "0x00000000", "resolve_type": "user", "format": "bitString", "enabled": false, "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_PROT_VALUE": [ { "value": "\"000\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_CACHE_VALUE": [ { "value": "\"0011\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "Component_Name": [ { "value": "bd_0_hls_inst_0", "resolve_type": "user", "usage": "all" } ],
         "clk_period": [ { "value": "10", "enabled": false, "usage": "all" } ],
         "machine": [ { "value": "64", "enabled": false, "usage": "all" } ],
         "combinational": [ { "value": "0", "enabled": false, "usage": "all" } ],
-        "latency": [ { "value": "29", "enabled": false, "usage": "all" } ],
-        "II": [ { "value": "30", "enabled": false, "usage": "all" } ]
+        "latency": [ { "value": "8829", "enabled": false, "usage": "all" } ],
+        "II": [ { "value": "8830", "enabled": false, "usage": "all" } ]
       },
       "model_parameters": {
-        "C_S_AXI_CTRL_ADDR_WIDTH": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_S_AXI_CTRL_DATA_WIDTH": [ { "value": "32", "format": "long", "usage": "all" } ]
+        "C_S_AXI_CTRL_ADDR_WIDTH": [ { "value": "5", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_S_AXI_CTRL_DATA_WIDTH": [ { "value": "32", "format": "long", "usage": "all" } ],
+        "C_S_AXI_CONTROL_ADDR_WIDTH": [ { "value": "6", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_S_AXI_CONTROL_DATA_WIDTH": [ { "value": "32", "format": "long", "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_ID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_ADDR_WIDTH": [ { "value": "64", "format": "long", "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_AWUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_ARUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_WUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_RUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_BUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_USER_VALUE": [ { "value": "0x00000000", "resolve_type": "generated", "format": "bitString", "enabled": false, "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_PROT_VALUE": [ { "value": "\"000\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "C_M_AXI_WEIGHTS_CACHE_VALUE": [ { "value": "\"0011\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "artix7" } ],
@@ -34,7 +59,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2114082713" } ],
+        "IPREVISION": [ { "value": "2114092025" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -45,17 +70,12 @@
     },
     "boundary": {
       "ports": {
-        "leds_port_ap_vld": [ { "direction": "out" } ],
-        "W1_out_ce0": [ { "direction": "out" } ],
-        "W1_out_we0": [ { "direction": "out" } ],
-        "W1_out_ce1": [ { "direction": "out" } ],
-        "W1_out_we1": [ { "direction": "out" } ],
-        "W2_out_ce0": [ { "direction": "out" } ],
-        "W2_out_we0": [ { "direction": "out" } ],
-        "s_axi_CTRL_ARADDR": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "img_pos_ce0": [ { "direction": "out" } ],
+        "img_neg_ce0": [ { "direction": "out" } ],
+        "s_axi_CTRL_ARADDR": [ { "direction": "in", "size_left": "4", "size_right": "0" } ],
         "s_axi_CTRL_ARREADY": [ { "direction": "out" } ],
         "s_axi_CTRL_ARVALID": [ { "direction": "in" } ],
-        "s_axi_CTRL_AWADDR": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "s_axi_CTRL_AWADDR": [ { "direction": "in", "size_left": "4", "size_right": "0" } ],
         "s_axi_CTRL_AWREADY": [ { "direction": "out" } ],
         "s_axi_CTRL_AWVALID": [ { "direction": "in" } ],
         "s_axi_CTRL_BREADY": [ { "direction": "in" } ],
@@ -69,16 +89,70 @@
         "s_axi_CTRL_WREADY": [ { "direction": "out" } ],
         "s_axi_CTRL_WSTRB": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
         "s_axi_CTRL_WVALID": [ { "direction": "in" } ],
+        "s_axi_control_ARADDR": [ { "direction": "in", "size_left": "5", "size_right": "0" } ],
+        "s_axi_control_ARREADY": [ { "direction": "out" } ],
+        "s_axi_control_ARVALID": [ { "direction": "in" } ],
+        "s_axi_control_AWADDR": [ { "direction": "in", "size_left": "5", "size_right": "0" } ],
+        "s_axi_control_AWREADY": [ { "direction": "out" } ],
+        "s_axi_control_AWVALID": [ { "direction": "in" } ],
+        "s_axi_control_BREADY": [ { "direction": "in" } ],
+        "s_axi_control_BRESP": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "s_axi_control_BVALID": [ { "direction": "out" } ],
+        "s_axi_control_RDATA": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "s_axi_control_RREADY": [ { "direction": "in" } ],
+        "s_axi_control_RRESP": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "s_axi_control_RVALID": [ { "direction": "out" } ],
+        "s_axi_control_WDATA": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "s_axi_control_WREADY": [ { "direction": "out" } ],
+        "s_axi_control_WSTRB": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
+        "s_axi_control_WVALID": [ { "direction": "in" } ],
         "ap_clk": [ { "direction": "in" } ],
         "ap_rst_n": [ { "direction": "in" } ],
         "interrupt": [ { "direction": "out" } ],
-        "leds_port": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
-        "W1_out_address0": [ { "direction": "out", "size_left": "4", "size_right": "0" } ],
-        "W1_out_d0": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
-        "W1_out_address1": [ { "direction": "out", "size_left": "4", "size_right": "0" } ],
-        "W1_out_d1": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
-        "W2_out_address0": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
-        "W2_out_d0": [ { "direction": "out", "size_left": "7", "size_right": "0" } ]
+        "m_axi_WEIGHTS_ARADDR": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
+        "m_axi_WEIGHTS_ARBURST": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "m_axi_WEIGHTS_ARCACHE": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "m_axi_WEIGHTS_ARID": [ { "direction": "out", "size_left": "0", "size_right": "0" } ],
+        "m_axi_WEIGHTS_ARLEN": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
+        "m_axi_WEIGHTS_ARLOCK": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "m_axi_WEIGHTS_ARPROT": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "m_axi_WEIGHTS_ARQOS": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "m_axi_WEIGHTS_ARREADY": [ { "direction": "in" } ],
+        "m_axi_WEIGHTS_ARREGION": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "m_axi_WEIGHTS_ARSIZE": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "m_axi_WEIGHTS_ARVALID": [ { "direction": "out" } ],
+        "m_axi_WEIGHTS_AWADDR": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
+        "m_axi_WEIGHTS_AWBURST": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "m_axi_WEIGHTS_AWCACHE": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "m_axi_WEIGHTS_AWID": [ { "direction": "out", "size_left": "0", "size_right": "0" } ],
+        "m_axi_WEIGHTS_AWLEN": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
+        "m_axi_WEIGHTS_AWLOCK": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "m_axi_WEIGHTS_AWPROT": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "m_axi_WEIGHTS_AWQOS": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "m_axi_WEIGHTS_AWREADY": [ { "direction": "in" } ],
+        "m_axi_WEIGHTS_AWREGION": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "m_axi_WEIGHTS_AWSIZE": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "m_axi_WEIGHTS_AWVALID": [ { "direction": "out" } ],
+        "m_axi_WEIGHTS_BID": [ { "direction": "in", "size_left": "0", "size_right": "0" } ],
+        "m_axi_WEIGHTS_BREADY": [ { "direction": "out" } ],
+        "m_axi_WEIGHTS_BRESP": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
+        "m_axi_WEIGHTS_BVALID": [ { "direction": "in" } ],
+        "m_axi_WEIGHTS_RDATA": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "m_axi_WEIGHTS_RID": [ { "direction": "in", "size_left": "0", "size_right": "0" } ],
+        "m_axi_WEIGHTS_RLAST": [ { "direction": "in" } ],
+        "m_axi_WEIGHTS_RREADY": [ { "direction": "out" } ],
+        "m_axi_WEIGHTS_RRESP": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
+        "m_axi_WEIGHTS_RVALID": [ { "direction": "in" } ],
+        "m_axi_WEIGHTS_WDATA": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "m_axi_WEIGHTS_WID": [ { "direction": "out", "size_left": "0", "size_right": "0" } ],
+        "m_axi_WEIGHTS_WLAST": [ { "direction": "out" } ],
+        "m_axi_WEIGHTS_WREADY": [ { "direction": "in" } ],
+        "m_axi_WEIGHTS_WSTRB": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "m_axi_WEIGHTS_WVALID": [ { "direction": "out" } ],
+        "img_pos_address0": [ { "direction": "out", "size_left": "5", "size_right": "0" } ],
+        "img_pos_q0": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
+        "img_neg_address0": [ { "direction": "out", "size_left": "5", "size_right": "0" } ],
+        "img_neg_q0": [ { "direction": "in", "size_left": "7", "size_right": "0" } ]
       },
       "interfaces": {
         "s_axi_CTRL": {
@@ -87,7 +161,7 @@
           "mode": "slave",
           "memory_map_ref": "s_axi_CTRL",
           "parameters": {
-            "ADDR_WIDTH": [ { "value": "8", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "ADDR_WIDTH": [ { "value": "5", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
             "DATA_WIDTH": [ { "value": "32", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
             "PROTOCOL": [ { "value": "AXI4LITE", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
             "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
@@ -139,12 +213,70 @@
             "WVALID": [ { "physical_name": "s_axi_CTRL_WVALID" } ]
           }
         },
+        "s_axi_control": {
+          "vlnv": "xilinx.com:interface:aximm:1.0",
+          "abstraction_type": "xilinx.com:interface:aximm_rtl:1.0",
+          "mode": "slave",
+          "memory_map_ref": "s_axi_control",
+          "parameters": {
+            "ADDR_WIDTH": [ { "value": "6", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "DATA_WIDTH": [ { "value": "32", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "PROTOCOL": [ { "value": "AXI4LITE", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "100000000.0", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "AWUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ARUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "BUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BURST": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_LOCK": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_PROT": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_CACHE": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_QOS": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_REGION": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_WSTRB": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_RRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_src": "auto", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_OUTSTANDING": [ { "value": "1", "value_src": "auto", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_OUTSTANDING": [ { "value": "1", "value_src": "auto", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "MAX_BURST_LENGTH": [ { "value": "1", "value_src": "auto", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "bd_0_ap_clk_0", "value_src": "default_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_THREADS": [ { "value": "1", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_THREADS": [ { "value": "1", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "ARADDR": [ { "physical_name": "s_axi_control_ARADDR" } ],
+            "ARREADY": [ { "physical_name": "s_axi_control_ARREADY" } ],
+            "ARVALID": [ { "physical_name": "s_axi_control_ARVALID" } ],
+            "AWADDR": [ { "physical_name": "s_axi_control_AWADDR" } ],
+            "AWREADY": [ { "physical_name": "s_axi_control_AWREADY" } ],
+            "AWVALID": [ { "physical_name": "s_axi_control_AWVALID" } ],
+            "BREADY": [ { "physical_name": "s_axi_control_BREADY" } ],
+            "BRESP": [ { "physical_name": "s_axi_control_BRESP" } ],
+            "BVALID": [ { "physical_name": "s_axi_control_BVALID" } ],
+            "RDATA": [ { "physical_name": "s_axi_control_RDATA" } ],
+            "RREADY": [ { "physical_name": "s_axi_control_RREADY" } ],
+            "RRESP": [ { "physical_name": "s_axi_control_RRESP" } ],
+            "RVALID": [ { "physical_name": "s_axi_control_RVALID" } ],
+            "WDATA": [ { "physical_name": "s_axi_control_WDATA" } ],
+            "WREADY": [ { "physical_name": "s_axi_control_WREADY" } ],
+            "WSTRB": [ { "physical_name": "s_axi_control_WSTRB" } ],
+            "WVALID": [ { "physical_name": "s_axi_control_WVALID" } ]
+          }
+        },
         "ap_clk": {
           "vlnv": "xilinx.com:signal:clock:1.0",
           "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
           "mode": "slave",
           "parameters": {
-            "ASSOCIATED_BUSIF": [ { "value": "s_axi_CTRL", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "ASSOCIATED_BUSIF": [ { "value": "s_axi_CTRL:s_axi_control:m_axi_WEIGHTS", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
             "ASSOCIATED_RESET": [ { "value": "ap_rst_n", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
             "FREQ_HZ": [ { "value": "100000000.0", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
@@ -181,18 +313,90 @@
             "INTERRUPT": [ { "physical_name": "interrupt" } ]
           }
         },
-        "leds_port": {
-          "vlnv": "xilinx.com:signal:data:1.0",
-          "abstraction_type": "xilinx.com:signal:data_rtl:1.0",
+        "m_axi_WEIGHTS": {
+          "vlnv": "xilinx.com:interface:aximm:1.0",
+          "abstraction_type": "xilinx.com:interface:aximm_rtl:1.0",
           "mode": "master",
+          "address_space_ref": "Data_m_axi_WEIGHTS",
           "parameters": {
-            "LAYERED_METADATA": [ { "value": "undef", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
+            "NUM_READ_OUTSTANDING": [ { "value": "16", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "NUM_WRITE_OUTSTANDING": [ { "value": "16", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "MAX_READ_BURST_LENGTH": [ { "value": "16", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "MAX_WRITE_BURST_LENGTH": [ { "value": "16", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "MAX_BURST_LENGTH": [ { "value": "256", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "PROTOCOL": [ { "value": "AXI4", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "HAS_BURST": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "ADDR_WIDTH": [ { "value": "64", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "DATA_WIDTH": [ { "value": "32", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_HZ": [ { "value": "100000000.0", "value_src": "user_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ID_WIDTH": [ { "value": "1", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "AWUSER_WIDTH": [ { "value": "0", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ARUSER_WIDTH": [ { "value": "0", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_WIDTH": [ { "value": "0", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_WIDTH": [ { "value": "0", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "BUSER_WIDTH": [ { "value": "0", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_LOCK": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_PROT": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_CACHE": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_QOS": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_REGION": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_WSTRB": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_RRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "bd_0_ap_clk_0", "value_src": "default_prop", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_THREADS": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_THREADS": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
-            "DATA": [ { "physical_name": "leds_port" } ]
+            "ARADDR": [ { "physical_name": "m_axi_WEIGHTS_ARADDR" } ],
+            "ARBURST": [ { "physical_name": "m_axi_WEIGHTS_ARBURST" } ],
+            "ARCACHE": [ { "physical_name": "m_axi_WEIGHTS_ARCACHE" } ],
+            "ARID": [ { "physical_name": "m_axi_WEIGHTS_ARID" } ],
+            "ARLEN": [ { "physical_name": "m_axi_WEIGHTS_ARLEN" } ],
+            "ARLOCK": [ { "physical_name": "m_axi_WEIGHTS_ARLOCK" } ],
+            "ARPROT": [ { "physical_name": "m_axi_WEIGHTS_ARPROT" } ],
+            "ARQOS": [ { "physical_name": "m_axi_WEIGHTS_ARQOS" } ],
+            "ARREADY": [ { "physical_name": "m_axi_WEIGHTS_ARREADY" } ],
+            "ARREGION": [ { "physical_name": "m_axi_WEIGHTS_ARREGION" } ],
+            "ARSIZE": [ { "physical_name": "m_axi_WEIGHTS_ARSIZE" } ],
+            "ARVALID": [ { "physical_name": "m_axi_WEIGHTS_ARVALID" } ],
+            "AWADDR": [ { "physical_name": "m_axi_WEIGHTS_AWADDR" } ],
+            "AWBURST": [ { "physical_name": "m_axi_WEIGHTS_AWBURST" } ],
+            "AWCACHE": [ { "physical_name": "m_axi_WEIGHTS_AWCACHE" } ],
+            "AWID": [ { "physical_name": "m_axi_WEIGHTS_AWID" } ],
+            "AWLEN": [ { "physical_name": "m_axi_WEIGHTS_AWLEN" } ],
+            "AWLOCK": [ { "physical_name": "m_axi_WEIGHTS_AWLOCK" } ],
+            "AWPROT": [ { "physical_name": "m_axi_WEIGHTS_AWPROT" } ],
+            "AWQOS": [ { "physical_name": "m_axi_WEIGHTS_AWQOS" } ],
+            "AWREADY": [ { "physical_name": "m_axi_WEIGHTS_AWREADY" } ],
+            "AWREGION": [ { "physical_name": "m_axi_WEIGHTS_AWREGION" } ],
+            "AWSIZE": [ { "physical_name": "m_axi_WEIGHTS_AWSIZE" } ],
+            "AWVALID": [ { "physical_name": "m_axi_WEIGHTS_AWVALID" } ],
+            "BID": [ { "physical_name": "m_axi_WEIGHTS_BID" } ],
+            "BREADY": [ { "physical_name": "m_axi_WEIGHTS_BREADY" } ],
+            "BRESP": [ { "physical_name": "m_axi_WEIGHTS_BRESP" } ],
+            "BVALID": [ { "physical_name": "m_axi_WEIGHTS_BVALID" } ],
+            "RDATA": [ { "physical_name": "m_axi_WEIGHTS_RDATA" } ],
+            "RID": [ { "physical_name": "m_axi_WEIGHTS_RID" } ],
+            "RLAST": [ { "physical_name": "m_axi_WEIGHTS_RLAST" } ],
+            "RREADY": [ { "physical_name": "m_axi_WEIGHTS_RREADY" } ],
+            "RRESP": [ { "physical_name": "m_axi_WEIGHTS_RRESP" } ],
+            "RVALID": [ { "physical_name": "m_axi_WEIGHTS_RVALID" } ],
+            "WDATA": [ { "physical_name": "m_axi_WEIGHTS_WDATA" } ],
+            "WID": [ { "physical_name": "m_axi_WEIGHTS_WID" } ],
+            "WLAST": [ { "physical_name": "m_axi_WEIGHTS_WLAST" } ],
+            "WREADY": [ { "physical_name": "m_axi_WEIGHTS_WREADY" } ],
+            "WSTRB": [ { "physical_name": "m_axi_WEIGHTS_WSTRB" } ],
+            "WVALID": [ { "physical_name": "m_axi_WEIGHTS_WVALID" } ]
           }
         },
-        "W1_out_address0": {
+        "img_pos_address0": {
           "vlnv": "xilinx.com:signal:data:1.0",
           "abstraction_type": "xilinx.com:signal:data_rtl:1.0",
           "mode": "master",
@@ -200,21 +404,21 @@
             "LAYERED_METADATA": [ { "value": "undef", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
-            "DATA": [ { "physical_name": "W1_out_address0" } ]
+            "DATA": [ { "physical_name": "img_pos_address0" } ]
           }
         },
-        "W1_out_d0": {
+        "img_pos_q0": {
           "vlnv": "xilinx.com:signal:data:1.0",
           "abstraction_type": "xilinx.com:signal:data_rtl:1.0",
-          "mode": "master",
+          "mode": "slave",
           "parameters": {
             "LAYERED_METADATA": [ { "value": "undef", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
-            "DATA": [ { "physical_name": "W1_out_d0" } ]
+            "DATA": [ { "physical_name": "img_pos_q0" } ]
           }
         },
-        "W1_out_address1": {
+        "img_neg_address0": {
           "vlnv": "xilinx.com:signal:data:1.0",
           "abstraction_type": "xilinx.com:signal:data_rtl:1.0",
           "mode": "master",
@@ -222,41 +426,25 @@
             "LAYERED_METADATA": [ { "value": "undef", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
-            "DATA": [ { "physical_name": "W1_out_address1" } ]
+            "DATA": [ { "physical_name": "img_neg_address0" } ]
           }
         },
-        "W1_out_d1": {
+        "img_neg_q0": {
           "vlnv": "xilinx.com:signal:data:1.0",
           "abstraction_type": "xilinx.com:signal:data_rtl:1.0",
-          "mode": "master",
+          "mode": "slave",
           "parameters": {
             "LAYERED_METADATA": [ { "value": "undef", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
-            "DATA": [ { "physical_name": "W1_out_d1" } ]
+            "DATA": [ { "physical_name": "img_neg_q0" } ]
           }
-        },
-        "W2_out_address0": {
-          "vlnv": "xilinx.com:signal:data:1.0",
-          "abstraction_type": "xilinx.com:signal:data_rtl:1.0",
-          "mode": "master",
-          "parameters": {
-            "LAYERED_METADATA": [ { "value": "undef", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
-          },
-          "port_maps": {
-            "DATA": [ { "physical_name": "W2_out_address0" } ]
-          }
-        },
-        "W2_out_d0": {
-          "vlnv": "xilinx.com:signal:data:1.0",
-          "abstraction_type": "xilinx.com:signal:data_rtl:1.0",
-          "mode": "master",
-          "parameters": {
-            "LAYERED_METADATA": [ { "value": "undef", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ]
-          },
-          "port_maps": {
-            "DATA": [ { "physical_name": "W2_out_d0" } ]
-          }
+        }
+      },
+      "address_spaces": {
+        "Data_m_axi_WEIGHTS": {
+          "range": "16E",
+          "width": "64"
         }
       },
       "memory_maps": {
@@ -414,376 +602,8 @@
                     }
                   }
                 },
-                "img_pos_0": {
-                  "address_offset": "16",
-                  "size": 32,
-                  "display_name": "img_pos_0",
-                  "description": "Data signal of img_pos_0",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_pos_0": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_pos_0",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_pos_1": {
-                  "address_offset": "24",
-                  "size": 32,
-                  "display_name": "img_pos_1",
-                  "description": "Data signal of img_pos_1",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_pos_1": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_pos_1",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_pos_2": {
-                  "address_offset": "32",
-                  "size": 32,
-                  "display_name": "img_pos_2",
-                  "description": "Data signal of img_pos_2",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_pos_2": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_pos_2",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_pos_3": {
-                  "address_offset": "40",
-                  "size": 32,
-                  "display_name": "img_pos_3",
-                  "description": "Data signal of img_pos_3",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_pos_3": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_pos_3",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_pos_4": {
-                  "address_offset": "48",
-                  "size": 32,
-                  "display_name": "img_pos_4",
-                  "description": "Data signal of img_pos_4",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_pos_4": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_pos_4",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_pos_5": {
-                  "address_offset": "56",
-                  "size": 32,
-                  "display_name": "img_pos_5",
-                  "description": "Data signal of img_pos_5",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_pos_5": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_pos_5",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_pos_6": {
-                  "address_offset": "64",
-                  "size": 32,
-                  "display_name": "img_pos_6",
-                  "description": "Data signal of img_pos_6",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_pos_6": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_pos_6",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_pos_7": {
-                  "address_offset": "72",
-                  "size": 32,
-                  "display_name": "img_pos_7",
-                  "description": "Data signal of img_pos_7",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_pos_7": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_pos_7",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_neg_0": {
-                  "address_offset": "80",
-                  "size": 32,
-                  "display_name": "img_neg_0",
-                  "description": "Data signal of img_neg_0",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_neg_0": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_neg_0",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_neg_1": {
-                  "address_offset": "88",
-                  "size": 32,
-                  "display_name": "img_neg_1",
-                  "description": "Data signal of img_neg_1",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_neg_1": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_neg_1",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_neg_2": {
-                  "address_offset": "96",
-                  "size": 32,
-                  "display_name": "img_neg_2",
-                  "description": "Data signal of img_neg_2",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_neg_2": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_neg_2",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_neg_3": {
-                  "address_offset": "104",
-                  "size": 32,
-                  "display_name": "img_neg_3",
-                  "description": "Data signal of img_neg_3",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_neg_3": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_neg_3",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_neg_4": {
-                  "address_offset": "112",
-                  "size": 32,
-                  "display_name": "img_neg_4",
-                  "description": "Data signal of img_neg_4",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_neg_4": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_neg_4",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_neg_5": {
-                  "address_offset": "120",
-                  "size": 32,
-                  "display_name": "img_neg_5",
-                  "description": "Data signal of img_neg_5",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_neg_5": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_neg_5",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_neg_6": {
-                  "address_offset": "128",
-                  "size": 32,
-                  "display_name": "img_neg_6",
-                  "description": "Data signal of img_neg_6",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_neg_6": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_neg_6",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "img_neg_7": {
-                  "address_offset": "136",
-                  "size": 32,
-                  "display_name": "img_neg_7",
-                  "description": "Data signal of img_neg_7",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "img_neg_7": {
-                      "bit_offset": 0,
-                      "bit_width": 8,
-                      "description": "Bit 7 to 0 of img_neg_7",
-                      "access": "write-only"
-                    },
-                    "RESERVED": {
-                      "bit_offset": 8,
-                      "bit_width": 24,
-                      "description": "Reserved.  0s on read.",
-                      "access": "read-only"
-                    }
-                  }
-                },
-                "last_sample": {
-                  "address_offset": "144",
-                  "size": 32,
-                  "display_name": "last_sample",
-                  "description": "Data signal of last_sample",
-                  "access": "write-only",
-                  "reset_value": "0",
-                  "fields": {
-                    "last_sample": {
-                      "bit_offset": 0,
-                      "bit_width": 32,
-                      "description": "Bit 31 to 0 of last_sample",
-                      "access": "write-only"
-                    }
-                  }
-                },
                 "sample_idx": {
-                  "address_offset": "152",
+                  "address_offset": "16",
                   "size": 32,
                   "display_name": "sample_idx",
                   "description": "Data signal of sample_idx",
@@ -794,6 +614,86 @@
                       "bit_offset": 0,
                       "bit_width": 32,
                       "description": "Bit 31 to 0 of sample_idx",
+                      "access": "write-only"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "s_axi_control": {
+          "address_blocks": {
+            "Reg": {
+              "base_address": "0",
+              "range": "65536",
+              "usage": "register",
+              "access": "read-write",
+              "parameters": {
+                "OFFSET_BASE_PARAM": [ { "value": "C_S_AXI_CONTROL_BASEADDR" } ],
+                "OFFSET_HIGH_PARAM": [ { "value": "C_S_AXI_CONTROL_HIGHADDR" } ]
+              },
+              "registers": {
+                "W1_1": {
+                  "address_offset": "16",
+                  "size": 32,
+                  "display_name": "W1_1",
+                  "description": "Data signal of W1",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "W1": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of W1",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "W1_2": {
+                  "address_offset": "20",
+                  "size": 32,
+                  "display_name": "W1_2",
+                  "description": "Data signal of W1",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "W1": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 63 to 32 of W1",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "W2_1": {
+                  "address_offset": "28",
+                  "size": 32,
+                  "display_name": "W2_1",
+                  "description": "Data signal of W2",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "W2": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 31 to 0 of W2",
+                      "access": "write-only"
+                    }
+                  }
+                },
+                "W2_2": {
+                  "address_offset": "32",
+                  "size": 32,
+                  "display_name": "W2_2",
+                  "description": "Data signal of W2",
+                  "access": "write-only",
+                  "reset_value": "0",
+                  "fields": {
+                    "W2": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "description": "Bit 63 to 32 of W2",
                       "access": "write-only"
                     }
                   }

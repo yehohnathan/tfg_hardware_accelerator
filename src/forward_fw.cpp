@@ -1,12 +1,6 @@
 #include "forward_fw.hpp"
 
 // ---------------------------------------------------------------------------
-// Definición de variables globales de pesos y LEDs (si se quisieran usar)
-// ---------------------------------------------------------------------------
-bin_t W1[N_HIDDEN][N_INPUT];
-bin_t W2[N_OUTPUT][N_HIDDEN];
-
-// ---------------------------------------------------------------------------
 // Función de signo: binariza a +1 o -1
 // ---------------------------------------------------------------------------
 bin_t signum(acc_t x) {
@@ -28,7 +22,8 @@ acc_t computeGoodness(const bin_t vec[], int size) {
 // Propagación hacia adelante: capa oculta
 // ---------------------------------------------------------------------------
 void forwardHidden(const bin_t input[N_INPUT],
-                   bin_t       hidden[N_HIDDEN]) {
+                   bin_t       hidden[N_HIDDEN],
+                   bin_t W1[N_HIDDEN][N_INPUT]) {
     // Para cada neurona j de la capa oculta...
     for(int j = 0; j < N_HIDDEN; j++) {
         acc_t sum = 0;
@@ -45,7 +40,8 @@ void forwardHidden(const bin_t input[N_INPUT],
 // Propagación hacia adelante: capa de salida
 // ---------------------------------------------------------------------------
 void forwardOutput(const bin_t hidden[N_HIDDEN],
-                   bin_t       output[N_OUTPUT]) {
+                   bin_t       output[N_OUTPUT],
+                   bin_t W2[N_OUTPUT][N_HIDDEN]) {
     for(int k = 0; k < N_OUTPUT; k++) {
         acc_t sum = 0;
         for(int j = 0; j < N_HIDDEN; j++) {
@@ -62,7 +58,8 @@ void forwardOutput(const bin_t hidden[N_HIDDEN],
 // ---------------------------------------------------------------------------
 void updateHidden(const bin_t input[N_INPUT],
                   const bin_t out_pos[N_HIDDEN],
-                  const bin_t out_neg[N_HIDDEN]) {
+                  const bin_t out_neg[N_HIDDEN],
+                  bin_t W1[N_HIDDEN][N_INPUT]) {
     const bin_t ALPHA = 1;  // tasa de aprendizaje
     for(int j = 0; j < N_HIDDEN; j++) {
         bin_t delta = out_pos[j] - out_neg[j];
@@ -82,7 +79,8 @@ void updateHidden(const bin_t input[N_INPUT],
 // ---------------------------------------------------------------------------
 void updateOutput(const bin_t hidden[N_HIDDEN],
                   const bin_t out_pos[N_OUTPUT],
-                  const bin_t out_neg[N_OUTPUT]) {
+                  const bin_t out_neg[N_OUTPUT],
+                  bin_t W2[N_OUTPUT][N_HIDDEN]) {
     const bin_t ALPHA = 1;
     for(int k = 0; k < N_OUTPUT; k++) {
         bin_t delta = out_pos[k] - out_neg[k];
@@ -102,16 +100,18 @@ void updateOutput(const bin_t hidden[N_HIDDEN],
 // ---------------------------------------------------------------------------
 void train_step(const uint8_t img_pos[N_INPUT],
                 const uint8_t img_neg[N_INPUT],
-                int           sample_idx) {
+                int           sample_idx,
+                bin_t         W1[N_HIDDEN][N_INPUT],
+                bin_t         W2[N_OUTPUT][N_HIDDEN]) {
     // Mapeo de memorias globales a AXI-Master (pesos externos)
     #pragma HLS INTERFACE m_axi port=W1 offset=slave bundle=WEIGHTS depth=N_HIDDEN*N_INPUT
     #pragma HLS INTERFACE m_axi port=W2 offset=slave bundle=WEIGHTS depth=N_OUTPUT*N_HIDDEN
 
     // Interfaces de control por AXI-Lite
-    #pragma HLS INTERFACE s_axilite port=img_pos     bundle=CTRL
-    #pragma HLS INTERFACE s_axilite port=img_neg     bundle=CTRL
-    #pragma HLS INTERFACE s_axilite port=sample_idx  bundle=CTRL
-    #pragma HLS INTERFACE s_axilite port=return      bundle=CTRL
+    #pragma HLS INTERFACE s_axilite port=img_pos    bundle=CTRL depth=N_INPUT
+    #pragma HLS INTERFACE s_axilite port=img_neg    bundle=CTRL depth=N_INPUT
+    #pragma HLS INTERFACE s_axilite port=sample_idx bundle=CTRL
+    #pragma HLS INTERFACE s_axilite port=return     bundle=CTRL
 
     // 1) Binarizar internamente los vectores de entrada
     bin_t in_pos[N_INPUT], in_neg[N_INPUT];
@@ -125,16 +125,16 @@ void train_step(const uint8_t img_pos[N_INPUT],
     bin_t out_pos[N_OUTPUT],    out_neg[N_OUTPUT];
 
     // --- Fase positiva ---
-    forwardHidden(in_pos,    hidden_pos);
-    forwardOutput(hidden_pos, out_pos);
+    forwardHidden(in_pos,    hidden_pos, W1);
+    forwardOutput(hidden_pos, out_pos, W2);
 
     // --- Fase negativa ---
-    forwardHidden(in_neg,    hidden_neg);
-    forwardOutput(hidden_neg, out_neg);
+    forwardHidden(in_neg,    hidden_neg, W1);
+    forwardOutput(hidden_neg, out_neg, W2);
 
     // --- Actualiza los pesos de la capa oculta ---
-    updateHidden(in_pos,    out_pos, out_neg);
-    updateOutput(hidden_pos, out_pos, out_neg);
+    updateHidden(in_pos, out_pos, out_neg, W1);
+    updateOutput(hidden_pos, out_pos, out_neg, W2);
 
     // (podrías añadir aquí updateHidden para W2 de forma análoga)
 }

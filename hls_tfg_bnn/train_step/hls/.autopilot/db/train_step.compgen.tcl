@@ -1,8 +1,22 @@
 # This script segment is generated automatically by AutoPilot
 
-set name train_step_mul_32ns_34ns_42_2_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler train_step_in_pos_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler train_step_hidden_pos_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler train_step_out_pos_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler train_step_WEIGHTS_m_axi BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
 }
 
 
@@ -15,149 +29,13 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 set axilite_register_dict [dict create]
 set port_CTRL {
-img_pos_0 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 16
-	offset_end 23
-}
-img_pos_1 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 24
-	offset_end 31
-}
-img_pos_2 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 32
-	offset_end 39
-}
-img_pos_3 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 40
-	offset_end 47
-}
-img_pos_4 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 48
-	offset_end 55
-}
-img_pos_5 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 56
-	offset_end 63
-}
-img_pos_6 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 64
-	offset_end 71
-}
-img_pos_7 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 72
-	offset_end 79
-}
-img_neg_0 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 80
-	offset_end 87
-}
-img_neg_1 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 88
-	offset_end 95
-}
-img_neg_2 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 96
-	offset_end 103
-}
-img_neg_3 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 104
-	offset_end 111
-}
-img_neg_4 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 112
-	offset_end 119
-}
-img_neg_5 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 120
-	offset_end 127
-}
-img_neg_6 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 128
-	offset_end 135
-}
-img_neg_7 { 
-	dir I
-	width 8
-	depth 1
-	mode ap_none
-	offset 136
-	offset_end 143
-}
-last_sample { 
-	dir I
-	width 32
-	depth 1
-	mode ap_none
-	offset 144
-	offset_end 151
-}
 sample_idx { 
 	dir I
 	width 32
 	depth 1
 	mode ap_none
-	offset 152
-	offset_end 159
+	offset 16
+	offset_end 23
 }
 ap_start { }
 ap_done { }
@@ -173,7 +51,7 @@ dict set axilite_register_dict CTRL $port_CTRL
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 201 \
+			id 607 \
 			corename train_step_CTRL_axilite \
 			name train_step_CTRL_s_axi \
 			ports {$port_CTRL} \
@@ -193,21 +71,66 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler train_step_CTRL_s_axi BINDTYPE interface TYPE interface_s_axilite
 }
 
+set port_control {
+W1 { 
+	dir I
+	width 64
+	depth 1
+	mode ap_none
+	offset 16
+	offset_end 27
+}
+W2 { 
+	dir I
+	width 64
+	depth 1
+	mode ap_none
+	offset 28
+	offset_end 39
+}
+}
+dict set axilite_register_dict control $port_control
+
+
+# Native S_AXILite:
+if {${::AESL::PGuard_simmodel_gen}} {
+	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
+		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
+			id 608 \
+			corename train_step_control_axilite \
+			name train_step_control_s_axi \
+			ports {$port_control} \
+			op interface \
+			interrupt_clear_mode TOW \
+			interrupt_trigger_type default \
+			is_flushable 0 \
+			is_datawidth64 0 \
+			is_addrwidth64 1 \
+		} "
+	} else {
+		puts "@W \[IMPL-110\] Cannot find AXI Lite interface model in the library. Ignored generation of AXI Lite  interface for 'control'"
+	}
+}
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler train_step_control_s_axi BINDTYPE interface TYPE interface_s_axilite
+}
+
 # XIL_BRAM:
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 203 \
-    name W1_out \
+    id 609 \
+    name img_pos \
     reset_level 0 \
     sync_rst true \
-    dir O \
-    corename W1_out \
+    dir I \
+    corename img_pos \
     op interface \
-    ports { W1_out_address0 { O 5 vector } W1_out_ce0 { O 1 bit } W1_out_we0 { O 1 bit } W1_out_d0 { O 8 vector } W1_out_address1 { O 5 vector } W1_out_ce1 { O 1 bit } W1_out_we1 { O 1 bit } W1_out_d1 { O 8 vector } } \
+    ports { img_pos_address0 { O 6 vector } img_pos_ce0 { O 1 bit } img_pos_q0 { I 8 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'W1_out'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'img_pos'"
 }
 }
 
@@ -216,35 +139,20 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 204 \
-    name W2_out \
+    id 610 \
+    name img_neg \
     reset_level 0 \
     sync_rst true \
-    dir O \
-    corename W2_out \
+    dir I \
+    corename img_neg \
     op interface \
-    ports { W2_out_address0 { O 2 vector } W2_out_ce0 { O 1 bit } W2_out_we0 { O 1 bit } W2_out_d0 { O 8 vector } } \
+    ports { img_neg_address0 { O 6 vector } img_neg_ce0 { O 1 bit } img_neg_q0 { I 8 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'W2_out'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'img_neg'"
 }
 }
 
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 202 \
-    name leds_port \
-    type other \
-    dir O \
-    reset_level 0 \
-    sync_rst true \
-    corename dc_leds_port \
-    op interface \
-    ports { leds_port { O 4 vector } leds_port_ap_vld { O 1 bit } } \
-} "
-}
 
 
 # Adapter definition:

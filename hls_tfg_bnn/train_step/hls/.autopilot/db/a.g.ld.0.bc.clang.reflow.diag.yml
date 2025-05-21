@@ -1,359 +1,157 @@
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: 'D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/.autopilot/db\forward_fw.pp.0.cpp', 
-                   Line: 0, Column: 0 }
-Function:        _GLOBAL__sub_I_forward_fw.pp.0.cpp
-Args:            
-  - Callee:          __cxx_global_var_init
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 14, Column: 0 }
-  - String:          ' not inlined into '
-  - Caller:          _GLOBAL__sub_I_forward_fw.pp.0.cpp
-    DebugLoc:        { File: 'D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/.autopilot/db\forward_fw.pp.0.cpp', 
-                       Line: 0, Column: 0 }
-  - String:          ' because it should never be inlined (cost=never)'
-...
---- !Missed
-Pass:            inline
-Name:            NeverInline
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 59, Column: 21 }
-Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 35, Column: 21 }
+Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_PA64_S2_
 Args:            
   - Callee:          'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 27, Column: 0 }
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 6, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 46, Column: 0 }
+  - Caller:          'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 26, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 75, Column: 21 }
-Function:        _Z13forwardOutputPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 50, Column: 21 }
+Function:        _Z13forwardOutputPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_PA32_S2_
 Args:            
   - Callee:          'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 27, Column: 0 }
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 6, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 64, Column: 0 }
+  - Caller:          'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 44, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 125, Column: 5 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 137, Column: 5 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - Callee:          'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 46, Column: 0 }
+  - Callee:          'updateOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 83, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
+  - Caller:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 126, Column: 5 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 136, Column: 5 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - Callee:          'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 64, Column: 0 }
+  - Callee:          'updateHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 62, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
+  - Caller:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: ../src/forward_fw.cpp, Line: 133, Column: 5 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - Callee:          'updateHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 87, Column: 0 }
+  - Callee:          'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 44, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
+  - Caller:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
-...
---- !Passed
-Pass:            reflow-infer-unroll
-Name:            ImplicitUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 92, Column: 19 }
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_92_1
-  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
-...
---- !Passed
-Pass:            reflow-infer-unroll
-Name:            ImplicitUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 94, Column: 26 }
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_94_2
-  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
-...
---- !Passed
-Pass:            reflow-infer-unroll
-Name:            ImplicitUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 70, Column: 19 }
-Function:        _Z13forwardOutputPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
-Args:            
-  - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_70_1
-  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
-...
---- !Passed
-Pass:            reflow-infer-unroll
-Name:            ImplicitUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 52, Column: 19 }
-Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
-Args:            
-  - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_52_1
-  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
-...
---- !Passed
-Pass:            reflow-infer-unroll
-Name:            ImplicitUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 55, Column: 26 }
-Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
-Args:            
-  - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_55_2
-  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 87, Column: 0 }
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_92_1
-  - String:          ''' ('
-  - LoopLoc:         '../src/forward_fw.cpp:92:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          updateHidden
-  - String:          ''' completely with a factor of '
-  - Factor:          '4'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 87, Column: 0 }
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_94_2
-  - String:          ''' ('
-  - LoopLoc:         '../src/forward_fw.cpp:94:26'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          updateHidden
-  - String:          ''' completely with a factor of '
-  - Factor:          '8'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 87, Column: 0 }
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_94_2
-  - String:          ''' ('
-  - LoopLoc:         '../src/forward_fw.cpp:94:26'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          updateHidden
-  - String:          ''' completely with a factor of '
-  - Factor:          '8'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 87, Column: 0 }
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_94_2
-  - String:          ''' ('
-  - LoopLoc:         '../src/forward_fw.cpp:94:26'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          updateHidden
-  - String:          ''' completely with a factor of '
-  - Factor:          '8'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 87, Column: 0 }
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_94_2
-  - String:          ''' ('
-  - LoopLoc:         '../src/forward_fw.cpp:94:26'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          updateHidden
-  - String:          ''' completely with a factor of '
-  - Factor:          '8'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 64, Column: 0 }
-Function:        _Z13forwardOutputPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_70_1
-  - String:          ''' ('
-  - LoopLoc:         '../src/forward_fw.cpp:70:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          forwardOutput
-  - String:          ''' completely with a factor of '
-  - Factor:          '1'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 46, Column: 0 }
-Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_52_1
-  - String:          ''' ('
-  - LoopLoc:         '../src/forward_fw.cpp:52:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          forwardHidden
-  - String:          ''' completely with a factor of '
-  - Factor:          '4'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 46, Column: 0 }
-Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_55_2
-  - String:          ''' ('
-  - LoopLoc:         '../src/forward_fw.cpp:55:26'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          forwardHidden
-  - String:          ''' completely with a factor of '
-  - Factor:          '8'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 46, Column: 0 }
-Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_55_2
-  - String:          ''' ('
-  - LoopLoc:         '../src/forward_fw.cpp:55:26'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          forwardHidden
-  - String:          ''' completely with a factor of '
-  - Factor:          '8'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 46, Column: 0 }
-Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_55_2
-  - String:          ''' ('
-  - LoopLoc:         '../src/forward_fw.cpp:55:26'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          forwardHidden
-  - String:          ''' completely with a factor of '
-  - Factor:          '8'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 46, Column: 0 }
-Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_55_2
-  - String:          ''' ('
-  - LoopLoc:         '../src/forward_fw.cpp:55:26'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          forwardHidden
-  - String:          ''' completely with a factor of '
-  - Factor:          '8'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 59, Column: 21 }
-Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 132, Column: 5 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - Callee:          'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 26, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 35, Column: 21 }
+Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_PA64_S2_
 Args:            
   - Callee:          'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 27, Column: 0 }
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 6, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 46, Column: 0 }
+  - Caller:          'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 26, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 125, Column: 5 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 50, Column: 21 }
+Function:        _Z13forwardOutputPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_PA32_S2_
 Args:            
-  - Callee:          'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 46, Column: 0 }
+  - Callee:          'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 6, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
+  - Caller:          'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 44, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 126, Column: 5 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 128, Column: 5 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - Callee:          'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 64, Column: 0 }
+  - Callee:          'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 26, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
+  - Caller:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 133, Column: 5 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 129, Column: 5 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - Callee:          'updateHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 87, Column: 0 }
+  - Callee:          'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 44, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
+  - Caller:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 136, Column: 5 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - Callee:          'updateHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 62, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 137, Column: 5 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - Callee:          'updateOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 83, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
@@ -361,8 +159,8 @@ Pass:            inline
 Name:            NeverInline
 Function:        apatb_train_step_ir
 Args:            
-  - Callee:          'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
+  - Callee:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          apatb_train_step_ir
   - String:          ' because it should never be inlined (cost=never)'
@@ -370,119 +168,121 @@ Args:
 --- !Passed
 Pass:            reflow-inliner
 Name:            Inline
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 46, Column: 0 }
-Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 26, Column: 0 }
+Function:        _Z13forwardHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_PA64_S2_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 27, Column: 0 }
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 6, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 46, Column: 0 }
+  - Caller:          'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 26, Column: 0 }
   - String:          ''''
 ...
 --- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 17, Column: 0 }
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 44, Column: 0 }
+Function:        _Z13forwardOutputPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPS2_PA32_S2_
 Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          W1
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '2'
-  - String:          .
+  - String:          'Inlining function '''
+  - Callee:          'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 6, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 44, Column: 0 }
+  - String:          ''''
 ...
 --- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 121, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          _ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E10hidden_neg
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
+  - String:          'Inlining function '''
+  - Callee:          'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 26, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ''''
 ...
 --- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 121, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          _ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E10hidden_pos
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
+  - String:          'Inlining function '''
+  - Callee:          'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 44, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ''''
 ...
 --- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          img_pos
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
+  - String:          'Inlining function '''
+  - Callee:          'updateHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 62, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ''''
 ...
 --- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          img_neg
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
+  - String:          'Inlining function '''
+  - Callee:          'updateOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 83, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 65, Column: 34 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          The program may have out of bound array access
+  - String:          ' on variable '''
+  - String:          out_pos
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 65, Column: 34 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          The program may have out of bound array access
+  - String:          ' on variable '''
+  - String:          out_neg
+  - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
   - String:          'Aggregating '
-  - HwTyName:        bram
+  - HwTyName:        maxi
   - String:          ' variable '''
-  - Name:            W2_out
+  - Name:            W2
   - String:          ''' with '
-  - AggregateTypeName: 'compact=bit'
+  - AggregateTypeName: 'compact=none'
   - String:          ' mode in '
   - Bitwidth:        '8'
   - String:          '-bits'
@@ -490,27 +290,365 @@ Args:
 --- !Passed
 Pass:            reflow-aggr
 Name:            AggrSucc
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
   - String:          'Aggregating '
-  - HwTyName:        bram
+  - HwTyName:        maxi
   - String:          ' variable '''
-  - Name:            W1_out
+  - Name:            W1
   - String:          ''' with '
-  - AggregateTypeName: 'compact=bit'
+  - AggregateTypeName: 'compact=none'
   - String:          ' mode in '
   - Bitwidth:        '8'
   - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 28, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2048'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        W11seq
+  - ArrayName:       W1
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ' '
+  - LoopLoc:         '../src/forward_fw.cpp:28:22'
+  - String:          ' '
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 32, Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.i.load.10
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 45, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '320'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        W22seq
+  - ArrayName:       W2
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_45_1
+  - String:          ' '
+  - LoopLoc:         '../src/forward_fw.cpp:45:22'
+  - String:          ' '
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 48, Column: 39 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.i96.load.10
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 28, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2048'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        W11seq3
+  - ArrayName:       W1
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          ' '
+  - LoopLoc:         '../src/forward_fw.cpp:28:22'
+  - String:          ' '
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 32, Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.i126.load.10
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 45, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '320'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        W22seq4
+  - ArrayName:       W2
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_45_1
+  - String:          ' '
+  - LoopLoc:         '../src/forward_fw.cpp:45:22'
+  - String:          ' '
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 48, Column: 39 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.i157.load.10
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 67, Column: 27 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 70, Column: 22 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 67, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          for.body6.i.load.3
+  - ArrayName:       W1
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 70, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 67, Column: 27 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 70, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          for.body6.i.store.17
+  - ArrayName:       W1
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 88, Column: 27 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 90, Column: 22 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 88, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          for.body6.i195.load.3
+  - ArrayName:       W2
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 90, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 88, Column: 27 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 90, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          for.body6.i195.store.17
+  - ArrayName:       W2
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 45, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 45, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          W22seq4
+  - ArrayName:       W2
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_47_2
+  - String:          ' '
+  - LoopLoc:         '../src/forward_fw.cpp:47:26'
+  - String:          ' '
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 28, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 28, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          W11seq3
+  - ArrayName:       W1
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_31_2
+  - String:          ' '
+  - LoopLoc:         '../src/forward_fw.cpp:31:26'
+  - String:          ' '
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 45, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 45, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          W22seq
+  - ArrayName:       W2
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_47_2
+  - String:          ' '
+  - LoopLoc:         '../src/forward_fw.cpp:47:26'
+  - String:          ' '
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 28, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i8
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 28, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          W11seq
+  - ArrayName:       W1
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_31_2
+  - String:          ' '
+  - LoopLoc:         '../src/forward_fw.cpp:31:26'
+  - String:          ' '
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 65, Column: 34 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          The program may have out of bound array access
+  - String:          ' on variable '''
+  - String:          out_pos
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 65, Column: 34 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          The program may have out of bound array access
+  - String:          ' on variable '''
+  - String:          out_neg
+  - String:          ''''
 ...
 --- !HLSReportInfo
 Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_136_1
+  - LoopName:        VITIS_LOOP_118_1
   - String:          '> at '
-  - LoopLoc:         '../src/forward_fw.cpp:136:23'
+  - LoopLoc:         '../src/forward_fw.cpp:118:23'
   - String:          ' '
 ...
 --- !HLSReportInfo
@@ -518,685 +656,414 @@ Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
 Args:            
   - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_141_4
+  - LoopName:        VITIS_LOOP_28_1
   - String:          '> at '
-  - LoopLoc:         '../src/forward_fw.cpp:141:27'
+  - LoopLoc:         '../src/forward_fw.cpp:28:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_45_1
+  - String:          '> at '
+  - LoopLoc:         '../src/forward_fw.cpp:45:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          '> at '
+  - LoopLoc:         '../src/forward_fw.cpp:28:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_45_1
+  - String:          '> at '
+  - LoopLoc:         '../src/forward_fw.cpp:45:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_64_1
+  - String:          '> at '
+  - LoopLoc:         '../src/forward_fw.cpp:64:22'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_85_1
+  - String:          '> at '
+  - LoopLoc:         '../src/forward_fw.cpp:85:22'
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 137, Column: 27 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 87, Column: 26 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_137_2
+  - LoopName:        VITIS_LOOP_87_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 66, Column: 26 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_66_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 47, Column: 26 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_47_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 31, Column: 26 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_31_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 47, Column: 26 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_47_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 31, Column: 26 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_31_2
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_137_2
+  - LoopName:        VITIS_LOOP_87_2
   - String:          ''' ('
-  - LoopLoc:         '../src/forward_fw.cpp:137:27'
+  - LoopLoc:         '../src/forward_fw.cpp:87:26'
   - String:          ') '
   - String:          'in function '''
   - String:          train_step
   - String:          ''' completely with a factor of '
-  - Factor:          '8'
+  - Factor:          '32'
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoSmallArrayPartition
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Automatically partitioning small array '''
-  - Value:           W1_0
-  - String:          ''' completely based on array size.'
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_66_2
+  - String:          ''' ('
+  - LoopLoc:         '../src/forward_fw.cpp:66:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          train_step
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoSmallArrayPartition
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Automatically partitioning small array '''
-  - Value:           W1_1
-  - String:          ''' completely based on array size.'
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_47_2
+  - String:          ''' ('
+  - LoopLoc:         '../src/forward_fw.cpp:47:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          train_step
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoSmallArrayPartition
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Automatically partitioning small array '''
-  - Value:           W1_2
-  - String:          ''' completely based on array size.'
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_31_2
+  - String:          ''' ('
+  - LoopLoc:         '../src/forward_fw.cpp:31:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          train_step
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoSmallArrayPartition
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Automatically partitioning small array '''
-  - Value:           W1_3
-  - String:          ''' completely based on array size.'
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_47_2
+  - String:          ''' ('
+  - LoopLoc:         '../src/forward_fw.cpp:47:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          train_step
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoSmallArrayPartition
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Automatically partitioning small array '''
-  - Value:           W1_4
-  - String:          ''' completely based on array size.'
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_31_2
+  - String:          ''' ('
+  - LoopLoc:         '../src/forward_fw.cpp:31:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          train_step
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoSmallArrayPartition
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 28, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Automatically partitioning small array '''
-  - Value:           W1_5
-  - String:          ''' completely based on array size.'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoSmallArrayPartition
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Automatically partitioning small array '''
-  - Value:           W1_6
-  - String:          ''' completely based on array size.'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoSmallArrayPartition
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Automatically partitioning small array '''
-  - Value:           W1_7
-  - String:          ''' completely based on array size.'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoSmallArrayPartition
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 122, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - String:          'Automatically partitioning small array '''
-  - Value:           _ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_pos
-  - String:          ''' completely based on array size.'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoSmallArrayPartition
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 122, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - String:          'Automatically partitioning small array '''
-  - Value:           _ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_neg
-  - String:          ''' completely based on array size.'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - PragmaType:      array_partition
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2048'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
   - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=W1_0'
+  - BundleName:      WEIGHTS
   - String:          ' '
-  - PragmaIsAuto:    '1'
+  - LoopName:        VITIS_LOOP_28_1
   - String:          ' '
-  - PragmaFunction:  train_step
+  - LoopLoc:         '../src/forward_fw.cpp:28:22'
   - String:          ' '
-  - VarName:         W1_0
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            W1_0
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - PragmaType:      array_partition
-  - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=W1_1'
-  - String:          ' '
-  - PragmaIsAuto:    '1'
-  - String:          ' '
-  - PragmaFunction:  train_step
-  - String:          ' '
-  - VarName:         W1_1
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 28, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            W1_1
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2048'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          '''('
+  - LoopLoc:         '../src/forward_fw.cpp:28:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      WEIGHTS
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 45, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - PragmaType:      array_partition
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '320'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
   - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=W1_2'
+  - BundleName:      WEIGHTS
   - String:          ' '
-  - PragmaIsAuto:    '1'
+  - LoopName:        VITIS_LOOP_45_1
   - String:          ' '
-  - PragmaFunction:  train_step
+  - LoopLoc:         '../src/forward_fw.cpp:45:22'
   - String:          ' '
-  - VarName:         W1_2
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            W1_2
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - PragmaType:      array_partition
-  - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=W1_3'
-  - String:          ' '
-  - PragmaIsAuto:    '1'
-  - String:          ' '
-  - PragmaFunction:  train_step
-  - String:          ' '
-  - VarName:         W1_3
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 45, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            W1_3
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '320'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_45_1
+  - String:          '''('
+  - LoopLoc:         '../src/forward_fw.cpp:45:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      WEIGHTS
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 28, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - PragmaType:      array_partition
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2048'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
   - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=W1_4'
+  - BundleName:      WEIGHTS
   - String:          ' '
-  - PragmaIsAuto:    '1'
+  - LoopName:        VITIS_LOOP_28_1
   - String:          ' '
-  - PragmaFunction:  train_step
+  - LoopLoc:         '../src/forward_fw.cpp:28:22'
   - String:          ' '
-  - VarName:         W1_4
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            W1_4
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - PragmaType:      array_partition
-  - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=W1_5'
-  - String:          ' '
-  - PragmaIsAuto:    '1'
-  - String:          ' '
-  - PragmaFunction:  train_step
-  - String:          ' '
-  - VarName:         W1_5
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 28, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            W1_5
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2048'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_28_1
+  - String:          '''('
+  - LoopLoc:         '../src/forward_fw.cpp:28:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      WEIGHTS
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 45, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - PragmaType:      array_partition
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '320'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
   - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=W1_6'
+  - BundleName:      WEIGHTS
   - String:          ' '
-  - PragmaIsAuto:    '1'
+  - LoopName:        VITIS_LOOP_45_1
   - String:          ' '
-  - PragmaFunction:  train_step
+  - LoopLoc:         '../src/forward_fw.cpp:45:22'
   - String:          ' '
-  - VarName:         W1_6
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            W1_6
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - PragmaType:      array_partition
-  - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=W1_7'
-  - String:          ' '
-  - PragmaIsAuto:    '1'
-  - String:          ' '
-  - PragmaFunction:  train_step
-  - String:          ' '
-  - VarName:         W1_7
+  - Function:        'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])'
+    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 105, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../src/forward_fw.cpp, Line: 45, Column: 22 }
+Function:        _Z10train_stepPKhS0_iPA64_8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EEPA32_S4_
 Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            W1_7
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 122, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - PragmaType:      array_partition
-  - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_neg'
-  - String:          ' '
-  - PragmaIsAuto:    '1'
-  - String:          ' '
-  - PragmaFunction:  train_step
-  - String:          ' '
-  - varLoc:          '../src/forward_fw.cpp:122:0'
-  - String:          ' '
-  - VarName:         'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])::out_neg'
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 122, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])::out_neg'
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 122, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - PragmaType:      array_partition
-  - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=_ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_pos'
-  - String:          ' '
-  - PragmaIsAuto:    '1'
-  - String:          ' '
-  - PragmaFunction:  train_step
-  - String:          ' '
-  - varLoc:          '../src/forward_fw.cpp:122:0'
-  - String:          ' '
-  - VarName:         'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])::out_pos'
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 122, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])::out_pos'
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 122, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          _ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_pos
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 122, Column: 0 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          _ZZ10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_E7out_neg
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          W1_7
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          W1_6
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          W1_5
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          W1_4
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          W1_3
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          W1_2
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          W1_1
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-Function:        _Z12updateHiddenPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_S4_
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          W1_0
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Missed
-Pass:            inline
-Name:            NeverInline
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 125, Column: 5 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - Callee:          'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*) (.82.83)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 46, Column: 0 }
-  - String:          ' not inlined into '
-  - Caller:          'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
-  - String:          ' because it should never be inlined (cost=never)'
-...
---- !Missed
-Pass:            inline
-Name:            NeverInline
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 126, Column: 5 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - Callee:          'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 64, Column: 0 }
-  - String:          ' not inlined into '
-  - Caller:          'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
-  - String:          ' because it should never be inlined (cost=never)'
-...
---- !Missed
-Pass:            inline
-Name:            NeverInline
-DebugLoc:        { File: ../src/forward_fw.cpp, Line: 133, Column: 5 }
-Function:        _Z10train_stepPK8ap_fixedILi8ELi8EL9ap_q_mode5EL9ap_o_mode3ELi0EES4_iiRV7ap_uintILi4EEPA8_S2_PA4_S2_
-Args:            
-  - Callee:          'updateHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*)'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 87, Column: 0 }
-  - String:          ' not inlined into '
-  - Caller:          'train_step(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, int, ap_uint<4> volatile&, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [8], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [4])'
-    DebugLoc:        { File: ../src/forward_fw.cpp, Line: 111, Column: 0 }
-  - String:          ' because it should never be inlined (cost=never)'
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '320'
+  - String:          ' and bit width '
+  - Width:           '8'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_45_1
+  - String:          '''('
+  - LoopLoc:         '../src/forward_fw.cpp:45:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      WEIGHTS
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
 ...

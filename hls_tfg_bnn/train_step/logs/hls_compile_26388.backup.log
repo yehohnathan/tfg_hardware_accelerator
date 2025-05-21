@@ -1,0 +1,470 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.cpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.hpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file 'D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding test bench file 'D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=D:/Proyectos/tfg_hardware_accelerator/data/mnist_test_data.hpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'D:/Proyectos/tfg_hardware_accelerator/data/mnist_test_data.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=D:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'D:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=train_step' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7a100tcsg324-1' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 3.266 seconds; current allocated memory: 264.008 MB.
+INFO: [HLS 200-10] Analyzing design file '../src/forward_fw.cpp' ... 
+WARNING: [HLS 207-5569] unexpected pragma parameter 'depth' (d:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp:8:32)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.557 seconds; current allocated memory: 267.285 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 4,806 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 762 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 299 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 254 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 232 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 232 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 232 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 232 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 232 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 240 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 240 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,494 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 20,454 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,800 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,614 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,637 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-178] Inlining function 'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../src/forward_fw.cpp:31:0)
+INFO: [HLS 214-178] Inlining function 'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' (../src/forward_fw.cpp:48:0)
+INFO: [HLS 214-178] Inlining function 'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'train_step(unsigned char const*, unsigned char const*, int)' (../src/forward_fw.cpp:105:0)
+INFO: [HLS 214-178] Inlining function 'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'train_step(unsigned char const*, unsigned char const*, int)' (../src/forward_fw.cpp:105:0)
+INFO: [HLS 214-178] Inlining function 'updateHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*)' into 'train_step(unsigned char const*, unsigned char const*, int)' (../src/forward_fw.cpp:105:0)
+INFO: [HLS 214-178] Inlining function 'updateOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*)' into 'train_step(unsigned char const*, unsigned char const*, int)' (../src/forward_fw.cpp:105:0)
+WARNING: [HLS 214-167] The program may have out of bound array access on variable 'out_pos' (../src/forward_fw.cpp:68:34)
+WARNING: [HLS 214-167] The program may have out of bound array access on variable 'out_neg' (../src/forward_fw.cpp:68:34)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_118_1> at ../src/forward_fw.cpp:118:23 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_33_1> at ../src/forward_fw.cpp:33:22 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_49_1> at ../src/forward_fw.cpp:49:22 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_67_1> at ../src/forward_fw.cpp:67:22 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_87_1> at ../src/forward_fw.cpp:87:22 
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_89_2' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:89:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_69_2' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:69:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_51_2' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:51:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_36_2' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:36:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_89_2' (../src/forward_fw.cpp:89:26) in function 'train_step' completely with a factor of 32 (../src/forward_fw.cpp:105:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_69_2' (../src/forward_fw.cpp:69:26) in function 'train_step' completely with a factor of 64 (../src/forward_fw.cpp:105:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_51_2' (../src/forward_fw.cpp:51:26) in function 'train_step' completely with a factor of 32 (../src/forward_fw.cpp:105:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_36_2' (../src/forward_fw.cpp:36:26) in function 'train_step' completely with a factor of 64 (../src/forward_fw.cpp:105:0)
+INFO: [HLS 214-449] Automatically partitioning array 'W1' dimension 2 completely based on constant index. (../src/forward_fw.cpp:6:0)
+INFO: [HLS 214-449] Automatically partitioning array 'W2' dimension 2 completely based on constant index. (../src/forward_fw.cpp:7:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array 'W1' due to pipeline pragma (../src/forward_fw.cpp:6:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array 'W2' due to pipeline pragma (../src/forward_fw.cpp:7:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'in_neg' due to pipeline pragma (../src/forward_fw.cpp:117:25)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'in_pos' due to pipeline pragma (../src/forward_fw.cpp:117:8)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'hidden_neg' due to pipeline pragma (../src/forward_fw.cpp:124:33)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'hidden_pos' due to pipeline pragma (../src/forward_fw.cpp:124:11)
+INFO: [HLS 214-248] Applying array_partition to 'W2': Complete partitioning on dimension 2. (../src/forward_fw.cpp:7:0)
+INFO: [HLS 214-248] Applying array_partition to 'W1': Complete partitioning on dimension 2. (../src/forward_fw.cpp:6:0)
+INFO: [HLS 214-248] Applying array_partition to 'in_pos': Complete partitioning on dimension 1. (../src/forward_fw.cpp:117:8)
+INFO: [HLS 214-248] Applying array_partition to 'in_neg': Complete partitioning on dimension 1. (../src/forward_fw.cpp:117:25)
+INFO: [HLS 214-248] Applying array_partition to 'hidden_pos': Complete partitioning on dimension 1. (../src/forward_fw.cpp:124:11)
+INFO: [HLS 214-248] Applying array_partition to 'hidden_neg': Complete partitioning on dimension 1. (../src/forward_fw.cpp:124:33)
+WARNING: [HLS 214-385] Cannot apply INTERFACE pragma on a global variable. In function 'train_step(unsigned char const*, unsigned char const*, int)' (../src/forward_fw.cpp:107:9)
+WARNING: [HLS 214-385] Cannot apply INTERFACE pragma on a global variable. In function 'train_step(unsigned char const*, unsigned char const*, int)' (../src/forward_fw.cpp:108:9)
+WARNING: [HLS 214-385] Cannot apply INTERFACE pragma on a global variable. In function 'train_step(unsigned char const*, unsigned char const*, int)' (../src/forward_fw.cpp:118:23)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 11.191 seconds; current allocated memory: 271.320 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 271.320 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.407 seconds; current allocated memory: 282.539 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-77] The top function 'train_step' (../src/forward_fw.cpp:103) has no outputs. Possible cause(s) are: (1) Output parameters are passed by value; (2) intended outputs (parameters or global variables) are never written; (3) there are infinite loops.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.216 seconds; current allocated memory: 284.848 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'train_step' (../src/forward_fw.cpp:13:22)...188 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.944 seconds; current allocated memory: 316.656 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.832 seconds; current allocated memory: 377.316 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'train_step' ...
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_118_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_118_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_118_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.593 seconds; current allocated memory: 385.969 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.163 seconds; current allocated memory: 387.234 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_33_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_58) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_55) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_54) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_50) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_48) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_42) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_33_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'VITIS_LOOP_33_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.134 seconds; current allocated memory: 392.535 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.198 seconds; current allocated memory: 392.793 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_49_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_49_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 7, loop 'VITIS_LOOP_49_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.36 seconds; current allocated memory: 394.516 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.113 seconds; current allocated memory: 395.215 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_33_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_54) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_50) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_46) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_42) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_34) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln37) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_33_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'VITIS_LOOP_33_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.177 seconds; current allocated memory: 400.766 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.206 seconds; current allocated memory: 400.820 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_49_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln52) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_49_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 7, loop 'VITIS_LOOP_49_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.489 seconds; current allocated memory: 402.402 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.122 seconds; current allocated memory: 402.914 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_67_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_188) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_187) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_186) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_185) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_184) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_183) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_182) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_181) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_180) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_179) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_178) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_177) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_176) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_175) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_174) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_173) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_172) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_171) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_170) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_169) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_168) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_167) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_166) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_165) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_164) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_163) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_162) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_161) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_160) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_159) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_158) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_157) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_156) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_155) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_154) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_153) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_152) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_151) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_150) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_149) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_148) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_147) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_146) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_145) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_144) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_143) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_142) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_141) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_140) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_139) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_138) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_137) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_136) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_135) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_134) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_133) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_132) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_131) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_130) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_129) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_128) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_127) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_126) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_67_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_67_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.341 seconds; current allocated memory: 408.062 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.224 seconds; current allocated memory: 409.207 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_62) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_61) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_60) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_58) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_55) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_54) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_52) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_50) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_48) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_46) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_45) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_44) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_42) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_34) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=w_new) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_87_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_87_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.74 seconds; current allocated memory: 410.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.144 seconds; current allocated memory: 412.055 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'train_step' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.552 seconds; current allocated memory: 413.410 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 414.914 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_118_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_118_1' pipeline 'VITIS_LOOP_118_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_118_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.315 seconds; current allocated memory: 419.117 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_33_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_33_1' pipeline 'VITIS_LOOP_33_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_10s_10_4_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_2s_8s_10_1_1': 32 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_33_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.81 seconds; current allocated memory: 433.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_49_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_49_1' pipeline 'VITIS_LOOP_49_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_10s_10_4_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_2s_8s_10_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_49_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.716 seconds; current allocated memory: 445.527 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_33_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_33_11' pipeline 'VITIS_LOOP_33_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_10s_10_4_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_2s_8s_10_1_1': 32 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_33_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.544 seconds; current allocated memory: 455.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_49_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_49_12' pipeline 'VITIS_LOOP_49_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_10s_10_4_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_2s_8s_10_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_49_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.745 seconds; current allocated memory: 467.523 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_67_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_67_1' pipeline 'VITIS_LOOP_67_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_3s_2s_10_4_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_67_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.546 seconds; current allocated memory: 478.566 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_87_1' pipeline 'VITIS_LOOP_87_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_3s_2s_10_4_1': 32 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_87_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.879 seconds; current allocated memory: 492.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'train_step' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'train_step/img_pos' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'train_step/img_neg' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'train_step/sample_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'train_step' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'sample_idx' and 'return' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step'.
+INFO: [RTMG 210-278] Implementing memory 'train_step_W1_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'train_step_W2_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'train_step_out_pos_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.876 seconds; current allocated memory: 510.824 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.047 seconds; current allocated memory: 525.574 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.998 seconds; current allocated memory: 541.465 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for train_step.
+INFO: [VLOG 209-307] Generating Verilog RTL for train_step.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 142.81 MHz
+INFO: [HLS 200-112] Total CPU user time: 15 seconds. Total CPU system time: 3 seconds. Total elapsed time: 45.068 seconds; peak allocated memory: 541.543 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 50s

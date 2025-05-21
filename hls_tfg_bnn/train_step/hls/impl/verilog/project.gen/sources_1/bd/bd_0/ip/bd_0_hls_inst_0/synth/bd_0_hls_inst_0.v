@@ -48,21 +48,17 @@
 
 
 // IP VLNV: xilinx.com:hls:train_step:1.0
-// IP Revision: 2114082713
+// IP Revision: 2114092025
 
 (* X_CORE_INFO = "train_step,Vivado 2024.2" *)
 (* CHECK_LICENSE_TYPE = "bd_0_hls_inst_0,train_step,{}" *)
-(* CORE_GENERATION_INFO = "bd_0_hls_inst_0,train_step,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=train_step,x_ipVersion=1.0,x_ipCoreRevision=2114082713,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CTRL_ADDR_WIDTH=8,C_S_AXI_CTRL_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "bd_0_hls_inst_0,train_step,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=train_step,x_ipVersion=1.0,x_ipCoreRevision=2114092025,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CTRL_ADDR_WIDTH=5,C_S_AXI_CTRL_DATA_WIDTH=32,C_S_AXI_CONTROL_ADDR_WIDTH=6,C_S_AXI_CONTROL_DATA_WIDTH=32,C_M_AXI_WEIGHTS_ID_WIDTH=1,C_M_AXI_WEIGHTS_ADDR_WIDTH=64,C_M_AXI_WEIGHTS_DATA_WIDTH=32,C_M_AXI_WEIGHTS_AWUSER_WIDTH=1,C_M_AXI_WEIGHTS_ARUSER_WIDTH=1,C_M_AXI_WEIGHTS_WUSER_WIDTH=1,C_M_AXI_WE\
+IGHTS_RUSER_WIDTH=1,C_M_AXI_WEIGHTS_BUSER_WIDTH=1,C_M_AXI_WEIGHTS_USER_VALUE=0x00000000,C_M_AXI_WEIGHTS_PROT_VALUE=000,C_M_AXI_WEIGHTS_CACHE_VALUE=0011}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_0_hls_inst_0 (
-  leds_port_ap_vld,
-  W1_out_ce0,
-  W1_out_we0,
-  W1_out_ce1,
-  W1_out_we1,
-  W2_out_ce0,
-  W2_out_we0,
+  img_pos_ce0,
+  img_neg_ce0,
   s_axi_CTRL_ARADDR,
   s_axi_CTRL_ARREADY,
   s_axi_CTRL_ARVALID,
@@ -80,36 +76,85 @@ module bd_0_hls_inst_0 (
   s_axi_CTRL_WREADY,
   s_axi_CTRL_WSTRB,
   s_axi_CTRL_WVALID,
+  s_axi_control_ARADDR,
+  s_axi_control_ARREADY,
+  s_axi_control_ARVALID,
+  s_axi_control_AWADDR,
+  s_axi_control_AWREADY,
+  s_axi_control_AWVALID,
+  s_axi_control_BREADY,
+  s_axi_control_BRESP,
+  s_axi_control_BVALID,
+  s_axi_control_RDATA,
+  s_axi_control_RREADY,
+  s_axi_control_RRESP,
+  s_axi_control_RVALID,
+  s_axi_control_WDATA,
+  s_axi_control_WREADY,
+  s_axi_control_WSTRB,
+  s_axi_control_WVALID,
   ap_clk,
   ap_rst_n,
   interrupt,
-  leds_port,
-  W1_out_address0,
-  W1_out_d0,
-  W1_out_address1,
-  W1_out_d1,
-  W2_out_address0,
-  W2_out_d0
+  m_axi_WEIGHTS_ARADDR,
+  m_axi_WEIGHTS_ARBURST,
+  m_axi_WEIGHTS_ARCACHE,
+  m_axi_WEIGHTS_ARID,
+  m_axi_WEIGHTS_ARLEN,
+  m_axi_WEIGHTS_ARLOCK,
+  m_axi_WEIGHTS_ARPROT,
+  m_axi_WEIGHTS_ARQOS,
+  m_axi_WEIGHTS_ARREADY,
+  m_axi_WEIGHTS_ARREGION,
+  m_axi_WEIGHTS_ARSIZE,
+  m_axi_WEIGHTS_ARVALID,
+  m_axi_WEIGHTS_AWADDR,
+  m_axi_WEIGHTS_AWBURST,
+  m_axi_WEIGHTS_AWCACHE,
+  m_axi_WEIGHTS_AWID,
+  m_axi_WEIGHTS_AWLEN,
+  m_axi_WEIGHTS_AWLOCK,
+  m_axi_WEIGHTS_AWPROT,
+  m_axi_WEIGHTS_AWQOS,
+  m_axi_WEIGHTS_AWREADY,
+  m_axi_WEIGHTS_AWREGION,
+  m_axi_WEIGHTS_AWSIZE,
+  m_axi_WEIGHTS_AWVALID,
+  m_axi_WEIGHTS_BID,
+  m_axi_WEIGHTS_BREADY,
+  m_axi_WEIGHTS_BRESP,
+  m_axi_WEIGHTS_BVALID,
+  m_axi_WEIGHTS_RDATA,
+  m_axi_WEIGHTS_RID,
+  m_axi_WEIGHTS_RLAST,
+  m_axi_WEIGHTS_RREADY,
+  m_axi_WEIGHTS_RRESP,
+  m_axi_WEIGHTS_RVALID,
+  m_axi_WEIGHTS_WDATA,
+  m_axi_WEIGHTS_WID,
+  m_axi_WEIGHTS_WLAST,
+  m_axi_WEIGHTS_WREADY,
+  m_axi_WEIGHTS_WSTRB,
+  m_axi_WEIGHTS_WVALID,
+  img_pos_address0,
+  img_pos_q0,
+  img_neg_address0,
+  img_neg_q0
 );
 
-output wire leds_port_ap_vld;
-output wire W1_out_ce0;
-output wire W1_out_we0;
-output wire W1_out_ce1;
-output wire W1_out_we1;
-output wire W2_out_ce0;
-output wire W2_out_we0;
+output wire img_pos_ce0;
+output wire img_neg_ce0;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL ARADDR" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_CTRL, ADDR_WIDTH 8, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, FREQ_HZ 100000000.0, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_CTRL, ADDR_WIDTH 5, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, FREQ_HZ 100000000.0, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1\
 , RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
-input wire [7 : 0] s_axi_CTRL_ARADDR;
+input wire [4 : 0] s_axi_CTRL_ARADDR;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL ARREADY" *)
 output wire s_axi_CTRL_ARREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL ARVALID" *)
 input wire s_axi_CTRL_ARVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL AWADDR" *)
-input wire [7 : 0] s_axi_CTRL_AWADDR;
+input wire [4 : 0] s_axi_CTRL_AWADDR;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL AWREADY" *)
 output wire s_axi_CTRL_AWREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL AWVALID" *)
@@ -136,9 +181,46 @@ output wire s_axi_CTRL_WREADY;
 input wire [3 : 0] s_axi_CTRL_WSTRB;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL WVALID" *)
 input wire s_axi_CTRL_WVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control ARADDR" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_control, ADDR_WIDTH 6, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, FREQ_HZ 100000000.0, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREAD\
+S 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+input wire [5 : 0] s_axi_control_ARADDR;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control ARREADY" *)
+output wire s_axi_control_ARREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control ARVALID" *)
+input wire s_axi_control_ARVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control AWADDR" *)
+input wire [5 : 0] s_axi_control_AWADDR;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control AWREADY" *)
+output wire s_axi_control_AWREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control AWVALID" *)
+input wire s_axi_control_AWVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control BREADY" *)
+input wire s_axi_control_BREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control BRESP" *)
+output wire [1 : 0] s_axi_control_BRESP;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control BVALID" *)
+output wire s_axi_control_BVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control RDATA" *)
+output wire [31 : 0] s_axi_control_RDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control RREADY" *)
+input wire s_axi_control_RREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control RRESP" *)
+output wire [1 : 0] s_axi_control_RRESP;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control RVALID" *)
+output wire s_axi_control_RVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control WDATA" *)
+input wire [31 : 0] s_axi_control_WDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control WREADY" *)
+output wire s_axi_control_WREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control WSTRB" *)
+input wire [3 : 0] s_axi_control_WSTRB;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control WVALID" *)
+input wire s_axi_control_WVALID;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_CTRL, ASSOCIATED_RESET ap_rst_n, FREQ_HZ 100000000.0, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_CTRL:s_axi_control:m_axi_WEIGHTS, ASSOCIATED_RESET ap_rst_n, FREQ_HZ 100000000.0, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, INSERT_VIP 0" *)
 input wire ap_clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *)
 (* X_INTERFACE_MODE = "slave" *)
@@ -148,49 +230,128 @@ input wire ap_rst_n;
 (* X_INTERFACE_MODE = "master" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, PortWidth 1" *)
 output wire interrupt;
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 leds_port DATA" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS ARADDR" *)
 (* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME leds_port, LAYERED_METADATA undef" *)
-output wire [3 : 0] leds_port;
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 W1_out_address0 DATA" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axi_WEIGHTS, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_READ_BURST_LENGTH 16, MAX_WRITE_BURST_LENGTH 16, MAX_BURST_LENGTH 256, PROTOCOL AXI4, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, SUPPORTS_NARROW_BURST 0, ADDR_WIDTH 64, DATA_WIDTH 32, FREQ_HZ 100000000.0, ID_WIDTH 1, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, PHASE 0.0, CLK_DOMA\
+IN bd_0_ap_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+output wire [63 : 0] m_axi_WEIGHTS_ARADDR;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS ARBURST" *)
+output wire [1 : 0] m_axi_WEIGHTS_ARBURST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS ARCACHE" *)
+output wire [3 : 0] m_axi_WEIGHTS_ARCACHE;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS ARID" *)
+output wire [0 : 0] m_axi_WEIGHTS_ARID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS ARLEN" *)
+output wire [7 : 0] m_axi_WEIGHTS_ARLEN;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS ARLOCK" *)
+output wire [1 : 0] m_axi_WEIGHTS_ARLOCK;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS ARPROT" *)
+output wire [2 : 0] m_axi_WEIGHTS_ARPROT;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS ARQOS" *)
+output wire [3 : 0] m_axi_WEIGHTS_ARQOS;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS ARREADY" *)
+input wire m_axi_WEIGHTS_ARREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS ARREGION" *)
+output wire [3 : 0] m_axi_WEIGHTS_ARREGION;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS ARSIZE" *)
+output wire [2 : 0] m_axi_WEIGHTS_ARSIZE;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS ARVALID" *)
+output wire m_axi_WEIGHTS_ARVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS AWADDR" *)
+output wire [63 : 0] m_axi_WEIGHTS_AWADDR;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS AWBURST" *)
+output wire [1 : 0] m_axi_WEIGHTS_AWBURST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS AWCACHE" *)
+output wire [3 : 0] m_axi_WEIGHTS_AWCACHE;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS AWID" *)
+output wire [0 : 0] m_axi_WEIGHTS_AWID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS AWLEN" *)
+output wire [7 : 0] m_axi_WEIGHTS_AWLEN;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS AWLOCK" *)
+output wire [1 : 0] m_axi_WEIGHTS_AWLOCK;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS AWPROT" *)
+output wire [2 : 0] m_axi_WEIGHTS_AWPROT;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS AWQOS" *)
+output wire [3 : 0] m_axi_WEIGHTS_AWQOS;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS AWREADY" *)
+input wire m_axi_WEIGHTS_AWREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS AWREGION" *)
+output wire [3 : 0] m_axi_WEIGHTS_AWREGION;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS AWSIZE" *)
+output wire [2 : 0] m_axi_WEIGHTS_AWSIZE;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS AWVALID" *)
+output wire m_axi_WEIGHTS_AWVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS BID" *)
+input wire [0 : 0] m_axi_WEIGHTS_BID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS BREADY" *)
+output wire m_axi_WEIGHTS_BREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS BRESP" *)
+input wire [1 : 0] m_axi_WEIGHTS_BRESP;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS BVALID" *)
+input wire m_axi_WEIGHTS_BVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS RDATA" *)
+input wire [31 : 0] m_axi_WEIGHTS_RDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS RID" *)
+input wire [0 : 0] m_axi_WEIGHTS_RID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS RLAST" *)
+input wire m_axi_WEIGHTS_RLAST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS RREADY" *)
+output wire m_axi_WEIGHTS_RREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS RRESP" *)
+input wire [1 : 0] m_axi_WEIGHTS_RRESP;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS RVALID" *)
+input wire m_axi_WEIGHTS_RVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS WDATA" *)
+output wire [31 : 0] m_axi_WEIGHTS_WDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS WID" *)
+output wire [0 : 0] m_axi_WEIGHTS_WID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS WLAST" *)
+output wire m_axi_WEIGHTS_WLAST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS WREADY" *)
+input wire m_axi_WEIGHTS_WREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS WSTRB" *)
+output wire [3 : 0] m_axi_WEIGHTS_WSTRB;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 m_axi_WEIGHTS WVALID" *)
+output wire m_axi_WEIGHTS_WVALID;
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 img_pos_address0 DATA" *)
 (* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME W1_out_address0, LAYERED_METADATA undef" *)
-output wire [4 : 0] W1_out_address0;
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 W1_out_d0 DATA" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME img_pos_address0, LAYERED_METADATA undef" *)
+output wire [5 : 0] img_pos_address0;
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 img_pos_q0 DATA" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME img_pos_q0, LAYERED_METADATA undef" *)
+input wire [7 : 0] img_pos_q0;
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 img_neg_address0 DATA" *)
 (* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME W1_out_d0, LAYERED_METADATA undef" *)
-output wire [7 : 0] W1_out_d0;
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 W1_out_address1 DATA" *)
-(* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME W1_out_address1, LAYERED_METADATA undef" *)
-output wire [4 : 0] W1_out_address1;
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 W1_out_d1 DATA" *)
-(* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME W1_out_d1, LAYERED_METADATA undef" *)
-output wire [7 : 0] W1_out_d1;
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 W2_out_address0 DATA" *)
-(* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME W2_out_address0, LAYERED_METADATA undef" *)
-output wire [1 : 0] W2_out_address0;
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 W2_out_d0 DATA" *)
-(* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME W2_out_d0, LAYERED_METADATA undef" *)
-output wire [7 : 0] W2_out_d0;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME img_neg_address0, LAYERED_METADATA undef" *)
+output wire [5 : 0] img_neg_address0;
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 img_neg_q0 DATA" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME img_neg_q0, LAYERED_METADATA undef" *)
+input wire [7 : 0] img_neg_q0;
 
 (* SDX_KERNEL = "true" *)
 (* SDX_KERNEL_TYPE = "hls" *)
 (* SDX_KERNEL_SYNTH_INST = "inst" *)
   train_step #(
-    .C_S_AXI_CTRL_ADDR_WIDTH(8),
-    .C_S_AXI_CTRL_DATA_WIDTH(32)
+    .C_S_AXI_CTRL_ADDR_WIDTH(5),
+    .C_S_AXI_CTRL_DATA_WIDTH(32),
+    .C_S_AXI_CONTROL_ADDR_WIDTH(6),
+    .C_S_AXI_CONTROL_DATA_WIDTH(32),
+    .C_M_AXI_WEIGHTS_ID_WIDTH(1),
+    .C_M_AXI_WEIGHTS_ADDR_WIDTH(64),
+    .C_M_AXI_WEIGHTS_DATA_WIDTH(32),
+    .C_M_AXI_WEIGHTS_AWUSER_WIDTH(1),
+    .C_M_AXI_WEIGHTS_ARUSER_WIDTH(1),
+    .C_M_AXI_WEIGHTS_WUSER_WIDTH(1),
+    .C_M_AXI_WEIGHTS_RUSER_WIDTH(1),
+    .C_M_AXI_WEIGHTS_BUSER_WIDTH(1),
+    .C_M_AXI_WEIGHTS_USER_VALUE(32'H00000000),
+    .C_M_AXI_WEIGHTS_PROT_VALUE(3'B000),
+    .C_M_AXI_WEIGHTS_CACHE_VALUE(4'B0011)
   ) inst (
-    .leds_port_ap_vld(leds_port_ap_vld),
-    .W1_out_ce0(W1_out_ce0),
-    .W1_out_we0(W1_out_we0),
-    .W1_out_ce1(W1_out_ce1),
-    .W1_out_we1(W1_out_we1),
-    .W2_out_ce0(W2_out_ce0),
-    .W2_out_we0(W2_out_we0),
+    .img_pos_ce0(img_pos_ce0),
+    .img_neg_ce0(img_neg_ce0),
     .s_axi_CTRL_ARADDR(s_axi_CTRL_ARADDR),
     .s_axi_CTRL_ARREADY(s_axi_CTRL_ARREADY),
     .s_axi_CTRL_ARVALID(s_axi_CTRL_ARVALID),
@@ -208,15 +369,74 @@ output wire [7 : 0] W2_out_d0;
     .s_axi_CTRL_WREADY(s_axi_CTRL_WREADY),
     .s_axi_CTRL_WSTRB(s_axi_CTRL_WSTRB),
     .s_axi_CTRL_WVALID(s_axi_CTRL_WVALID),
+    .s_axi_control_ARADDR(s_axi_control_ARADDR),
+    .s_axi_control_ARREADY(s_axi_control_ARREADY),
+    .s_axi_control_ARVALID(s_axi_control_ARVALID),
+    .s_axi_control_AWADDR(s_axi_control_AWADDR),
+    .s_axi_control_AWREADY(s_axi_control_AWREADY),
+    .s_axi_control_AWVALID(s_axi_control_AWVALID),
+    .s_axi_control_BREADY(s_axi_control_BREADY),
+    .s_axi_control_BRESP(s_axi_control_BRESP),
+    .s_axi_control_BVALID(s_axi_control_BVALID),
+    .s_axi_control_RDATA(s_axi_control_RDATA),
+    .s_axi_control_RREADY(s_axi_control_RREADY),
+    .s_axi_control_RRESP(s_axi_control_RRESP),
+    .s_axi_control_RVALID(s_axi_control_RVALID),
+    .s_axi_control_WDATA(s_axi_control_WDATA),
+    .s_axi_control_WREADY(s_axi_control_WREADY),
+    .s_axi_control_WSTRB(s_axi_control_WSTRB),
+    .s_axi_control_WVALID(s_axi_control_WVALID),
     .ap_clk(ap_clk),
     .ap_rst_n(ap_rst_n),
     .interrupt(interrupt),
-    .leds_port(leds_port),
-    .W1_out_address0(W1_out_address0),
-    .W1_out_d0(W1_out_d0),
-    .W1_out_address1(W1_out_address1),
-    .W1_out_d1(W1_out_d1),
-    .W2_out_address0(W2_out_address0),
-    .W2_out_d0(W2_out_d0)
+    .m_axi_WEIGHTS_ARADDR(m_axi_WEIGHTS_ARADDR),
+    .m_axi_WEIGHTS_ARBURST(m_axi_WEIGHTS_ARBURST),
+    .m_axi_WEIGHTS_ARCACHE(m_axi_WEIGHTS_ARCACHE),
+    .m_axi_WEIGHTS_ARID(m_axi_WEIGHTS_ARID),
+    .m_axi_WEIGHTS_ARLEN(m_axi_WEIGHTS_ARLEN),
+    .m_axi_WEIGHTS_ARLOCK(m_axi_WEIGHTS_ARLOCK),
+    .m_axi_WEIGHTS_ARPROT(m_axi_WEIGHTS_ARPROT),
+    .m_axi_WEIGHTS_ARQOS(m_axi_WEIGHTS_ARQOS),
+    .m_axi_WEIGHTS_ARREADY(m_axi_WEIGHTS_ARREADY),
+    .m_axi_WEIGHTS_ARREGION(m_axi_WEIGHTS_ARREGION),
+    .m_axi_WEIGHTS_ARSIZE(m_axi_WEIGHTS_ARSIZE),
+    .m_axi_WEIGHTS_ARUSER(),
+    .m_axi_WEIGHTS_ARVALID(m_axi_WEIGHTS_ARVALID),
+    .m_axi_WEIGHTS_AWADDR(m_axi_WEIGHTS_AWADDR),
+    .m_axi_WEIGHTS_AWBURST(m_axi_WEIGHTS_AWBURST),
+    .m_axi_WEIGHTS_AWCACHE(m_axi_WEIGHTS_AWCACHE),
+    .m_axi_WEIGHTS_AWID(m_axi_WEIGHTS_AWID),
+    .m_axi_WEIGHTS_AWLEN(m_axi_WEIGHTS_AWLEN),
+    .m_axi_WEIGHTS_AWLOCK(m_axi_WEIGHTS_AWLOCK),
+    .m_axi_WEIGHTS_AWPROT(m_axi_WEIGHTS_AWPROT),
+    .m_axi_WEIGHTS_AWQOS(m_axi_WEIGHTS_AWQOS),
+    .m_axi_WEIGHTS_AWREADY(m_axi_WEIGHTS_AWREADY),
+    .m_axi_WEIGHTS_AWREGION(m_axi_WEIGHTS_AWREGION),
+    .m_axi_WEIGHTS_AWSIZE(m_axi_WEIGHTS_AWSIZE),
+    .m_axi_WEIGHTS_AWUSER(),
+    .m_axi_WEIGHTS_AWVALID(m_axi_WEIGHTS_AWVALID),
+    .m_axi_WEIGHTS_BID(m_axi_WEIGHTS_BID),
+    .m_axi_WEIGHTS_BREADY(m_axi_WEIGHTS_BREADY),
+    .m_axi_WEIGHTS_BRESP(m_axi_WEIGHTS_BRESP),
+    .m_axi_WEIGHTS_BUSER(1'B0),
+    .m_axi_WEIGHTS_BVALID(m_axi_WEIGHTS_BVALID),
+    .m_axi_WEIGHTS_RDATA(m_axi_WEIGHTS_RDATA),
+    .m_axi_WEIGHTS_RID(m_axi_WEIGHTS_RID),
+    .m_axi_WEIGHTS_RLAST(m_axi_WEIGHTS_RLAST),
+    .m_axi_WEIGHTS_RREADY(m_axi_WEIGHTS_RREADY),
+    .m_axi_WEIGHTS_RRESP(m_axi_WEIGHTS_RRESP),
+    .m_axi_WEIGHTS_RUSER(1'B0),
+    .m_axi_WEIGHTS_RVALID(m_axi_WEIGHTS_RVALID),
+    .m_axi_WEIGHTS_WDATA(m_axi_WEIGHTS_WDATA),
+    .m_axi_WEIGHTS_WID(m_axi_WEIGHTS_WID),
+    .m_axi_WEIGHTS_WLAST(m_axi_WEIGHTS_WLAST),
+    .m_axi_WEIGHTS_WREADY(m_axi_WEIGHTS_WREADY),
+    .m_axi_WEIGHTS_WSTRB(m_axi_WEIGHTS_WSTRB),
+    .m_axi_WEIGHTS_WUSER(),
+    .m_axi_WEIGHTS_WVALID(m_axi_WEIGHTS_WVALID),
+    .img_pos_address0(img_pos_address0),
+    .img_pos_q0(img_pos_q0),
+    .img_neg_address0(img_neg_address0),
+    .img_neg_q0(img_neg_q0)
   );
 endmodule

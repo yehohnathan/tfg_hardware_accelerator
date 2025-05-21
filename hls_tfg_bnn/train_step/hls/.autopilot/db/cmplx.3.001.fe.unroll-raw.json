@@ -1,24 +1,54 @@
 {
   "0": {
-    "basicblocks": 16,
-    "calls": "2 4 2 4 3",
+    "basicblocks": 15,
+    "calls": "4 2 4 2 1 5",
     "file": "forward_fw.cpp",
-    "fileloc": 105,
-    "instructions": 61,
+    "fileloc": 101,
+    "instructions": 80,
     "loads": {
-      "G": 1
+      "T": 2
     },
     "name": "train_step",
     "stores": {
-      "T": 3
+      "L": 2
     },
-    "total_instructions": 6186
+    "total_instructions": 762
   },
   "1": {
+    "basicblocks": 58,
+    "calls": "",
+    "file": "forward_fw.cpp",
+    "fileloc": 59,
+    "instructions": 135,
+    "loads": {
+      "L": 12
+    },
+    "name": "updateHidden",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 135
+  },
+  "2": {
+    "basicblocks": 35,
+    "calls": "3",
+    "file": "forward_fw.cpp",
+    "fileloc": 42,
+    "instructions": 91,
+    "loads": {
+      "L": 7
+    },
+    "name": "forwardOutput",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 103
+  },
+  "3": {
     "basicblocks": 9,
     "calls": "",
     "file": "forward_fw.cpp",
-    "fileloc": 27,
+    "fileloc": 6,
     "instructions": 12,
     "name": "signum",
     "stores": {
@@ -26,48 +56,34 @@
     },
     "total_instructions": 12
   },
-  "2": {
-    "basicblocks": 848,
-    "calls": "1 1 1 1",
+  "4": {
+    "basicblocks": 35,
+    "calls": "3",
     "file": "forward_fw.cpp",
-    "fileloc": 46,
-    "instructions": 1893,
+    "fileloc": 24,
+    "instructions": 91,
     "loads": {
-      "G": 96,
-      "L": 100
+      "L": 7
     },
     "name": "forwardHidden",
     "stores": {
-      "L": 4
+      "L": 1
     },
-    "total_instructions": 1941
+    "total_instructions": 103
   },
-  "3": {
-    "basicblocks": 1184,
+  "5": {
+    "basicblocks": 58,
     "calls": "",
     "file": "forward_fw.cpp",
-    "fileloc": 85,
-    "instructions": 2229,
+    "fileloc": 80,
+    "instructions": 135,
     "loads": {
-      "G": 120,
-      "L": 96
+      "L": 12
     },
-    "name": "updateHidden",
-    "stores": {
-      "G": 32
-    },
-    "total_instructions": 2229
-  },
-  "4": {
-    "basicblocks": 6,
-    "calls": "",
-    "file": "forward_fw.cpp",
-    "fileloc": 64,
-    "instructions": 7,
-    "name": "forwardOutput",
+    "name": "updateOutput",
     "stores": {
       "L": 1
     },
-    "total_instructions": 7
+    "total_instructions": 135
   }
 }

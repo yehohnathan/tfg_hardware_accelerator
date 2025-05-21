@@ -14,6 +14,7 @@ int XTrain_step_CfgInitialize(XTrain_step *InstancePtr, XTrain_step_Config *Conf
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(ConfigPtr != NULL);
 
+    InstancePtr->Control_BaseAddress = ConfigPtr->Control_BaseAddress;
     InstancePtr->Ctrl_BaseAddress = ConfigPtr->Ctrl_BaseAddress;
     InstancePtr->IsReady = XIL_COMPONENT_IS_READY;
 
@@ -76,292 +77,41 @@ void XTrain_step_DisableAutoRestart(XTrain_step *InstancePtr) {
     XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_AP_CTRL, 0);
 }
 
-void XTrain_step_Set_img_pos_0(XTrain_step *InstancePtr, u32 Data) {
+void XTrain_step_Set_W1(XTrain_step *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_0_DATA, Data);
+    XTrain_step_WriteReg(InstancePtr->Control_BaseAddress, XTRAIN_STEP_CONTROL_ADDR_W1_DATA, (u32)(Data));
+    XTrain_step_WriteReg(InstancePtr->Control_BaseAddress, XTRAIN_STEP_CONTROL_ADDR_W1_DATA + 4, (u32)(Data >> 32));
 }
 
-u32 XTrain_step_Get_img_pos_0(XTrain_step *InstancePtr) {
-    u32 Data;
+u64 XTrain_step_Get_W1(XTrain_step *InstancePtr) {
+    u64 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_0_DATA);
+    Data = XTrain_step_ReadReg(InstancePtr->Control_BaseAddress, XTRAIN_STEP_CONTROL_ADDR_W1_DATA);
+    Data += (u64)XTrain_step_ReadReg(InstancePtr->Control_BaseAddress, XTRAIN_STEP_CONTROL_ADDR_W1_DATA + 4) << 32;
     return Data;
 }
 
-void XTrain_step_Set_img_pos_1(XTrain_step *InstancePtr, u32 Data) {
+void XTrain_step_Set_W2(XTrain_step *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_1_DATA, Data);
+    XTrain_step_WriteReg(InstancePtr->Control_BaseAddress, XTRAIN_STEP_CONTROL_ADDR_W2_DATA, (u32)(Data));
+    XTrain_step_WriteReg(InstancePtr->Control_BaseAddress, XTRAIN_STEP_CONTROL_ADDR_W2_DATA + 4, (u32)(Data >> 32));
 }
 
-u32 XTrain_step_Get_img_pos_1(XTrain_step *InstancePtr) {
-    u32 Data;
+u64 XTrain_step_Get_W2(XTrain_step *InstancePtr) {
+    u64 Data;
 
     Xil_AssertNonvoid(InstancePtr != NULL);
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_1_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_pos_2(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_2_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_pos_2(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_2_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_pos_3(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_3_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_pos_3(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_3_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_pos_4(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_4_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_pos_4(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_4_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_pos_5(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_5_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_pos_5(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_5_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_pos_6(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_6_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_pos_6(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_6_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_pos_7(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_7_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_pos_7(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_POS_7_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_neg_0(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_0_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_neg_0(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_0_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_neg_1(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_1_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_neg_1(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_1_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_neg_2(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_2_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_neg_2(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_2_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_neg_3(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_3_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_neg_3(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_3_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_neg_4(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_4_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_neg_4(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_4_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_neg_5(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_5_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_neg_5(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_5_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_neg_6(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_6_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_neg_6(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_6_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_img_neg_7(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_7_DATA, Data);
-}
-
-u32 XTrain_step_Get_img_neg_7(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_IMG_NEG_7_DATA);
-    return Data;
-}
-
-void XTrain_step_Set_last_sample(XTrain_step *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XTrain_step_WriteReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_LAST_SAMPLE_DATA, Data);
-}
-
-u32 XTrain_step_Get_last_sample(XTrain_step *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XTrain_step_ReadReg(InstancePtr->Ctrl_BaseAddress, XTRAIN_STEP_CTRL_ADDR_LAST_SAMPLE_DATA);
+    Data = XTrain_step_ReadReg(InstancePtr->Control_BaseAddress, XTRAIN_STEP_CONTROL_ADDR_W2_DATA);
+    Data += (u64)XTrain_step_ReadReg(InstancePtr->Control_BaseAddress, XTRAIN_STEP_CONTROL_ADDR_W2_DATA + 4) << 32;
     return Data;
 }
 

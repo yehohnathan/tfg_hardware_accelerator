@@ -17,7 +17,7 @@ config:
     - XTrain_step_Config
 required:
     - compatible
-    - reg
+    - reg: 2
 additionalProperties:
    - interrupts
    - interrupt-parent

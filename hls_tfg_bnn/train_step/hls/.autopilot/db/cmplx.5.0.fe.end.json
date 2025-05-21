@@ -1,82 +1,141 @@
 {
     "0": {
         "name": "train_step",
-        "file": "..\/src\/forward_fw.cpp",
-        "fileloc": "105",
-        "instructions": "143",
-        "total_instructions": "917",
-        "calls": "1 1 4 3 2",
+        "file": "forward_fw.cpp",
+        "fileloc": "101",
+        "instructions": "421",
+        "total_instructions": "3324",
+        "calls": "3 5 4 1 6 2 7",
         "basicblocks": "1",
         "loads": {
-            "G": "32"
-        },
-        "stores": {
-            "G": "8"
+            "L": "192"
         }
     },
     "1": {
-        "name": "forwardHidden",
+        "name": "train_step_Pipeline_VITIS_LOOP_28_11",
         "file": "..\/src\/forward_fw.cpp",
-        "fileloc": "46",
-        "instructions": "202",
-        "total_instructions": "202",
-        "calls": "",
-        "basicblocks": "1",
-        "loads": {
-            "G": "32"
-        }
-    },
-    "2": {
-        "name": "train_step_Pipeline_VITIS_LOOP_141_4",
-        "file": "..\/src\/forward_fw.cpp",
-        "fileloc": "141",
-        "instructions": "17",
-        "total_instructions": "17",
+        "fileloc": "128",
+        "instructions": "453",
+        "total_instructions": "453",
         "calls": "",
         "basicblocks": "4",
         "loads": {
             "L": "1"
         },
         "stores": {
-            "L": "2",
-            "T": "1"
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "train_step_Pipeline_VITIS_LOOP_64_1",
+        "file": "..\/src\/forward_fw.cpp",
+        "fileloc": "136",
+        "instructions": "988",
+        "total_instructions": "988",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "2"
         },
         "loops": {
             "L": "1"
         }
     },
     "3": {
-        "name": "train_step_Pipeline_VITIS_LOOP_136_1",
+        "name": "train_step_Pipeline_VITIS_LOOP_118_1",
         "file": "..\/src\/forward_fw.cpp",
-        "fileloc": "136",
-        "instructions": "95",
-        "total_instructions": "95",
+        "fileloc": "118",
+        "instructions": "28",
+        "total_instructions": "28",
         "calls": "",
         "basicblocks": "4",
         "loads": {
-            "L": "1"
+            "L": "1",
+            "T": "2"
         },
         "stores": {
-            "L": "2",
-            "T": "8"
+            "L": "4"
         },
         "loops": {
             "L": "1"
         }
     },
     "4": {
-        "name": "updateHidden",
-        "file": "forward_fw.cpp",
-        "fileloc": "85",
-        "instructions": "258",
-        "total_instructions": "258",
+        "name": "train_step_Pipeline_VITIS_LOOP_45_1",
+        "file": "..\/src\/forward_fw.cpp",
+        "fileloc": "129",
+        "instructions": "237",
+        "total_instructions": "237",
         "calls": "",
-        "basicblocks": "1",
+        "basicblocks": "4",
         "loads": {
-            "G": "40"
+            "L": "1"
         },
         "stores": {
-            "G": "32"
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "train_step_Pipeline_VITIS_LOOP_28_1",
+        "file": "..\/src\/forward_fw.cpp",
+        "fileloc": "128",
+        "instructions": "453",
+        "total_instructions": "453",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "train_step_Pipeline_VITIS_LOOP_45_12",
+        "file": "..\/src\/forward_fw.cpp",
+        "fileloc": "129",
+        "instructions": "237",
+        "total_instructions": "237",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "train_step_Pipeline_VITIS_LOOP_85_1",
+        "file": "..\/src\/forward_fw.cpp",
+        "fileloc": "137",
+        "instructions": "507",
+        "total_instructions": "507",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
         }
     }
 }

@@ -22,7 +22,7 @@ XTrain_step_Config *XTrain_step_LookupConfig(UINTPTR BaseAddress) {
 	int Index;
 
 	for (Index = (u32)0x0; XTrain_step_ConfigTable[Index].Name != NULL; Index++) {
-		if (!BaseAddress || XTrain_step_ConfigTable[Index].Ctrl_BaseAddress == BaseAddress) {
+		if (!BaseAddress || XTrain_step_ConfigTable[Index].Control_BaseAddress == BaseAddress) {
 			ConfigPtr = &XTrain_step_ConfigTable[Index];
 			break;
 		}

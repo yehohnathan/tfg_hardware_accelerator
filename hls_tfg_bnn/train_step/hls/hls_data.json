@@ -18,62 +18,27 @@
     "img_pos": {
       "index": "0",
       "direction": "in",
-      "srcType": "ap_fixed<8, 8, AP_TRN, AP_WRAP, 0> const *",
+      "srcType": "unsigned char const *",
       "srcSize": "8",
       "hwRefs": [
         {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
+          "type": "port",
+          "interface": "img_pos_address0",
+          "name": "img_pos_address0",
+          "usage": "address",
+          "direction": "out"
         },
         {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
+          "type": "port",
+          "interface": "img_pos_ce0",
+          "name": "img_pos_ce0",
+          "usage": "control",
+          "direction": "out"
         },
         {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
+          "type": "port",
+          "interface": "img_pos_q0",
+          "name": "img_pos_q0",
           "usage": "data",
           "direction": "in"
         }
@@ -82,82 +47,34 @@
     "img_neg": {
       "index": "1",
       "direction": "in",
-      "srcType": "ap_fixed<8, 8, AP_TRN, AP_WRAP, 0> const *",
+      "srcType": "unsigned char const *",
       "srcSize": "8",
       "hwRefs": [
         {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
+          "type": "port",
+          "interface": "img_neg_address0",
+          "name": "img_neg_address0",
+          "usage": "address",
+          "direction": "out"
         },
         {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
+          "type": "port",
+          "interface": "img_neg_ce0",
+          "name": "img_neg_ce0",
+          "usage": "control",
+          "direction": "out"
         },
         {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "interface",
-          "interface": "s_axi_CTRL",
-          "name": "",
+          "type": "port",
+          "interface": "img_neg_q0",
+          "name": "img_neg_q0",
           "usage": "data",
           "direction": "in"
         }
       ]
     },
-    "last_sample": {
-      "index": "2",
-      "direction": "in",
-      "srcType": "int",
-      "srcSize": "32",
-      "hwRefs": [{
-          "type": "register",
-          "interface": "s_axi_CTRL",
-          "name": "last_sample",
-          "usage": "data",
-          "direction": "in"
-        }]
-    },
     "sample_idx": {
-      "index": "3",
+      "index": "2",
       "direction": "in",
       "srcType": "int",
       "srcSize": "32",
@@ -169,125 +86,61 @@
           "direction": "in"
         }]
     },
-    "leds_port": {
+    "W1": {
+      "index": "3",
+      "direction": "inout",
+      "srcType": "ap_fixed<8, 8, AP_TRN, AP_WRAP, 0>*",
+      "srcSize": "8",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_WEIGHTS",
+          "name": "",
+          "usage": "data",
+          "direction": "inout"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "W1_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "W1_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "W2": {
       "index": "4",
-      "direction": "out",
-      "srcType": "&",
-      "srcSize": "8",
-      "hwRefs": [
-        {
-          "type": "port",
-          "interface": "leds_port",
-          "name": "leds_port",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "leds_port_ap_vld",
-          "name": "leds_port_ap_vld",
-          "usage": "control",
-          "direction": "out"
-        }
-      ]
-    },
-    "W1_out": {
-      "index": "5",
-      "direction": "out",
+      "direction": "inout",
       "srcType": "ap_fixed<8, 8, AP_TRN, AP_WRAP, 0>*",
       "srcSize": "8",
       "hwRefs": [
         {
-          "type": "port",
-          "interface": "W1_out_address0",
-          "name": "W1_out_address0",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "W1_out_ce0",
-          "name": "W1_out_ce0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "W1_out_we0",
-          "name": "W1_out_we0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "W1_out_d0",
-          "name": "W1_out_d0",
+          "type": "interface",
+          "interface": "m_axi_WEIGHTS",
+          "name": "",
           "usage": "data",
-          "direction": "out"
+          "direction": "inout"
         },
         {
-          "type": "port",
-          "interface": "W1_out_address1",
-          "name": "W1_out_address1",
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "W2_1",
           "usage": "address",
-          "direction": "out"
+          "direction": "in"
         },
         {
-          "type": "port",
-          "interface": "W1_out_ce1",
-          "name": "W1_out_ce1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "W1_out_we1",
-          "name": "W1_out_we1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "W1_out_d1",
-          "name": "W1_out_d1",
-          "usage": "data",
-          "direction": "out"
-        }
-      ]
-    },
-    "W2_out": {
-      "index": "6",
-      "direction": "out",
-      "srcType": "ap_fixed<8, 8, AP_TRN, AP_WRAP, 0>*",
-      "srcSize": "8",
-      "hwRefs": [
-        {
-          "type": "port",
-          "interface": "W2_out_address0",
-          "name": "W2_out_address0",
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "W2_2",
           "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "W2_out_ce0",
-          "name": "W2_out_ce0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "W2_out_we0",
-          "name": "W2_out_we0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "W2_out_d0",
-          "name": "W2_out_d0",
-          "usage": "data",
-          "direction": "out"
+          "direction": "in"
         }
       ]
     }
@@ -307,8 +160,8 @@
     "ClockPeriod": "10",
     "Uncertainty": "2.7",
     "IsCombinational": "0",
-    "II": "30",
-    "Latency": "29"
+    "II": "8830",
+    "Latency": "8829"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
@@ -317,7 +170,7 @@
     "Name": "train_step",
     "Version": "1.0",
     "DisplayName": "Train_step",
-    "Revision": "2114082713",
+    "Revision": "2114092025",
     "Description": "An IP generated by Vitis HLS",
     "Taxonomy": "\/VITIS_HLS_IP",
     "AutoFamilySupport": "",
@@ -334,31 +187,43 @@
       "..\/..\/..\/data\/mnist_train_data.hpp"
     ],
     "Vhdl": [
+      "impl\/vhdl\/train_step_control_s_axi.vhd",
       "impl\/vhdl\/train_step_CTRL_s_axi.vhd",
       "impl\/vhdl\/train_step_flow_control_loop_pipe_sequential_init.vhd",
-      "impl\/vhdl\/train_step_forwardHidden.vhd",
-      "impl\/vhdl\/train_step_mac_muladd_8s_2s_10s_11_4_1.vhd",
-      "impl\/vhdl\/train_step_mac_muladd_8s_8s_2s_12_4_1.vhd",
-      "impl\/vhdl\/train_step_mul_2s_8s_10_1_1.vhd",
-      "impl\/vhdl\/train_step_mul_32ns_34ns_42_2_1.vhd",
-      "impl\/vhdl\/train_step_sparsemux_9_2_2_1_1.vhd",
-      "impl\/vhdl\/train_step_train_step_Pipeline_VITIS_LOOP_136_1.vhd",
-      "impl\/vhdl\/train_step_train_step_Pipeline_VITIS_LOOP_141_4.vhd",
-      "impl\/vhdl\/train_step_updateHidden.vhd",
+      "impl\/vhdl\/train_step_hidden_pos_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/train_step_in_pos_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/train_step_mac_muladd_3s_2s_8s_9_4_1.vhd",
+      "impl\/vhdl\/train_step_mac_muladd_8s_2s_10s_10_4_1.vhd",
+      "impl\/vhdl\/train_step_mul_8s_2s_10_1_1.vhd",
+      "impl\/vhdl\/train_step_out_pos_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/train_step_train_step_Pipeline_VITIS_LOOP_28_1.vhd",
+      "impl\/vhdl\/train_step_train_step_Pipeline_VITIS_LOOP_28_11.vhd",
+      "impl\/vhdl\/train_step_train_step_Pipeline_VITIS_LOOP_45_1.vhd",
+      "impl\/vhdl\/train_step_train_step_Pipeline_VITIS_LOOP_45_12.vhd",
+      "impl\/vhdl\/train_step_train_step_Pipeline_VITIS_LOOP_64_1.vhd",
+      "impl\/vhdl\/train_step_train_step_Pipeline_VITIS_LOOP_85_1.vhd",
+      "impl\/vhdl\/train_step_train_step_Pipeline_VITIS_LOOP_118_1.vhd",
+      "impl\/vhdl\/train_step_WEIGHTS_m_axi.vhd",
       "impl\/vhdl\/train_step.vhd"
     ],
     "Verilog": [
+      "impl\/verilog\/train_step_control_s_axi.v",
       "impl\/verilog\/train_step_CTRL_s_axi.v",
       "impl\/verilog\/train_step_flow_control_loop_pipe_sequential_init.v",
-      "impl\/verilog\/train_step_forwardHidden.v",
-      "impl\/verilog\/train_step_mac_muladd_8s_2s_10s_11_4_1.v",
-      "impl\/verilog\/train_step_mac_muladd_8s_8s_2s_12_4_1.v",
-      "impl\/verilog\/train_step_mul_2s_8s_10_1_1.v",
-      "impl\/verilog\/train_step_mul_32ns_34ns_42_2_1.v",
-      "impl\/verilog\/train_step_sparsemux_9_2_2_1_1.v",
-      "impl\/verilog\/train_step_train_step_Pipeline_VITIS_LOOP_136_1.v",
-      "impl\/verilog\/train_step_train_step_Pipeline_VITIS_LOOP_141_4.v",
-      "impl\/verilog\/train_step_updateHidden.v",
+      "impl\/verilog\/train_step_hidden_pos_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/train_step_in_pos_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/train_step_mac_muladd_3s_2s_8s_9_4_1.v",
+      "impl\/verilog\/train_step_mac_muladd_8s_2s_10s_10_4_1.v",
+      "impl\/verilog\/train_step_mul_8s_2s_10_1_1.v",
+      "impl\/verilog\/train_step_out_pos_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/train_step_train_step_Pipeline_VITIS_LOOP_28_1.v",
+      "impl\/verilog\/train_step_train_step_Pipeline_VITIS_LOOP_28_11.v",
+      "impl\/verilog\/train_step_train_step_Pipeline_VITIS_LOOP_45_1.v",
+      "impl\/verilog\/train_step_train_step_Pipeline_VITIS_LOOP_45_12.v",
+      "impl\/verilog\/train_step_train_step_Pipeline_VITIS_LOOP_64_1.v",
+      "impl\/verilog\/train_step_train_step_Pipeline_VITIS_LOOP_85_1.v",
+      "impl\/verilog\/train_step_train_step_Pipeline_VITIS_LOOP_118_1.v",
+      "impl\/verilog\/train_step_WEIGHTS_m_axi.v",
       "impl\/verilog\/train_step.v"
     ],
     "SwDriver": [
@@ -392,7 +257,7 @@
       "busTypeName": "aximm",
       "mode": "slave",
       "dataWidth": "32",
-      "addrWidth": "8",
+      "addrWidth": "5",
       "portPrefix": "s_axi_CTRL_",
       "paramPrefix": "C_S_AXI_CTRL_",
       "ports": [
@@ -572,388 +437,6 @@
         },
         {
           "offset": "0x10",
-          "name": "img_pos_0",
-          "access": "W",
-          "description": "Data signal of img_pos_0",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_pos_0",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_pos_0"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x18",
-          "name": "img_pos_1",
-          "access": "W",
-          "description": "Data signal of img_pos_1",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_pos_1",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_pos_1"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x20",
-          "name": "img_pos_2",
-          "access": "W",
-          "description": "Data signal of img_pos_2",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_pos_2",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_pos_2"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x28",
-          "name": "img_pos_3",
-          "access": "W",
-          "description": "Data signal of img_pos_3",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_pos_3",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_pos_3"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x30",
-          "name": "img_pos_4",
-          "access": "W",
-          "description": "Data signal of img_pos_4",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_pos_4",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_pos_4"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x38",
-          "name": "img_pos_5",
-          "access": "W",
-          "description": "Data signal of img_pos_5",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_pos_5",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_pos_5"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x40",
-          "name": "img_pos_6",
-          "access": "W",
-          "description": "Data signal of img_pos_6",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_pos_6",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_pos_6"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x48",
-          "name": "img_pos_7",
-          "access": "W",
-          "description": "Data signal of img_pos_7",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_pos_7",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_pos_7"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x50",
-          "name": "img_neg_0",
-          "access": "W",
-          "description": "Data signal of img_neg_0",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_neg_0",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_neg_0"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x58",
-          "name": "img_neg_1",
-          "access": "W",
-          "description": "Data signal of img_neg_1",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_neg_1",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_neg_1"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x60",
-          "name": "img_neg_2",
-          "access": "W",
-          "description": "Data signal of img_neg_2",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_neg_2",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_neg_2"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x68",
-          "name": "img_neg_3",
-          "access": "W",
-          "description": "Data signal of img_neg_3",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_neg_3",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_neg_3"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x70",
-          "name": "img_neg_4",
-          "access": "W",
-          "description": "Data signal of img_neg_4",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_neg_4",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_neg_4"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x78",
-          "name": "img_neg_5",
-          "access": "W",
-          "description": "Data signal of img_neg_5",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_neg_5",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_neg_5"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x80",
-          "name": "img_neg_6",
-          "access": "W",
-          "description": "Data signal of img_neg_6",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_neg_6",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_neg_6"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x88",
-          "name": "img_neg_7",
-          "access": "W",
-          "description": "Data signal of img_neg_7",
-          "range": "32",
-          "fields": [
-            {
-              "offset": "0",
-              "width": "8",
-              "name": "img_neg_7",
-              "access": "W",
-              "description": "Bit 7 to 0 of img_neg_7"
-            },
-            {
-              "offset": "8",
-              "width": "24",
-              "name": "RESERVED",
-              "access": "R",
-              "description": "Reserved.  0s on read."
-            }
-          ]
-        },
-        {
-          "offset": "0x90",
-          "name": "last_sample",
-          "access": "W",
-          "description": "Data signal of last_sample",
-          "range": "32",
-          "fields": [{
-              "offset": "0",
-              "width": "32",
-              "name": "last_sample",
-              "access": "W",
-              "description": "Bit 31 to 0 of last_sample"
-            }]
-        },
-        {
-          "offset": "0x98",
           "name": "sample_idx",
           "access": "W",
           "description": "Data signal of sample_idx",
@@ -967,132 +450,114 @@
             }]
         }
       ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "16",
+          "argName": "sample_idx"
+        }]
+    },
+    "s_axi_control": {
+      "type": "axi4lite",
+      "busTypeName": "aximm",
+      "mode": "slave",
+      "dataWidth": "32",
+      "addrWidth": "6",
+      "portPrefix": "s_axi_control_",
+      "paramPrefix": "C_S_AXI_CONTROL_",
+      "offsetMasterName": "m_axi_WEIGHTS",
+      "ports": [
+        "s_axi_control_ARADDR",
+        "s_axi_control_ARREADY",
+        "s_axi_control_ARVALID",
+        "s_axi_control_AWADDR",
+        "s_axi_control_AWREADY",
+        "s_axi_control_AWVALID",
+        "s_axi_control_BREADY",
+        "s_axi_control_BRESP",
+        "s_axi_control_BVALID",
+        "s_axi_control_RDATA",
+        "s_axi_control_RREADY",
+        "s_axi_control_RRESP",
+        "s_axi_control_RVALID",
+        "s_axi_control_WDATA",
+        "s_axi_control_WREADY",
+        "s_axi_control_WSTRB",
+        "s_axi_control_WVALID"
+      ],
+      "registers": [
+        {
+          "offset": "0x10",
+          "name": "W1_1",
+          "access": "W",
+          "description": "Data signal of W1",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "W1",
+              "access": "W",
+              "description": "Bit 31 to 0 of W1"
+            }]
+        },
+        {
+          "offset": "0x14",
+          "name": "W1_2",
+          "access": "W",
+          "description": "Data signal of W1",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "W1",
+              "access": "W",
+              "description": "Bit 63 to 32 of W1"
+            }]
+        },
+        {
+          "offset": "0x1c",
+          "name": "W2_1",
+          "access": "W",
+          "description": "Data signal of W2",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "W2",
+              "access": "W",
+              "description": "Bit 31 to 0 of W2"
+            }]
+        },
+        {
+          "offset": "0x20",
+          "name": "W2_2",
+          "access": "W",
+          "description": "Data signal of W2",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "W2",
+              "access": "W",
+              "description": "Bit 63 to 32 of W2"
+            }]
+        }
+      ],
       "constraints": [
         {
           "constraint_type": "pragma interface",
           "mode": "s_axilite",
           "register_option": "0",
           "offset": "16",
-          "argName": "img_pos"
+          "argName": "W1"
         },
         {
           "constraint_type": "pragma interface",
           "mode": "s_axilite",
           "register_option": "0",
-          "offset": "24",
-          "argName": "img_pos"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "32",
-          "argName": "img_pos"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "40",
-          "argName": "img_pos"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "48",
-          "argName": "img_pos"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "56",
-          "argName": "img_pos"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "64",
-          "argName": "img_pos"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "72",
-          "argName": "img_pos"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "80",
-          "argName": "img_neg"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "88",
-          "argName": "img_neg"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "96",
-          "argName": "img_neg"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "104",
-          "argName": "img_neg"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "112",
-          "argName": "img_neg"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "120",
-          "argName": "img_neg"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "128",
-          "argName": "img_neg"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "136",
-          "argName": "img_neg"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "144",
-          "argName": "last_sample"
-        },
-        {
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "152",
-          "argName": "sample_idx"
+          "offset": "28",
+          "argName": "W2"
         }
       ]
     },
@@ -1101,7 +566,7 @@
       "busTypeName": "clock",
       "mode": "slave",
       "busParams": {
-        "ASSOCIATED_BUSIF": "s_axi_CTRL",
+        "ASSOCIATED_BUSIF": "s_axi_CTRL:s_axi_control:m_axi_WEIGHTS",
         "ASSOCIATED_RESET": "ap_rst_n"
       },
       "portMap": {"ap_clk": "CLK"},
@@ -1124,109 +589,175 @@
       "portMap": {"interrupt": "INTERRUPT"},
       "ports": ["interrupt"]
     },
-    "leds_port": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_vld",
+    "m_axi_WEIGHTS": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
       "mode": "master",
-      "dataWidth": "4",
-      "portMap": {"leds_port": "DATA"},
-      "ports": ["leds_port"],
-      "constraints": [{
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_WEIGHTS_",
+      "paramPrefix": "C_M_AXI_WEIGHTS_",
+      "offsetSlaveName": "s_axi_control",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_WRITE",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_WEIGHTS_ARADDR",
+        "m_axi_WEIGHTS_ARBURST",
+        "m_axi_WEIGHTS_ARCACHE",
+        "m_axi_WEIGHTS_ARID",
+        "m_axi_WEIGHTS_ARLEN",
+        "m_axi_WEIGHTS_ARLOCK",
+        "m_axi_WEIGHTS_ARPROT",
+        "m_axi_WEIGHTS_ARQOS",
+        "m_axi_WEIGHTS_ARREADY",
+        "m_axi_WEIGHTS_ARREGION",
+        "m_axi_WEIGHTS_ARSIZE",
+        "m_axi_WEIGHTS_ARUSER",
+        "m_axi_WEIGHTS_ARVALID",
+        "m_axi_WEIGHTS_AWADDR",
+        "m_axi_WEIGHTS_AWBURST",
+        "m_axi_WEIGHTS_AWCACHE",
+        "m_axi_WEIGHTS_AWID",
+        "m_axi_WEIGHTS_AWLEN",
+        "m_axi_WEIGHTS_AWLOCK",
+        "m_axi_WEIGHTS_AWPROT",
+        "m_axi_WEIGHTS_AWQOS",
+        "m_axi_WEIGHTS_AWREADY",
+        "m_axi_WEIGHTS_AWREGION",
+        "m_axi_WEIGHTS_AWSIZE",
+        "m_axi_WEIGHTS_AWUSER",
+        "m_axi_WEIGHTS_AWVALID",
+        "m_axi_WEIGHTS_BID",
+        "m_axi_WEIGHTS_BREADY",
+        "m_axi_WEIGHTS_BRESP",
+        "m_axi_WEIGHTS_BUSER",
+        "m_axi_WEIGHTS_BVALID",
+        "m_axi_WEIGHTS_RDATA",
+        "m_axi_WEIGHTS_RID",
+        "m_axi_WEIGHTS_RLAST",
+        "m_axi_WEIGHTS_RREADY",
+        "m_axi_WEIGHTS_RRESP",
+        "m_axi_WEIGHTS_RUSER",
+        "m_axi_WEIGHTS_RVALID",
+        "m_axi_WEIGHTS_WDATA",
+        "m_axi_WEIGHTS_WID",
+        "m_axi_WEIGHTS_WLAST",
+        "m_axi_WEIGHTS_WREADY",
+        "m_axi_WEIGHTS_WSTRB",
+        "m_axi_WEIGHTS_WUSER",
+        "m_axi_WEIGHTS_WVALID"
+      ],
+      "constraints": [
+        {
           "constraint_type": "pragma interface",
-          "mode": "ap_vld",
+          "mode": "m_axi",
           "register_option": "0",
-          "argName": "leds_port"
-        }]
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "channel_id": "0",
+          "argName": "W1"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "8",
+          "final_bitwidth": "8",
+          "argName": "W1"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "channel_id": "0",
+          "argName": "W2"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "8",
+          "final_bitwidth": "8",
+          "argName": "W2"
+        }
+      ]
     },
-    "W1_out_address0": {
+    "img_pos_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
-      "dataWidth": "5",
-      "portMap": {"W1_out_address0": "DATA"},
-      "ports": ["W1_out_address0"],
+      "dataWidth": "6",
+      "portMap": {"img_pos_address0": "DATA"},
+      "ports": ["img_pos_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "W1_out"
+          "argName": "img_pos"
         }]
     },
-    "W1_out_d0": {
+    "img_pos_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
-      "mode": "master",
+      "mode": "slave",
       "dataWidth": "8",
-      "portMap": {"W1_out_d0": "DATA"},
-      "ports": ["W1_out_d0"],
+      "portMap": {"img_pos_q0": "DATA"},
+      "ports": ["img_pos_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "W1_out"
+          "argName": "img_pos"
         }]
     },
-    "W1_out_address1": {
+    "img_neg_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
-      "dataWidth": "5",
-      "portMap": {"W1_out_address1": "DATA"},
-      "ports": ["W1_out_address1"],
+      "dataWidth": "6",
+      "portMap": {"img_neg_address0": "DATA"},
+      "ports": ["img_neg_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "W1_out"
+          "argName": "img_neg"
         }]
     },
-    "W1_out_d1": {
+    "img_neg_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
-      "mode": "master",
+      "mode": "slave",
       "dataWidth": "8",
-      "portMap": {"W1_out_d1": "DATA"},
-      "ports": ["W1_out_d1"],
+      "portMap": {"img_neg_q0": "DATA"},
+      "ports": ["img_neg_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "W1_out"
-        }]
-    },
-    "W2_out_address0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "2",
-      "portMap": {"W2_out_address0": "DATA"},
-      "ports": ["W2_out_address0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "W2_out"
-        }]
-    },
-    "W2_out_d0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "8",
-      "portMap": {"W2_out_d0": "DATA"},
-      "ports": ["W2_out_d0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "W2_out"
+          "argName": "img_neg"
         }]
     }
   },
@@ -1241,7 +772,7 @@
     },
     "s_axi_CTRL_AWADDR": {
       "dir": "in",
-      "width": "8"
+      "width": "5"
     },
     "s_axi_CTRL_WVALID": {
       "dir": "in",
@@ -1269,7 +800,7 @@
     },
     "s_axi_CTRL_ARADDR": {
       "dir": "in",
-      "width": "8"
+      "width": "5"
     },
     "s_axi_CTRL_RVALID": {
       "dir": "out",
@@ -1299,6 +830,74 @@
       "dir": "out",
       "width": "2"
     },
+    "s_axi_control_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_AWADDR": {
+      "dir": "in",
+      "width": "6"
+    },
+    "s_axi_control_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_control_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_control_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_ARADDR": {
+      "dir": "in",
+      "width": "6"
+    },
+    "s_axi_control_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_control_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_control_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
     "ap_clk": {
       "dir": "in",
       "width": "1"
@@ -1311,118 +910,307 @@
       "dir": "out",
       "width": "1"
     },
-    "leds_port": {
-      "dir": "out",
-      "width": "4"
-    },
-    "leds_port_ap_vld": {
+    "m_axi_WEIGHTS_AWVALID": {
       "dir": "out",
       "width": "1"
     },
-    "W1_out_address0": {
-      "dir": "out",
-      "width": "5"
-    },
-    "W1_out_ce0": {
-      "dir": "out",
+    "m_axi_WEIGHTS_AWREADY": {
+      "dir": "in",
       "width": "1"
     },
-    "W1_out_we0": {
+    "m_axi_WEIGHTS_AWADDR": {
       "dir": "out",
-      "width": "1"
+      "width": "64"
     },
-    "W1_out_d0": {
+    "m_axi_WEIGHTS_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_WEIGHTS_AWLEN": {
       "dir": "out",
       "width": "8"
     },
-    "W1_out_address1": {
+    "m_axi_WEIGHTS_AWSIZE": {
       "dir": "out",
-      "width": "5"
+      "width": "3"
     },
-    "W1_out_ce1": {
-      "dir": "out",
-      "width": "1"
-    },
-    "W1_out_we1": {
-      "dir": "out",
-      "width": "1"
-    },
-    "W1_out_d1": {
-      "dir": "out",
-      "width": "8"
-    },
-    "W2_out_address0": {
+    "m_axi_WEIGHTS_AWBURST": {
       "dir": "out",
       "width": "2"
     },
-    "W2_out_ce0": {
+    "m_axi_WEIGHTS_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_WEIGHTS_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_WEIGHTS_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_WEIGHTS_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_WEIGHTS_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_WEIGHTS_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_WEIGHTS_WVALID": {
       "dir": "out",
       "width": "1"
     },
-    "W2_out_we0": {
+    "m_axi_WEIGHTS_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_WEIGHTS_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_WEIGHTS_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_WEIGHTS_WLAST": {
       "dir": "out",
       "width": "1"
     },
-    "W2_out_d0": {
+    "m_axi_WEIGHTS_WID": {
       "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_WEIGHTS_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_WEIGHTS_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_WEIGHTS_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_WEIGHTS_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_WEIGHTS_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_WEIGHTS_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_WEIGHTS_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_WEIGHTS_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_WEIGHTS_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_WEIGHTS_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_WEIGHTS_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_WEIGHTS_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_WEIGHTS_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_WEIGHTS_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_WEIGHTS_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_WEIGHTS_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_WEIGHTS_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_WEIGHTS_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_WEIGHTS_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_WEIGHTS_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_WEIGHTS_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_WEIGHTS_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_WEIGHTS_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_WEIGHTS_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_WEIGHTS_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_WEIGHTS_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "img_pos_address0": {
+      "dir": "out",
+      "width": "6"
+    },
+    "img_pos_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "img_pos_q0": {
+      "dir": "in",
+      "width": "8"
+    },
+    "img_neg_address0": {
+      "dir": "out",
+      "width": "6"
+    },
+    "img_neg_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "img_neg_q0": {
+      "dir": "in",
       "width": "8"
     }
   },
   "ModuleInfo": {
     "Hierarchy": {
       "ModuleName": "train_step",
-      "BindInstances": "sub_ln145_fu_640_p2 mul_32ns_34ns_42_2_1_U199 icmp_ln146_fu_646_p2 xor_ln146_fu_666_p2 leds_port CTRL_s_axi_U",
+      "BindInstances": "in_pos_U in_neg_U hidden_pos_U hidden_neg_U out_pos_U out_neg_U CTRL_s_axi_U control_s_axi_U WEIGHTS_m_axi_U",
       "Instances": [
         {
-          "ModuleName": "forwardHidden",
-          "InstanceName": "grp_forwardHidden_fu_325",
-          "BindInstances": "mac_muladd_8s_2s_10s_11_4_1_U17 mac_muladd_8s_2s_10s_11_4_1_U17 mul_2s_8s_10_1_1_U1 mul_2s_8s_10_1_1_U2 mac_muladd_8s_2s_10s_11_4_1_U18 mac_muladd_8s_2s_10s_11_4_1_U18 mul_2s_8s_10_1_1_U3 mac_muladd_8s_2s_10s_11_4_1_U19 mac_muladd_8s_2s_10s_11_4_1_U19 mul_2s_8s_10_1_1_U4 mac_muladd_8s_2s_10s_11_4_1_U20 mac_muladd_8s_2s_10s_11_4_1_U20 mac_muladd_8s_2s_10s_11_4_1_U17 mac_muladd_8s_2s_10s_11_4_1_U18 mac_muladd_8s_2s_10s_11_4_1_U19 mac_muladd_8s_2s_10s_11_4_1_U20 add_ln56_5_fu_598_p2 select_ln53_fu_665_p3 mac_muladd_8s_2s_10s_11_4_1_U21 mac_muladd_8s_2s_10s_11_4_1_U21 mul_2s_8s_10_1_1_U5 mul_2s_8s_10_1_1_U6 mac_muladd_8s_2s_10s_11_4_1_U22 mac_muladd_8s_2s_10s_11_4_1_U22 mul_2s_8s_10_1_1_U7 mac_muladd_8s_2s_10s_11_4_1_U23 mac_muladd_8s_2s_10s_11_4_1_U23 mul_2s_8s_10_1_1_U8 mac_muladd_8s_2s_10s_11_4_1_U24 mac_muladd_8s_2s_10s_11_4_1_U24 mac_muladd_8s_2s_10s_11_4_1_U21 mac_muladd_8s_2s_10s_11_4_1_U22 mac_muladd_8s_2s_10s_11_4_1_U23 mac_muladd_8s_2s_10s_11_4_1_U24 add_ln56_12_fu_610_p2 select_ln56_fu_698_p3 mac_muladd_8s_2s_10s_11_4_1_U25 mac_muladd_8s_2s_10s_11_4_1_U25 mul_2s_8s_10_1_1_U9 mul_2s_8s_10_1_1_U10 mac_muladd_8s_2s_10s_11_4_1_U26 mac_muladd_8s_2s_10s_11_4_1_U26 mul_2s_8s_10_1_1_U11 mac_muladd_8s_2s_10s_11_4_1_U27 mac_muladd_8s_2s_10s_11_4_1_U27 mul_2s_8s_10_1_1_U12 mac_muladd_8s_2s_10s_11_4_1_U28 mac_muladd_8s_2s_10s_11_4_1_U28 mac_muladd_8s_2s_10s_11_4_1_U25 mac_muladd_8s_2s_10s_11_4_1_U26 mac_muladd_8s_2s_10s_11_4_1_U27 mac_muladd_8s_2s_10s_11_4_1_U28 add_ln56_19_fu_622_p2 select_ln56_1_fu_731_p3 mac_muladd_8s_2s_10s_11_4_1_U29 mac_muladd_8s_2s_10s_11_4_1_U29 mul_2s_8s_10_1_1_U13 mul_2s_8s_10_1_1_U14 mac_muladd_8s_2s_10s_11_4_1_U30 mac_muladd_8s_2s_10s_11_4_1_U30 mul_2s_8s_10_1_1_U15 mac_muladd_8s_2s_10s_11_4_1_U31 mac_muladd_8s_2s_10s_11_4_1_U31 mul_2s_8s_10_1_1_U16 mac_muladd_8s_2s_10s_11_4_1_U32 mac_muladd_8s_2s_10s_11_4_1_U32 mac_muladd_8s_2s_10s_11_4_1_U29 mac_muladd_8s_2s_10s_11_4_1_U30 mac_muladd_8s_2s_10s_11_4_1_U31 mac_muladd_8s_2s_10s_11_4_1_U32 add_ln56_26_fu_634_p2 select_ln61_fu_764_p3"
+          "ModuleName": "train_step_Pipeline_VITIS_LOOP_118_1",
+          "InstanceName": "grp_train_step_Pipeline_VITIS_LOOP_118_1_fu_1826",
+          "BindInstances": "icmp_ln118_fu_110_p2 add_ln118_fu_116_p2 select_ln119_fu_141_p3 select_ln120_fu_158_p3"
         },
         {
-          "ModuleName": "forwardHidden",
-          "InstanceName": "grp_forwardHidden_fu_409",
-          "BindInstances": "mac_muladd_8s_2s_10s_11_4_1_U17 mac_muladd_8s_2s_10s_11_4_1_U17 mul_2s_8s_10_1_1_U1 mul_2s_8s_10_1_1_U2 mac_muladd_8s_2s_10s_11_4_1_U18 mac_muladd_8s_2s_10s_11_4_1_U18 mul_2s_8s_10_1_1_U3 mac_muladd_8s_2s_10s_11_4_1_U19 mac_muladd_8s_2s_10s_11_4_1_U19 mul_2s_8s_10_1_1_U4 mac_muladd_8s_2s_10s_11_4_1_U20 mac_muladd_8s_2s_10s_11_4_1_U20 mac_muladd_8s_2s_10s_11_4_1_U17 mac_muladd_8s_2s_10s_11_4_1_U18 mac_muladd_8s_2s_10s_11_4_1_U19 mac_muladd_8s_2s_10s_11_4_1_U20 add_ln56_5_fu_598_p2 select_ln53_fu_665_p3 mac_muladd_8s_2s_10s_11_4_1_U21 mac_muladd_8s_2s_10s_11_4_1_U21 mul_2s_8s_10_1_1_U5 mul_2s_8s_10_1_1_U6 mac_muladd_8s_2s_10s_11_4_1_U22 mac_muladd_8s_2s_10s_11_4_1_U22 mul_2s_8s_10_1_1_U7 mac_muladd_8s_2s_10s_11_4_1_U23 mac_muladd_8s_2s_10s_11_4_1_U23 mul_2s_8s_10_1_1_U8 mac_muladd_8s_2s_10s_11_4_1_U24 mac_muladd_8s_2s_10s_11_4_1_U24 mac_muladd_8s_2s_10s_11_4_1_U21 mac_muladd_8s_2s_10s_11_4_1_U22 mac_muladd_8s_2s_10s_11_4_1_U23 mac_muladd_8s_2s_10s_11_4_1_U24 add_ln56_12_fu_610_p2 select_ln56_fu_698_p3 mac_muladd_8s_2s_10s_11_4_1_U25 mac_muladd_8s_2s_10s_11_4_1_U25 mul_2s_8s_10_1_1_U9 mul_2s_8s_10_1_1_U10 mac_muladd_8s_2s_10s_11_4_1_U26 mac_muladd_8s_2s_10s_11_4_1_U26 mul_2s_8s_10_1_1_U11 mac_muladd_8s_2s_10s_11_4_1_U27 mac_muladd_8s_2s_10s_11_4_1_U27 mul_2s_8s_10_1_1_U12 mac_muladd_8s_2s_10s_11_4_1_U28 mac_muladd_8s_2s_10s_11_4_1_U28 mac_muladd_8s_2s_10s_11_4_1_U25 mac_muladd_8s_2s_10s_11_4_1_U26 mac_muladd_8s_2s_10s_11_4_1_U27 mac_muladd_8s_2s_10s_11_4_1_U28 add_ln56_19_fu_622_p2 select_ln56_1_fu_731_p3 mac_muladd_8s_2s_10s_11_4_1_U29 mac_muladd_8s_2s_10s_11_4_1_U29 mul_2s_8s_10_1_1_U13 mul_2s_8s_10_1_1_U14 mac_muladd_8s_2s_10s_11_4_1_U30 mac_muladd_8s_2s_10s_11_4_1_U30 mul_2s_8s_10_1_1_U15 mac_muladd_8s_2s_10s_11_4_1_U31 mac_muladd_8s_2s_10s_11_4_1_U31 mul_2s_8s_10_1_1_U16 mac_muladd_8s_2s_10s_11_4_1_U32 mac_muladd_8s_2s_10s_11_4_1_U32 mac_muladd_8s_2s_10s_11_4_1_U29 mac_muladd_8s_2s_10s_11_4_1_U30 mac_muladd_8s_2s_10s_11_4_1_U31 mac_muladd_8s_2s_10s_11_4_1_U32 add_ln56_26_fu_634_p2 select_ln61_fu_764_p3"
+          "ModuleName": "train_step_Pipeline_VITIS_LOOP_28_1",
+          "InstanceName": "grp_train_step_Pipeline_VITIS_LOOP_28_1_fu_1838",
+          "BindInstances": "icmp_ln28_fu_868_p2 add_ln28_fu_874_p2 mac_muladd_8s_2s_10s_10_4_1_U37 mul_8s_2s_10_1_1_U5 mul_8s_2s_10_1_1_U6 mac_muladd_8s_2s_10s_10_4_1_U38 mul_8s_2s_10_1_1_U7 mac_muladd_8s_2s_10s_10_4_1_U39 mul_8s_2s_10_1_1_U8 mac_muladd_8s_2s_10s_10_4_1_U40 mul_8s_2s_10_1_1_U9 mac_muladd_8s_2s_10s_10_4_1_U41 mul_8s_2s_10_1_1_U10 mac_muladd_8s_2s_10s_10_4_1_U42 mul_8s_2s_10_1_1_U11 mac_muladd_8s_2s_10s_10_4_1_U43 mul_8s_2s_10_1_1_U12 mac_muladd_8s_2s_10s_10_4_1_U44 mul_8s_2s_10_1_1_U13 mac_muladd_8s_2s_10s_10_4_1_U45 mul_8s_2s_10_1_1_U14 mac_muladd_8s_2s_10s_10_4_1_U46 mul_8s_2s_10_1_1_U15 mac_muladd_8s_2s_10s_10_4_1_U47 mul_8s_2s_10_1_1_U16 mac_muladd_8s_2s_10s_10_4_1_U48 mul_8s_2s_10_1_1_U17 mac_muladd_8s_2s_10s_10_4_1_U49 mul_8s_2s_10_1_1_U18 mac_muladd_8s_2s_10s_10_4_1_U50 mul_8s_2s_10_1_1_U19 mac_muladd_8s_2s_10s_10_4_1_U51 mul_8s_2s_10_1_1_U20 mac_muladd_8s_2s_10s_10_4_1_U52 mul_8s_2s_10_1_1_U21 mac_muladd_8s_2s_10s_10_4_1_U53 mul_8s_2s_10_1_1_U22 mac_muladd_8s_2s_10s_10_4_1_U54 mul_8s_2s_10_1_1_U23 mac_muladd_8s_2s_10s_10_4_1_U55 mul_8s_2s_10_1_1_U24 mac_muladd_8s_2s_10s_10_4_1_U56 mul_8s_2s_10_1_1_U25 mac_muladd_8s_2s_10s_10_4_1_U57 mul_8s_2s_10_1_1_U26 mac_muladd_8s_2s_10s_10_4_1_U58 mul_8s_2s_10_1_1_U27 mac_muladd_8s_2s_10s_10_4_1_U59 mul_8s_2s_10_1_1_U28 mac_muladd_8s_2s_10s_10_4_1_U60 mul_8s_2s_10_1_1_U29 mac_muladd_8s_2s_10s_10_4_1_U61 mul_8s_2s_10_1_1_U30 mac_muladd_8s_2s_10s_10_4_1_U62 mul_8s_2s_10_1_1_U31 mac_muladd_8s_2s_10s_10_4_1_U63 mul_8s_2s_10_1_1_U32 mac_muladd_8s_2s_10s_10_4_1_U64 mul_8s_2s_10_1_1_U33 mac_muladd_8s_2s_10s_10_4_1_U65 mul_8s_2s_10_1_1_U34 mac_muladd_8s_2s_10s_10_4_1_U66 mul_8s_2s_10_1_1_U35 mac_muladd_8s_2s_10s_10_4_1_U67 mul_8s_2s_10_1_1_U36 mac_muladd_8s_2s_10s_10_4_1_U68 mac_muladd_8s_2s_10s_10_4_1_U37 mac_muladd_8s_2s_10s_10_4_1_U38 add_ln32_3_fu_945_p2 mac_muladd_8s_2s_10s_10_4_1_U39 mac_muladd_8s_2s_10s_10_4_1_U40 add_ln32_6_fu_983_p2 mac_muladd_8s_2s_10s_10_4_1_U41 mac_muladd_8s_2s_10s_10_4_1_U42 add_ln32_10_fu_1021_p2 mac_muladd_8s_2s_10s_10_4_1_U43 mac_muladd_8s_2s_10s_10_4_1_U44 add_ln32_13_fu_1062_p2 add_ln32_14_fu_1072_p2 mac_muladd_8s_2s_10s_10_4_1_U45 mac_muladd_8s_2s_10s_10_4_1_U46 add_ln32_18_fu_1127_p2 mac_muladd_8s_2s_10s_10_4_1_U47 mac_muladd_8s_2s_10s_10_4_1_U48 add_ln32_21_fu_1165_p2 mac_muladd_8s_2s_10s_10_4_1_U49 mac_muladd_8s_2s_10s_10_4_1_U50 add_ln32_25_fu_1203_p2 mac_muladd_8s_2s_10s_10_4_1_U51 mac_muladd_8s_2s_10s_10_4_1_U52 add_ln32_28_fu_1244_p2 add_ln32_29_fu_1254_p2 mac_muladd_8s_2s_10s_10_4_1_U53 mac_muladd_8s_2s_10s_10_4_1_U54 add_ln32_34_fu_1309_p2 mac_muladd_8s_2s_10s_10_4_1_U55 mac_muladd_8s_2s_10s_10_4_1_U56 add_ln32_37_fu_1350_p2 add_ln32_38_fu_1360_p2 mac_muladd_8s_2s_10s_10_4_1_U57 mac_muladd_8s_2s_10s_10_4_1_U58 add_ln32_41_fu_1398_p2 mac_muladd_8s_2s_10s_10_4_1_U59 mac_muladd_8s_2s_10s_10_4_1_U60 add_ln32_44_fu_1439_p2 add_ln32_45_fu_1449_p2 mac_muladd_8s_2s_10s_10_4_1_U61 mac_muladd_8s_2s_10s_10_4_1_U62 add_ln32_49_fu_1487_p2 mac_muladd_8s_2s_10s_10_4_1_U63 mac_muladd_8s_2s_10s_10_4_1_U64 add_ln32_52_fu_1525_p2 mac_muladd_8s_2s_10s_10_4_1_U65 mac_muladd_8s_2s_10s_10_4_1_U66 add_ln32_56_fu_1563_p2 mac_muladd_8s_2s_10s_10_4_1_U67 mac_muladd_8s_2s_10s_10_4_1_U68 add_ln32_59_fu_1582_p2 add_ln32_60_fu_1592_p2 select_ln7_fu_1645_p3"
         },
         {
-          "ModuleName": "updateHidden",
-          "InstanceName": "grp_updateHidden_fu_493",
-          "BindInstances": "delta_fu_170_p2 mac_muladd_8s_8s_2s_12_4_1_U75 mac_muladd_8s_8s_2s_12_4_1_U75 select_ln97_fu_529_p3 mac_muladd_8s_8s_2s_12_4_1_U76 mac_muladd_8s_8s_2s_12_4_1_U77 mac_muladd_8s_8s_2s_12_4_1_U78 mac_muladd_8s_8s_2s_12_4_1_U79 mac_muladd_8s_8s_2s_12_4_1_U80 mac_muladd_8s_8s_2s_12_4_1_U81 mac_muladd_8s_8s_2s_12_4_1_U82 delta_4_fu_228_p2 mac_muladd_8s_8s_2s_12_4_1_U83 mac_muladd_8s_8s_2s_12_4_1_U84 mac_muladd_8s_8s_2s_12_4_1_U85 mac_muladd_8s_8s_2s_12_4_1_U86 mac_muladd_8s_8s_2s_12_4_1_U87 mac_muladd_8s_8s_2s_12_4_1_U88 mac_muladd_8s_8s_2s_12_4_1_U89 mac_muladd_8s_8s_2s_12_4_1_U90 delta_5_fu_242_p2 mac_muladd_8s_8s_2s_12_4_1_U91 mac_muladd_8s_8s_2s_12_4_1_U92 mac_muladd_8s_8s_2s_12_4_1_U93 mac_muladd_8s_8s_2s_12_4_1_U94 mac_muladd_8s_8s_2s_12_4_1_U95 mac_muladd_8s_8s_2s_12_4_1_U96 mac_muladd_8s_8s_2s_12_4_1_U97 mac_muladd_8s_8s_2s_12_4_1_U98 delta_3_fu_256_p2 mac_muladd_8s_8s_2s_12_4_1_U99 mac_muladd_8s_8s_2s_12_4_1_U100 mac_muladd_8s_8s_2s_12_4_1_U101 mac_muladd_8s_8s_2s_12_4_1_U102 mac_muladd_8s_8s_2s_12_4_1_U103 mac_muladd_8s_8s_2s_12_4_1_U104 mac_muladd_8s_8s_2s_12_4_1_U105 mac_muladd_8s_8s_2s_12_4_1_U106 mac_muladd_8s_8s_2s_12_4_1_U76 select_ln97_1_fu_544_p3 mac_muladd_8s_8s_2s_12_4_1_U77 select_ln97_2_fu_559_p3 mac_muladd_8s_8s_2s_12_4_1_U78 select_ln97_3_fu_574_p3 mac_muladd_8s_8s_2s_12_4_1_U79 select_ln97_4_fu_589_p3 mac_muladd_8s_8s_2s_12_4_1_U80 select_ln97_5_fu_604_p3 mac_muladd_8s_8s_2s_12_4_1_U81 select_ln97_6_fu_619_p3 mac_muladd_8s_8s_2s_12_4_1_U82 select_ln97_7_fu_634_p3 mac_muladd_8s_8s_2s_12_4_1_U83 select_ln97_8_fu_649_p3 mac_muladd_8s_8s_2s_12_4_1_U84 select_ln97_9_fu_664_p3 mac_muladd_8s_8s_2s_12_4_1_U85 select_ln97_10_fu_679_p3 mac_muladd_8s_8s_2s_12_4_1_U86 select_ln97_11_fu_694_p3 mac_muladd_8s_8s_2s_12_4_1_U87 select_ln97_12_fu_709_p3 mac_muladd_8s_8s_2s_12_4_1_U88 select_ln97_13_fu_724_p3 mac_muladd_8s_8s_2s_12_4_1_U89 select_ln97_14_fu_739_p3 mac_muladd_8s_8s_2s_12_4_1_U90 select_ln97_15_fu_754_p3 mac_muladd_8s_8s_2s_12_4_1_U91 select_ln97_16_fu_769_p3 mac_muladd_8s_8s_2s_12_4_1_U92 select_ln97_17_fu_784_p3 mac_muladd_8s_8s_2s_12_4_1_U93 select_ln97_18_fu_799_p3 mac_muladd_8s_8s_2s_12_4_1_U94 select_ln97_19_fu_814_p3 mac_muladd_8s_8s_2s_12_4_1_U95 select_ln97_20_fu_829_p3 mac_muladd_8s_8s_2s_12_4_1_U96 select_ln97_21_fu_844_p3 mac_muladd_8s_8s_2s_12_4_1_U97 select_ln97_22_fu_859_p3 mac_muladd_8s_8s_2s_12_4_1_U98 select_ln97_23_fu_874_p3 mac_muladd_8s_8s_2s_12_4_1_U99 select_ln97_24_fu_889_p3 mac_muladd_8s_8s_2s_12_4_1_U100 select_ln97_25_fu_904_p3 mac_muladd_8s_8s_2s_12_4_1_U101 select_ln97_26_fu_919_p3 mac_muladd_8s_8s_2s_12_4_1_U102 select_ln97_27_fu_934_p3 mac_muladd_8s_8s_2s_12_4_1_U103 select_ln97_28_fu_949_p3 mac_muladd_8s_8s_2s_12_4_1_U104 select_ln97_29_fu_964_p3 mac_muladd_8s_8s_2s_12_4_1_U105 select_ln97_30_fu_979_p3 mac_muladd_8s_8s_2s_12_4_1_U106 select_ln97_31_fu_994_p3"
+          "ModuleName": "train_step_Pipeline_VITIS_LOOP_45_1",
+          "InstanceName": "grp_train_step_Pipeline_VITIS_LOOP_45_1_fu_1912",
+          "BindInstances": "icmp_ln45_fu_484_p2 add_ln45_fu_490_p2 mac_muladd_8s_2s_10s_10_4_1_U154 mul_8s_2s_10_1_1_U138 mul_8s_2s_10_1_1_U139 mac_muladd_8s_2s_10s_10_4_1_U155 mul_8s_2s_10_1_1_U140 mac_muladd_8s_2s_10s_10_4_1_U156 mul_8s_2s_10_1_1_U141 mac_muladd_8s_2s_10s_10_4_1_U157 mul_8s_2s_10_1_1_U142 mac_muladd_8s_2s_10s_10_4_1_U158 mul_8s_2s_10_1_1_U143 mac_muladd_8s_2s_10s_10_4_1_U159 mul_8s_2s_10_1_1_U144 mac_muladd_8s_2s_10s_10_4_1_U160 mul_8s_2s_10_1_1_U145 mac_muladd_8s_2s_10s_10_4_1_U161 mul_8s_2s_10_1_1_U146 mac_muladd_8s_2s_10s_10_4_1_U162 mul_8s_2s_10_1_1_U147 mac_muladd_8s_2s_10s_10_4_1_U163 mul_8s_2s_10_1_1_U148 mac_muladd_8s_2s_10s_10_4_1_U164 mul_8s_2s_10_1_1_U149 mac_muladd_8s_2s_10s_10_4_1_U165 mul_8s_2s_10_1_1_U150 mac_muladd_8s_2s_10s_10_4_1_U166 mul_8s_2s_10_1_1_U151 mac_muladd_8s_2s_10s_10_4_1_U167 mul_8s_2s_10_1_1_U152 mac_muladd_8s_2s_10s_10_4_1_U168 mul_8s_2s_10_1_1_U153 mac_muladd_8s_2s_10s_10_4_1_U169 mac_muladd_8s_2s_10s_10_4_1_U154 mac_muladd_8s_2s_10s_10_4_1_U155 add_ln48_3_fu_561_p2 mac_muladd_8s_2s_10s_10_4_1_U156 mac_muladd_8s_2s_10s_10_4_1_U157 add_ln48_6_fu_602_p2 add_ln48_7_fu_612_p2 mac_muladd_8s_2s_10s_10_4_1_U158 mac_muladd_8s_2s_10s_10_4_1_U159 add_ln48_10_fu_650_p2 mac_muladd_8s_2s_10s_10_4_1_U160 mac_muladd_8s_2s_10s_10_4_1_U161 add_ln48_13_fu_691_p2 add_ln48_14_fu_701_p2 mac_muladd_8s_2s_10s_10_4_1_U162 mac_muladd_8s_2s_10s_10_4_1_U163 add_ln48_18_fu_739_p2 mac_muladd_8s_2s_10s_10_4_1_U164 mac_muladd_8s_2s_10s_10_4_1_U165 add_ln48_21_fu_777_p2 mac_muladd_8s_2s_10s_10_4_1_U166 mac_muladd_8s_2s_10s_10_4_1_U167 add_ln48_25_fu_815_p2 mac_muladd_8s_2s_10s_10_4_1_U168 mac_muladd_8s_2s_10s_10_4_1_U169 add_ln48_28_fu_834_p2 add_ln48_29_fu_844_p2 select_ln7_fu_888_p3"
         },
         {
-          "ModuleName": "train_step_Pipeline_VITIS_LOOP_136_1",
-          "InstanceName": "grp_train_step_Pipeline_VITIS_LOOP_136_1_fu_585",
-          "BindInstances": "icmp_ln136_fu_399_p2 add_ln136_fu_405_p2 sparsemux_9_2_2_1_1_U156 sparsemux_9_2_2_1_1_U157 sparsemux_9_2_2_1_1_U158 sparsemux_9_2_2_1_1_U159 sparsemux_9_2_2_1_1_U160 sparsemux_9_2_2_1_1_U161 sparsemux_9_2_2_1_1_U162 sparsemux_9_2_2_1_1_U163"
+          "ModuleName": "train_step_Pipeline_VITIS_LOOP_28_11",
+          "InstanceName": "grp_train_step_Pipeline_VITIS_LOOP_28_11_fu_1954",
+          "BindInstances": "icmp_ln28_fu_868_p2 add_ln28_fu_874_p2 mac_muladd_8s_2s_10s_10_4_1_U237 mul_8s_2s_10_1_1_U205 mul_8s_2s_10_1_1_U206 mac_muladd_8s_2s_10s_10_4_1_U238 mul_8s_2s_10_1_1_U207 mac_muladd_8s_2s_10s_10_4_1_U239 mul_8s_2s_10_1_1_U208 mac_muladd_8s_2s_10s_10_4_1_U240 mul_8s_2s_10_1_1_U209 mac_muladd_8s_2s_10s_10_4_1_U241 mul_8s_2s_10_1_1_U210 mac_muladd_8s_2s_10s_10_4_1_U242 mul_8s_2s_10_1_1_U211 mac_muladd_8s_2s_10s_10_4_1_U243 mul_8s_2s_10_1_1_U212 mac_muladd_8s_2s_10s_10_4_1_U244 mul_8s_2s_10_1_1_U213 mac_muladd_8s_2s_10s_10_4_1_U245 mul_8s_2s_10_1_1_U214 mac_muladd_8s_2s_10s_10_4_1_U246 mul_8s_2s_10_1_1_U215 mac_muladd_8s_2s_10s_10_4_1_U247 mul_8s_2s_10_1_1_U216 mac_muladd_8s_2s_10s_10_4_1_U248 mul_8s_2s_10_1_1_U217 mac_muladd_8s_2s_10s_10_4_1_U249 mul_8s_2s_10_1_1_U218 mac_muladd_8s_2s_10s_10_4_1_U250 mul_8s_2s_10_1_1_U219 mac_muladd_8s_2s_10s_10_4_1_U251 mul_8s_2s_10_1_1_U220 mac_muladd_8s_2s_10s_10_4_1_U252 mul_8s_2s_10_1_1_U221 mac_muladd_8s_2s_10s_10_4_1_U253 mul_8s_2s_10_1_1_U222 mac_muladd_8s_2s_10s_10_4_1_U254 mul_8s_2s_10_1_1_U223 mac_muladd_8s_2s_10s_10_4_1_U255 mul_8s_2s_10_1_1_U224 mac_muladd_8s_2s_10s_10_4_1_U256 mul_8s_2s_10_1_1_U225 mac_muladd_8s_2s_10s_10_4_1_U257 mul_8s_2s_10_1_1_U226 mac_muladd_8s_2s_10s_10_4_1_U258 mul_8s_2s_10_1_1_U227 mac_muladd_8s_2s_10s_10_4_1_U259 mul_8s_2s_10_1_1_U228 mac_muladd_8s_2s_10s_10_4_1_U260 mul_8s_2s_10_1_1_U229 mac_muladd_8s_2s_10s_10_4_1_U261 mul_8s_2s_10_1_1_U230 mac_muladd_8s_2s_10s_10_4_1_U262 mul_8s_2s_10_1_1_U231 mac_muladd_8s_2s_10s_10_4_1_U263 mul_8s_2s_10_1_1_U232 mac_muladd_8s_2s_10s_10_4_1_U264 mul_8s_2s_10_1_1_U233 mac_muladd_8s_2s_10s_10_4_1_U265 mul_8s_2s_10_1_1_U234 mac_muladd_8s_2s_10s_10_4_1_U266 mul_8s_2s_10_1_1_U235 mac_muladd_8s_2s_10s_10_4_1_U267 mul_8s_2s_10_1_1_U236 mac_muladd_8s_2s_10s_10_4_1_U268 mac_muladd_8s_2s_10s_10_4_1_U237 mac_muladd_8s_2s_10s_10_4_1_U238 add_ln32_2_fu_945_p2 mac_muladd_8s_2s_10s_10_4_1_U239 mac_muladd_8s_2s_10s_10_4_1_U240 add_ln32_5_fu_983_p2 mac_muladd_8s_2s_10s_10_4_1_U241 mac_muladd_8s_2s_10s_10_4_1_U242 add_ln32_9_fu_1021_p2 mac_muladd_8s_2s_10s_10_4_1_U243 mac_muladd_8s_2s_10s_10_4_1_U244 add_ln32_12_fu_1062_p2 add_ln32_13_fu_1072_p2 mac_muladd_8s_2s_10s_10_4_1_U245 mac_muladd_8s_2s_10s_10_4_1_U246 add_ln32_17_fu_1127_p2 mac_muladd_8s_2s_10s_10_4_1_U247 mac_muladd_8s_2s_10s_10_4_1_U248 add_ln32_20_fu_1165_p2 mac_muladd_8s_2s_10s_10_4_1_U249 mac_muladd_8s_2s_10s_10_4_1_U250 add_ln32_24_fu_1203_p2 mac_muladd_8s_2s_10s_10_4_1_U251 mac_muladd_8s_2s_10s_10_4_1_U252 add_ln32_27_fu_1244_p2 add_ln32_28_fu_1254_p2 mac_muladd_8s_2s_10s_10_4_1_U253 mac_muladd_8s_2s_10s_10_4_1_U254 add_ln32_33_fu_1309_p2 mac_muladd_8s_2s_10s_10_4_1_U255 mac_muladd_8s_2s_10s_10_4_1_U256 add_ln32_36_fu_1350_p2 add_ln32_37_fu_1360_p2 mac_muladd_8s_2s_10s_10_4_1_U257 mac_muladd_8s_2s_10s_10_4_1_U258 add_ln32_40_fu_1398_p2 mac_muladd_8s_2s_10s_10_4_1_U259 mac_muladd_8s_2s_10s_10_4_1_U260 add_ln32_43_fu_1439_p2 add_ln32_44_fu_1449_p2 mac_muladd_8s_2s_10s_10_4_1_U261 mac_muladd_8s_2s_10s_10_4_1_U262 add_ln32_48_fu_1487_p2 mac_muladd_8s_2s_10s_10_4_1_U263 mac_muladd_8s_2s_10s_10_4_1_U264 add_ln32_51_fu_1525_p2 mac_muladd_8s_2s_10s_10_4_1_U265 mac_muladd_8s_2s_10s_10_4_1_U266 add_ln32_55_fu_1563_p2 mac_muladd_8s_2s_10s_10_4_1_U267 mac_muladd_8s_2s_10s_10_4_1_U268 add_ln32_58_fu_1582_p2 add_ln32_59_fu_1592_p2 select_ln7_fu_1645_p3"
         },
         {
-          "ModuleName": "train_step_Pipeline_VITIS_LOOP_141_4",
-          "InstanceName": "grp_train_step_Pipeline_VITIS_LOOP_141_4_fu_623",
-          "BindInstances": "icmp_ln141_fu_60_p2 add_ln141_fu_66_p2"
+          "ModuleName": "train_step_Pipeline_VITIS_LOOP_45_12",
+          "InstanceName": "grp_train_step_Pipeline_VITIS_LOOP_45_12_fu_2028",
+          "BindInstances": "icmp_ln45_fu_484_p2 add_ln45_fu_490_p2 mac_muladd_8s_2s_10s_10_4_1_U352 mul_8s_2s_10_1_1_U336 mul_8s_2s_10_1_1_U337 mac_muladd_8s_2s_10s_10_4_1_U353 mul_8s_2s_10_1_1_U338 mac_muladd_8s_2s_10s_10_4_1_U354 mul_8s_2s_10_1_1_U339 mac_muladd_8s_2s_10s_10_4_1_U355 mul_8s_2s_10_1_1_U340 mac_muladd_8s_2s_10s_10_4_1_U356 mul_8s_2s_10_1_1_U341 mac_muladd_8s_2s_10s_10_4_1_U357 mul_8s_2s_10_1_1_U342 mac_muladd_8s_2s_10s_10_4_1_U358 mul_8s_2s_10_1_1_U343 mac_muladd_8s_2s_10s_10_4_1_U359 mul_8s_2s_10_1_1_U344 mac_muladd_8s_2s_10s_10_4_1_U360 mul_8s_2s_10_1_1_U345 mac_muladd_8s_2s_10s_10_4_1_U361 mul_8s_2s_10_1_1_U346 mac_muladd_8s_2s_10s_10_4_1_U362 mul_8s_2s_10_1_1_U347 mac_muladd_8s_2s_10s_10_4_1_U363 mul_8s_2s_10_1_1_U348 mac_muladd_8s_2s_10s_10_4_1_U364 mul_8s_2s_10_1_1_U349 mac_muladd_8s_2s_10s_10_4_1_U365 mul_8s_2s_10_1_1_U350 mac_muladd_8s_2s_10s_10_4_1_U366 mul_8s_2s_10_1_1_U351 mac_muladd_8s_2s_10s_10_4_1_U367 mac_muladd_8s_2s_10s_10_4_1_U352 mac_muladd_8s_2s_10s_10_4_1_U353 add_ln48_2_fu_561_p2 mac_muladd_8s_2s_10s_10_4_1_U354 mac_muladd_8s_2s_10s_10_4_1_U355 add_ln48_5_fu_602_p2 add_ln48_6_fu_612_p2 mac_muladd_8s_2s_10s_10_4_1_U356 mac_muladd_8s_2s_10s_10_4_1_U357 add_ln48_9_fu_650_p2 mac_muladd_8s_2s_10s_10_4_1_U358 mac_muladd_8s_2s_10s_10_4_1_U359 add_ln48_12_fu_691_p2 add_ln48_13_fu_701_p2 mac_muladd_8s_2s_10s_10_4_1_U360 mac_muladd_8s_2s_10s_10_4_1_U361 add_ln48_17_fu_739_p2 mac_muladd_8s_2s_10s_10_4_1_U362 mac_muladd_8s_2s_10s_10_4_1_U363 add_ln48_20_fu_777_p2 mac_muladd_8s_2s_10s_10_4_1_U364 mac_muladd_8s_2s_10s_10_4_1_U365 add_ln48_24_fu_815_p2 mac_muladd_8s_2s_10s_10_4_1_U366 mac_muladd_8s_2s_10s_10_4_1_U367 add_ln48_27_fu_834_p2 add_ln48_28_fu_844_p2 select_ln7_fu_888_p3"
+        },
+        {
+          "ModuleName": "train_step_Pipeline_VITIS_LOOP_64_1",
+          "InstanceName": "grp_train_step_Pipeline_VITIS_LOOP_64_1_fu_2070",
+          "BindInstances": "icmp_ln64_fu_2418_p2 add_ln64_fu_2424_p2 delta_fu_2471_p2 add_ln67_fu_2452_p2 mac_muladd_3s_2s_8s_9_4_1_U403 mac_muladd_3s_2s_8s_9_4_1_U403 mac_muladd_3s_2s_8s_9_4_1_U403 select_ln70_fu_2496_p3 add_ln67_1_fu_2504_p2 mac_muladd_3s_2s_8s_9_4_1_U404 mac_muladd_3s_2s_8s_9_4_1_U404 mac_muladd_3s_2s_8s_9_4_1_U404 select_ln70_1_fu_2525_p3 add_ln67_2_fu_2533_p2 mac_muladd_3s_2s_8s_9_4_1_U405 mac_muladd_3s_2s_8s_9_4_1_U405 mac_muladd_3s_2s_8s_9_4_1_U405 select_ln70_2_fu_2554_p3 add_ln67_3_fu_2562_p2 mac_muladd_3s_2s_8s_9_4_1_U406 mac_muladd_3s_2s_8s_9_4_1_U406 mac_muladd_3s_2s_8s_9_4_1_U406 select_ln70_3_fu_2583_p3 add_ln67_4_fu_2591_p2 mac_muladd_3s_2s_8s_9_4_1_U407 mac_muladd_3s_2s_8s_9_4_1_U407 mac_muladd_3s_2s_8s_9_4_1_U407 select_ln70_4_fu_2612_p3 add_ln67_5_fu_2620_p2 mac_muladd_3s_2s_8s_9_4_1_U408 mac_muladd_3s_2s_8s_9_4_1_U408 mac_muladd_3s_2s_8s_9_4_1_U408 select_ln70_5_fu_2641_p3 add_ln67_6_fu_2649_p2 mac_muladd_3s_2s_8s_9_4_1_U409 mac_muladd_3s_2s_8s_9_4_1_U409 mac_muladd_3s_2s_8s_9_4_1_U409 select_ln70_6_fu_2670_p3 add_ln67_7_fu_2678_p2 mac_muladd_3s_2s_8s_9_4_1_U410 mac_muladd_3s_2s_8s_9_4_1_U410 mac_muladd_3s_2s_8s_9_4_1_U410 select_ln70_7_fu_2699_p3 add_ln67_8_fu_2707_p2 mac_muladd_3s_2s_8s_9_4_1_U411 mac_muladd_3s_2s_8s_9_4_1_U411 mac_muladd_3s_2s_8s_9_4_1_U411 select_ln70_8_fu_2728_p3 add_ln67_9_fu_2736_p2 mac_muladd_3s_2s_8s_9_4_1_U412 mac_muladd_3s_2s_8s_9_4_1_U412 mac_muladd_3s_2s_8s_9_4_1_U412 select_ln70_9_fu_2757_p3 add_ln67_10_fu_2765_p2 mac_muladd_3s_2s_8s_9_4_1_U413 mac_muladd_3s_2s_8s_9_4_1_U413 mac_muladd_3s_2s_8s_9_4_1_U413 select_ln70_10_fu_2786_p3 add_ln67_11_fu_2794_p2 mac_muladd_3s_2s_8s_9_4_1_U414 mac_muladd_3s_2s_8s_9_4_1_U414 mac_muladd_3s_2s_8s_9_4_1_U414 select_ln70_11_fu_2815_p3 add_ln67_12_fu_2823_p2 mac_muladd_3s_2s_8s_9_4_1_U415 mac_muladd_3s_2s_8s_9_4_1_U415 mac_muladd_3s_2s_8s_9_4_1_U415 select_ln70_12_fu_2844_p3 add_ln67_13_fu_2852_p2 mac_muladd_3s_2s_8s_9_4_1_U416 mac_muladd_3s_2s_8s_9_4_1_U416 mac_muladd_3s_2s_8s_9_4_1_U416 select_ln70_13_fu_2873_p3 add_ln67_14_fu_2881_p2 mac_muladd_3s_2s_8s_9_4_1_U417 mac_muladd_3s_2s_8s_9_4_1_U417 mac_muladd_3s_2s_8s_9_4_1_U417 select_ln70_14_fu_2902_p3 add_ln67_15_fu_2910_p2 mac_muladd_3s_2s_8s_9_4_1_U418 mac_muladd_3s_2s_8s_9_4_1_U418 mac_muladd_3s_2s_8s_9_4_1_U418 select_ln70_15_fu_2931_p3 add_ln67_16_fu_2939_p2 mac_muladd_3s_2s_8s_9_4_1_U419 mac_muladd_3s_2s_8s_9_4_1_U419 mac_muladd_3s_2s_8s_9_4_1_U419 select_ln70_16_fu_2960_p3 add_ln67_17_fu_2968_p2 mac_muladd_3s_2s_8s_9_4_1_U420 mac_muladd_3s_2s_8s_9_4_1_U420 mac_muladd_3s_2s_8s_9_4_1_U420 select_ln70_17_fu_2989_p3 add_ln67_18_fu_2997_p2 mac_muladd_3s_2s_8s_9_4_1_U421 mac_muladd_3s_2s_8s_9_4_1_U421 mac_muladd_3s_2s_8s_9_4_1_U421 select_ln70_18_fu_3018_p3 add_ln67_19_fu_3026_p2 mac_muladd_3s_2s_8s_9_4_1_U422 mac_muladd_3s_2s_8s_9_4_1_U422 mac_muladd_3s_2s_8s_9_4_1_U422 select_ln70_19_fu_3047_p3 add_ln67_20_fu_3055_p2 mac_muladd_3s_2s_8s_9_4_1_U423 mac_muladd_3s_2s_8s_9_4_1_U423 mac_muladd_3s_2s_8s_9_4_1_U423 select_ln70_20_fu_3076_p3 add_ln67_21_fu_3084_p2 mac_muladd_3s_2s_8s_9_4_1_U424 mac_muladd_3s_2s_8s_9_4_1_U424 mac_muladd_3s_2s_8s_9_4_1_U424 select_ln70_21_fu_3105_p3 add_ln67_22_fu_3113_p2 mac_muladd_3s_2s_8s_9_4_1_U425 mac_muladd_3s_2s_8s_9_4_1_U425 mac_muladd_3s_2s_8s_9_4_1_U425 select_ln70_22_fu_3134_p3 add_ln67_23_fu_3142_p2 mac_muladd_3s_2s_8s_9_4_1_U426 mac_muladd_3s_2s_8s_9_4_1_U426 mac_muladd_3s_2s_8s_9_4_1_U426 select_ln70_23_fu_3163_p3 add_ln67_24_fu_3171_p2 mac_muladd_3s_2s_8s_9_4_1_U427 mac_muladd_3s_2s_8s_9_4_1_U427 mac_muladd_3s_2s_8s_9_4_1_U427 select_ln70_24_fu_3192_p3 add_ln67_25_fu_3200_p2 mac_muladd_3s_2s_8s_9_4_1_U428 mac_muladd_3s_2s_8s_9_4_1_U428 mac_muladd_3s_2s_8s_9_4_1_U428 select_ln70_25_fu_3221_p3 add_ln67_26_fu_3229_p2 mac_muladd_3s_2s_8s_9_4_1_U429 mac_muladd_3s_2s_8s_9_4_1_U429 mac_muladd_3s_2s_8s_9_4_1_U429 select_ln70_26_fu_3250_p3 add_ln67_27_fu_3258_p2 mac_muladd_3s_2s_8s_9_4_1_U430 mac_muladd_3s_2s_8s_9_4_1_U430 mac_muladd_3s_2s_8s_9_4_1_U430 select_ln70_27_fu_3279_p3 add_ln67_28_fu_3287_p2 mac_muladd_3s_2s_8s_9_4_1_U431 mac_muladd_3s_2s_8s_9_4_1_U431 mac_muladd_3s_2s_8s_9_4_1_U431 select_ln70_28_fu_3308_p3 add_ln67_29_fu_3316_p2 mac_muladd_3s_2s_8s_9_4_1_U432 mac_muladd_3s_2s_8s_9_4_1_U432 mac_muladd_3s_2s_8s_9_4_1_U432 select_ln70_29_fu_3337_p3 add_ln67_30_fu_3345_p2 mac_muladd_3s_2s_8s_9_4_1_U433 mac_muladd_3s_2s_8s_9_4_1_U433 mac_muladd_3s_2s_8s_9_4_1_U433 select_ln70_30_fu_3366_p3 add_ln67_31_fu_3374_p2 mac_muladd_3s_2s_8s_9_4_1_U434 mac_muladd_3s_2s_8s_9_4_1_U434 mac_muladd_3s_2s_8s_9_4_1_U434 select_ln70_31_fu_3395_p3 add_ln67_32_fu_3403_p2 mac_muladd_3s_2s_8s_9_4_1_U435 mac_muladd_3s_2s_8s_9_4_1_U435 mac_muladd_3s_2s_8s_9_4_1_U435 select_ln70_32_fu_3424_p3 add_ln67_33_fu_3432_p2 mac_muladd_3s_2s_8s_9_4_1_U436 mac_muladd_3s_2s_8s_9_4_1_U436 mac_muladd_3s_2s_8s_9_4_1_U436 select_ln70_33_fu_3453_p3 add_ln67_34_fu_3461_p2 mac_muladd_3s_2s_8s_9_4_1_U437 mac_muladd_3s_2s_8s_9_4_1_U437 mac_muladd_3s_2s_8s_9_4_1_U437 select_ln70_34_fu_3482_p3 add_ln67_35_fu_3490_p2 mac_muladd_3s_2s_8s_9_4_1_U438 mac_muladd_3s_2s_8s_9_4_1_U438 mac_muladd_3s_2s_8s_9_4_1_U438 select_ln70_35_fu_3511_p3 add_ln67_36_fu_3519_p2 mac_muladd_3s_2s_8s_9_4_1_U439 mac_muladd_3s_2s_8s_9_4_1_U439 mac_muladd_3s_2s_8s_9_4_1_U439 select_ln70_36_fu_3540_p3 add_ln67_37_fu_3548_p2 mac_muladd_3s_2s_8s_9_4_1_U440 mac_muladd_3s_2s_8s_9_4_1_U440 mac_muladd_3s_2s_8s_9_4_1_U440 select_ln70_37_fu_3569_p3 add_ln67_38_fu_3577_p2 mac_muladd_3s_2s_8s_9_4_1_U441 mac_muladd_3s_2s_8s_9_4_1_U441 mac_muladd_3s_2s_8s_9_4_1_U441 select_ln70_38_fu_3598_p3 add_ln67_39_fu_3606_p2 mac_muladd_3s_2s_8s_9_4_1_U442 mac_muladd_3s_2s_8s_9_4_1_U442 mac_muladd_3s_2s_8s_9_4_1_U442 select_ln70_39_fu_3627_p3 add_ln67_40_fu_3635_p2 mac_muladd_3s_2s_8s_9_4_1_U443 mac_muladd_3s_2s_8s_9_4_1_U443 mac_muladd_3s_2s_8s_9_4_1_U443 select_ln70_40_fu_3656_p3 add_ln67_41_fu_3664_p2 mac_muladd_3s_2s_8s_9_4_1_U444 mac_muladd_3s_2s_8s_9_4_1_U444 mac_muladd_3s_2s_8s_9_4_1_U444 select_ln70_41_fu_3685_p3 add_ln67_42_fu_3693_p2 mac_muladd_3s_2s_8s_9_4_1_U445 mac_muladd_3s_2s_8s_9_4_1_U445 mac_muladd_3s_2s_8s_9_4_1_U445 select_ln70_42_fu_3714_p3 add_ln67_43_fu_3722_p2 mac_muladd_3s_2s_8s_9_4_1_U446 mac_muladd_3s_2s_8s_9_4_1_U446 mac_muladd_3s_2s_8s_9_4_1_U446 select_ln70_43_fu_3743_p3 add_ln67_44_fu_3751_p2 mac_muladd_3s_2s_8s_9_4_1_U447 mac_muladd_3s_2s_8s_9_4_1_U447 mac_muladd_3s_2s_8s_9_4_1_U447 select_ln70_44_fu_3772_p3 add_ln67_45_fu_3780_p2 mac_muladd_3s_2s_8s_9_4_1_U448 mac_muladd_3s_2s_8s_9_4_1_U448 mac_muladd_3s_2s_8s_9_4_1_U448 select_ln70_45_fu_3801_p3 add_ln67_46_fu_3809_p2 mac_muladd_3s_2s_8s_9_4_1_U449 mac_muladd_3s_2s_8s_9_4_1_U449 mac_muladd_3s_2s_8s_9_4_1_U449 select_ln70_46_fu_3830_p3 add_ln67_47_fu_3838_p2 mac_muladd_3s_2s_8s_9_4_1_U450 mac_muladd_3s_2s_8s_9_4_1_U450 mac_muladd_3s_2s_8s_9_4_1_U450 select_ln70_47_fu_3859_p3 add_ln67_48_fu_3867_p2 mac_muladd_3s_2s_8s_9_4_1_U451 mac_muladd_3s_2s_8s_9_4_1_U451 mac_muladd_3s_2s_8s_9_4_1_U451 select_ln70_48_fu_3888_p3 add_ln67_49_fu_3896_p2 mac_muladd_3s_2s_8s_9_4_1_U452 mac_muladd_3s_2s_8s_9_4_1_U452 mac_muladd_3s_2s_8s_9_4_1_U452 select_ln70_49_fu_3917_p3 add_ln67_50_fu_3925_p2 mac_muladd_3s_2s_8s_9_4_1_U453 mac_muladd_3s_2s_8s_9_4_1_U453 mac_muladd_3s_2s_8s_9_4_1_U453 select_ln70_50_fu_3946_p3 add_ln67_51_fu_3954_p2 mac_muladd_3s_2s_8s_9_4_1_U454 mac_muladd_3s_2s_8s_9_4_1_U454 mac_muladd_3s_2s_8s_9_4_1_U454 select_ln70_51_fu_3975_p3 add_ln67_52_fu_3983_p2 mac_muladd_3s_2s_8s_9_4_1_U455 mac_muladd_3s_2s_8s_9_4_1_U455 mac_muladd_3s_2s_8s_9_4_1_U455 select_ln70_52_fu_4004_p3 add_ln67_53_fu_4012_p2 mac_muladd_3s_2s_8s_9_4_1_U456 mac_muladd_3s_2s_8s_9_4_1_U456 mac_muladd_3s_2s_8s_9_4_1_U456 select_ln70_53_fu_4033_p3 add_ln67_54_fu_4041_p2 mac_muladd_3s_2s_8s_9_4_1_U457 mac_muladd_3s_2s_8s_9_4_1_U457 mac_muladd_3s_2s_8s_9_4_1_U457 select_ln70_54_fu_4062_p3 add_ln67_55_fu_4070_p2 mac_muladd_3s_2s_8s_9_4_1_U458 mac_muladd_3s_2s_8s_9_4_1_U458 mac_muladd_3s_2s_8s_9_4_1_U458 select_ln70_55_fu_4179_p3 add_ln67_56_fu_4081_p2 mac_muladd_3s_2s_8s_9_4_1_U459 mac_muladd_3s_2s_8s_9_4_1_U459 mac_muladd_3s_2s_8s_9_4_1_U459 select_ln70_56_fu_4197_p3 add_ln67_57_fu_4092_p2 mac_muladd_3s_2s_8s_9_4_1_U460 mac_muladd_3s_2s_8s_9_4_1_U460 mac_muladd_3s_2s_8s_9_4_1_U460 select_ln70_57_fu_4215_p3 add_ln67_58_fu_4103_p2 mac_muladd_3s_2s_8s_9_4_1_U461 mac_muladd_3s_2s_8s_9_4_1_U461 mac_muladd_3s_2s_8s_9_4_1_U461 select_ln70_58_fu_4233_p3 add_ln67_59_fu_4114_p2 mac_muladd_3s_2s_8s_9_4_1_U462 mac_muladd_3s_2s_8s_9_4_1_U462 mac_muladd_3s_2s_8s_9_4_1_U462 select_ln70_59_fu_4251_p3 add_ln67_60_fu_4125_p2 mac_muladd_3s_2s_8s_9_4_1_U463 mac_muladd_3s_2s_8s_9_4_1_U463 mac_muladd_3s_2s_8s_9_4_1_U463 select_ln70_60_fu_4269_p3 add_ln67_61_fu_4136_p2 mac_muladd_3s_2s_8s_9_4_1_U464 mac_muladd_3s_2s_8s_9_4_1_U464 mac_muladd_3s_2s_8s_9_4_1_U464 select_ln70_61_fu_4287_p3 add_ln67_62_fu_4147_p2 mac_muladd_3s_2s_8s_9_4_1_U465 mac_muladd_3s_2s_8s_9_4_1_U465 mac_muladd_3s_2s_8s_9_4_1_U465 select_ln70_62_fu_4305_p3 add_ln67_63_fu_4158_p2 mac_muladd_3s_2s_8s_9_4_1_U466 mac_muladd_3s_2s_8s_9_4_1_U466 mac_muladd_3s_2s_8s_9_4_1_U466 select_ln70_63_fu_4323_p3"
+        },
+        {
+          "ModuleName": "train_step_Pipeline_VITIS_LOOP_85_1",
+          "InstanceName": "grp_train_step_Pipeline_VITIS_LOOP_85_1_fu_2143",
+          "BindInstances": "icmp_ln85_fu_1268_p2 add_ln85_fu_1274_p2 delta_fu_1317_p2 add_ln88_fu_1298_p2 mac_muladd_3s_2s_8s_9_4_1_U536 mac_muladd_3s_2s_8s_9_4_1_U536 mac_muladd_3s_2s_8s_9_4_1_U536 select_ln90_fu_1342_p3 add_ln88_1_fu_1350_p2 mac_muladd_3s_2s_8s_9_4_1_U537 mac_muladd_3s_2s_8s_9_4_1_U537 mac_muladd_3s_2s_8s_9_4_1_U537 select_ln90_1_fu_1371_p3 add_ln88_2_fu_1379_p2 mac_muladd_3s_2s_8s_9_4_1_U538 mac_muladd_3s_2s_8s_9_4_1_U538 mac_muladd_3s_2s_8s_9_4_1_U538 select_ln90_2_fu_1400_p3 add_ln88_3_fu_1408_p2 mac_muladd_3s_2s_8s_9_4_1_U539 mac_muladd_3s_2s_8s_9_4_1_U539 mac_muladd_3s_2s_8s_9_4_1_U539 select_ln90_3_fu_1429_p3 add_ln88_4_fu_1437_p2 mac_muladd_3s_2s_8s_9_4_1_U540 mac_muladd_3s_2s_8s_9_4_1_U540 mac_muladd_3s_2s_8s_9_4_1_U540 select_ln90_4_fu_1458_p3 add_ln88_5_fu_1466_p2 mac_muladd_3s_2s_8s_9_4_1_U541 mac_muladd_3s_2s_8s_9_4_1_U541 mac_muladd_3s_2s_8s_9_4_1_U541 select_ln90_5_fu_1487_p3 add_ln88_6_fu_1495_p2 mac_muladd_3s_2s_8s_9_4_1_U542 mac_muladd_3s_2s_8s_9_4_1_U542 mac_muladd_3s_2s_8s_9_4_1_U542 select_ln90_6_fu_1516_p3 add_ln88_7_fu_1524_p2 mac_muladd_3s_2s_8s_9_4_1_U543 mac_muladd_3s_2s_8s_9_4_1_U543 mac_muladd_3s_2s_8s_9_4_1_U543 select_ln90_7_fu_1545_p3 add_ln88_8_fu_1553_p2 mac_muladd_3s_2s_8s_9_4_1_U544 mac_muladd_3s_2s_8s_9_4_1_U544 mac_muladd_3s_2s_8s_9_4_1_U544 select_ln90_8_fu_1574_p3 add_ln88_9_fu_1582_p2 mac_muladd_3s_2s_8s_9_4_1_U545 mac_muladd_3s_2s_8s_9_4_1_U545 mac_muladd_3s_2s_8s_9_4_1_U545 select_ln90_9_fu_1603_p3 add_ln88_10_fu_1611_p2 mac_muladd_3s_2s_8s_9_4_1_U546 mac_muladd_3s_2s_8s_9_4_1_U546 mac_muladd_3s_2s_8s_9_4_1_U546 select_ln90_10_fu_1632_p3 add_ln88_11_fu_1640_p2 mac_muladd_3s_2s_8s_9_4_1_U547 mac_muladd_3s_2s_8s_9_4_1_U547 mac_muladd_3s_2s_8s_9_4_1_U547 select_ln90_11_fu_1661_p3 add_ln88_12_fu_1669_p2 mac_muladd_3s_2s_8s_9_4_1_U548 mac_muladd_3s_2s_8s_9_4_1_U548 mac_muladd_3s_2s_8s_9_4_1_U548 select_ln90_12_fu_1690_p3 add_ln88_13_fu_1698_p2 mac_muladd_3s_2s_8s_9_4_1_U549 mac_muladd_3s_2s_8s_9_4_1_U549 mac_muladd_3s_2s_8s_9_4_1_U549 select_ln90_13_fu_1719_p3 add_ln88_14_fu_1727_p2 mac_muladd_3s_2s_8s_9_4_1_U550 mac_muladd_3s_2s_8s_9_4_1_U550 mac_muladd_3s_2s_8s_9_4_1_U550 select_ln90_14_fu_1748_p3 add_ln88_15_fu_1756_p2 mac_muladd_3s_2s_8s_9_4_1_U551 mac_muladd_3s_2s_8s_9_4_1_U551 mac_muladd_3s_2s_8s_9_4_1_U551 select_ln90_15_fu_1777_p3 add_ln88_16_fu_1785_p2 mac_muladd_3s_2s_8s_9_4_1_U552 mac_muladd_3s_2s_8s_9_4_1_U552 mac_muladd_3s_2s_8s_9_4_1_U552 select_ln90_16_fu_1806_p3 add_ln88_17_fu_1814_p2 mac_muladd_3s_2s_8s_9_4_1_U553 mac_muladd_3s_2s_8s_9_4_1_U553 mac_muladd_3s_2s_8s_9_4_1_U553 select_ln90_17_fu_1835_p3 add_ln88_18_fu_1843_p2 mac_muladd_3s_2s_8s_9_4_1_U554 mac_muladd_3s_2s_8s_9_4_1_U554 mac_muladd_3s_2s_8s_9_4_1_U554 select_ln90_18_fu_1864_p3 add_ln88_19_fu_1872_p2 mac_muladd_3s_2s_8s_9_4_1_U555 mac_muladd_3s_2s_8s_9_4_1_U555 mac_muladd_3s_2s_8s_9_4_1_U555 select_ln90_19_fu_1893_p3 add_ln88_20_fu_1901_p2 mac_muladd_3s_2s_8s_9_4_1_U556 mac_muladd_3s_2s_8s_9_4_1_U556 mac_muladd_3s_2s_8s_9_4_1_U556 select_ln90_20_fu_1922_p3 add_ln88_21_fu_1930_p2 mac_muladd_3s_2s_8s_9_4_1_U557 mac_muladd_3s_2s_8s_9_4_1_U557 mac_muladd_3s_2s_8s_9_4_1_U557 select_ln90_21_fu_1951_p3 add_ln88_22_fu_1959_p2 mac_muladd_3s_2s_8s_9_4_1_U558 mac_muladd_3s_2s_8s_9_4_1_U558 mac_muladd_3s_2s_8s_9_4_1_U558 select_ln90_22_fu_1980_p3 add_ln88_23_fu_1988_p2 mac_muladd_3s_2s_8s_9_4_1_U559 mac_muladd_3s_2s_8s_9_4_1_U559 mac_muladd_3s_2s_8s_9_4_1_U559 select_ln90_23_fu_2097_p3 add_ln88_24_fu_1999_p2 mac_muladd_3s_2s_8s_9_4_1_U560 mac_muladd_3s_2s_8s_9_4_1_U560 mac_muladd_3s_2s_8s_9_4_1_U560 select_ln90_24_fu_2115_p3 add_ln88_25_fu_2010_p2 mac_muladd_3s_2s_8s_9_4_1_U561 mac_muladd_3s_2s_8s_9_4_1_U561 mac_muladd_3s_2s_8s_9_4_1_U561 select_ln90_25_fu_2133_p3 add_ln88_26_fu_2021_p2 mac_muladd_3s_2s_8s_9_4_1_U562 mac_muladd_3s_2s_8s_9_4_1_U562 mac_muladd_3s_2s_8s_9_4_1_U562 select_ln90_26_fu_2151_p3 add_ln88_27_fu_2032_p2 mac_muladd_3s_2s_8s_9_4_1_U563 mac_muladd_3s_2s_8s_9_4_1_U563 mac_muladd_3s_2s_8s_9_4_1_U563 select_ln90_27_fu_2169_p3 add_ln88_28_fu_2043_p2 mac_muladd_3s_2s_8s_9_4_1_U564 mac_muladd_3s_2s_8s_9_4_1_U564 mac_muladd_3s_2s_8s_9_4_1_U564 select_ln90_28_fu_2187_p3 add_ln88_29_fu_2054_p2 mac_muladd_3s_2s_8s_9_4_1_U565 mac_muladd_3s_2s_8s_9_4_1_U565 mac_muladd_3s_2s_8s_9_4_1_U565 select_ln90_29_fu_2205_p3 add_ln88_30_fu_2065_p2 mac_muladd_3s_2s_8s_9_4_1_U566 mac_muladd_3s_2s_8s_9_4_1_U566 mac_muladd_3s_2s_8s_9_4_1_U566 select_ln90_30_fu_2223_p3 add_ln88_31_fu_2076_p2 mac_muladd_3s_2s_8s_9_4_1_U567 mac_muladd_3s_2s_8s_9_4_1_U567 mac_muladd_3s_2s_8s_9_4_1_U567 select_ln90_31_fu_2241_p3"
         }
       ]
     },
     "Info": {
-      "forwardHidden": {
+      "train_step_Pipeline_VITIS_LOOP_118_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "updateHidden": {
+      "train_step_Pipeline_VITIS_LOOP_28_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "train_step_Pipeline_VITIS_LOOP_136_1": {
+      "train_step_Pipeline_VITIS_LOOP_45_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "train_step_Pipeline_VITIS_LOOP_141_4": {
+      "train_step_Pipeline_VITIS_LOOP_28_11": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "train_step_Pipeline_VITIS_LOOP_45_12": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "train_step_Pipeline_VITIS_LOOP_64_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "train_step_Pipeline_VITIS_LOOP_85_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
@@ -1438,60 +1226,113 @@
       }
     },
     "Metrics": {
-      "forwardHidden": {
+      "train_step_Pipeline_VITIS_LOOP_118_1": {
         "Latency": {
-          "LatencyBest": "4",
-          "LatencyAvg": "4",
-          "LatencyWorst": "4",
-          "PipelineII": "1",
-          "PipelineDepth": "5",
-          "PipelineType": "yes"
+          "LatencyBest": "66",
+          "LatencyAvg": "66",
+          "LatencyWorst": "66",
+          "PipelineII": "65",
+          "PipelineDepth": "",
+          "PipelineType": "loop auto-rewind stp (delay=0 clock cycles(s))"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "6.470"
+          "Estimate": "5.297"
         },
+        "Loops": [{
+            "Name": "VITIS_LOOP_118_1",
+            "TripCount": "64",
+            "Latency": "64",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
         "Area": {
-          "DSP": "16",
-          "AVAIL_DSP": "240",
-          "UTIL_DSP": "6",
-          "FF": "328",
+          "FF": "17",
           "AVAIL_FF": "126800",
           "UTIL_FF": "~0",
-          "LUT": "852",
+          "LUT": "71",
           "AVAIL_LUT": "63400",
-          "UTIL_LUT": "1",
+          "UTIL_LUT": "~0",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "270",
           "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "240",
+          "UTIL_DSP": "0",
           "URAM": "0",
           "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
         }
       },
-      "updateHidden": {
+      "train_step_Pipeline_VITIS_LOOP_28_1": {
         "Latency": {
-          "LatencyBest": "3",
-          "LatencyAvg": "3",
-          "LatencyWorst": "3",
-          "PipelineII": "1",
-          "PipelineDepth": "4",
-          "PipelineType": "yes"
+          "LatencyBest": "2057",
+          "LatencyAvg": "2057",
+          "LatencyWorst": "2057",
+          "PipelineII": "2056",
+          "PipelineDepth": "",
+          "PipelineType": "loop auto-rewind stp (delay=0 clock cycles(s))"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "3.565"
+          "Estimate": "7.300"
         },
+        "Loops": [{
+            "Name": "VITIS_LOOP_28_1",
+            "TripCount": "32",
+            "Latency": "2055",
+            "PipelineII": "64",
+            "PipelineDepth": "72"
+          }],
         "Area": {
           "DSP": "32",
           "AVAIL_DSP": "240",
           "UTIL_DSP": "13",
-          "FF": "4",
+          "FF": "1443",
+          "AVAIL_FF": "126800",
+          "UTIL_FF": "1",
+          "LUT": "2353",
+          "AVAIL_LUT": "63400",
+          "UTIL_LUT": "3",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "270",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "train_step_Pipeline_VITIS_LOOP_45_1": {
+        "Latency": {
+          "LatencyBest": "328",
+          "LatencyAvg": "328",
+          "LatencyWorst": "328",
+          "PipelineII": "327",
+          "PipelineDepth": "",
+          "PipelineType": "loop auto-rewind stp (delay=0 clock cycles(s))"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_45_1",
+            "TripCount": "10",
+            "Latency": "326",
+            "PipelineII": "32",
+            "PipelineDepth": "39"
+          }],
+        "Area": {
+          "DSP": "16",
+          "AVAIL_DSP": "240",
+          "UTIL_DSP": "6",
+          "FF": "719",
           "AVAIL_FF": "126800",
           "UTIL_FF": "~0",
-          "LUT": "702",
+          "LUT": "1232",
           "AVAIL_LUT": "63400",
           "UTIL_LUT": "1",
           "BRAM_18K": "0",
@@ -1502,79 +1343,157 @@
           "UTIL_URAM": "0"
         }
       },
-      "train_step_Pipeline_VITIS_LOOP_136_1": {
+      "train_step_Pipeline_VITIS_LOOP_28_11": {
         "Latency": {
-          "LatencyBest": "18",
-          "LatencyAvg": "18",
-          "LatencyWorst": "18",
-          "PipelineII": "17",
+          "LatencyBest": "2057",
+          "LatencyAvg": "2057",
+          "LatencyWorst": "2057",
+          "PipelineII": "2056",
           "PipelineDepth": "",
           "PipelineType": "loop auto-rewind stp (delay=0 clock cycles(s))"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "5.442"
+          "Estimate": "7.300"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_136_1",
-            "TripCount": "4",
-            "Latency": "16",
-            "PipelineII": "4",
-            "PipelineDepth": "4"
+            "Name": "VITIS_LOOP_28_1",
+            "TripCount": "32",
+            "Latency": "2055",
+            "PipelineII": "64",
+            "PipelineDepth": "72"
           }],
         "Area": {
-          "FF": "22",
+          "DSP": "32",
+          "AVAIL_DSP": "240",
+          "UTIL_DSP": "13",
+          "FF": "1443",
           "AVAIL_FF": "126800",
-          "UTIL_FF": "~0",
-          "LUT": "292",
+          "UTIL_FF": "1",
+          "LUT": "2353",
           "AVAIL_LUT": "63400",
-          "UTIL_LUT": "~0",
+          "UTIL_LUT": "3",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "270",
           "UTIL_BRAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "240",
-          "UTIL_DSP": "0",
           "URAM": "0",
           "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
         }
       },
-      "train_step_Pipeline_VITIS_LOOP_141_4": {
+      "train_step_Pipeline_VITIS_LOOP_45_12": {
         "Latency": {
-          "LatencyBest": "6",
-          "LatencyAvg": "6",
-          "LatencyWorst": "6",
-          "PipelineII": "5",
+          "LatencyBest": "328",
+          "LatencyAvg": "328",
+          "LatencyWorst": "328",
+          "PipelineII": "327",
           "PipelineDepth": "",
           "PipelineType": "loop auto-rewind stp (delay=0 clock cycles(s))"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "5.442"
+          "Estimate": "7.300"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_141_4",
-            "TripCount": "4",
-            "Latency": "4",
-            "PipelineII": "1",
-            "PipelineDepth": "1"
+            "Name": "VITIS_LOOP_45_1",
+            "TripCount": "10",
+            "Latency": "326",
+            "PipelineII": "32",
+            "PipelineDepth": "39"
           }],
         "Area": {
-          "FF": "5",
+          "DSP": "16",
+          "AVAIL_DSP": "240",
+          "UTIL_DSP": "6",
+          "FF": "719",
           "AVAIL_FF": "126800",
           "UTIL_FF": "~0",
-          "LUT": "51",
+          "LUT": "1232",
           "AVAIL_LUT": "63400",
-          "UTIL_LUT": "~0",
+          "UTIL_LUT": "1",
           "BRAM_18K": "0",
           "AVAIL_BRAM": "270",
           "UTIL_BRAM": "0",
-          "DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "train_step_Pipeline_VITIS_LOOP_64_1": {
+        "Latency": {
+          "LatencyBest": "3074",
+          "LatencyAvg": "3074",
+          "LatencyWorst": "3074",
+          "PipelineII": "2112",
+          "PipelineDepth": "",
+          "PipelineType": "loop auto-rewind stp (delay=0 clock cycles(s))"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_64_1",
+            "TripCount": "32",
+            "Latency": "3072",
+            "PipelineII": "64",
+            "PipelineDepth": "1089"
+          }],
+        "Area": {
+          "DSP": "64",
           "AVAIL_DSP": "240",
-          "UTIL_DSP": "0",
+          "UTIL_DSP": "26",
+          "FF": "6450",
+          "AVAIL_FF": "126800",
+          "UTIL_FF": "5",
+          "LUT": "7020",
+          "AVAIL_LUT": "63400",
+          "UTIL_LUT": "11",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "270",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "train_step_Pipeline_VITIS_LOOP_85_1": {
+        "Latency": {
+          "LatencyBest": "834",
+          "LatencyAvg": "834",
+          "LatencyWorst": "834",
+          "PipelineII": "352",
+          "PipelineDepth": "",
+          "PipelineType": "loop auto-rewind stp (delay=0 clock cycles(s))"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.300"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_85_1",
+            "TripCount": "10",
+            "Latency": "832",
+            "PipelineII": "32",
+            "PipelineDepth": "545"
+          }],
+        "Area": {
+          "DSP": "32",
+          "AVAIL_DSP": "240",
+          "UTIL_DSP": "13",
+          "FF": "3664",
+          "AVAIL_FF": "126800",
+          "UTIL_FF": "2",
+          "LUT": "3910",
+          "AVAIL_LUT": "63400",
+          "UTIL_LUT": "6",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "270",
+          "UTIL_BRAM": "0",
           "URAM": "0",
           "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
@@ -1582,31 +1501,31 @@
       },
       "train_step": {
         "Latency": {
-          "LatencyBest": "29",
-          "LatencyAvg": "29",
-          "LatencyWorst": "29",
-          "PipelineII": "30",
+          "LatencyBest": "8829",
+          "LatencyAvg": "8829",
+          "LatencyWorst": "8829",
+          "PipelineII": "8830",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "6.860"
+          "Estimate": "7.300"
         },
         "Area": {
-          "BRAM_18K": "0",
+          "BRAM_18K": "3",
           "AVAIL_BRAM": "270",
-          "UTIL_BRAM": "0",
-          "DSP": "68",
+          "UTIL_BRAM": "1",
+          "DSP": "192",
           "AVAIL_DSP": "240",
-          "UTIL_DSP": "28",
-          "FF": "1440",
+          "UTIL_DSP": "80",
+          "FF": "16316",
           "AVAIL_FF": "126800",
-          "UTIL_FF": "1",
-          "LUT": "3368",
+          "UTIL_FF": "12",
+          "LUT": "21239",
           "AVAIL_LUT": "63400",
-          "UTIL_LUT": "5",
+          "UTIL_LUT": "33",
           "URAM": "0",
           "AVAIL_URAM": "0",
           "UTIL_URAM": "0"
@@ -1617,7 +1536,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2025-05-14 09:53:23 -0600",
+    "Time": "2025-05-20 21:05:03 -0600",
     "ToolName": "vitis_hls",
     "ToolVersion": "2024.2"
   }

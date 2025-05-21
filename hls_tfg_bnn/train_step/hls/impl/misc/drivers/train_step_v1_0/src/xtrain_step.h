@@ -45,11 +45,13 @@ typedef struct {
 #else
     u16 DeviceId;
 #endif
+    u64 Control_BaseAddress;
     u64 Ctrl_BaseAddress;
 } XTrain_step_Config;
 #endif
 
 typedef struct {
+    u64 Control_BaseAddress;
     u64 Ctrl_BaseAddress;
     u32 IsReady;
 } XTrain_step;
@@ -99,40 +101,10 @@ u32 XTrain_step_IsReady(XTrain_step *InstancePtr);
 void XTrain_step_EnableAutoRestart(XTrain_step *InstancePtr);
 void XTrain_step_DisableAutoRestart(XTrain_step *InstancePtr);
 
-void XTrain_step_Set_img_pos_0(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_pos_0(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_pos_1(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_pos_1(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_pos_2(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_pos_2(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_pos_3(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_pos_3(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_pos_4(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_pos_4(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_pos_5(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_pos_5(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_pos_6(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_pos_6(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_pos_7(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_pos_7(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_neg_0(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_neg_0(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_neg_1(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_neg_1(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_neg_2(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_neg_2(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_neg_3(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_neg_3(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_neg_4(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_neg_4(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_neg_5(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_neg_5(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_neg_6(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_neg_6(XTrain_step *InstancePtr);
-void XTrain_step_Set_img_neg_7(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_img_neg_7(XTrain_step *InstancePtr);
-void XTrain_step_Set_last_sample(XTrain_step *InstancePtr, u32 Data);
-u32 XTrain_step_Get_last_sample(XTrain_step *InstancePtr);
+void XTrain_step_Set_W1(XTrain_step *InstancePtr, u64 Data);
+u64 XTrain_step_Get_W1(XTrain_step *InstancePtr);
+void XTrain_step_Set_W2(XTrain_step *InstancePtr, u64 Data);
+u64 XTrain_step_Get_W2(XTrain_step *InstancePtr);
 void XTrain_step_Set_sample_idx(XTrain_step *InstancePtr, u32 Data);
 u32 XTrain_step_Get_sample_idx(XTrain_step *InstancePtr);
 

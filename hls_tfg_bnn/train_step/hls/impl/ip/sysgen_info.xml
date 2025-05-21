@@ -2,73 +2,118 @@
 <AdditionalInfo>
   <CTypeInfo>
       <RtlPort>
-        <name>leds_port</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>leds_port_ap_vld</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>W1_out_address0</name>
+        <name>img_neg_address0</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>W1_out_address1</name>
+        <name>img_neg_ce0</name>
+        <type>bool</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>img_neg_q0</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>W1_out_ce0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>W1_out_ce1</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>W1_out_d0</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>W1_out_d1</name>
-        <type>Signed</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>W1_out_we0</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>W1_out_we1</name>
-        <type>bool</type>
-        <fractionWidth>0</fractionWidth>
-      </RtlPort>
-      <RtlPort>
-        <name>W2_out_address0</name>
+        <name>img_pos_address0</name>
         <type>Unsigned</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>W2_out_ce0</name>
+        <name>img_pos_ce0</name>
         <type>bool</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>W2_out_d0</name>
+        <name>img_pos_q0</name>
+        <type>Unsigned</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_ARADDR</name>
         <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
       <RtlPort>
-        <name>W2_out_we0</name>
-        <type>bool</type>
+        <name>s_axi_CTRL_ARREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_ARVALID</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_AWADDR</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_AWREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_AWVALID</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_BREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_BRESP</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_BVALID</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_RDATA</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_RREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_RRESP</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_RVALID</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_WDATA</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_WREADY</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_WSTRB</name>
+        <type>Signed</type>
+        <fractionWidth>0</fractionWidth>
+      </RtlPort>
+      <RtlPort>
+        <name>s_axi_CTRL_WVALID</name>
+        <type>Signed</type>
         <fractionWidth>0</fractionWidth>
       </RtlPort>
   </CTypeInfo>
@@ -78,7 +123,7 @@
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>29</latency>
-    <II>30</II>
+    <latency>8829</latency>
+    <II>8830</II>
   </modelParameters>
 </AdditionalInfo>

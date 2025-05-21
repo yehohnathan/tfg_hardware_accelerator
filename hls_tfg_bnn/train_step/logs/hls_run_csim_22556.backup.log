@@ -1,0 +1,70 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.cpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.hpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file 'D:/Proyectos/tfg_hardware_accelerator/src/forward_fw.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding test bench file 'D:/Proyectos/tfg_hardware_accelerator/tb/train_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=D:/Proyectos/tfg_hardware_accelerator/data/mnist_test_data.hpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'D:/Proyectos/tfg_hardware_accelerator/data/mnist_test_data.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=D:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'D:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=train_step' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7a100tcsg324-1' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(5)
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../tb/train_tb.cpp in debug mode
+   Compiling ../../../../../src/forward_fw.cpp in debug mode
+   Generating csim.exe
+Makefile.rules:349: recipe for target 'csim.exe' failed
+In file included from ../../../../../tb/train_tb.cpp:4:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_int.h:10:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis/2024.2/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../../../src/forward_fw.cpp:1:
+In file included from ../../../../../src/forward_fw.hpp:2:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_fixed.h:9:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
+In file included from C:/Xilinx/Vitis/2024.2/include/etc/hls_half_fpo.h:19:
+In file included from C:/Xilinx/Vitis/2024.2/include/hls_fpo.h:140:
+In file included from C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:150:
+C:/Xilinx/Vitis/2024.2/include/gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+ld.lld: error: undefined symbol: W1
+>>> referenced by obj/train_tb.o:(.refptr.W1)
+
+ld.lld: error: undefined symbol: W2
+>>> referenced by obj/train_tb.o:(.refptr.W2)
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [csim.exe] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: 4
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 1 seconds. Total elapsed time: 19.786 seconds; peak allocated memory: 265.383 MB.
