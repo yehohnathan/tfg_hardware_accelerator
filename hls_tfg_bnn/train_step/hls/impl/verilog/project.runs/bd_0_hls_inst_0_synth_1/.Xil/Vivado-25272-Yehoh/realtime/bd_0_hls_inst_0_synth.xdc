@@ -1,6 +1,0 @@
-set_property SRC_FILE_INFO {cfile:d:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/train_step_ooc.xdc rfile:../../../../../project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/train_step_ooc.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
-set_property SRC_FILE_INFO {cfile:D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc rfile:../../../dont_touch.xdc id:2} [current_design]
-set_property src_info {type:SCOPED_XDC file:1 line:5 export:INPUT save:INPUT read:FILTER_OUT_OF_CONTEXT} [current_design]
-create_clock -period 10.000 -name ap_clk [get_ports ap_clk]
-set_property src_info {type:XDC file:2 line:9 export:INPUT save:INPUT read:READ} [current_design]
-set_property KEEP_HIERARCHY SOFT [get_cells inst]

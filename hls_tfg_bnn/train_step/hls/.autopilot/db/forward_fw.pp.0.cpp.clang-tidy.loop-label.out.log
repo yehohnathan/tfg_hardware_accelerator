@@ -18,53 +18,53 @@ D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\f
       ^~~
       VITIS_LOOP_1248_1: 
 D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:3919:7: note: FIX-IT applied suggested code changes
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6131:5: warning: Added loop label VITIS_LOOP_15_1:   [xilinx-label-all-loops]
-    for(int i = 0; i < size; i++) {
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11088:5: warning: Added loop label VITIS_LOOP_22_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < size; ++i) {
     ^~~
-    VITIS_LOOP_15_1: 
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6131:5: note: FIX-IT applied suggested code changes
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6144:5: warning: Added loop label VITIS_LOOP_28_1:   [xilinx-label-all-loops]
+    VITIS_LOOP_22_1: 
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11088:5: note: FIX-IT applied suggested code changes
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11102:5: warning: Added loop label VITIS_LOOP_36_1:   [xilinx-label-all-loops]
     for(int j = 0; j < N_HIDDEN; j++) {
     ^~~
-    VITIS_LOOP_28_1: 
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6144:5: note: FIX-IT applied suggested code changes
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6147:9: warning: Added loop label VITIS_LOOP_31_2:   [xilinx-label-all-loops]
+    VITIS_LOOP_36_1: 
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11102:5: note: FIX-IT applied suggested code changes
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11105:9: warning: Added loop label VITIS_LOOP_39_2:   [xilinx-label-all-loops]
         for(int i = 0; i < N_INPUT; i++) {
         ^~~
-        VITIS_LOOP_31_2: 
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6147:9: note: FIX-IT applied suggested code changes
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6161:5: warning: Added loop label VITIS_LOOP_45_1:   [xilinx-label-all-loops]
+        VITIS_LOOP_39_2: 
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11105:9: note: FIX-IT applied suggested code changes
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11120:5: warning: Added loop label VITIS_LOOP_54_1:   [xilinx-label-all-loops]
     for(int k = 0; k < N_OUTPUT; k++) {
     ^~~
-    VITIS_LOOP_45_1: 
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6161:5: note: FIX-IT applied suggested code changes
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6163:9: warning: Added loop label VITIS_LOOP_47_2:   [xilinx-label-all-loops]
+    VITIS_LOOP_54_1: 
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11120:5: note: FIX-IT applied suggested code changes
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11122:9: warning: Added loop label VITIS_LOOP_56_2:   [xilinx-label-all-loops]
         for(int j = 0; j < N_HIDDEN; j++) {
         ^~~
-        VITIS_LOOP_47_2: 
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6163:9: note: FIX-IT applied suggested code changes
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6180:5: warning: Added loop label VITIS_LOOP_64_1:   [xilinx-label-all-loops]
+        VITIS_LOOP_56_2: 
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11122:9: note: FIX-IT applied suggested code changes
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11139:5: warning: Added loop label VITIS_LOOP_73_1:   [xilinx-label-all-loops]
     for(int j = 0; j < N_HIDDEN; j++) {
     ^~~
-    VITIS_LOOP_64_1: 
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6180:5: note: FIX-IT applied suggested code changes
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6182:9: warning: Added loop label VITIS_LOOP_66_2:   [xilinx-label-all-loops]
+    VITIS_LOOP_73_1: 
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11139:5: note: FIX-IT applied suggested code changes
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11141:9: warning: Added loop label VITIS_LOOP_75_2:   [xilinx-label-all-loops]
         for(int i = 0; i < N_INPUT; i++) {
         ^~~
-        VITIS_LOOP_66_2: 
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6182:9: note: FIX-IT applied suggested code changes
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6201:5: warning: Added loop label VITIS_LOOP_85_1:   [xilinx-label-all-loops]
+        VITIS_LOOP_75_2: 
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11141:9: note: FIX-IT applied suggested code changes
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11158:5: warning: Added loop label VITIS_LOOP_92_1:   [xilinx-label-all-loops]
     for(int k = 0; k < N_OUTPUT; k++) {
     ^~~
-    VITIS_LOOP_85_1: 
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6201:5: note: FIX-IT applied suggested code changes
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6203:9: warning: Added loop label VITIS_LOOP_87_2:   [xilinx-label-all-loops]
+    VITIS_LOOP_92_1: 
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11158:5: note: FIX-IT applied suggested code changes
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11160:9: warning: Added loop label VITIS_LOOP_94_2:   [xilinx-label-all-loops]
         for(int j = 0; j < N_HIDDEN; j++) {
         ^~~
-        VITIS_LOOP_87_2: 
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6203:9: note: FIX-IT applied suggested code changes
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6238:5: warning: Added loop label VITIS_LOOP_118_1:   [xilinx-label-all-loops]
-    for(int i = 0; i < N_INPUT; i++) {
-    ^~~
-    VITIS_LOOP_118_1: 
-D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:6238:5: note: FIX-IT applied suggested code changes
+        VITIS_LOOP_94_2: 
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11160:9: note: FIX-IT applied suggested code changes
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11199:2: warning: Added loop label VITIS_LOOP_129_1:   [xilinx-label-all-loops]
+ for(int i = 0; i < N_INPUT; i++) {
+ ^~~
+ VITIS_LOOP_129_1: 
+D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp:11199:2: note: FIX-IT applied suggested code changes

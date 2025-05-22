@@ -117,3 +117,22 @@
 16:54:54 INFO  : Embedded Template List generated successfully
 16:54:54 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2024.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2024.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\yehoh\AppData\Local\Temp\rigel_lopper_yehoh11397131881465617937 -r D:\Proyectos\tfg_hardware_accelerator\_ide\.wsdata\.repo.yaml && C:\Xilinx\Vitis\2024.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
 16:54:55 INFO  : Embedded Template List generated successfully
+09:39:53 INFO  : connection terminated
+09:39:53 INFO  : connection terminated
+09:39:53 INFO  : scheduling shutdown timer for 2 seconds ...
+09:39:55 INFO  : Terminating Vitis C++ Server
+09:39:55 INFO  : Vitis C++ Server terminated
+09:40:45 INFO  : updated workspace path: D:\Proyectos\tfg_hardware_accelerator
+09:40:45 INFO  : created .gitignore file for the project D:\Proyectos\tfg_hardware_accelerator
+09:40:46 INFO  : connection terminated
+09:40:47 INFO  : Successfully created repository data at C:\Users\yehoh\AppData\Local\Temp\rigel_lopper_yehoh14743267892946769614
+09:40:47 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2024.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2024.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\yehoh\AppData\Local\Temp\rigel_lopper_yehoh7557703630486630750 -r C:\Users\yehoh\AppData\Local\Temp\rigel_lopper_yehoh14743267892946769614\.repo.yaml && C:\Xilinx\Vitis\2024.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+09:40:48 INFO  : Embedded Template List generated successfully
+09:40:48 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2024.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2024.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\yehoh\AppData\Local\Temp\rigel_lopper_yehoh16317120168543018909 -r D:\Proyectos\tfg_hardware_accelerator\_ide\.wsdata\.repo.yaml && C:\Xilinx\Vitis\2024.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+09:40:48 INFO  : Embedded Template List generated successfully
+09:20:49 INFO  : updated workspace path: D:\Proyectos\tfg_hardware_accelerator
+09:20:49 INFO  : created .gitignore file for the project D:\Proyectos\tfg_hardware_accelerator
+09:20:49 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2024.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2024.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\yehoh\AppData\Local\Temp\rigel_lopper_yehoh14511522101993178074 -r D:\Proyectos\tfg_hardware_accelerator\_ide\.wsdata\.repo.yaml && C:\Xilinx\Vitis\2024.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+09:20:51 INFO  : Embedded Template List generated successfully
+09:20:51 INFO  : cmd.exe, /C, C:\Xilinx\Vitis\2024.2\tps\win64\lopper-1.1.0\env\Scripts\activate.bat && python C:\Xilinx\Vitis\2024.2\data\embeddedsw\scripts\pyesw\\get_template_data.py -d C:\Users\yehoh\AppData\Local\Temp\rigel_lopper_yehoh3962676626572026368 -r D:\Proyectos\tfg_hardware_accelerator\_ide\.wsdata\.repo.yaml && C:\Xilinx\Vitis\2024.2\tps\win64\lopper-1.1.0\env\Scripts\deactivate.bat
+09:20:53 INFO  : Embedded Template List generated successfully

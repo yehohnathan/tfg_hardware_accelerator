@@ -1,0 +1,223 @@
+
+
+================================================================
+== Vitis HLS Report for 'forwardOutput'
+================================================================
+* Date:           Wed May 21 10:33:29 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        train_step
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a100t-csg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      338|      338|  3.380 us|  3.380 us|  338|  338|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.30>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%W2_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %W2" [../src/forward_fw.cpp:52]   --->   Operation 11 'read' 'W2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%WEIGHTS_addr = getelementptr i8 %WEIGHTS, i64 %W2_read" [../src/forward_fw.cpp:54]   --->   Operation 12 'getelementptr' 'WEIGHTS_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [8/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %WEIGHTS_addr, i64 320" [../src/forward_fw.cpp:54]   --->   Operation 13 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 14 [7/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %WEIGHTS_addr, i64 320" [../src/forward_fw.cpp:54]   --->   Operation 14 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 15 [6/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %WEIGHTS_addr, i64 320" [../src/forward_fw.cpp:54]   --->   Operation 15 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 16 [5/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %WEIGHTS_addr, i64 320" [../src/forward_fw.cpp:54]   --->   Operation 16 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 17 [4/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %WEIGHTS_addr, i64 320" [../src/forward_fw.cpp:54]   --->   Operation 17 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 18 [3/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %WEIGHTS_addr, i64 320" [../src/forward_fw.cpp:54]   --->   Operation 18 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 19 [2/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %WEIGHTS_addr, i64 320" [../src/forward_fw.cpp:54]   --->   Operation 19 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 20 [1/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i8, i8 %WEIGHTS_addr, i64 320" [../src/forward_fw.cpp:54]   --->   Operation 20 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 21 [1/1] (0.00ns)   --->   "%hidden_31_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_31_val" [../src/forward_fw.cpp:52]   --->   Operation 21 'read' 'hidden_31_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 22 [1/1] (0.00ns)   --->   "%hidden_30_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_30_val" [../src/forward_fw.cpp:52]   --->   Operation 22 'read' 'hidden_30_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 23 [1/1] (0.00ns)   --->   "%hidden_29_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_29_val" [../src/forward_fw.cpp:52]   --->   Operation 23 'read' 'hidden_29_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 24 [1/1] (0.00ns)   --->   "%hidden_28_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_28_val" [../src/forward_fw.cpp:52]   --->   Operation 24 'read' 'hidden_28_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 25 [1/1] (0.00ns)   --->   "%hidden_27_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_27_val" [../src/forward_fw.cpp:52]   --->   Operation 25 'read' 'hidden_27_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 26 [1/1] (0.00ns)   --->   "%hidden_26_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_26_val" [../src/forward_fw.cpp:52]   --->   Operation 26 'read' 'hidden_26_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 27 [1/1] (0.00ns)   --->   "%hidden_25_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_25_val" [../src/forward_fw.cpp:52]   --->   Operation 27 'read' 'hidden_25_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 28 [1/1] (0.00ns)   --->   "%hidden_24_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_24_val" [../src/forward_fw.cpp:52]   --->   Operation 28 'read' 'hidden_24_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 29 [1/1] (0.00ns)   --->   "%hidden_23_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_23_val" [../src/forward_fw.cpp:52]   --->   Operation 29 'read' 'hidden_23_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 30 [1/1] (0.00ns)   --->   "%hidden_22_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_22_val" [../src/forward_fw.cpp:52]   --->   Operation 30 'read' 'hidden_22_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 31 [1/1] (0.00ns)   --->   "%hidden_21_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_21_val" [../src/forward_fw.cpp:52]   --->   Operation 31 'read' 'hidden_21_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 32 [1/1] (0.00ns)   --->   "%hidden_20_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_20_val" [../src/forward_fw.cpp:52]   --->   Operation 32 'read' 'hidden_20_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 33 [1/1] (0.00ns)   --->   "%hidden_19_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_19_val" [../src/forward_fw.cpp:52]   --->   Operation 33 'read' 'hidden_19_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 34 [1/1] (0.00ns)   --->   "%hidden_18_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_18_val" [../src/forward_fw.cpp:52]   --->   Operation 34 'read' 'hidden_18_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 35 [1/1] (0.00ns)   --->   "%hidden_17_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_17_val" [../src/forward_fw.cpp:52]   --->   Operation 35 'read' 'hidden_17_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 36 [1/1] (0.00ns)   --->   "%hidden_16_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_16_val" [../src/forward_fw.cpp:52]   --->   Operation 36 'read' 'hidden_16_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 37 [1/1] (0.00ns)   --->   "%hidden_15_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_15_val" [../src/forward_fw.cpp:52]   --->   Operation 37 'read' 'hidden_15_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 38 [1/1] (0.00ns)   --->   "%hidden_14_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_14_val" [../src/forward_fw.cpp:52]   --->   Operation 38 'read' 'hidden_14_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 39 [1/1] (0.00ns)   --->   "%hidden_13_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_13_val" [../src/forward_fw.cpp:52]   --->   Operation 39 'read' 'hidden_13_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 40 [1/1] (0.00ns)   --->   "%hidden_12_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_12_val" [../src/forward_fw.cpp:52]   --->   Operation 40 'read' 'hidden_12_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 41 [1/1] (0.00ns)   --->   "%hidden_11_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_11_val" [../src/forward_fw.cpp:52]   --->   Operation 41 'read' 'hidden_11_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 42 [1/1] (0.00ns)   --->   "%hidden_10_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_10_val" [../src/forward_fw.cpp:52]   --->   Operation 42 'read' 'hidden_10_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 43 [1/1] (0.00ns)   --->   "%hidden_9_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_9_val" [../src/forward_fw.cpp:52]   --->   Operation 43 'read' 'hidden_9_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 44 [1/1] (0.00ns)   --->   "%hidden_8_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_8_val" [../src/forward_fw.cpp:52]   --->   Operation 44 'read' 'hidden_8_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 45 [1/1] (0.00ns)   --->   "%hidden_7_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_7_val" [../src/forward_fw.cpp:52]   --->   Operation 45 'read' 'hidden_7_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 46 [1/1] (0.00ns)   --->   "%hidden_6_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_6_val" [../src/forward_fw.cpp:52]   --->   Operation 46 'read' 'hidden_6_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 47 [1/1] (0.00ns)   --->   "%hidden_5_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_5_val" [../src/forward_fw.cpp:52]   --->   Operation 47 'read' 'hidden_5_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 48 [1/1] (0.00ns)   --->   "%hidden_4_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_4_val" [../src/forward_fw.cpp:52]   --->   Operation 48 'read' 'hidden_4_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 49 [1/1] (0.00ns)   --->   "%hidden_3_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_3_val" [../src/forward_fw.cpp:52]   --->   Operation 49 'read' 'hidden_3_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 50 [1/1] (0.00ns)   --->   "%hidden_2_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_2_val" [../src/forward_fw.cpp:52]   --->   Operation 50 'read' 'hidden_2_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 51 [1/1] (0.00ns)   --->   "%hidden_1_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_1_val" [../src/forward_fw.cpp:52]   --->   Operation 51 'read' 'hidden_1_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 52 [1/1] (0.00ns)   --->   "%hidden_0_val_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %hidden_0_val" [../src/forward_fw.cpp:52]   --->   Operation 52 'read' 'hidden_0_val_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 53 [2/2] (0.00ns)   --->   "%call_ln52 = call void @forwardOutput_Pipeline_VITIS_LOOP_54_1, i2 %output_0, i8 %WEIGHTS, i64 %W2_read, i2 %output_9, i2 %output_8, i2 %output_7, i2 %output_6, i2 %output_5, i2 %output_4, i2 %output_3, i2 %output_2, i2 %output_1, i2 %hidden_0_val_read, i2 %hidden_1_val_read, i2 %hidden_2_val_read, i2 %hidden_3_val_read, i2 %hidden_4_val_read, i2 %hidden_5_val_read, i2 %hidden_6_val_read, i2 %hidden_7_val_read, i2 %hidden_8_val_read, i2 %hidden_9_val_read, i2 %hidden_10_val_read, i2 %hidden_11_val_read, i2 %hidden_12_val_read, i2 %hidden_13_val_read, i2 %hidden_14_val_read, i2 %hidden_15_val_read, i2 %hidden_16_val_read, i2 %hidden_17_val_read, i2 %hidden_18_val_read, i2 %hidden_19_val_read, i2 %hidden_20_val_read, i2 %hidden_21_val_read, i2 %hidden_22_val_read, i2 %hidden_23_val_read, i2 %hidden_24_val_read, i2 %hidden_25_val_read, i2 %hidden_26_val_read, i2 %hidden_27_val_read, i2 %hidden_28_val_read, i2 %hidden_29_val_read, i2 %hidden_30_val_read, i2 %hidden_31_val_read" [../src/forward_fw.cpp:52]   --->   Operation 53 'call' 'call_ln52' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 10 <SV = 9> <Delay = 4.85>
+ST_10 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %WEIGHTS, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 2048, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 55 [1/2] (4.85ns)   --->   "%call_ln52 = call void @forwardOutput_Pipeline_VITIS_LOOP_54_1, i2 %output_0, i8 %WEIGHTS, i64 %W2_read, i2 %output_9, i2 %output_8, i2 %output_7, i2 %output_6, i2 %output_5, i2 %output_4, i2 %output_3, i2 %output_2, i2 %output_1, i2 %hidden_0_val_read, i2 %hidden_1_val_read, i2 %hidden_2_val_read, i2 %hidden_3_val_read, i2 %hidden_4_val_read, i2 %hidden_5_val_read, i2 %hidden_6_val_read, i2 %hidden_7_val_read, i2 %hidden_8_val_read, i2 %hidden_9_val_read, i2 %hidden_10_val_read, i2 %hidden_11_val_read, i2 %hidden_12_val_read, i2 %hidden_13_val_read, i2 %hidden_14_val_read, i2 %hidden_15_val_read, i2 %hidden_16_val_read, i2 %hidden_17_val_read, i2 %hidden_18_val_read, i2 %hidden_19_val_read, i2 %hidden_20_val_read, i2 %hidden_21_val_read, i2 %hidden_22_val_read, i2 %hidden_23_val_read, i2 %hidden_24_val_read, i2 %hidden_25_val_read, i2 %hidden_26_val_read, i2 %hidden_27_val_read, i2 %hidden_28_val_read, i2 %hidden_29_val_read, i2 %hidden_30_val_read, i2 %hidden_31_val_read" [../src/forward_fw.cpp:52]   --->   Operation 55 'call' 'call_ln52' <Predicate = true> <Delay = 4.85> <CoreType = "Generic">   --->   Generic Core
+ST_10 : Operation 56 [1/1] (0.00ns)   --->   "%ret_ln62 = ret" [../src/forward_fw.cpp:62]   --->   Operation 56 'ret' 'ret_ln62' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 7.300ns
+The critical path consists of the following:
+	wire read operation ('W2_read', ../src/forward_fw.cpp:52) on port 'W2' (../src/forward_fw.cpp:52) [46]  (0.000 ns)
+	'getelementptr' operation 8 bit ('WEIGHTS_addr', ../src/forward_fw.cpp:54) [79]  (0.000 ns)
+	bus request operation ('empty', ../src/forward_fw.cpp:54) on port 'WEIGHTS' (../src/forward_fw.cpp:54) [80]  (7.300 ns)
+
+ <State 2>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', ../src/forward_fw.cpp:54) on port 'WEIGHTS' (../src/forward_fw.cpp:54) [80]  (7.300 ns)
+
+ <State 3>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', ../src/forward_fw.cpp:54) on port 'WEIGHTS' (../src/forward_fw.cpp:54) [80]  (7.300 ns)
+
+ <State 4>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', ../src/forward_fw.cpp:54) on port 'WEIGHTS' (../src/forward_fw.cpp:54) [80]  (7.300 ns)
+
+ <State 5>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', ../src/forward_fw.cpp:54) on port 'WEIGHTS' (../src/forward_fw.cpp:54) [80]  (7.300 ns)
+
+ <State 6>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', ../src/forward_fw.cpp:54) on port 'WEIGHTS' (../src/forward_fw.cpp:54) [80]  (7.300 ns)
+
+ <State 7>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', ../src/forward_fw.cpp:54) on port 'WEIGHTS' (../src/forward_fw.cpp:54) [80]  (7.300 ns)
+
+ <State 8>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', ../src/forward_fw.cpp:54) on port 'WEIGHTS' (../src/forward_fw.cpp:54) [80]  (7.300 ns)
+
+ <State 9>: 0.000ns
+The critical path consists of the following:
+
+ <State 10>: 4.851ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln52', ../src/forward_fw.cpp:52) to 'forwardOutput_Pipeline_VITIS_LOOP_54_1' [81]  (4.851 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

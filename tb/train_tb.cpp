@@ -8,6 +8,7 @@
 
 // Epochs para prueba rápida
 constexpr int NUM_EPOCHS = 1;
+extern acc_t MARGIN;
 
 // ---------------------------------------------------------------------------
 // Pseudo-aleatorio para datos negativos (0–255)
@@ -59,14 +60,6 @@ int main() {
             // 2.2) Ejecutar paso de entrenamiento (actualiza W1 y W2 en HLS)
             train_step(pos, neg, img, W1, W2);
 
-            // 2.3) Leer pesos recién actualizados
-            for (int j = 0; j < N_HIDDEN; ++j)
-                for (int i = 0; i < N_INPUT; ++i)
-                    W1_out[j][i] = W1[j][i];
-            for (int k = 0; k < N_OUTPUT; ++k)
-                for (int j = 0; j < N_HIDDEN; ++j)
-                    W2_out[k][j] = W2[k][j];
-
             // 2.4) Imprimir todas las entradas de W1 y W2
             /*
             std::printf("-- Despues de img %2d --\n", img);
@@ -90,13 +83,13 @@ int main() {
         for (int j = 0; j < N_HIDDEN; ++j) {
             std::printf(" W1[%d]:", j);
             for (int i = 0; i < N_INPUT; ++i)
-                std::printf(" %d", static_cast<int>(W1_out[j][i]));
+                std::printf(" %d", static_cast<int>(W1[j][i]));
             std::printf("\n");
         }
         for (int k = 0; k < N_OUTPUT; ++k) {
             std::printf(" W2[%d]:", k);
             for (int j = 0; j < N_HIDDEN; ++j)
-                std::printf(" %d", static_cast<int>(W2_out[k][j]));
+                std::printf(" %d", static_cast<int>(W2[k][j]));
             std::printf("\n");
         }
     }
@@ -107,7 +100,7 @@ int main() {
     // Recorremos todo W1 y ponemos a true changed1 en cuanto encontremos alguna diferencia
     for (int j = 0; j < N_HIDDEN && !changed1; ++j) {
         for (int i = 0; i < N_INPUT; ++i) {
-            if (W1_out[j][i] != bin_t(1)) {
+            if (W1[j][i] != bin_t(1)) {
                 changed1 = true;
                 break;
             }
@@ -117,7 +110,7 @@ int main() {
     // Recorremos todo W2 y ponemos a true changed2 en cuanto encontremos alguna diferencia
     for (int k = 0; k < N_OUTPUT && !changed2; ++k) {
         for (int j = 0; j < N_HIDDEN; ++j) {
-            if (W2_out[k][j] != bin_t(1)) {
+            if (W2[k][j] != bin_t(1)) {
                 changed2 = true;
                 break;
             }

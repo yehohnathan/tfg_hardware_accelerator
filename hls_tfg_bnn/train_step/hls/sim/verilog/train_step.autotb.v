@@ -39,9 +39,9 @@
 `define AUTOTB_TVOUT_WEIGHTS_out_wrapc  "../tv/rtldatafile/rtl.train_step.autotvout_WEIGHTS.dat"
 module `AUTOTB_TOP;
 
-parameter AUTOTB_TRANSACTION_NUM = 50;
+parameter AUTOTB_TRANSACTION_NUM = 5000;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 8829;
+parameter LATENCY_ESTIMATION = 7705;
 parameter LENGTH_W1 = 1;
 parameter LENGTH_W2 = 1;
 parameter LENGTH_WEIGHTS = 2368;
@@ -161,9 +161,15 @@ wire [0 : 0] WEIGHTS_BUSER;
 wire [5 : 0] img_pos_address0;
 wire  img_pos_ce0;
 wire [7 : 0] img_pos_q0;
+wire [5 : 0] img_pos_address1;
+wire  img_pos_ce1;
+wire [7 : 0] img_pos_q1;
 wire [5 : 0] img_neg_address0;
 wire  img_neg_ce0;
 wire [7 : 0] img_neg_q0;
+wire [5 : 0] img_neg_address1;
+wire  img_neg_ce1;
+wire [7 : 0] img_neg_q1;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
 integer ready_cnt = 0;
@@ -278,9 +284,15 @@ wire ap_rst_n_n;
     .img_pos_address0(img_pos_address0),
     .img_pos_ce0(img_pos_ce0),
     .img_pos_q0(img_pos_q0),
+    .img_pos_address1(img_pos_address1),
+    .img_pos_ce1(img_pos_ce1),
+    .img_pos_q1(img_pos_q1),
     .img_neg_address0(img_neg_address0),
     .img_neg_ce0(img_neg_ce0),
-    .img_neg_q0(img_neg_q0));
+    .img_neg_q0(img_neg_q0),
+    .img_neg_address1(img_neg_address1),
+    .img_neg_ce1(img_neg_ce1),
+    .img_neg_q1(img_neg_q1));
 
 // Assignment for control signal
 assign ap_clk = AESL_clock;
@@ -379,6 +391,9 @@ assign arrayimg_pos_ce0 = img_pos_ce0;
 assign img_pos_q0 = arrayimg_pos_dout0;
 assign arrayimg_pos_we0 = 0;
 assign arrayimg_pos_din0 = 0;
+assign arrayimg_pos_address1 = img_pos_address1;
+assign arrayimg_pos_ce1 = img_pos_ce1;
+assign img_pos_q1 = arrayimg_pos_dout1;
 assign arrayimg_pos_we1 = 0;
 assign arrayimg_pos_din1 = 0;
 assign arrayimg_pos_ready=    ready;
@@ -419,6 +434,9 @@ assign arrayimg_neg_ce0 = img_neg_ce0;
 assign img_neg_q0 = arrayimg_neg_dout0;
 assign arrayimg_neg_we0 = 0;
 assign arrayimg_neg_din0 = 0;
+assign arrayimg_neg_address1 = img_neg_address1;
+assign arrayimg_neg_ce1 = img_neg_ce1;
+assign img_neg_q1 = arrayimg_neg_dout1;
 assign arrayimg_neg_we1 = 0;
 assign arrayimg_neg_din1 = 0;
 assign arrayimg_neg_ready=    ready;

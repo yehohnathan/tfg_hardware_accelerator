@@ -2,76 +2,115 @@
     <msg msg_groups="PRAGMA_INVALID" msg_id="207-5569" msg_severity="WARNING" msg_loc="d:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp:8:32" msg_body="unexpected pragma parameter 'depth'">
         <args ClangWarningOption="invalid-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="computeGoodness" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="forwardHidden" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:57:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="forwardOutput" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:95:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="updateOutput" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=train_step" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:107:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:115:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=W1 offset=slave bundle=WEIGHTS depth=N_HIDDEN*N_INPUT" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:108:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:116:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=W2 offset=slave bundle=WEIGHTS depth=N_OUTPUT*N_HIDDEN" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:111:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:119:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="0" ARG_PragmaOptions="s_axilite port=img_pos bundle=CTRL depth=N_INPUT" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:112:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:120:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="0" ARG_PragmaOptions="s_axilite port=img_neg bundle=CTRL depth=N_INPUT" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:113:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:121:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=sample_idx bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:114:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:122:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:26:0" msg_body="Inlining function 'signum(ap_fixed&lt;12, 12, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'forwardHidden(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64])'">
-        <args Callee="signum(ap_fixed&lt;12, 12, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File ../src/forward_fw.cpp Line 6 Column 0" Caller="forwardHidden(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64])" Caller-DebugLoc="File ../src/forward_fw.cpp Line 26 Column 0"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:126:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=in_pos complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:44:0" msg_body="Inlining function 'signum(ap_fixed&lt;12, 12, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'forwardOutput(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])'">
-        <args Callee="signum(ap_fixed&lt;12, 12, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File ../src/forward_fw.cpp Line 6 Column 0" Caller="forwardOutput(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])" Caller-DebugLoc="File ../src/forward_fw.cpp Line 44 Column 0"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:127:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=in_neg complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:105:0" msg_body="Inlining function 'forwardHidden(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64])' into 'train_step(unsigned char const*, unsigned char const*, int, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])'">
-        <args Callee="forwardHidden(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64])" Callee-DebugLoc="File ../src/forward_fw.cpp Line 26 Column 0" Caller="train_step(unsigned char const*, unsigned char const*, int, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])" Caller-DebugLoc="File ../src/forward_fw.cpp Line 105 Column 0"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:130:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:105:0" msg_body="Inlining function 'forwardOutput(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])' into 'train_step(unsigned char const*, unsigned char const*, int, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])'">
-        <args Callee="forwardOutput(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])" Callee-DebugLoc="File ../src/forward_fw.cpp Line 44 Column 0" Caller="train_step(unsigned char const*, unsigned char const*, int, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])" Caller-DebugLoc="File ../src/forward_fw.cpp Line 105 Column 0"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:138:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=hidden_pos complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:105:0" msg_body="Inlining function 'updateHidden(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64])' into 'train_step(unsigned char const*, unsigned char const*, int, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])'">
-        <args Callee="updateHidden(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64])" Callee-DebugLoc="File ../src/forward_fw.cpp Line 62 Column 0" Caller="train_step(unsigned char const*, unsigned char const*, int, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])" Caller-DebugLoc="File ../src/forward_fw.cpp Line 105 Column 0"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:139:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=hidden_neg complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:105:0" msg_body="Inlining function 'updateOutput(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])' into 'train_step(unsigned char const*, unsigned char const*, int, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])'">
-        <args Callee="updateOutput(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])" Callee-DebugLoc="File ../src/forward_fw.cpp Line 83 Column 0" Caller="train_step(unsigned char const*, unsigned char const*, int, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])" Caller-DebugLoc="File ../src/forward_fw.cpp Line 105 Column 0"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:140:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=out_pos complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:65:34" msg_body="The program may have out of bound array access on variable 'out_pos'"/>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:65:34" msg_body="The program may have out of bound array access on variable 'out_neg'"/>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:105:0" msg_body="Aggregating maxi variable 'W2' with compact=none mode in 8-bits">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:141:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="train_step" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=out_neg complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:113:0" msg_body="Unrolling loop 'VITIS_LOOP_129_1' (../src/forward_fw.cpp:129:20) in function 'train_step' completely with a factor of 64">
+        <args Factor="64" LoopLoc="../src/forward_fw.cpp:129:20" LoopName="VITIS_LOOP_129_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:91:0" msg_body="Unrolling loop 'VITIS_LOOP_94_2' (../src/forward_fw.cpp:94:26) in function 'updateOutput' completely with a factor of 32">
+        <args Factor="32" LoopLoc="../src/forward_fw.cpp:94:26" LoopName="VITIS_LOOP_94_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:53:0" msg_body="Unrolling loop 'VITIS_LOOP_56_2' (../src/forward_fw.cpp:56:26) in function 'forwardOutput' completely with a factor of 32">
+        <args Factor="32" LoopLoc="../src/forward_fw.cpp:56:26" LoopName="VITIS_LOOP_56_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:34:0" msg_body="Unrolling loop 'VITIS_LOOP_39_2' (../src/forward_fw.cpp:39:26) in function 'forwardHidden' completely with a factor of 64">
+        <args Factor="64" LoopLoc="../src/forward_fw.cpp:39:26" LoopName="VITIS_LOOP_39_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:34:0" msg_body="Inlining function 'signum(ap_fixed&lt;12, 12, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'forwardHidden(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64])'">
+        <args Callee="signum(ap_fixed&lt;12, 12, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File ../src/forward_fw.cpp Line 12 Column 0" Caller="forwardHidden(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64])" Caller-DebugLoc="File ../src/forward_fw.cpp Line 34 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:53:0" msg_body="Inlining function 'signum(ap_fixed&lt;12, 12, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'forwardOutput(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])'">
+        <args Callee="signum(ap_fixed&lt;12, 12, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File ../src/forward_fw.cpp Line 12 Column 0" Caller="forwardOutput(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])" Caller-DebugLoc="File ../src/forward_fw.cpp Line 53 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:113:0" msg_body="Inlining function 'computeGoodness(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, int)' into 'train_step(unsigned char const*, unsigned char const*, int, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])'">
+        <args Callee="computeGoodness(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, int)" Callee-DebugLoc="File ../src/forward_fw.cpp Line 20 Column 0" Caller="train_step(unsigned char const*, unsigned char const*, int, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])" Caller-DebugLoc="File ../src/forward_fw.cpp Line 113 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:113:0" msg_body="Inlining function 'updateHidden(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64])' into 'train_step(unsigned char const*, unsigned char const*, int, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])'">
+        <args Callee="updateHidden(ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64])" Callee-DebugLoc="File ../src/forward_fw.cpp Line 72 Column 0" Caller="train_step(unsigned char const*, unsigned char const*, int, ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [64], ap_fixed&lt;8, 8, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [32])" Caller-DebugLoc="File ../src/forward_fw.cpp Line 113 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:74:34" msg_body="The program may have out of bound array access on variable 'out_pos'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="../src/forward_fw.cpp:74:34" msg_body="The program may have out of bound array access on variable 'out_neg'"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:113:0" msg_body="Unrolling loop 'VITIS_LOOP_22_1' (../src/forward_fw.cpp:22:22) in function 'train_step' completely with a factor of 10">
+        <args Factor="10" LoopLoc="../src/forward_fw.cpp:22:22" LoopName="VITIS_LOOP_22_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:113:0" msg_body="Unrolling loop 'VITIS_LOOP_22_1' (../src/forward_fw.cpp:22:22) in function 'train_step' completely with a factor of 32">
+        <args Factor="32" LoopLoc="../src/forward_fw.cpp:22:22" LoopName="VITIS_LOOP_22_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:125:8" msg_body="Applying array_partition to 'in_pos': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="in_pos"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:125:25" msg_body="Applying array_partition to 'in_neg': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="in_neg"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:136:11" msg_body="Applying array_partition to 'hidden_pos': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="hidden_pos"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:136:33" msg_body="Applying array_partition to 'hidden_neg': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="hidden_neg"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:137:11" msg_body="Applying array_partition to 'out_pos': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="out_pos"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:137:30" msg_body="Applying array_partition to 'out_neg': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="out_neg"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:113:0" msg_body="Aggregating maxi variable 'W2' with compact=none mode in 8-bits">
         <args AggregateTypeName="compact=none" Bitwidth="8" HwTyName="maxi" Name="W2"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:105:0" msg_body="Aggregating maxi variable 'W1' with compact=none mode in 8-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:113:0" msg_body="Aggregating maxi variable 'W1' with compact=none mode in 8-bits">
         <args AggregateTypeName="compact=none" Bitwidth="8" HwTyName="maxi" Name="W1"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:87:26" msg_body="Loop 'VITIS_LOOP_87_2' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_87_2"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:66:26" msg_body="Loop 'VITIS_LOOP_66_2' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_66_2"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:47:26" msg_body="Loop 'VITIS_LOOP_47_2' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_47_2"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:31:26" msg_body="Loop 'VITIS_LOOP_31_2' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_31_2"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:105:0" msg_body="Unrolling loop 'VITIS_LOOP_87_2' (../src/forward_fw.cpp:87:26) in function 'train_step' completely with a factor of 32">
-        <args Factor="32" LoopLoc="../src/forward_fw.cpp:87:26" LoopName="VITIS_LOOP_87_2"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:105:0" msg_body="Unrolling loop 'VITIS_LOOP_66_2' (../src/forward_fw.cpp:66:26) in function 'train_step' completely with a factor of 64">
-        <args Factor="64" LoopLoc="../src/forward_fw.cpp:66:26" LoopName="VITIS_LOOP_66_2"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:105:0" msg_body="Unrolling loop 'VITIS_LOOP_47_2' (../src/forward_fw.cpp:47:26) in function 'train_step' completely with a factor of 32">
-        <args Factor="32" LoopLoc="../src/forward_fw.cpp:47:26" LoopName="VITIS_LOOP_47_2"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../src/forward_fw.cpp:105:0" msg_body="Unrolling loop 'VITIS_LOOP_31_2' (../src/forward_fw.cpp:31:26) in function 'train_step' completely with a factor of 64">
-        <args Factor="64" LoopLoc="../src/forward_fw.cpp:31:26" LoopName="VITIS_LOOP_31_2"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

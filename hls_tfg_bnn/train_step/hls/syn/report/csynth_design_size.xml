@@ -2,45 +2,46 @@
     <item name="Total Instructions per Compilation Phase">
         <table>
             <keys size="4">Phase, Step, Instructions, Description</keys>
-            <column name="Compile/Link">, 4806, After all functions are compiled and linked into a single design</column>
+            <column name="Compile/Link">,  7046, After all functions are compiled and linked into a single design</column>
             <column name="">, , </column>
             <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
-            <column name="">(1) unroll,   762, user unroll pragmas are applied</column>
-            <column name="">(2) simplification,   299, simplification of applied user unroll pragmas</column>
-            <column name="">(3) inline,   254, user inline pragmas are applied</column>
-            <column name="">(4) simplification,   232, simplification of applied user inline pragmas</column>
+            <column name="">(1) unroll, 16285, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,  4811, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,  4684, user inline pragmas are applied</column>
+            <column name="">(4) simplification,  4636, simplification of applied user inline pragmas</column>
             <column name="">, , </column>
             <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
-            <column name="">(1) array partition,   234, user array partition pragmas are applied</column>
-            <column name="">(2) simplification,   234, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
-            <column name="">(3) aggregate/disaggregate ,   242, user struct aggregate/disaggregate pragmas are applied</column>
-            <column name="">(4) array reshape,   250, apply array reshape pragmas</column>
-            <column name="">(5) access patterns,   272, array access pattern optmizations</column>
+            <column name="">(1) array partition,  5991, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,  5991, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,  6249, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,  6507, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,  6493, array access pattern optmizations</column>
             <column name="">, , </column>
             <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
-            <column name="">(1) loop simplification,   256, loop and instruction simplification</column>
-            <column name="">(2) parallelization, 4506, loops are unrolled or pipelined to meet performance targets</column>
-            <column name="">(3) array partition, 4506, arrays are partitioned to meet performance targets</column>
-            <column name="">(4) simplification, 4506, simplification of design after performance transformations</column>
+            <column name="">(1) loop simplification,  5509, loop and instruction simplification</column>
+            <column name="">(2) parallelization,  5425, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,  5424, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,  5424, simplification of design after performance transformations</column>
             <column name="">, , </column>
             <column name="HW Transforms">, , After hardware transfomations</column>
-            <column name="">(1) lowering, 4610, initial conversion to HW specific instructions</column>
-            <column name="">(2) optimizations, 4433, high level synthesis optimizations</column>
+            <column name="">(1) lowering,  5435, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,  5099, high level synthesis optimizations</column>
         </table>
     </item>
     <item name="Instructions per Function for each Compilation Phase">
         <hiertable>
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
-                <row id="0" col0="train_step" col1="forward_fw.cpp:101" col2="4806" col3="232" col4="272" col5="4506" col6="4433">
-                    <row id="1" col0="forwardHidden" col1="forward_fw.cpp:24" col2="1274" col2_disp="1,274 (2 calls)" col3="" col4="" col5="" col6="">
-                        <row id="3" col0="signum" col1="forward_fw.cpp:6" col2="242" col2_disp=" 242 (2 calls)" col3="" col4="" col5="" col6=""/>
+                <row id="0" col0="train_step" col1="forward_fw.cpp:109" col2="7046" col3="4636" col4="6493" col5="5424" col6="5099">
+                    <row id="2" col0="forwardHidden" col1="forward_fw.cpp:32" col2="1274" col2_disp="1,274 (2 calls)" col3="2182" col3_disp="2,182 (2 calls)" col4="2512" col4_disp="2,512 (2 calls)" col5="2128" col5_disp="2,128 (2 calls)" col6="2006" col6_disp="2,006 (2 calls)">
+                        <row id="8" col0="signum" col1="forward_fw.cpp:12" col2="242" col2_disp=" 242 (2 calls)" col3="" col4="" col5="" col6=""/>
                     </row>
-                    <row id="4" col0="forwardOutput" col1="forward_fw.cpp:42" col2="1274" col2_disp="1,274 (2 calls)" col3="" col4="" col5="" col6="">
-                        <row id="3" col0="signum" col1="forward_fw.cpp:6" col2="242" col2_disp=" 242 (2 calls)" col3="" col4="" col5="" col6=""/>
+                    <row id="6" col0="forwardOutput" col1="forward_fw.cpp:51" col2="1274" col2_disp="1,274 (2 calls)" col3="1094" col3_disp="1,094 (2 calls)" col4="1228" col4_disp="1,228 (2 calls)" col5="1036" col5_disp="1,036 (2 calls)" col6="978" col6_disp=" 978 (2 calls)">
+                        <row id="8" col0="signum" col1="forward_fw.cpp:12" col2="242" col2_disp=" 242 (2 calls)" col3="" col4="" col5="" col6=""/>
                     </row>
-                    <row id="5" col0="updateHidden" col1="forward_fw.cpp:59" col2="994" col3="" col4="" col5="" col6=""/>
-                    <row id="2" col0="updateOutput" col1="forward_fw.cpp:80" col2="994" col3="" col4="" col5="" col6=""/>
+                    <row id="1" col0="computeGoodness" col1="forward_fw.cpp:20" col2="1948" col2_disp="1,948 (4 calls)" col3="" col4="" col5="" col6=""/>
+                    <row id="7" col0="updateHidden" col1="forward_fw.cpp:69" col2="945" col3="" col4="" col5="" col6=""/>
+                    <row id="3" col0="updateOutput" col1="forward_fw.cpp:88" col2="945" col3="429" col4="517" col5="337" col6="342"/>
                 </row>
             </rows>
             <notes/>

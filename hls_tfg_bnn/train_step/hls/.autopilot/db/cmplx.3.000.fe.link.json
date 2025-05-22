@@ -1,10 +1,10 @@
 {
   "0": {
-    "basicblocks": 13,
-    "calls": "1 4 1 4 5 2",
+    "basicblocks": 17,
+    "calls": "2 7 2 7 1 1 1 1 8 3",
     "file": "forward_fw.cpp",
-    "fileloc": 101,
-    "instructions": 102,
+    "fileloc": 109,
+    "instructions": 152,
     "loads": {
       "L": 2,
       "T": 2
@@ -13,13 +13,22 @@
     "stores": {
       "L": 2
     },
-    "total_instructions": 4806
+    "total_instructions": 7046
   },
   "1": {
-    "basicblocks": 13,
-    "calls": "3",
+    "basicblocks": 7,
+    "calls": "",
     "file": "forward_fw.cpp",
-    "fileloc": 24,
+    "fileloc": 20,
+    "instructions": 36,
+    "name": "computeGoodness",
+    "total_instructions": 487
+  },
+  "2": {
+    "basicblocks": 13,
+    "calls": "9",
+    "file": "forward_fw.cpp",
+    "fileloc": 32,
     "instructions": 65,
     "loads": {
       "L": 2
@@ -30,12 +39,12 @@
     },
     "total_instructions": 637
   },
-  "2": {
+  "3": {
     "basicblocks": 16,
     "calls": "",
     "file": "forward_fw.cpp",
-    "fileloc": 80,
-    "instructions": 112,
+    "fileloc": 88,
+    "instructions": 105,
     "loads": {
       "L": 1
     },
@@ -43,22 +52,40 @@
     "stores": {
       "L": 1
     },
-    "total_instructions": 994
+    "total_instructions": 945
   },
-  "3": {
-    "basicblocks": 4,
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "forward_fw.cpp",
+    "fileloc": 7,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.1",
+    "total_instructions": 44
+  },
+  "5": {
+    "basicblocks": 1,
     "calls": "",
     "file": "forward_fw.cpp",
     "fileloc": 6,
-    "instructions": 8,
-    "name": "signum",
-    "total_instructions": 121
+    "instructions": 2,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 44
   },
-  "4": {
+  "6": {
+    "basicblocks": 1,
+    "calls": "5 4",
+    "file": "forward_fw.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 3,
+    "name": "",
+    "total_instructions": 91
+  },
+  "7": {
     "basicblocks": 13,
-    "calls": "3",
+    "calls": "9",
     "file": "forward_fw.cpp",
-    "fileloc": 42,
+    "fileloc": 51,
     "instructions": 65,
     "loads": {
       "L": 2
@@ -69,12 +96,12 @@
     },
     "total_instructions": 637
   },
-  "5": {
+  "8": {
     "basicblocks": 16,
     "calls": "",
     "file": "forward_fw.cpp",
-    "fileloc": 59,
-    "instructions": 112,
+    "fileloc": 69,
+    "instructions": 105,
     "loads": {
       "L": 1
     },
@@ -82,6 +109,15 @@
     "stores": {
       "L": 1
     },
-    "total_instructions": 994
+    "total_instructions": 945
+  },
+  "9": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "forward_fw.cpp",
+    "fileloc": 12,
+    "instructions": 8,
+    "name": "signum",
+    "total_instructions": 121
   }
 }

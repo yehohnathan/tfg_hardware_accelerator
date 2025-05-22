@@ -3407,7 +3407,7 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xcd v.2024.2 (win64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Tue May 20 21:00:55 2025</td></tr>
+<tr><td><b>Date</b></td><td>Wed May 21 10:33:49 2025</td></tr>
 <tr><td><b>Host</b></td><td>Yehoh running 64-bit major release  (build 9200)</td></tr>
 <tr><td><b>Command</b></td><td>C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\hls_config.cfg --work_dir train_step </td></tr>
 </table></center><br>
@@ -3416,7 +3416,7 @@ window.onload = function () { addSorting(); }
 <tr><td><a href="#VIOLATION DETAILS">2 VIOLATION DETAILS</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 57
+<pre>Violations found: 34
 </pre>
 <pre>Rule Specs Violated: 3
 </pre>
@@ -3434,200 +3434,13 @@ window.onload = function () { addSorting(); }
 <th align="left" width="380">Resolution</th>
 </tr>
 <tr>
-<td align="left">28</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 63, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">52</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_91_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">11</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 63, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">7</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">54</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 32, Depth = 545, loop 'VITIS_LOOP_85_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">25</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
 <td align="left">12</td>
 <td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 64, Depth = 72, loop 'VITIS_LOOP_28_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">47</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_65_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">31</td>
-<td align="left">Throughput</td>
 <td align="left">WARNING</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">34</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">27</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 59, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">29</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 64, Depth = 72, loop 'VITIS_LOOP_28_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">32</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">38</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_1_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">20</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 32, Depth = 39, loop 'VITIS_LOOP_45_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">40</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_3_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">18</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>).
+<td align="left">The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 63, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>).
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3638,161 +3451,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td align="left">Interface</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.train_step.Interface</td>
-<td align="left">Multiple burst reads of length 2048 and bit width 8 in loop 'VITIS_LOOP_28_1'(<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=28">forward_fw.cpp</a>) has been inferred on bundle 'WEIGHTS'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=28">forward_fw.cpp</a>)
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">45</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_63_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) due to limited memory ports (II = 63). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">8</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">53</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_95_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) due to limited memory ports (II = 31). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">13</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">50</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_68_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">36</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 31, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">16</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">43</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_51_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) due to limited memory ports (II = 51). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">17</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">23</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">21</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">22</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">10</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 59, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>).
+<td align="left">The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus response operation ('empty_24', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) and bus request operation ('empty', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>).
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3803,249 +3462,18 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>).
+<td align="left">The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 77, distance = 1, offset = 1) between bus response operation ('empty_24', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) and bus request operation ('empty', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>).
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">15</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">19</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 31, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">6</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">2</td>
-<td align="left">Interface</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.train_step.Interface</td>
-<td align="left">Multiple burst reads of length 320 and bit width 8 in loop 'VITIS_LOOP_45_1'(<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=45">forward_fw.cpp</a>) has been inferred on bundle 'WEIGHTS'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=45">forward_fw.cpp</a>)
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">56</td>
-<td align="left">Kernel</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">**** Loop Constraint Status: All loop constraints were NOT satisfied.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">51</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_83_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">35</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">41</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_4_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">46</td>
+<td align="left">13</td>
 <td align="left">Throughput</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 64, Depth = 1089, loop 'VITIS_LOOP_64_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">14</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=129">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">39</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_2_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">3</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_118_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">33</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=48">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=133">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">9</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">55</td>
-<td align="left">Interface</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.train_step.Interface</td>
-<td align="left">Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">44</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_59_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) due to limited memory ports (II = 59). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">48</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_66_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">42</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_35_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=67">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=136">forward_fw.cpp</a>) due to limited memory ports (II = 35). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">26</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=132">forward_fw.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">49</td>
-<td align="left">Kernel</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_67_req', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=88">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=137">forward_fw.cpp</a>) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">57</td>
-<td align="left">Kernel</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.train_step.Kernel</td>
-<td align="left">**** Estimated Fmax: 136.99 MHz
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">37</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 32, Depth = 39, loop 'VITIS_LOOP_45_1'
+<td align="left">Pipelining result : Target II = NA, Final II = 64, Depth = 72, loop 'VITIS_LOOP_36_1'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -4056,7 +3484,326 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.train_step.Throughput</td>
-<td align="left">The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=32">forward_fw.cpp</a>-><a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=128">forward_fw.cpp</a>).
+<td align="left">The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">29</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 76, distance = 1, offset = 1) between bus response operation ('empty_24', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) and bus request operation ('empty', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">Pipelining result : Target II = NA, Final II = 32, Depth = 40, loop 'VITIS_LOOP_54_1'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">34</td>
+<td align="left">Kernel</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.train_step.Kernel</td>
+<td align="left">**** Estimated Fmax: 136.99 MHz
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.train_step.Interface</td>
+<td align="left">Multiple burst writes of length 32 and bit width 8 has been inferred on bundle 'WEIGHTS'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">27</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1) between bus response operation ('empty_24', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) and bus request operation ('empty', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">26</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus response operation ('empty_24', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) and bus request operation ('empty', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 31, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">31</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">Pipelining result : Target II = NA, Final II = 78, Depth = 79, loop 'VITIS_LOOP_92_1'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">23</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus response operation ('empty_24', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) and bus request operation ('empty', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 19, loop 'VITIS_LOOP_73_1_VITIS_LOOP_75_2'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">32</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.train_step.Interface</td>
+<td align="left">Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">28</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 74, distance = 1, offset = 1) between bus response operation ('empty_24', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) and bus request operation ('empty', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">17</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">33</td>
+<td align="left">Kernel</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.train_step.Kernel</td>
+<td align="left">**** Loop Constraint Status: All loop constraints were NOT satisfied.
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.train_step.Interface</td>
+<td align="left">Multiple burst reads of length 2048 and bit width 8 in loop 'VITIS_LOOP_36_1'(<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=36">forward_fw.cpp</a>) has been inferred on bundle 'WEIGHTS'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=36">forward_fw.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.train_step.Interface</td>
+<td align="left">Multiple burst reads of length 320 and bit width 8 in loop 'VITIS_LOOP_54_1'(<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=54">forward_fw.cpp</a>) has been inferred on bundle 'WEIGHTS'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=54">forward_fw.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">18</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.train_step.Interface</td>
+<td align="left">Multiple burst reads of length 32 and bit width 8 has been inferred on bundle 'WEIGHTS'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 59, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus response operation ('empty_24', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=92">forward_fw.cpp</a>) and bus request operation ('empty', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=96">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=58">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>).
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.train_step.Throughput</td>
+<td align="left">The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) and bus read operation ('WEIGHTS_addr_read', <a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>) on port 'WEIGHTS' (<a href="file:///D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn\../src/forward_fw.cpp#line=41">forward_fw.cpp</a>).
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>

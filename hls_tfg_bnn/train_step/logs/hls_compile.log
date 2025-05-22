@@ -19,386 +19,217 @@ Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/top
 INFO: [HLS 200-1465] Applying ini 'part=xc7a100tcsg324-1' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(1)
 INFO: [HLS 200-1611] Setting target device to 'xc7a100t-csg324-1'
 INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/hls_config.cfg(5)
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.212 seconds; current allocated memory: 264.383 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 3.635 seconds; current allocated memory: 264.523 MB.
 INFO: [HLS 200-10] Analyzing design file '../src/forward_fw.cpp' ... 
 WARNING: [HLS 207-5569] unexpected pragma parameter 'depth' (d:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp:8:32)
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 7.342 seconds; current allocated memory: 267.281 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 13.299 seconds; current allocated memory: 267.660 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-1995] There were 4,806 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 762 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 299 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 254 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 232 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 234 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 234 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 242 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 250 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 272 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 256 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 4,506 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 4,506 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 4,506 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 4,610 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 4,433 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 214-178] Inlining function 'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' (../src/forward_fw.cpp:26:0)
-INFO: [HLS 214-178] Inlining function 'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])' (../src/forward_fw.cpp:44:0)
-INFO: [HLS 214-178] Inlining function 'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' into 'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])' (../src/forward_fw.cpp:105:0)
-INFO: [HLS 214-178] Inlining function 'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])' into 'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])' (../src/forward_fw.cpp:105:0)
-INFO: [HLS 214-178] Inlining function 'updateHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' into 'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])' (../src/forward_fw.cpp:105:0)
-INFO: [HLS 214-178] Inlining function 'updateOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])' into 'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])' (../src/forward_fw.cpp:105:0)
-WARNING: [HLS 214-167] The program may have out of bound array access on variable 'out_pos' (../src/forward_fw.cpp:65:34)
-WARNING: [HLS 214-167] The program may have out of bound array access on variable 'out_neg' (../src/forward_fw.cpp:65:34)
-INFO: [HLS 214-241] Aggregating maxi variable 'W2' with compact=none mode in 8-bits (../src/forward_fw.cpp:105:0)
-INFO: [HLS 214-241] Aggregating maxi variable 'W1' with compact=none mode in 8-bits (../src/forward_fw.cpp:105:0)
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_118_1> at ../src/forward_fw.cpp:118:23 
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_28_1> at ../src/forward_fw.cpp:28:22 
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_45_1> at ../src/forward_fw.cpp:45:22 
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_64_1> at ../src/forward_fw.cpp:64:22 
-INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_85_1> at ../src/forward_fw.cpp:85:22 
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_87_2' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:87:26)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_66_2' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:66:26)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_47_2' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:47:26)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_31_2' is marked as complete unroll implied by the pipeline pragma (../src/forward_fw.cpp:31:26)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_87_2' (../src/forward_fw.cpp:87:26) in function 'train_step' completely with a factor of 32 (../src/forward_fw.cpp:105:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_66_2' (../src/forward_fw.cpp:66:26) in function 'train_step' completely with a factor of 64 (../src/forward_fw.cpp:105:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_47_2' (../src/forward_fw.cpp:47:26) in function 'train_step' completely with a factor of 32 (../src/forward_fw.cpp:105:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_31_2' (../src/forward_fw.cpp:31:26) in function 'train_step' completely with a factor of 64 (../src/forward_fw.cpp:105:0)
-INFO: [HLS 214-115] Multiple burst reads of length 2048 and bit width 8 in loop 'VITIS_LOOP_28_1'(../src/forward_fw.cpp:28:22) has been inferred on bundle 'WEIGHTS'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../src/forward_fw.cpp:28:22)
-INFO: [HLS 214-115] Multiple burst reads of length 320 and bit width 8 in loop 'VITIS_LOOP_45_1'(../src/forward_fw.cpp:45:22) has been inferred on bundle 'WEIGHTS'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../src/forward_fw.cpp:45:22)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 11.301 seconds; current allocated memory: 269.973 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 269.973 MB.
+INFO: [HLS 200-1995] There were 7,046 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 16,285 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,811 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,684 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,636 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,991 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,991 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,249 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,507 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 6,493 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,509 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,425 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,424 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,424 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,435 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,099 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: D:/Proyectos/tfg_hardware_accelerator/hls_tfg_bnn/train_step/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_129_1' (../src/forward_fw.cpp:129:20) in function 'train_step' completely with a factor of 64 (../src/forward_fw.cpp:113:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_94_2' (../src/forward_fw.cpp:94:26) in function 'updateOutput' completely with a factor of 32 (../src/forward_fw.cpp:91:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_56_2' (../src/forward_fw.cpp:56:26) in function 'forwardOutput' completely with a factor of 32 (../src/forward_fw.cpp:53:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_39_2' (../src/forward_fw.cpp:39:26) in function 'forwardHidden' completely with a factor of 64 (../src/forward_fw.cpp:34:0)
+INFO: [HLS 214-178] Inlining function 'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'forwardHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' (../src/forward_fw.cpp:34:0)
+INFO: [HLS 214-178] Inlining function 'signum(ap_fixed<12, 12, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'forwardOutput(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])' (../src/forward_fw.cpp:53:0)
+INFO: [HLS 214-178] Inlining function 'computeGoodness(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int)' into 'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])' (../src/forward_fw.cpp:113:0)
+INFO: [HLS 214-178] Inlining function 'updateHidden(ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64])' into 'train_step(unsigned char const*, unsigned char const*, int, ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [64], ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0> (*) [32])' (../src/forward_fw.cpp:113:0)
+WARNING: [HLS 214-167] The program may have out of bound array access on variable 'out_pos' (../src/forward_fw.cpp:74:34)
+WARNING: [HLS 214-167] The program may have out of bound array access on variable 'out_neg' (../src/forward_fw.cpp:74:34)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_22_1' (../src/forward_fw.cpp:22:22) in function 'train_step' completely with a factor of 10 (../src/forward_fw.cpp:113:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_22_1' (../src/forward_fw.cpp:22:22) in function 'train_step' completely with a factor of 32 (../src/forward_fw.cpp:113:0)
+INFO: [HLS 214-248] Applying array_partition to 'in_pos': Complete partitioning on dimension 1. (../src/forward_fw.cpp:125:8)
+INFO: [HLS 214-248] Applying array_partition to 'in_neg': Complete partitioning on dimension 1. (../src/forward_fw.cpp:125:25)
+INFO: [HLS 214-248] Applying array_partition to 'hidden_pos': Complete partitioning on dimension 1. (../src/forward_fw.cpp:136:11)
+INFO: [HLS 214-248] Applying array_partition to 'hidden_neg': Complete partitioning on dimension 1. (../src/forward_fw.cpp:136:33)
+INFO: [HLS 214-248] Applying array_partition to 'out_pos': Complete partitioning on dimension 1. (../src/forward_fw.cpp:137:11)
+INFO: [HLS 214-248] Applying array_partition to 'out_neg': Complete partitioning on dimension 1. (../src/forward_fw.cpp:137:30)
+INFO: [HLS 214-241] Aggregating maxi variable 'W2' with compact=none mode in 8-bits (../src/forward_fw.cpp:113:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'W1' with compact=none mode in 8-bits (../src/forward_fw.cpp:113:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_92_1> at ../src/forward_fw.cpp:92:22 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_54_1> at ../src/forward_fw.cpp:54:22 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_36_1> at ../src/forward_fw.cpp:36:22 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_75_2> at ../src/forward_fw.cpp:75:26 
+INFO: [HLS 214-115] Multiple burst reads of length 2048 and bit width 8 in loop 'VITIS_LOOP_36_1'(../src/forward_fw.cpp:36:22) has been inferred on bundle 'WEIGHTS'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../src/forward_fw.cpp:36:22)
+INFO: [HLS 214-115] Multiple burst reads of length 320 and bit width 8 in loop 'VITIS_LOOP_54_1'(../src/forward_fw.cpp:54:22) has been inferred on bundle 'WEIGHTS'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../src/forward_fw.cpp:54:22)
+INFO: [HLS 214-115] Multiple burst reads of length 32 and bit width 8 has been inferred on bundle 'WEIGHTS'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../src/forward_fw.cpp:96:16)
+INFO: [HLS 214-115] Multiple burst writes of length 32 and bit width 8 has been inferred on bundle 'WEIGHTS'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (../src/forward_fw.cpp:92:52)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 11.785 seconds; current allocated memory: 271.008 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 271.016 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.273 seconds; current allocated memory: 278.980 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.324 seconds; current allocated memory: 277.879 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.111 seconds; current allocated memory: 280.332 MB.
-INFO: [XFORM 203-11] Balancing expressions in function 'train_step' (../src/forward_fw.cpp:7:22)...188 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.597 seconds; current allocated memory: 308.027 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.798 seconds; current allocated memory: 381.074 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.243 seconds; current allocated memory: 281.004 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'train_step' (../src/forward_fw.cpp:73:26)...80 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'forwardOutput' (../src/forward_fw.cpp:13:22)...31 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'forwardHidden' (../src/forward_fw.cpp:13:22)...63 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.924 seconds; current allocated memory: 304.547 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_73_1'(../src/forward_fw.cpp:73:22) and 'VITIS_LOOP_75_2'(../src/forward_fw.cpp:75:26) in function 'train_step' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_73_1' (../src/forward_fw.cpp:73:22) in function 'train_step'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.055 seconds; current allocated memory: 358.051 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'train_step' ...
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_118_1' 
+INFO: [HLS 200-42] -- Implementing module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_118_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_118_1'
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_54) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_50) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_46) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_42) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_34) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln41) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_36_1'.
+WARNING: [HLS 200-880] The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 59, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' (loop 'VITIS_LOOP_36_1'): Unable to enforce a carried dependence constraint (II = 63, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:41) on port 'WEIGHTS' (../src/forward_fw.cpp:41).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 64, Depth = 72, loop 'VITIS_LOOP_36_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.415 seconds; current allocated memory: 381.074 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.753 seconds; current allocated memory: 369.918 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 381.074 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.239 seconds; current allocated memory: 370.945 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_28_1' 
+INFO: [HLS 200-42] -- Implementing module 'forwardHidden' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_58) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_57) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_55) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_54) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_51) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_50) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_48) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_47) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_43) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_42) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_40) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_39) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_36) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_35) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_33) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_32) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_27) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_26) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_24) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_23) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_20) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_19) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_17) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_16) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_12) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_11) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_9) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_8) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_5) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_4) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_2) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_1) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 59, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_1' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 63, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_63', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:128) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:128).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 64, Depth = 72, loop 'VITIS_LOOP_28_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.774 seconds; current allocated memory: 381.074 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.299 seconds; current allocated memory: 371.074 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.193 seconds; current allocated memory: 381.074 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 371.109 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_45_1' 
+INFO: [HLS 200-42] -- Implementing module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_27) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_26) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_24) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_23) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_20) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_19) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_17) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_16) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_12) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_11) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_9) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_8) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_5) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_4) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_2) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_1) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_45_1'.
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129).
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln58) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_54_1'.
+WARNING: [HLS 200-880] The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58).
 Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129).
+WARNING: [HLS 200-880] The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58).
 Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129).
+WARNING: [HLS 200-880] The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58).
 Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129).
+WARNING: [HLS 200-880] The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58).
 Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129).
+WARNING: [HLS 200-880] The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58).
 Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129).
+WARNING: [HLS 200-880] The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58).
 Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_1' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 31, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:129) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:129).
+WARNING: [HLS 200-880] The II Violation in module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' (loop 'VITIS_LOOP_54_1'): Unable to enforce a carried dependence constraint (II = 31, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_62', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:58) on port 'WEIGHTS' (../src/forward_fw.cpp:58).
 Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 32, Depth = 39, loop 'VITIS_LOOP_45_1'
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 32, Depth = 40, loop 'VITIS_LOOP_54_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.753 seconds; current allocated memory: 381.074 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.054 seconds; current allocated memory: 373.254 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.128 seconds; current allocated memory: 381.074 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.129 seconds; current allocated memory: 373.617 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_28_11' 
+INFO: [HLS 200-42] -- Implementing module 'forwardOutput' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_57) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_56) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_54) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_53) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_50) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_49) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_47) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_46) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_42) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_41) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_39) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_38) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_35) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_34) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_32) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_31) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_26) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_25) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_23) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_22) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_19) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_18) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_16) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_15) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_11) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_10) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_8) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_7) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_4) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_3) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln32) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_28_1'.
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 59, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_28_11' (loop 'VITIS_LOOP_28_1'): Unable to enforce a carried dependence constraint (II = 63, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_125', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:32->../src/forward_fw.cpp:132) on port 'WEIGHTS' (../src/forward_fw.cpp:32->../src/forward_fw.cpp:132).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 64, Depth = 72, loop 'VITIS_LOOP_28_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.97 seconds; current allocated memory: 384.395 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.136 seconds; current allocated memory: 373.793 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.189 seconds; current allocated memory: 384.852 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 373.984 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_45_12' 
+INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_73_1_VITIS_LOOP_75_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_26) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_25) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_23) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_22) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_19) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_18) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_16) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_15) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_11) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_10) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_8) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_7) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_4) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_3) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48_1) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln48) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_45_1'.
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-WARNING: [HLS 200-880] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_45_12' (loop 'VITIS_LOOP_45_1'): Unable to enforce a carried dependence constraint (II = 31, distance = 1, offset = 1) between bus read operation ('WEIGHTS_addr_read_31', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) and bus read operation ('WEIGHTS_addr_read', ../src/forward_fw.cpp:48->../src/forward_fw.cpp:133) on port 'WEIGHTS' (../src/forward_fw.cpp:48->../src/forward_fw.cpp:133).
-Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 32, Depth = 39, loop 'VITIS_LOOP_45_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_73_1_VITIS_LOOP_75_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 19, loop 'VITIS_LOOP_73_1_VITIS_LOOP_75_2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.71 seconds; current allocated memory: 386.391 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.141 seconds; current allocated memory: 375.074 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.134 seconds; current allocated memory: 386.688 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 375.500 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_64_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_126) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_125) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_124) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_123) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_122) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_121) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_120) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_119) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_118) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_117) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_116) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_115) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_114) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_113) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_112) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_111) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_110) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_109) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_108) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_107) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_106) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_105) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_104) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_103) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_102) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_101) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_100) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_99) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_98) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_97) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_96) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_95) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_94) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_93) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_92) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_91) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_90) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_89) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_88) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_87) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_86) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_85) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_84) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_83) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_82) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_81) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_80) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_79) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_78) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_77) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_76) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_75) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_74) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_73) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_72) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_71) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_70) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_69) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_68) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_67) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_66) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_65) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new_64) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=w_new) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_64_1'.
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_1_req', ../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) on port 'WEIGHTS' (../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_2_req', ../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) on port 'WEIGHTS' (../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_3_req', ../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) on port 'WEIGHTS' (../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_4_req', ../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) on port 'WEIGHTS' (../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_35_req', ../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) on port 'WEIGHTS' (../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) due to limited memory ports (II = 35). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_51_req', ../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) on port 'WEIGHTS' (../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) due to limited memory ports (II = 51). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_59_req', ../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) on port 'WEIGHTS' (../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) due to limited memory ports (II = 59). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_64_1' (loop 'VITIS_LOOP_64_1'): Unable to schedule bus request operation ('WEIGHTS_load_63_req', ../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) on port 'WEIGHTS' (../src/forward_fw.cpp:67->../src/forward_fw.cpp:136) due to limited memory ports (II = 63). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 64, Depth = 1089, loop 'VITIS_LOOP_64_1'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 7.68 seconds; current allocated memory: 402.438 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.009 seconds; current allocated memory: 408.301 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'train_step_Pipeline_VITIS_LOOP_85_1' 
+INFO: [HLS 200-42] -- Implementing module 'updateOutput' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [HLS 200-486] Changing DSP latency (root=w_new_31) to 3 in order to utilize available DSP registers.
@@ -433,142 +264,155 @@ INFO: [HLS 200-486] Changing DSP latency (root=w_new_3) to 3 in order to utilize
 INFO: [HLS 200-486] Changing DSP latency (root=w_new_2) to 3 in order to utilize available DSP registers.
 INFO: [HLS 200-486] Changing DSP latency (root=w_new_1) to 3 in order to utilize available DSP registers.
 INFO: [HLS 200-486] Changing DSP latency (root=w_new) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_85_1'.
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_65_req', ../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) on port 'WEIGHTS' (../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_66_req', ../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) on port 'WEIGHTS' (../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_67_req', ../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) on port 'WEIGHTS' (../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_68_req', ../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) on port 'WEIGHTS' (../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_83_req', ../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) on port 'WEIGHTS' (../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_91_req', ../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) on port 'WEIGHTS' (../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) due to limited memory ports (II = 27). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-WARNING: [HLS 200-885] The II Violation in module 'train_step_Pipeline_VITIS_LOOP_85_1' (loop 'VITIS_LOOP_85_1'): Unable to schedule bus request operation ('WEIGHTS_load_95_req', ../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) on port 'WEIGHTS' (../src/forward_fw.cpp:88->../src/forward_fw.cpp:137) due to limited memory ports (II = 31). Please consider using a memory core with more ports or partitioning the array.
-Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-885.html
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 32, Depth = 545, loop 'VITIS_LOOP_85_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_92_1'.
+WARNING: [HLS 200-880] The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus response operation ('empty_24', ../src/forward_fw.cpp:92) on port 'WEIGHTS' (../src/forward_fw.cpp:92) and bus request operation ('empty', ../src/forward_fw.cpp:96) on port 'WEIGHTS' (../src/forward_fw.cpp:96).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus response operation ('empty_24', ../src/forward_fw.cpp:92) on port 'WEIGHTS' (../src/forward_fw.cpp:92) and bus request operation ('empty', ../src/forward_fw.cpp:96) on port 'WEIGHTS' (../src/forward_fw.cpp:96).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus response operation ('empty_24', ../src/forward_fw.cpp:92) on port 'WEIGHTS' (../src/forward_fw.cpp:92) and bus request operation ('empty', ../src/forward_fw.cpp:96) on port 'WEIGHTS' (../src/forward_fw.cpp:96).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus response operation ('empty_24', ../src/forward_fw.cpp:92) on port 'WEIGHTS' (../src/forward_fw.cpp:92) and bus request operation ('empty', ../src/forward_fw.cpp:96) on port 'WEIGHTS' (../src/forward_fw.cpp:96).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1) between bus response operation ('empty_24', ../src/forward_fw.cpp:92) on port 'WEIGHTS' (../src/forward_fw.cpp:92) and bus request operation ('empty', ../src/forward_fw.cpp:96) on port 'WEIGHTS' (../src/forward_fw.cpp:96).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 74, distance = 1, offset = 1) between bus response operation ('empty_24', ../src/forward_fw.cpp:92) on port 'WEIGHTS' (../src/forward_fw.cpp:92) and bus request operation ('empty', ../src/forward_fw.cpp:96) on port 'WEIGHTS' (../src/forward_fw.cpp:96).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 76, distance = 1, offset = 1) between bus response operation ('empty_24', ../src/forward_fw.cpp:92) on port 'WEIGHTS' (../src/forward_fw.cpp:92) and bus request operation ('empty', ../src/forward_fw.cpp:96) on port 'WEIGHTS' (../src/forward_fw.cpp:96).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'updateOutput' (loop 'VITIS_LOOP_92_1'): Unable to enforce a carried dependence constraint (II = 77, distance = 1, offset = 1) between bus response operation ('empty_24', ../src/forward_fw.cpp:92) on port 'WEIGHTS' (../src/forward_fw.cpp:92) and bus request operation ('empty', ../src/forward_fw.cpp:96) on port 'WEIGHTS' (../src/forward_fw.cpp:96).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 78, Depth = 79, loop 'VITIS_LOOP_92_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.435 seconds; current allocated memory: 414.254 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.497 seconds; current allocated memory: 379.047 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.375 seconds; current allocated memory: 416.527 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.194 seconds; current allocated memory: 379.227 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'train_step' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_77) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_76) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_75) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_73) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_72) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_71) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_68) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_67) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_66) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_64) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_63) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_62) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_54) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_50) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_46) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_42) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_34) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln24) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.474 seconds; current allocated memory: 419.090 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.5 seconds; current allocated memory: 386.730 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.183 seconds; current allocated memory: 419.820 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.481 seconds; current allocated memory: 387.711 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_118_1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_118_1' pipeline 'VITIS_LOOP_118_1' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_118_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 421.930 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_28_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_28_1' pipeline 'VITIS_LOOP_28_1' pipeline type 'loop pipeline'
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_1/m_axi_WEIGHTS_0_ARVALID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_1/m_axi_WEIGHTS_0_ARADDR' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_1/m_axi_WEIGHTS_0_ARID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_1/m_axi_WEIGHTS_0_ARLEN' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_1/m_axi_WEIGHTS_0_ARSIZE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_1/m_axi_WEIGHTS_0_ARBURST' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_1/m_axi_WEIGHTS_0_ARLOCK' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_1/m_axi_WEIGHTS_0_ARCACHE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_1/m_axi_WEIGHTS_0_ARPROT' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_1/m_axi_WEIGHTS_0_ARQOS' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_1/m_axi_WEIGHTS_0_ARREGION' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_1/m_axi_WEIGHTS_0_ARUSER' to 0.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'forwardHidden_Pipeline_VITIS_LOOP_36_1' pipeline 'VITIS_LOOP_36_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardHidden_Pipeline_VITIS_LOOP_36_1/m_axi_WEIGHTS_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardHidden_Pipeline_VITIS_LOOP_36_1/m_axi_WEIGHTS_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardHidden_Pipeline_VITIS_LOOP_36_1/m_axi_WEIGHTS_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardHidden_Pipeline_VITIS_LOOP_36_1/m_axi_WEIGHTS_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardHidden_Pipeline_VITIS_LOOP_36_1/m_axi_WEIGHTS_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardHidden_Pipeline_VITIS_LOOP_36_1/m_axi_WEIGHTS_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardHidden_Pipeline_VITIS_LOOP_36_1/m_axi_WEIGHTS_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardHidden_Pipeline_VITIS_LOOP_36_1/m_axi_WEIGHTS_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardHidden_Pipeline_VITIS_LOOP_36_1/m_axi_WEIGHTS_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardHidden_Pipeline_VITIS_LOOP_36_1/m_axi_WEIGHTS_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardHidden_Pipeline_VITIS_LOOP_36_1/m_axi_WEIGHTS_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardHidden_Pipeline_VITIS_LOOP_36_1/m_axi_WEIGHTS_0_ARUSER' to 0.
 INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_10s_10_4_1': 32 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_8s_2s_10_1_1': 32 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_28_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.619 seconds; current allocated memory: 429.262 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forwardHidden_Pipeline_VITIS_LOOP_36_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.13 seconds; current allocated memory: 396.480 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_45_1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'forwardHidden' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_45_1' pipeline 'VITIS_LOOP_45_1' pipeline type 'loop pipeline'
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_1/m_axi_WEIGHTS_0_ARVALID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_1/m_axi_WEIGHTS_0_ARADDR' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_1/m_axi_WEIGHTS_0_ARID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_1/m_axi_WEIGHTS_0_ARLEN' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_1/m_axi_WEIGHTS_0_ARSIZE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_1/m_axi_WEIGHTS_0_ARBURST' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_1/m_axi_WEIGHTS_0_ARLOCK' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_1/m_axi_WEIGHTS_0_ARCACHE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_1/m_axi_WEIGHTS_0_ARPROT' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_1/m_axi_WEIGHTS_0_ARQOS' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_1/m_axi_WEIGHTS_0_ARREGION' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_1/m_axi_WEIGHTS_0_ARUSER' to 0.
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_10s_10_4_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forwardHidden'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.727 seconds; current allocated memory: 406.266 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'forwardOutput_Pipeline_VITIS_LOOP_54_1' pipeline 'VITIS_LOOP_54_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardOutput_Pipeline_VITIS_LOOP_54_1/m_axi_WEIGHTS_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardOutput_Pipeline_VITIS_LOOP_54_1/m_axi_WEIGHTS_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardOutput_Pipeline_VITIS_LOOP_54_1/m_axi_WEIGHTS_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardOutput_Pipeline_VITIS_LOOP_54_1/m_axi_WEIGHTS_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardOutput_Pipeline_VITIS_LOOP_54_1/m_axi_WEIGHTS_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardOutput_Pipeline_VITIS_LOOP_54_1/m_axi_WEIGHTS_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardOutput_Pipeline_VITIS_LOOP_54_1/m_axi_WEIGHTS_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardOutput_Pipeline_VITIS_LOOP_54_1/m_axi_WEIGHTS_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardOutput_Pipeline_VITIS_LOOP_54_1/m_axi_WEIGHTS_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardOutput_Pipeline_VITIS_LOOP_54_1/m_axi_WEIGHTS_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardOutput_Pipeline_VITIS_LOOP_54_1/m_axi_WEIGHTS_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'forwardOutput_Pipeline_VITIS_LOOP_54_1/m_axi_WEIGHTS_0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_10s_11_4_1': 16 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_8s_2s_10_1_1': 16 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_45_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.975 seconds; current allocated memory: 438.211 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forwardOutput_Pipeline_VITIS_LOOP_54_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.58 seconds; current allocated memory: 410.332 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_28_11' 
+INFO: [HLS 200-10] -- Generating RTL for module 'forwardOutput' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_28_11' pipeline 'VITIS_LOOP_28_1' pipeline type 'loop pipeline'
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_11/m_axi_WEIGHTS_0_ARVALID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_11/m_axi_WEIGHTS_0_ARADDR' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_11/m_axi_WEIGHTS_0_ARID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_11/m_axi_WEIGHTS_0_ARLEN' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_11/m_axi_WEIGHTS_0_ARSIZE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_11/m_axi_WEIGHTS_0_ARBURST' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_11/m_axi_WEIGHTS_0_ARLOCK' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_11/m_axi_WEIGHTS_0_ARCACHE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_11/m_axi_WEIGHTS_0_ARPROT' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_11/m_axi_WEIGHTS_0_ARQOS' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_11/m_axi_WEIGHTS_0_ARREGION' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_28_11/m_axi_WEIGHTS_0_ARUSER' to 0.
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_10s_10_4_1': 32 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_8s_2s_10_1_1': 32 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_28_11'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.995 seconds; current allocated memory: 447.672 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forwardOutput'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.469 seconds; current allocated memory: 414.965 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_45_12' 
+INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_73_1_VITIS_LOOP_75_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_45_12' pipeline 'VITIS_LOOP_45_1' pipeline type 'loop pipeline'
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_12/m_axi_WEIGHTS_0_ARVALID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_12/m_axi_WEIGHTS_0_ARADDR' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_12/m_axi_WEIGHTS_0_ARID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_12/m_axi_WEIGHTS_0_ARLEN' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_12/m_axi_WEIGHTS_0_ARSIZE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_12/m_axi_WEIGHTS_0_ARBURST' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_12/m_axi_WEIGHTS_0_ARLOCK' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_12/m_axi_WEIGHTS_0_ARCACHE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_12/m_axi_WEIGHTS_0_ARPROT' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_12/m_axi_WEIGHTS_0_ARQOS' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_12/m_axi_WEIGHTS_0_ARREGION' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'train_step_Pipeline_VITIS_LOOP_45_12/m_axi_WEIGHTS_0_ARUSER' to 0.
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_2s_10s_10_4_1': 16 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_8s_2s_10_1_1': 16 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_45_12'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.812 seconds; current allocated memory: 456.035 MB.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_73_1_VITIS_LOOP_75_2' pipeline 'VITIS_LOOP_73_1_VITIS_LOOP_75_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_2s_3s_4_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_2_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_21_4_2_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_73_1_VITIS_LOOP_75_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.411 seconds; current allocated memory: 417.605 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_64_1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'updateOutput' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_64_1' pipeline 'VITIS_LOOP_64_1' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3s_2s_8s_9_4_1': 64 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_64_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.806 seconds; current allocated memory: 484.965 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'train_step_Pipeline_VITIS_LOOP_85_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'train_step_Pipeline_VITIS_LOOP_85_1' pipeline 'VITIS_LOOP_85_1' pipeline type 'loop pipeline'
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'updateOutput' pipeline 'VITIS_LOOP_92_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3s_2s_8s_9_4_1': 32 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step_Pipeline_VITIS_LOOP_85_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.291 seconds; current allocated memory: 511.793 MB.
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_21_4_2_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'updateOutput'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.686 seconds; current allocated memory: 427.934 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'train_step' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -582,17 +426,17 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'train_step/W2' to 's_axili
 INFO: [RTGEN 206-500] Setting interface mode on function 'train_step' to 's_axilite & ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Bundling port 'sample_idx' and 'return' to AXI-Lite port CTRL.
 INFO: [RTGEN 206-100] Bundling port 'W1' and 'W2' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_2s_2s_4s_5_4_1': 40 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_2s_2s_5s_5_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_2s_2s_4_1_1': 40 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'train_step'.
-INFO: [RTMG 210-278] Implementing memory 'train_step_in_pos_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'train_step_hidden_pos_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'train_step_out_pos_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.325 seconds; current allocated memory: 526.363 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.157 seconds; current allocated memory: 536.621 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.5 seconds; current allocated memory: 442.477 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.328 seconds; current allocated memory: 464.891 MB.
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.364 seconds; current allocated memory: 556.375 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.193 seconds; current allocated memory: 481.430 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for train_step.
 INFO: [VLOG 209-307] Generating Verilog RTL for train_step.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-INFO: [HLS 200-112] Total CPU user time: 25 seconds. Total CPU system time: 3 seconds. Total elapsed time: 68.221 seconds; peak allocated memory: 556.414 MB.
-INFO: [v++ 60-791] Total elapsed time: 0h 1m 13s
+INFO: [HLS 200-112] Total CPU user time: 17 seconds. Total CPU system time: 4 seconds. Total elapsed time: 58.762 seconds; peak allocated memory: 481.754 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 4s

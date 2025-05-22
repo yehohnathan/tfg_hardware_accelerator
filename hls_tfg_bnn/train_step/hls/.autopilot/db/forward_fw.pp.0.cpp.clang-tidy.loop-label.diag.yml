@@ -38,93 +38,93 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_1248_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_15_1:  '
-    FileOffset:      15
+    Message:         'Added loop label VITIS_LOOP_22_1:  '
+    FileOffset:      22
     FilePath:        'D:\Proyectos\tfg_hardware_accelerator\src\forward_fw.cpp'
     Replacements:    
       - FilePath:        'D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp'
-        Offset:          954825
+        Offset:          2099797
         Length:          0
-        ReplacementText: 'VITIS_LOOP_15_1: '
+        ReplacementText: 'VITIS_LOOP_22_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_28_1:  '
-    FileOffset:      28
+    Message:         'Added loop label VITIS_LOOP_36_1:  '
+    FileOffset:      36
     FilePath:        'D:\Proyectos\tfg_hardware_accelerator\src\forward_fw.cpp'
     Replacements:    
       - FilePath:        'D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp'
-        Offset:          955076
+        Offset:          2100061
         Length:          0
-        ReplacementText: 'VITIS_LOOP_28_1: '
+        ReplacementText: 'VITIS_LOOP_36_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_31_2:  '
-    FileOffset:      31
+    Message:         'Added loop label VITIS_LOOP_39_2:  '
+    FileOffset:      39
     FilePath:        'D:\Proyectos\tfg_hardware_accelerator\src\forward_fw.cpp'
     Replacements:    
       - FilePath:        'D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp'
-        Offset:          955144
+        Offset:          2100129
         Length:          0
-        ReplacementText: 'VITIS_LOOP_31_2: '
+        ReplacementText: 'VITIS_LOOP_39_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_45_1:  '
-    FileOffset:      45
+    Message:         'Added loop label VITIS_LOOP_54_1:  '
+    FileOffset:      54
     FilePath:        'D:\Proyectos\tfg_hardware_accelerator\src\forward_fw.cpp'
     Replacements:    
       - FilePath:        'D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp'
-        Offset:          955436
+        Offset:          2100429
         Length:          0
-        ReplacementText: 'VITIS_LOOP_45_1: '
+        ReplacementText: 'VITIS_LOOP_54_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_47_2:  '
-    FileOffset:      47
+    Message:         'Added loop label VITIS_LOOP_56_2:  '
+    FileOffset:      56
     FilePath:        'D:\Proyectos\tfg_hardware_accelerator\src\forward_fw.cpp'
     Replacements:    
       - FilePath:        'D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp'
-        Offset:          955503
+        Offset:          2100496
         Length:          0
-        ReplacementText: 'VITIS_LOOP_47_2: '
+        ReplacementText: 'VITIS_LOOP_56_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_64_1:  '
-    FileOffset:      64
+    Message:         'Added loop label VITIS_LOOP_73_1:  '
+    FileOffset:      73
     FilePath:        'D:\Proyectos\tfg_hardware_accelerator\src\forward_fw.cpp'
     Replacements:    
       - FilePath:        'D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp'
-        Offset:          955875
+        Offset:          2100849
         Length:          0
-        ReplacementText: 'VITIS_LOOP_64_1: '
+        ReplacementText: 'VITIS_LOOP_73_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_66_2:  '
-    FileOffset:      66
+    Message:         'Added loop label VITIS_LOOP_75_2:  '
+    FileOffset:      75
     FilePath:        'D:\Proyectos\tfg_hardware_accelerator\src\forward_fw.cpp'
     Replacements:    
       - FilePath:        'D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp'
-        Offset:          955966
+        Offset:          2100940
         Length:          0
-        ReplacementText: 'VITIS_LOOP_66_2: '
+        ReplacementText: 'VITIS_LOOP_75_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_85_1:  '
-    FileOffset:      85
+    Message:         'Added loop label VITIS_LOOP_92_1:  '
+    FileOffset:      92
     FilePath:        'D:\Proyectos\tfg_hardware_accelerator\src\forward_fw.cpp'
     Replacements:    
       - FilePath:        'D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp'
-        Offset:          956423
+        Offset:          2101344
         Length:          0
-        ReplacementText: 'VITIS_LOOP_85_1: '
+        ReplacementText: 'VITIS_LOOP_92_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_87_2:  '
-    FileOffset:      87
+    Message:         'Added loop label VITIS_LOOP_94_2:  '
+    FileOffset:      94
     FilePath:        'D:\Proyectos\tfg_hardware_accelerator\src\forward_fw.cpp'
     Replacements:    
       - FilePath:        'D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp'
-        Offset:          956514
+        Offset:          2101435
         Length:          0
-        ReplacementText: 'VITIS_LOOP_87_2: '
+        ReplacementText: 'VITIS_LOOP_94_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_118_1:  '
-    FileOffset:      118
+    Message:         'Added loop label VITIS_LOOP_129_1:  '
+    FileOffset:      129
     FilePath:        'D:\Proyectos\tfg_hardware_accelerator\src\forward_fw.cpp'
     Replacements:    
       - FilePath:        'D:\Proyectos\tfg_hardware_accelerator\hls_tfg_bnn\train_step\hls\.autopilot\db\forward_fw.pp.0.cpp'
-        Offset:          957587
+        Offset:          2102595
         Length:          0
-        ReplacementText: 'VITIS_LOOP_118_1: '
+        ReplacementText: 'VITIS_LOOP_129_1: '
 ...

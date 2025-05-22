@@ -1,0 +1,381 @@
+
+
+================================================================
+== Vitis HLS Report for 'forwardHidden'
+================================================================
+* Date:           Wed May 21 10:33:39 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        train_step
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a100t-csg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     2066|     2066|  20.660 us|  20.660 us|  2066|  2066|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+------+------+------------------------------------------------+
+        |                                                   |                                        |  Latency (cycles) |   Latency (absolute)  |   Interval  |                    Pipeline                    |
+        |                      Instance                     |                 Module                 |   min   |   max   |    min    |    max    |  min |  max |                      Type                      |
+        +---------------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+------+------+------------------------------------------------+
+        |grp_forwardHidden_Pipeline_VITIS_LOOP_36_1_fu_621  |forwardHidden_Pipeline_VITIS_LOOP_36_1  |     2057|     2057|  20.570 us|  20.570 us|  2056|  2056|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +---------------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+------+------+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       -|      -|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|   32|    1479|   2353|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|    471|    -|
+|Register         |        -|    -|      75|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|   32|    1554|   2824|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      270|  240|  126800|  63400|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|   13|       1|      4|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------+----------------------------------------+---------+----+------+------+-----+
+    |                      Instance                     |                 Module                 | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +---------------------------------------------------+----------------------------------------+---------+----+------+------+-----+
+    |grp_forwardHidden_Pipeline_VITIS_LOOP_36_1_fu_621  |forwardHidden_Pipeline_VITIS_LOOP_36_1  |        0|  32|  1479|  2353|    0|
+    +---------------------------------------------------+----------------------------------------+---------+----+------+------+-----+
+    |Total                                              |                                        |        0|  32|  1479|  2353|    0|
+    +---------------------------------------------------+----------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |WEIGHTS_blk_n_AR          |   9|          2|    1|          2|
+    |ap_NS_fsm                 |  45|         11|    1|         11|
+    |hidden_0                  |   9|          2|    2|          4|
+    |hidden_1                  |   9|          2|    2|          4|
+    |hidden_10                 |   9|          2|    2|          4|
+    |hidden_11                 |   9|          2|    2|          4|
+    |hidden_12                 |   9|          2|    2|          4|
+    |hidden_13                 |   9|          2|    2|          4|
+    |hidden_14                 |   9|          2|    2|          4|
+    |hidden_15                 |   9|          2|    2|          4|
+    |hidden_16                 |   9|          2|    2|          4|
+    |hidden_17                 |   9|          2|    2|          4|
+    |hidden_18                 |   9|          2|    2|          4|
+    |hidden_19                 |   9|          2|    2|          4|
+    |hidden_2                  |   9|          2|    2|          4|
+    |hidden_20                 |   9|          2|    2|          4|
+    |hidden_21                 |   9|          2|    2|          4|
+    |hidden_22                 |   9|          2|    2|          4|
+    |hidden_23                 |   9|          2|    2|          4|
+    |hidden_24                 |   9|          2|    2|          4|
+    |hidden_25                 |   9|          2|    2|          4|
+    |hidden_26                 |   9|          2|    2|          4|
+    |hidden_27                 |   9|          2|    2|          4|
+    |hidden_28                 |   9|          2|    2|          4|
+    |hidden_29                 |   9|          2|    2|          4|
+    |hidden_3                  |   9|          2|    2|          4|
+    |hidden_30                 |   9|          2|    2|          4|
+    |hidden_31                 |   9|          2|    2|          4|
+    |hidden_4                  |   9|          2|    2|          4|
+    |hidden_5                  |   9|          2|    2|          4|
+    |hidden_6                  |   9|          2|    2|          4|
+    |hidden_7                  |   9|          2|    2|          4|
+    |hidden_8                  |   9|          2|    2|          4|
+    |hidden_9                  |   9|          2|    2|          4|
+    |m_axi_WEIGHTS_0_ARADDR    |  13|          3|   64|        192|
+    |m_axi_WEIGHTS_0_ARBURST   |   9|          2|    2|          4|
+    |m_axi_WEIGHTS_0_ARCACHE   |   9|          2|    4|          8|
+    |m_axi_WEIGHTS_0_ARID      |   9|          2|    1|          2|
+    |m_axi_WEIGHTS_0_ARLEN     |  13|          3|   32|         96|
+    |m_axi_WEIGHTS_0_ARLOCK    |   9|          2|    2|          4|
+    |m_axi_WEIGHTS_0_ARPROT    |   9|          2|    3|          6|
+    |m_axi_WEIGHTS_0_ARQOS     |   9|          2|    4|          8|
+    |m_axi_WEIGHTS_0_ARREGION  |   9|          2|    4|          8|
+    |m_axi_WEIGHTS_0_ARSIZE    |   9|          2|    3|          6|
+    |m_axi_WEIGHTS_0_ARUSER    |   9|          2|    1|          2|
+    |m_axi_WEIGHTS_0_ARVALID   |  13|          3|    1|          3|
+    |m_axi_WEIGHTS_0_RREADY    |   9|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     | 471|        106|  188|        482|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------+----+----+-----+-----------+
+    |                              Name                              | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                       |  10|   0|   10|          0|
+    |grp_forwardHidden_Pipeline_VITIS_LOOP_36_1_fu_621_ap_start_reg  |   1|   0|    1|          0|
+    |hidden_0_reg                                                    |   2|   0|    2|          0|
+    |hidden_10_reg                                                   |   2|   0|    2|          0|
+    |hidden_11_reg                                                   |   2|   0|    2|          0|
+    |hidden_12_reg                                                   |   2|   0|    2|          0|
+    |hidden_13_reg                                                   |   2|   0|    2|          0|
+    |hidden_14_reg                                                   |   2|   0|    2|          0|
+    |hidden_15_reg                                                   |   2|   0|    2|          0|
+    |hidden_16_reg                                                   |   2|   0|    2|          0|
+    |hidden_17_reg                                                   |   2|   0|    2|          0|
+    |hidden_18_reg                                                   |   2|   0|    2|          0|
+    |hidden_19_reg                                                   |   2|   0|    2|          0|
+    |hidden_1_reg                                                    |   2|   0|    2|          0|
+    |hidden_20_reg                                                   |   2|   0|    2|          0|
+    |hidden_21_reg                                                   |   2|   0|    2|          0|
+    |hidden_22_reg                                                   |   2|   0|    2|          0|
+    |hidden_23_reg                                                   |   2|   0|    2|          0|
+    |hidden_24_reg                                                   |   2|   0|    2|          0|
+    |hidden_25_reg                                                   |   2|   0|    2|          0|
+    |hidden_26_reg                                                   |   2|   0|    2|          0|
+    |hidden_27_reg                                                   |   2|   0|    2|          0|
+    |hidden_28_reg                                                   |   2|   0|    2|          0|
+    |hidden_29_reg                                                   |   2|   0|    2|          0|
+    |hidden_2_reg                                                    |   2|   0|    2|          0|
+    |hidden_30_reg                                                   |   2|   0|    2|          0|
+    |hidden_31_reg                                                   |   2|   0|    2|          0|
+    |hidden_3_reg                                                    |   2|   0|    2|          0|
+    |hidden_4_reg                                                    |   2|   0|    2|          0|
+    |hidden_5_reg                                                    |   2|   0|    2|          0|
+    |hidden_6_reg                                                    |   2|   0|    2|          0|
+    |hidden_7_reg                                                    |   2|   0|    2|          0|
+    |hidden_8_reg                                                    |   2|   0|    2|          0|
+    |hidden_9_reg                                                    |   2|   0|    2|          0|
+    +----------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                           |  75|   0|   75|          0|
+    +----------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+---------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  | Source Object |    C Type    |
++--------------------------+-----+-----+------------+---------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|  forwardHidden|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|  forwardHidden|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|  forwardHidden|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|  forwardHidden|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|  forwardHidden|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|  forwardHidden|  return value|
+|input_0_val               |   in|    2|     ap_none|    input_0_val|        scalar|
+|input_1_val               |   in|    2|     ap_none|    input_1_val|        scalar|
+|input_2_val               |   in|    2|     ap_none|    input_2_val|        scalar|
+|input_3_val               |   in|    2|     ap_none|    input_3_val|        scalar|
+|input_4_val               |   in|    2|     ap_none|    input_4_val|        scalar|
+|input_5_val               |   in|    2|     ap_none|    input_5_val|        scalar|
+|input_6_val               |   in|    2|     ap_none|    input_6_val|        scalar|
+|input_7_val               |   in|    2|     ap_none|    input_7_val|        scalar|
+|input_8_val               |   in|    2|     ap_none|    input_8_val|        scalar|
+|input_9_val               |   in|    2|     ap_none|    input_9_val|        scalar|
+|input_10_val              |   in|    2|     ap_none|   input_10_val|        scalar|
+|input_11_val              |   in|    2|     ap_none|   input_11_val|        scalar|
+|input_12_val              |   in|    2|     ap_none|   input_12_val|        scalar|
+|input_13_val              |   in|    2|     ap_none|   input_13_val|        scalar|
+|input_14_val              |   in|    2|     ap_none|   input_14_val|        scalar|
+|input_15_val              |   in|    2|     ap_none|   input_15_val|        scalar|
+|input_16_val              |   in|    2|     ap_none|   input_16_val|        scalar|
+|input_17_val              |   in|    2|     ap_none|   input_17_val|        scalar|
+|input_18_val              |   in|    2|     ap_none|   input_18_val|        scalar|
+|input_19_val              |   in|    2|     ap_none|   input_19_val|        scalar|
+|input_20_val              |   in|    2|     ap_none|   input_20_val|        scalar|
+|input_21_val              |   in|    2|     ap_none|   input_21_val|        scalar|
+|input_22_val              |   in|    2|     ap_none|   input_22_val|        scalar|
+|input_23_val              |   in|    2|     ap_none|   input_23_val|        scalar|
+|input_24_val              |   in|    2|     ap_none|   input_24_val|        scalar|
+|input_25_val              |   in|    2|     ap_none|   input_25_val|        scalar|
+|input_26_val              |   in|    2|     ap_none|   input_26_val|        scalar|
+|input_27_val              |   in|    2|     ap_none|   input_27_val|        scalar|
+|input_28_val              |   in|    2|     ap_none|   input_28_val|        scalar|
+|input_29_val              |   in|    2|     ap_none|   input_29_val|        scalar|
+|input_30_val              |   in|    2|     ap_none|   input_30_val|        scalar|
+|input_31_val              |   in|    2|     ap_none|   input_31_val|        scalar|
+|input_32_val              |   in|    2|     ap_none|   input_32_val|        scalar|
+|input_33_val              |   in|    2|     ap_none|   input_33_val|        scalar|
+|input_34_val              |   in|    2|     ap_none|   input_34_val|        scalar|
+|input_35_val              |   in|    2|     ap_none|   input_35_val|        scalar|
+|input_36_val              |   in|    2|     ap_none|   input_36_val|        scalar|
+|input_37_val              |   in|    2|     ap_none|   input_37_val|        scalar|
+|input_38_val              |   in|    2|     ap_none|   input_38_val|        scalar|
+|input_39_val              |   in|    2|     ap_none|   input_39_val|        scalar|
+|input_40_val              |   in|    2|     ap_none|   input_40_val|        scalar|
+|input_41_val              |   in|    2|     ap_none|   input_41_val|        scalar|
+|input_42_val              |   in|    2|     ap_none|   input_42_val|        scalar|
+|input_43_val              |   in|    2|     ap_none|   input_43_val|        scalar|
+|input_44_val              |   in|    2|     ap_none|   input_44_val|        scalar|
+|input_45_val              |   in|    2|     ap_none|   input_45_val|        scalar|
+|input_46_val              |   in|    2|     ap_none|   input_46_val|        scalar|
+|input_47_val              |   in|    2|     ap_none|   input_47_val|        scalar|
+|input_48_val              |   in|    2|     ap_none|   input_48_val|        scalar|
+|input_49_val              |   in|    2|     ap_none|   input_49_val|        scalar|
+|input_50_val              |   in|    2|     ap_none|   input_50_val|        scalar|
+|input_51_val              |   in|    2|     ap_none|   input_51_val|        scalar|
+|input_52_val              |   in|    2|     ap_none|   input_52_val|        scalar|
+|input_53_val              |   in|    2|     ap_none|   input_53_val|        scalar|
+|input_54_val              |   in|    2|     ap_none|   input_54_val|        scalar|
+|input_55_val              |   in|    2|     ap_none|   input_55_val|        scalar|
+|input_56_val              |   in|    2|     ap_none|   input_56_val|        scalar|
+|input_57_val              |   in|    2|     ap_none|   input_57_val|        scalar|
+|input_58_val              |   in|    2|     ap_none|   input_58_val|        scalar|
+|input_59_val              |   in|    2|     ap_none|   input_59_val|        scalar|
+|input_60_val              |   in|    2|     ap_none|   input_60_val|        scalar|
+|input_61_val              |   in|    2|     ap_none|   input_61_val|        scalar|
+|input_62_val              |   in|    2|     ap_none|   input_62_val|        scalar|
+|input_63_val              |   in|    2|     ap_none|   input_63_val|        scalar|
+|hidden_0                  |  out|    2|      ap_vld|       hidden_0|       pointer|
+|hidden_0_ap_vld           |  out|    1|      ap_vld|       hidden_0|       pointer|
+|hidden_1                  |  out|    2|      ap_vld|       hidden_1|       pointer|
+|hidden_1_ap_vld           |  out|    1|      ap_vld|       hidden_1|       pointer|
+|hidden_2                  |  out|    2|      ap_vld|       hidden_2|       pointer|
+|hidden_2_ap_vld           |  out|    1|      ap_vld|       hidden_2|       pointer|
+|hidden_3                  |  out|    2|      ap_vld|       hidden_3|       pointer|
+|hidden_3_ap_vld           |  out|    1|      ap_vld|       hidden_3|       pointer|
+|hidden_4                  |  out|    2|      ap_vld|       hidden_4|       pointer|
+|hidden_4_ap_vld           |  out|    1|      ap_vld|       hidden_4|       pointer|
+|hidden_5                  |  out|    2|      ap_vld|       hidden_5|       pointer|
+|hidden_5_ap_vld           |  out|    1|      ap_vld|       hidden_5|       pointer|
+|hidden_6                  |  out|    2|      ap_vld|       hidden_6|       pointer|
+|hidden_6_ap_vld           |  out|    1|      ap_vld|       hidden_6|       pointer|
+|hidden_7                  |  out|    2|      ap_vld|       hidden_7|       pointer|
+|hidden_7_ap_vld           |  out|    1|      ap_vld|       hidden_7|       pointer|
+|hidden_8                  |  out|    2|      ap_vld|       hidden_8|       pointer|
+|hidden_8_ap_vld           |  out|    1|      ap_vld|       hidden_8|       pointer|
+|hidden_9                  |  out|    2|      ap_vld|       hidden_9|       pointer|
+|hidden_9_ap_vld           |  out|    1|      ap_vld|       hidden_9|       pointer|
+|hidden_10                 |  out|    2|      ap_vld|      hidden_10|       pointer|
+|hidden_10_ap_vld          |  out|    1|      ap_vld|      hidden_10|       pointer|
+|hidden_11                 |  out|    2|      ap_vld|      hidden_11|       pointer|
+|hidden_11_ap_vld          |  out|    1|      ap_vld|      hidden_11|       pointer|
+|hidden_12                 |  out|    2|      ap_vld|      hidden_12|       pointer|
+|hidden_12_ap_vld          |  out|    1|      ap_vld|      hidden_12|       pointer|
+|hidden_13                 |  out|    2|      ap_vld|      hidden_13|       pointer|
+|hidden_13_ap_vld          |  out|    1|      ap_vld|      hidden_13|       pointer|
+|hidden_14                 |  out|    2|      ap_vld|      hidden_14|       pointer|
+|hidden_14_ap_vld          |  out|    1|      ap_vld|      hidden_14|       pointer|
+|hidden_15                 |  out|    2|      ap_vld|      hidden_15|       pointer|
+|hidden_15_ap_vld          |  out|    1|      ap_vld|      hidden_15|       pointer|
+|hidden_16                 |  out|    2|      ap_vld|      hidden_16|       pointer|
+|hidden_16_ap_vld          |  out|    1|      ap_vld|      hidden_16|       pointer|
+|hidden_17                 |  out|    2|      ap_vld|      hidden_17|       pointer|
+|hidden_17_ap_vld          |  out|    1|      ap_vld|      hidden_17|       pointer|
+|hidden_18                 |  out|    2|      ap_vld|      hidden_18|       pointer|
+|hidden_18_ap_vld          |  out|    1|      ap_vld|      hidden_18|       pointer|
+|hidden_19                 |  out|    2|      ap_vld|      hidden_19|       pointer|
+|hidden_19_ap_vld          |  out|    1|      ap_vld|      hidden_19|       pointer|
+|hidden_20                 |  out|    2|      ap_vld|      hidden_20|       pointer|
+|hidden_20_ap_vld          |  out|    1|      ap_vld|      hidden_20|       pointer|
+|hidden_21                 |  out|    2|      ap_vld|      hidden_21|       pointer|
+|hidden_21_ap_vld          |  out|    1|      ap_vld|      hidden_21|       pointer|
+|hidden_22                 |  out|    2|      ap_vld|      hidden_22|       pointer|
+|hidden_22_ap_vld          |  out|    1|      ap_vld|      hidden_22|       pointer|
+|hidden_23                 |  out|    2|      ap_vld|      hidden_23|       pointer|
+|hidden_23_ap_vld          |  out|    1|      ap_vld|      hidden_23|       pointer|
+|hidden_24                 |  out|    2|      ap_vld|      hidden_24|       pointer|
+|hidden_24_ap_vld          |  out|    1|      ap_vld|      hidden_24|       pointer|
+|hidden_25                 |  out|    2|      ap_vld|      hidden_25|       pointer|
+|hidden_25_ap_vld          |  out|    1|      ap_vld|      hidden_25|       pointer|
+|hidden_26                 |  out|    2|      ap_vld|      hidden_26|       pointer|
+|hidden_26_ap_vld          |  out|    1|      ap_vld|      hidden_26|       pointer|
+|hidden_27                 |  out|    2|      ap_vld|      hidden_27|       pointer|
+|hidden_27_ap_vld          |  out|    1|      ap_vld|      hidden_27|       pointer|
+|hidden_28                 |  out|    2|      ap_vld|      hidden_28|       pointer|
+|hidden_28_ap_vld          |  out|    1|      ap_vld|      hidden_28|       pointer|
+|hidden_29                 |  out|    2|      ap_vld|      hidden_29|       pointer|
+|hidden_29_ap_vld          |  out|    1|      ap_vld|      hidden_29|       pointer|
+|hidden_30                 |  out|    2|      ap_vld|      hidden_30|       pointer|
+|hidden_30_ap_vld          |  out|    1|      ap_vld|      hidden_30|       pointer|
+|hidden_31                 |  out|    2|      ap_vld|      hidden_31|       pointer|
+|hidden_31_ap_vld          |  out|    1|      ap_vld|      hidden_31|       pointer|
+|m_axi_WEIGHTS_0_AWVALID   |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_AWREADY   |   in|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_AWADDR    |  out|   64|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_AWID      |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_AWLEN     |  out|   32|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_AWSIZE    |  out|    3|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_AWBURST   |  out|    2|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_AWLOCK    |  out|    2|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_AWCACHE   |  out|    4|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_AWPROT    |  out|    3|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_AWQOS     |  out|    4|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_AWREGION  |  out|    4|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_AWUSER    |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_WVALID    |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_WREADY    |   in|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_WDATA     |  out|    8|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_WSTRB     |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_WLAST     |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_WID       |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_WUSER     |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARVALID   |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARREADY   |   in|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARADDR    |  out|   64|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARID      |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARLEN     |  out|   32|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARSIZE    |  out|    3|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARBURST   |  out|    2|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARLOCK    |  out|    2|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARCACHE   |  out|    4|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARPROT    |  out|    3|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARQOS     |  out|    4|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARREGION  |  out|    4|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_ARUSER    |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_RVALID    |   in|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_RREADY    |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_RDATA     |   in|    8|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_RLAST     |   in|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_RID       |   in|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_RFIFONUM  |   in|   11|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_RUSER     |   in|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_RRESP     |   in|    2|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_BVALID    |   in|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_BREADY    |  out|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_BRESP     |   in|    2|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_BID       |   in|    1|       m_axi|        WEIGHTS|       pointer|
+|m_axi_WEIGHTS_0_BUSER     |   in|    1|       m_axi|        WEIGHTS|       pointer|
+|W1                        |   in|   64|     ap_none|             W1|        scalar|
++--------------------------+-----+-----+------------+---------------+--------------+
+

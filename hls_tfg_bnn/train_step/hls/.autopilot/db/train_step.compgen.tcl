@@ -1,17 +1,18 @@
 # This script segment is generated automatically by AutoPilot
 
+set name train_step_mul_2s_2s_4_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler train_step_in_pos_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler train_step_hidden_pos_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler train_step_mac_muladd_2s_2s_4s_5_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler train_step_out_pos_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler train_step_mac_muladd_2s_2s_5s_5_4_1 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
@@ -51,7 +52,7 @@ dict set axilite_register_dict CTRL $port_CTRL
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 607 \
+			id 653 \
 			corename train_step_CTRL_axilite \
 			name train_step_CTRL_s_axi \
 			ports {$port_CTRL} \
@@ -96,7 +97,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 608 \
+			id 654 \
 			corename train_step_control_axilite \
 			name train_step_control_s_axi \
 			ports {$port_control} \
@@ -120,14 +121,14 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 609 \
+    id 655 \
     name img_pos \
     reset_level 0 \
     sync_rst true \
     dir I \
     corename img_pos \
     op interface \
-    ports { img_pos_address0 { O 6 vector } img_pos_ce0 { O 1 bit } img_pos_q0 { I 8 vector } } \
+    ports { img_pos_address0 { O 6 vector } img_pos_ce0 { O 1 bit } img_pos_q0 { I 8 vector } img_pos_address1 { O 6 vector } img_pos_ce1 { O 1 bit } img_pos_q1 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'img_pos'"
@@ -139,14 +140,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 610 \
+    id 656 \
     name img_neg \
     reset_level 0 \
     sync_rst true \
     dir I \
     corename img_neg \
     op interface \
-    ports { img_neg_address0 { O 6 vector } img_neg_ce0 { O 1 bit } img_neg_q0 { I 8 vector } } \
+    ports { img_neg_address0 { O 6 vector } img_neg_ce0 { O 1 bit } img_neg_q0 { I 8 vector } img_neg_address1 { O 6 vector } img_neg_ce1 { O 1 bit } img_neg_q1 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'img_neg'"

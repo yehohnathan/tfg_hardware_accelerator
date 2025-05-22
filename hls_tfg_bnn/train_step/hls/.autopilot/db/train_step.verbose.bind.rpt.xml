@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'train_step'" level="0">
-<item name = "Date">Tue May 20 21:00:43 2025
+<item name = "Date">Wed May 21 10:33:37 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">train_step</item>
@@ -24,20 +24,17 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">8829, 8829, 88.290 us, 88.290 us, 8830, 8830, no</column>
+<column name="">4855, 7705, 48.550 us, 77.050 us, 4856, 7706, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_train_step_Pipeline_VITIS_LOOP_118_1_fu_1826">train_step_Pipeline_VITIS_LOOP_118_1, 66, 66, 0.660 us, 0.660 us, 65, 65, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_train_step_Pipeline_VITIS_LOOP_28_1_fu_1838">train_step_Pipeline_VITIS_LOOP_28_1, 2057, 2057, 20.570 us, 20.570 us, 2056, 2056, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_train_step_Pipeline_VITIS_LOOP_45_1_fu_1912">train_step_Pipeline_VITIS_LOOP_45_1, 328, 328, 3.280 us, 3.280 us, 327, 327, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_train_step_Pipeline_VITIS_LOOP_28_11_fu_1954">train_step_Pipeline_VITIS_LOOP_28_11, 2057, 2057, 20.570 us, 20.570 us, 2056, 2056, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_train_step_Pipeline_VITIS_LOOP_45_12_fu_2028">train_step_Pipeline_VITIS_LOOP_45_12, 328, 328, 3.280 us, 3.280 us, 327, 327, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_train_step_Pipeline_VITIS_LOOP_64_1_fu_2070">train_step_Pipeline_VITIS_LOOP_64_1, 3074, 3074, 30.740 us, 30.740 us, 2112, 2112, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_train_step_Pipeline_VITIS_LOOP_85_1_fu_2143">train_step_Pipeline_VITIS_LOOP_85_1, 834, 834, 8.340 us, 8.340 us, 352, 352, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_forwardHidden_fu_1732">forwardHidden, 2066, 2066, 20.660 us, 20.660 us, 2066, 2066, no</column>
+<column name="grp_forwardOutput_fu_1835">forwardOutput, 338, 338, 3.380 us, 3.380 us, 338, 338, no</column>
+<column name="grp_train_step_Pipeline_VITIS_LOOP_73_1_VITIS_LOOP_75_2_fu_1884">train_step_Pipeline_VITIS_LOOP_73_1_VITIS_LOOP_75_2, 2067, 2067, 20.670 us, 20.670 us, 2049, 2049, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_updateOutput_fu_1975">updateOutput, 782, 782, 7.820 us, 7.820 us, 781, 781, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

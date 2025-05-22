@@ -7,6 +7,70 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
+      <string>../src/forward_fw.cpp</string>
+      <key>line</key>
+      <integer>23</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=computeGoodness_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../src/forward_fw.cpp</string>
+      <key>line</key>
+      <integer>40</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=forwardHidden_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../src/forward_fw.cpp</string>
+      <key>line</key>
+      <integer>57</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=forwardOutput_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../src/forward_fw.cpp</string>
+      <key>line</key>
+      <integer>95</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=updateOutput_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
       <string>directive</string>
       <key>line</key>
       <integer>1</integer>
@@ -25,7 +89,7 @@
       <key>filename</key>
       <string>../src/forward_fw.cpp</string>
       <key>line</key>
-      <integer>107</integer>
+      <integer>115</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -41,7 +105,7 @@
       <key>filename</key>
       <string>../src/forward_fw.cpp</string>
       <key>line</key>
-      <integer>108</integer>
+      <integer>116</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -73,7 +137,7 @@
       <key>filename</key>
       <string>../src/forward_fw.cpp</string>
       <key>line</key>
-      <integer>111</integer>
+      <integer>119</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -105,7 +169,7 @@
       <key>filename</key>
       <string>../src/forward_fw.cpp</string>
       <key>line</key>
-      <integer>112</integer>
+      <integer>120</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -121,7 +185,7 @@
       <key>filename</key>
       <string>../src/forward_fw.cpp</string>
       <key>line</key>
-      <integer>113</integer>
+      <integer>121</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -137,11 +201,123 @@
       <key>filename</key>
       <string>../src/forward_fw.cpp</string>
       <key>line</key>
-      <integer>114</integer>
+      <integer>122</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=train_step_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=CTRL_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../src/forward_fw.cpp</string>
+      <key>line</key>
+      <integer>126</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=train_step_XLX_SEP_ PragmaOptions=variable=in_pos complete_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../src/forward_fw.cpp</string>
+      <key>line</key>
+      <integer>127</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=train_step_XLX_SEP_ PragmaOptions=variable=in_neg complete_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../src/forward_fw.cpp</string>
+      <key>line</key>
+      <integer>130</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=train_step_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../src/forward_fw.cpp</string>
+      <key>line</key>
+      <integer>138</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=train_step_XLX_SEP_ PragmaOptions=variable=hidden_pos complete_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../src/forward_fw.cpp</string>
+      <key>line</key>
+      <integer>139</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=train_step_XLX_SEP_ PragmaOptions=variable=hidden_neg complete_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../src/forward_fw.cpp</string>
+      <key>line</key>
+      <integer>140</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=train_step_XLX_SEP_ PragmaOptions=variable=out_pos complete_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>../src/forward_fw.cpp</string>
+      <key>line</key>
+      <integer>141</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=train_step_XLX_SEP_ PragmaOptions=variable=out_neg complete_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>

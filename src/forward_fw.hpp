@@ -2,6 +2,8 @@
 #include <ap_fixed.h>
 #include <ap_int.h>
 #include <cstdint>
+#include <cstdio>
+#include <cassert>
 
 // ---------------------------------------------------------------------------
 // INCLUYE EL DATASET -> define NUM_IMAGES y N_INPUT de forma automática

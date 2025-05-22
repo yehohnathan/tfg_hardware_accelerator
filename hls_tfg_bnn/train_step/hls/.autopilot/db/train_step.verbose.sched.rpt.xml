@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'train_step'" level="0">
-<item name = "Date">Tue May 20 21:00:43 2025
+<item name = "Date">Wed May 21 10:33:37 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">train_step</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">8829, 8829, 88.290 us, 88.290 us, 8830, 8830, no</column>
+<column name="">4855, 7705, 48.550 us, 77.050 us, 4856, 7706, no</column>
 </table>
 </item>
 <item name = "Detail">

@@ -165,7 +165,7 @@ if __name__ == '__main__':
     # Selección de muestras por dígito para el entrenamiento
     data_train = samples_per_digit(x_train,
                                    y_train,
-                                   samples_per_digit=500)
+                                   samples_per_digit=20)
 
     # Redimencionamiento de las muestras originales a unas más pequeñas
     data_train_resize = resize_data(data_train,
@@ -181,7 +181,7 @@ if __name__ == '__main__':
     # Selección de muestras por dígito para la prueba
     data_test = samples_per_digit(x_train,
                                   y_train,
-                                  samples_per_digit=100)
+                                  samples_per_digit=20)
 
     # Redimencionamiento de las muestras originales a unas más pequeñas
     data_test_resize = resize_data(data_test,
