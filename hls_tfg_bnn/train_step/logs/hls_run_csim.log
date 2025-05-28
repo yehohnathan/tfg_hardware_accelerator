@@ -22,10 +22,11 @@ INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from D:/Pro
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
-   Compiling ../../../../../tb/train_tb.cpp in debug mode
+   Compiling ../../../../../src/forward_fw.cpp in debug mode
    Generating csim.exe
-In file included from ../../../../../tb/train_tb.cpp:4:
-In file included from C:/Xilinx/Vitis/2024.2/include/ap_int.h:10:
+In file included from ../../../../../src/forward_fw.cpp:1:
+In file included from ../../../../../src/forward_fw.hpp:2:
+In file included from C:/Xilinx/Vitis/2024.2/include/ap_fixed.h:9:
 In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_common.h:658:
 In file included from C:/Xilinx/Vitis/2024.2/include/etc/ap_private.h:68:
 In file included from C:/Xilinx/Vitis/2024.2/include/hls_half.h:26:
@@ -39,295 +40,303 @@ C:/Xilinx/Vitis/2024.2/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: 
 #define __GMP_LIBGMP_DLL 1
         ^
 1 warning generated.
- W1[0]: -76 1 0 0 0 0 0 0 -125 1 0 -126 0 0 0 0 -1 3 0 0 0 0 0 0 112 58 15 0 0 0 0 0 116 70 93 64 0 0 0 0 -82 5 0 -85 0 0 0 0 112 58 15 0 0 0 0 0 -32 119 15 0 0 0 0 0
- W1[1]: 0 0 14 0 0 0 0 0 0 0 14 0 0 0 0 0 16 0 0 0 0 0 0 0 100 0 0 0 0 0 0 0 16 36 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -82 5 0 -85 0 0 0 0
- W1[2]: 1 1 0 0 0 0 0 0 -82 5 0 -85 0 0 0 0 80 1 14 0 0 0 0 0 127 6 0 0 127 3 0 0 1 0 0 0 0 0 0 0 -82 5 0 -85 0 0 0 0 0 0 0 0 0 0 0 0 -128 0 0 0 0 0 0 0
- W1[3]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16 0 0 0 0 0 0 0 103 0 0 0 0 0 0 0 -76 1 0 0 0 0 0 0 8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -82 5 0 -85 0 0 0 0
- W1[4]: 0 0 93 64 0 0 0 0 114 1 0 115 0 0 0 0 -64 -40 11 125 -6 127 0 0 108 -18 63 64 0 0 0 0 -64 -40 11 125 -6 127 0 0 35 -12 6 125 -6 127 0 0 82 0 0 0 0 0 0 0 -14 0 0 0 0 0 0 0
- W1[5]: 48 -17 63 64 0 0 0 0 1 0 0 0 0 0 0 0 32 0 0 0 0 0 0 0 -39 -13 6 125 -6 127 0 0 -64 -40 11 125 -6 127 0 0 -63 -40 11 125 -6 127 0 0 32 0 0 0 0 0 0 0 16 36 1 0 0 0 0 0
- W1[6]: 0 0 93 64 0 0 0 0 65 18 0 0 0 0 0 0 33 0 0 0 0 0 0 0 -1 -1 -1 -1 82 0 0 0 1 0 0 0 0 0 0 0 2 0 0 0 -6 127 0 0 0 0 0 0 0 0 0 0 -104 -12 63 64 0 0 0 0
- W1[7]: 0 0 0 0 0 0 0 0 64 -13 63 64 0 0 0 0 39 0 0 0 0 0 0 0 122 -45 11 125 -6 127 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[8]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[9]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[10]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[11]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[12]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[13]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[14]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[15]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -89 -22 6 125 -6 127 0 0 0 0 0 0 0 0 0 0 0 0 0 0 55 52 49 99 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[16]: -64 -40 11 125 -6 127 0 0 92 -15 63 64 0 0 0 0 -64 -40 11 125 -6 127 0 0 35 -12 6 125 -6 127 0 0 82 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32 -14 63 64 0 0 0 0 1 0 0 0 0 0 0 0
- W1[17]: 32 0 0 0 0 0 0 0 -39 -13 6 125 -6 127 0 0 -64 -40 11 125 -6 127 0 0 -63 -40 11 125 -6 127 0 0 32 0 0 0 0 0 0 0 0 0 0 0 39 0 0 0 -48 -13 63 64 0 0 0 0 0 0 0 0 0 0 0 0
- W1[18]: 25 0 0 0 0 0 0 0 -1 -1 -1 -1 82 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -120 -9 63 64 0 0 0 0 0 0 0 0 0 0 0 0 48 -10 63 64 0 0 0 0
- W1[19]: 39 0 0 0 0 0 0 0 122 -45 11 125 -6 127 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[20]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[21]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[22]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[23]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[24]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[25]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[26]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[27]: 0 0 0 0 0 0 0 0 -89 -22 6 125 -6 127 0 0 0 0 0 0 0 0 0 0 0 0 0 0 55 52 49 99 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 56 -10 63 64 0 0 0 0 -107 -23 6 125 -6 127 0 0
- W1[28]: 56 -10 63 64 0 0 0 0 -8 -1 -1 -1 0 0 0 0 8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 0 0 0 0 0 0 0 8 0 0 0
- W1[29]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 96 -4 63 64 0 0 0 0 0 0 0 0 39 0 0 0 -64 -10 63 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[30]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W1[31]: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 64 43 93 64 0 0 0 0 5 0 0 0 0 0 0 0
- W2[0]: -8 -6 63 64 0 0 0 0 0 0 0 0 0 0 0 0 0 64 102 64 0 0 0 0 -1 0 0 0 0 0 0 0
- W2[1]: 0 48 1 0 0 0 0 0 80 1 93 64 0 0 0 0 80 1 93 64 0 0 0 0 -2 -6 63 64 0 0 0 0
- W2[2]: 112 0 101 64 0 0 0 0 20 0 0 0 0 0 0 0 16 36 1 0 0 0 0 0 0 36 1 0 0 0 0 0
- W2[3]: 1 0 0 0 0 0 0 0 125 71 -8 124 -6 127 0 0 0 0 93 64 0 0 0 0 0 0 16 0 0 0 0 0
- W2[4]: 0 0 93 64 0 0 0 0 0 0 93 64 0 0 0 0 -1 3 0 0 0 0 0 0 -11 19 0 0 0 0 0 0
- W2[5]: -4 -6 63 64 0 0 0 0 80 1 93 64 0 0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W2[6]: -128 0 101 64 0 0 0 0 1 0 0 0 0 0 0 0 112 0 101 64 0 0 0 0 1 0 0 0 0 0 0 0
- W2[7]: -76 1 0 0 0 0 0 0 0 0 0 0 127 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W2[8]: 0 0 0 0 0 0 0 0 -76 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- W2[9]: -76 1 0 0 0 0 0 0 80 1 93 64 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0
-== Epoca 1 ==
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
-Hidden -> Good Pos:32, Neg:32, Margin: 4, Diff: 0 | Output -> Good Pos:10, Neg:10, Margin: 4, Diff: 0
 
-Pesos finales tras la epoca:
- W1[0]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 -1 -1 1 -1 1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
- W1[1]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 -1 1 -1 1 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[2]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 -1 1 -1 1 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[3]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 -1 1 -1 1 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[4]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 -1 -1 1 -1 1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
- W1[5]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 -1 -1 1 -1 1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
- W1[6]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 -1 1 -1 1 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[7]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 -1 -1 1 -1 1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
- W1[8]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 -1 -1 1 -1 1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
- W1[9]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 -1 1 -1 1 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[10]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
- W1[11]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
- W1[12]: -1 1 1 -1 1 1 -1 -1 -1 -1 -1 1 1 -1 1 1 -1 -1 -1 -1 1 1 -1 1 1 1 1 1 -1 -1 1 -1 1 1 -1 1 -1 1 1 -1 1 -1 -1 -1 -1 1 1 -1 1 1 -1 -1 -1 -1 -1 1 1 1 -1 1 -1 -1 -1 -1
- W1[13]: 1 1 1 -1 -1 -1 1 1 1 1 -1 1 1 -1 1 1 -1 -1 1 -1 1 1 -1 1 1 1 1 1 -1 -1 -1 1 -1 -1 1 -1 -1 -1 1 1 -1 -1 -1 -1 1 1 1 1 -1 1 -1 -1 -1 -1 -1 1 -1 -1 -1 1 -1 1 1 -1
- W1[14]: -1 1 -1 -1 -1 -1 -1 1 1 1 1 -1 1 -1 -1 -1 -1 1 -1 1 1 1 1 1 1 1 -1 1 1 -1 1 -1 1 -1 1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 1 1 1 -1 -1 1 1 -1 1 1 -1 -1 -1 -1 1
- W1[15]: -1 1 -1 -1 -1 -1 -1 1 -1 -1 -1 1 1 1 -1 1 1 -1 1 1 -1 -1 -1 -1 1 1 -1 1 -1 1 -1 1 1 -1 -1 -1 1 -1 1 1 1 -1 1 1 -1 -1 -1 1 -1 1 1 1 1 1 1 -1 1 1 1 -1 -1 1 -1 1
- W1[16]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 -1 1 -1 1 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[17]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
- W1[18]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
- W1[19]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
- W1[20]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 -1 1 -1 1 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[21]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 -1 1 -1 1 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[22]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
- W1[23]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 -1 1 -1 1 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[24]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 -1 1 1 1 1 1 -1 1 -1 1 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[25]: -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 1 1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
- W1[26]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 -1 -1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[27]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 -1 -1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[28]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[29]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[30]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- W1[31]: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- W2[0]: 1 -1 -1 -1 1 1 -1 1 1 -1 1 1 1 1 1 -1 -1 1 1 1 -1 -1 1 -1 -1 1 -1 -1 -1 -1 -1 -1
- W2[1]: -1 1 1 1 -1 -1 1 -1 -1 1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 1 1 -1 1 1 -1 1 1 1 1 1 1
- W2[2]: -1 1 1 1 -1 -1 1 -1 -1 1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 1 1 -1 1 1 -1 1 1 1 1 1 1
- W2[3]: -1 1 1 1 -1 -1 1 -1 -1 1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 1 1 -1 1 1 -1 1 1 1 1 1 1
- W2[4]: 1 -1 -1 -1 1 1 -1 1 1 -1 1 1 1 1 1 -1 -1 1 1 1 -1 -1 1 -1 -1 1 -1 -1 -1 -1 -1 -1
- W2[5]: 1 -1 -1 -1 1 1 -1 1 1 -1 1 1 1 1 1 -1 -1 1 1 1 -1 -1 1 -1 -1 1 -1 -1 -1 -1 -1 -1
- W2[6]: -1 1 1 1 -1 -1 1 -1 -1 1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 1 1 -1 1 1 -1 1 1 1 1 1 1
- W2[7]: 1 -1 -1 -1 1 1 -1 1 1 -1 1 1 1 1 1 -1 -1 1 1 1 -1 -1 1 -1 -1 1 -1 -1 -1 -1 -1 -1
- W2[8]: 1 -1 -1 -1 1 1 -1 1 1 -1 1 1 1 1 1 -1 -1 1 1 1 -1 -1 1 -1 -1 1 -1 -1 -1 -1 -1 -1
- W2[9]: -1 1 1 1 -1 -1 1 -1 -1 1 -1 -1 -1 -1 -1 1 1 -1 -1 -1 1 1 -1 1 1 -1 1 1 1 1 1 1
-Simulacion finalizada OK. Pesos actualizados correctamente.
+== Epoca 1 ==
+Hidden -> Good Pos: 0, Neg:29, Margin: 4, Diff:-29 | Output -> Good Pos: 0, Neg: 5, Margin: 4, Diff:-5
+Hidden -> Good Pos: 0, Neg:30, Margin: 4, Diff:-30 | Output -> Good Pos: 0, Neg: 5, Margin: 4, Diff:-5
+Hidden -> Good Pos: 3, Neg:25, Margin: 4, Diff:-22 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:24, Margin: 4, Diff:-24 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:29, Margin: 4, Diff:-29 | Output -> Good Pos: 0, Neg: 3, Margin: 4, Diff:-3
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:30, Margin: 4, Diff:-30 | Output -> Good Pos: 0, Neg: 4, Margin: 4, Diff:-4
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:22, Margin: 4, Diff:-22 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos:15, Neg:26, Margin: 4, Diff:-11 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:29, Margin: 4, Diff:-29 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos:14, Neg:28, Margin: 4, Diff:-14 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:23, Margin: 4, Diff:-23 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 7, Neg:27, Margin: 4, Diff:-20 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:29, Margin: 4, Diff:-29 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos:14, Neg:27, Margin: 4, Diff:-13 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:29, Margin: 4, Diff:-29 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos:14, Neg:27, Margin: 4, Diff:-13 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 6, Neg:27, Margin: 4, Diff:-21 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:29, Margin: 4, Diff:-29 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos:15, Neg:27, Margin: 4, Diff:-12 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:29, Margin: 4, Diff:-29 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos:15, Neg:26, Margin: 4, Diff:-11 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:23, Margin: 4, Diff:-23 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos:15, Neg:27, Margin: 4, Diff:-12 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:22, Margin: 4, Diff:-22 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:30, Margin: 4, Diff:-30 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos:16, Neg:26, Margin: 4, Diff:-10 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:29, Margin: 4, Diff:-29 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos:14, Neg:26, Margin: 4, Diff:-12 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos:19, Neg:27, Margin: 4, Diff:-8 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:24, Margin: 4, Diff:-24 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos:15, Neg:27, Margin: 4, Diff:-12 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos:14, Neg:27, Margin: 4, Diff:-13 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 2, Margin: 4, Diff:-2
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos:15, Neg:27, Margin: 4, Diff:-12 | Output -> Good Pos: 0, Neg: 1, Margin: 4, Diff:-1
+Hidden -> Good Pos: 0, Neg:28, Margin: 4, Diff:-28 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:25, Margin: 4, Diff:-25 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:23, Margin: 4, Diff:-23 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:26, Margin: 4, Diff:-26 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:24, Margin: 4, Diff:-24 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+Hidden -> Good Pos: 0, Neg:27, Margin: 4, Diff:-27 | Output -> Good Pos: 0, Neg: 0, Margin: 4, Diff: 0
+
+--- Pesos Iniciales W1 ---
+W1[00]: 0 0 0 1 1 1 1 0 1 0 1 0 0 0 1 1 0 1 0 1 0 1 1 1 1 0 0 1 1 0 1 0 1 0 1 0 1 1 0 1 0 1 1 1 1 1 1 1 1 0 1 1 1 1 0 1 1 1 1 1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 1 0 1 0 0 1 0 0 0 1 0 1 1 1 0 0 0 1 0 1 1 1 1 1 0 1 1 0 1 1 0 1 0 1 0 1 1 1 1 1 0 0 0 1 0 1 1 0 0 0 0 0 0 1 0 1 1 1 1 1 0 1 0 1 0 0 0 0 1 1 0 0 1 1 0 1 1 1 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 1 1 1 0 1 1 1 1 1 1 1 1 0 0 0 0 1 0 0
+W1[01]: 1 0 1 0 0 0 0 1 1 1 0 0 1 1 1 0 1 1 0 1 0 0 0 0 0 1 0 1 1 1 0 1 0 0 0 1 0 1 0 1 1 1 0 0 0 0 0 0 0 1 1 0 1 0 1 1 0 0 1 1 0 0 1 1 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 1 1 1 0 0 0 1 1 1 1 0 0 1 0 0 0 1 0 1 0 0 1 0 0 0 1 1 1 1 1 0 1 0 0 0 0 1 0 1 1 0 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 0 0 0 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 0 1 1 1 1 1 0 1 0 1 1 0 1 0 1 1 1 1 0 1 0 1 0 0 1 1 0 0 1 1 1 1
+W1[02]: 0 1 1 1 0 1 1 0 0 0 0 1 0 1 1 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 1 1 1 0 1 1 0 0 0 0 0 1 1 0 1 1 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 1 1 1 1 0 0 0 0 1 0 1 1 0 1 0 1 0 0 1 1 1 0 0 1 1 1 0 1 0 1 0 1 1 1 1 0 0 0 1 0 0 0 0 0 1 1 1 0 0 1 0 1 0 1 1 1 0 0 1 1 0 0 1 1 0 0 0 0 0 0 1 1 1 0 0 1 1 0 1 0 0 0 0 1 1 1 1 1 1 1 0 0 0 1 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 1
+W1[03]: 1 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 0 1 0 1 1 0 0 1 0 0 1 0 1 1 1 1 0 1 0 1 0 1 0 1 1 1 1 1 1 0 1 1 0 1 0 1 0 0 1 0 1 1 1 1 0 1 0 0 0 0 1 1 0 0 1 1 0 0 1 1 0 0 0 1 1 0 1 0 0 1 0 0 1 1 0 1 0 1 1 0 1 0 0 1 0 1 0 0 0 1 0 0 0 1 0 1 1 1 0 0 1 0 1 1 1 1 1 0 1 1 0 1 1 1 1 1 0 0 1 1 1 0 1 1 1 0 0 0 0 1 0 1 1 0 0 0 0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 1 1 0 0 0 0 1 0 1 0 1 1 0 0 1 1 0 0 1 1 1 1 0 1 0 1
+W1[04]: 1 0 1 0 1 1 0 0 0 0 1 1 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 1 0 1 0 1 1 1 0 1 0 0 0 1 1 1 1 1 0 0 0 1 1 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 1 1 1 0 0 0 0 0 1 0 1 1 1 0 0 0 1 0 0 1 1 1 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 1 0 0 1 0 1 0 0 0 1 1 0 1 1 0 1 0 0 0 1 1 1 1 1 0 1 0 0 0 0 0 1 0 1 0 1 0 0 0 0 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 1 1 0 0 0 1 0 1 0 1 1 0 1 0 1 1 1
+W1[05]: 0 0 0 0 0 1 1 0 1 0 0 0 1 0 0 1 1 0 1 0 0 1 0 1 1 0 0 0 0 1 1 1 0 1 1 1 0 1 1 0 0 0 1 0 1 0 0 1 1 0 1 1 0 1 0 1 1 0 1 1 1 0 1 0 0 0 1 0 0 0 0 0 1 1 0 1 0 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 1 1 0 0 1 1 0 0 1 1 0 0 1 0 1 1 0 1 0 1 0 1 1 0 0 0 1 0 1 1 1 1 0 0 1 1 0 1 1 1 1 0 0 0 1 1 1 0 1 1 1 0 1 1 0 0 0 1 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 1 1 1 0 1 0 1 1 0 1 0 0 0 1 1 0 0 1 0 1 0 0
+W1[06]: 0 0 1 1 1 1 1 1 0 1 1 0 1 0 1 0 1 0 0 1 1 1 1 0 1 0 0 1 0 1 0 0 0 0 0 1 1 1 0 0 1 0 0 0 1 0 1 0 0 1 0 1 1 0 1 0 1 0 1 1 1 0 1 1 1 1 0 1 1 1 1 0 1 1 0 1 1 0 1 0 1 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 0 1 1 0 1 0 1 0 1 1 1 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 1 0 1 0 1 0 0 0 0 1 0 1 1 0 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 0 1 1 1 1 1 0 1 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 0 1 0 0 1 1 0 0 0 1 1 0 1 1 0 0
+W1[07]: 0 1 0 1 1 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 1 1 0 1 0 1 0 0 1 0 1 1 1 1 0 0 1 0 0 1 0 1 1 0 0 1 1 0 1 1 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 0 0 1 0 1 0 1 1 1 0 1 0 0 1 0 0 0 0 0 1 0 1 1 0 0 1 0 1 1 1 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 1 1 1 1 0 1 1 1 1 1 1 0 1 0 1 1 0 1 0 0 0 0 1 1 1 0 0 0 0 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1 0 0 0 0 1 0 1 1 1 1 0 0 1 0 1 1 1 0 1 0 1 1 1
+W1[08]: 1 1 0 0 1 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0 1 1 0 0 1 0 0 1 0 1 0 1 1 1 0 0 0 1 1 1 1 1 0 1 1 1 0 1 1 0 1 0 0 1 1 0 0 1 1 0 1 0 0 1 1 1 1 0 1 0 1 1 0 0 0 1 0 1 1 1 1 1 1 0 0 0 0 0 1 0 1 1 1 0 0 1 0 1 1 0 1 1 0 0 0 0 0 0 0 1 1 1 0 1 0 0 0 1 1 1 1 1 1 1 1 0 1 0 1 1 1 0 0 1 0 1 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 1 0 0 0 0 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 0 0 0 0 0 0 0 1 0 1 0 1
+W1[09]: 0 0 0 0 0 0 0 1 0 1 1 0 0 1 0 0 1 1 1 1 1 1 0 0 1 0 1 0 1 0 0 0 0 0 1 0 1 0 1 1 1 1 1 0 0 0 0 0 0 0 1 1 1 0 0 1 1 0 1 1 0 1 1 1 0 1 0 1 0 1 0 0 0 1 1 0 1 0 0 1 1 1 0 0 0 0 1 1 1 0 1 0 1 1 1 0 1 0 0 0 1 0 1 1 0 1 0 0 1 1 0 0 1 0 1 1 0 0 0 0 0 0 1 0 1 0 1 1 1 1 0 1 0 0 1 0 0 1 1 0 0 0 0 1 0 0 0 0 1 0 0 1 0 0 0 1 0 0 0 1 1 0 1 0 0 1 0 0 1 1 1 1 0 0 0 1 1 0 0 0 0 1 0 1 1 0 0 0 1 1 0 1 0 1 0 0
+W1[10]: 0 1 0 0 0 1 1 0 0 1 0 0 1 0 0 1 0 1 1 1 1 0 1 0 0 1 0 0 1 1 0 0 1 0 1 0 0 0 1 1 1 1 0 1 0 1 0 1 0 1 0 0 1 0 0 1 1 0 0 1 1 0 0 1 0 0 1 0 0 0 1 0 1 0 0 0 1 1 0 0 1 1 1 1 1 0 0 1 1 0 1 1 1 0 1 0 1 0 1 1 0 0 1 1 0 0 0 1 1 0 1 1 1 0 0 0 0 1 0 1 1 0 0 0 0 0 1 0 1 0 1 0 1 1 1 0 1 0 1 1 0 0 0 0 1 0 1 0 0 1 0 1 1 0 0 0 1 0 1 0 1 1 1 1 1 0 1 0 0 0 0 1 1 1 1 1 0 1 0 1 1 1 1 0 1 1 1 1 0 1 1 0 1 1 1 1
+W1[11]: 0 0 1 1 0 1 0 1 0 1 1 1 0 1 1 0 1 1 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 1 0 0 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 0 1 1 1 1 0 1 0 1 1 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 0 1 1 0 1 0 0 0 1 1 0 0 0 0 0 1 0 0 1 1 0 1 1 1 1 1 0 1 0 0 0 1 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0 0 0 1 1 1 1 0 1 0 1 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 1 0 0 0 1 1 1 1 0 0 1 1
+W1[12]: 1 0 1 1 1 1 1 1 1 0 0 0 0 1 0 1 0 0 0 1 1 1 1 0 1 1 1 0 1 1 0 1 0 0 1 1 0 1 0 0 0 0 1 0 1 1 1 0 0 0 1 0 0 1 1 0 1 1 1 0 1 1 0 0 1 0 1 0 0 0 1 0 0 1 0 0 1 0 1 1 1 1 0 1 0 0 0 0 0 0 1 1 1 0 0 0 1 1 0 1 0 0 0 0 1 1 1 0 0 0 1 1 0 0 1 0 1 1 0 0 0 1 1 0 0 1 1 1 0 0 1 0 1 0 0 0 1 0 0 1 0 1 1 1 1 1 1 0 1 1 1 1 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 1 1 0 1 0 1 0 0 0 0 0 1 0 1 0 1 0 0 1 1 0 1 1 1 1 1 1 1
+W1[13]: 1 1 1 0 1 0 1 1 0 1 0 1 1 1 0 1 0 1 0 1 1 1 0 1 1 1 1 1 0 0 1 1 0 0 0 1 0 1 0 0 0 0 1 0 0 0 1 0 0 1 1 1 0 0 1 0 1 0 1 1 0 0 1 0 0 0 0 1 0 1 1 1 0 1 1 1 0 0 0 1 0 1 0 0 0 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 0 0 1 0 0 0 0 1 0 1 0 1 1 0 0 1 0 0 1 0 0 0 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 0 1 0 1 0 1 0 1 0 1 0 0 0 0 0 0 0 0 1 1 0 1 1 0 1 1 1 1 1 1 1 0 1 1 1 0 1 0 0 0 0 1 0 0 1 0 1 0 1 0 0 0 0 1 0 1
+W1[14]: 1 0 0 1 0 0 0 0 1 1 1 1 0 0 0 0 1 1 0 0 1 0 0 1 0 0 0 1 1 1 0 0 0 0 1 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 1 1 0 1 0 0 0 1 1 0 1 0 1 1 0 0 1 0 1 1 1 0 1 1 1 0 1 0 0 0 1 1 1 1 0 1 1 0 0 0 1 1 0 1 1 0 0 0 1 1 0 0 1 0 1 1 0 0 1 0 1 0 1 1 1 1 1 1 0 1 0 0 0 0 0 1 0 0 0 1 1 1 0 0 0 1 0 1 1 0 0 1 1 0 1 0 0 1 0 1 1 1 0 0 0 1 0 0 1 0 1 1 0 0 0 0 1 0 0 1 0 1 0 1 0 0 1 0 0 0 1 1 1 0 1 0 1 0 0 0 1 1 1
+W1[15]: 1 0 0 1 0 0 0 1 1 0 0 1 0 1 1 1 1 0 1 1 1 0 1 1 1 0 0 0 0 0 0 0 1 0 1 1 0 1 0 1 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 1 1 0 1 0 1 1 1 0 1 1 0 1 1 0 1 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 0 1 0 1 0 0 1 1 0 1 1 1 0 0 0 0 1 0 0 1 1 1 1 0 1 1 1 1 0 0 0 0 0 0 1 1 1 0 1 0 1 0 0 0 1 1 1 0 1 1 1 1 1 0 0 0 1 0 0 1 1 0 1 1 1 1 1 0 0 1 1 0 1 0 1 0 0 0 1 0 0 1 1 0 1 1 0 1 0 0 1 0 1
+W1[16]: 1 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 1 0 1 1 1 1 1 0 1 1 1 1 0 0 1 1 0 1 1 0 0 0 1 1 1 1 1 0 1 1 0 0 1 1 0 0 0 0 1 1 0 1 0 1 1 1 1 0 0 1 0 0 0 0 1 1 1 0 1 1 1 1 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 1 0 1 1 1 1 1 1 1 0 1 0 1 0 1 0 0 1 1 1 1 1 0 0 1 1 1 0 1 0 0 0 1 0 1 1 1 0 1 1 1 0 0 1 0 1 1 0 1 0 0 1 1 0 0 0 1 0 1 0 0 0 1 0 1 1 0 1 0 1 1 1 1 0 1 0 0 1 1 1 0 0 1 0 1 0 0 1 1 0 1 1 1 1 1 0 0 0
+W1[17]: 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 1 1 1 0 0 1 1 1 1 1 0 1 1 0 1 1 0 0 0 1 1 0 0 0 0 0 0 1 1 1 0 0 1 0 0 0 0 0 1 1 1 1 0 0 1 1 0 1 0 1 0 0 0 0 1 0 0 1 0 0 0 0 1 0 1 1 0 1 0 1 1 0 0 1 1 1 0 1 1 1 0 0 1 0 1 0 1 0 1 1 0 0 0 1 1 0 0 0 1 1 1 1 1 1 0 0 1 1 1 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 1 0 1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1 1 0 0 1 0 1 0 1 1 1 1 1 0 0
+W1[18]: 0 0 0 0 1 1 0 0 1 0 1 1 1 1 0 1 1 0 1 0 0 1 1 0 0 1 1 0 0 0 0 1 0 0 1 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 1 1 0 0 1 0 1 1 0 0 0 0 0 1 0 1 0 1 1 0 0 1 1 1 1 0 1 0 0 0 1 1 0 1 0 1 0 0 1 0 1 1 1 1 0 0 1 0 1 1 0 0 1 0 1 0 0 1 1 1 0 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 0 1 1 0 1 0 0 1 1 0 1 0 1 1 0 1 0 1 1 0 1 1 0 1 1 1 0 0 0 0 0
+W1[19]: 1 1 1 1 1 0 0 0 0 1 1 1 0 1 0 1 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 1 1 1 1 1 1 1 0 0 0 0 0 1 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 0 0 1 0 1 0 1 0 1 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 1 0 0 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 1 0 1 1 0 1 1 0 0 1 0 1 1 1 0 1 0 0 0 1 0 0 1 1 0 0 1 0 1 1 1 1 1 1 1 0 0 0 1 1 1 0 0 0 1 1 0 1 0 0 0 1 1 0 0 0
+W1[20]: 0 1 1 0 0 1 1 1 1 1 0 0 0 0 0 1 0 1 1 1 1 1 1 1 0 1 1 0 0 0 1 0 1 1 0 0 1 0 0 1 0 0 1 0 1 1 0 0 0 0 1 0 0 1 0 0 0 1 1 0 0 1 1 0 0 1 1 1 1 0 1 1 1 1 1 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0 0 1 1 0 1 1 0 0 1 1 1 1 1 1 0 1 0 1 0 0 1 0 1 0 1 0 1 0 1 0 1 1 0 1 1 1 1 1 0 0 0 0 1 0 1 0 1 1 0 0 0 1 1 0 1 0 1 0 0 1 1 1 0 1 1 0 0 1 0 0 1 1 1 1 0 0 0 0 0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 0 1 0 0 1 1 1 0 0 0 1 1 1
+W1[21]: 1 0 1 1 1 1 1 1 0 0 0 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0 1 0 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 1 1 0 0 1 1 0 1 0 0 1 0 0 1 0 1 0 1 0 0 0 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 0 1 0 0 1 0 1 1 0 0 1 1 0 0 1 1 1 1 0 1 1 1 0 0 1 1 1 0 1 0 1 0 1 1 1 0 0 1 0 0 0 1 1 0 1 0 1 1 1 1 0 0 0 1 0 1 0 0 0 0 1 1 0 0 0 1 1 1 1 0 1 1 0 0 1 0 0 0 0 1 0 1 1 0 0 1 1 0 1 1 1 1 0 1 0 1 1 0 0 1 1 1 1 1 1 0 0 0 1 0 0 1 1 0 0 0 0
+W1[22]: 0 0 1 1 1 0 1 0 1 0 0 1 1 1 1 1 0 0 0 1 0 0 0 0 1 1 0 1 1 1 0 0 0 0 1 1 1 1 1 1 0 1 0 0 1 0 1 1 1 0 0 1 0 1 1 1 1 0 1 0 1 0 1 1 1 1 1 0 1 0 1 0 1 1 1 1 1 0 0 0 1 0 1 0 1 1 0 1 1 0 1 0 1 0 1 0 1 1 0 1 1 1 0 0 0 0 1 1 0 1 1 0 1 1 0 0 1 0 1 1 0 1 1 0 0 0 1 1 1 1 0 1 1 0 1 1 1 1 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 1 0 0 0 0 1 1 1 0 0 0 0 0 0 0 1 1 0 1 0 1 1 1 0 1 1 1 0 1 1 1 0 0 1 1 1 0 1 1 1 1 1 1
+W1[23]: 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 1 1 0 1 1 0 0 1 0 0 0 1 1 1 1 0 1 0 0 0 1 0 1 1 1 0 1 0 0 0 1 1 1 0 0 1 0 1 1 1 1 1 1 0 1 1 1 0 1 0 0 0 0 0 1 1 0 1 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 1 1 1 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 1 0 1 0 1 1 1 1 0 0 0 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 1 1 1 0 1 0 0 1 0 0 1 1 0 1 0 0 1 0 0 1 1 1 1 0 0 0 1 0 1 0 1 0 1 1 0 0 1 1 1 1 1 0 1 1 1 1
+W1[24]: 1 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 0 1 0 0 1 1 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 1 0 1 1 1 0 0 0 1 0 1 0 1 0 0 0 1 1 0 0 1 1 0 0 0 0 0 0 1 0 1 1 0 0 1 1 0 0 1 0 1 0 1 1 0 1 1 0 1 0 0 0 1 1 0 1 0 1 1 0 0 0 0 1 1 1 0 0 1 0 0 0 0 0 1 1 1 1 0 0 1 0 0 1 1 0 0 0 1 0 1 1 0 1 0 0 0 0 1 1 1 0 0 0 0 1 0 0 1 0 1 1 1 1 0 1 1 1 0 0 1 0 1 1 0 0 0 1 1 1 0 1 0 1 1 1 0 1 1 0 0 0 0 0 0 0 1 0 0 1
+W1[25]: 0 0 1 1 0 0 1 1 0 1 0 1 0 0 1 0 0 1 0 0 0 0 0 1 0 1 1 1 1 0 1 0 1 1 0 0 0 1 1 1 1 0 0 0 0 1 0 1 1 0 1 1 0 0 0 1 1 1 0 1 1 0 0 0 0 1 1 0 1 0 0 1 0 0 1 1 1 0 0 0 1 1 0 0 1 0 1 0 1 1 0 0 1 1 1 1 1 1 0 0 1 1 1 0 0 1 0 0 1 1 1 0 1 0 1 1 1 0 0 0 1 0 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 1 0 0 1 1 1 1 1 0 1 1 0 1 1 1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 0 1 0 1 0 1 1 0 0 0 1
+W1[26]: 0 0 0 0 0 1 0 1 1 1 0 0 1 0 1 1 1 0 1 0 1 0 1 1 0 0 0 1 0 0 0 0 0 1 1 1 0 0 0 1 1 1 0 1 0 0 1 1 1 1 0 0 0 1 0 0 0 0 0 1 1 0 0 1 1 0 0 0 1 1 0 0 1 1 1 1 1 0 1 0 1 0 1 1 0 0 0 0 1 1 0 1 0 0 0 1 1 1 1 1 0 0 0 1 1 1 1 0 1 1 1 1 0 0 1 1 1 1 0 1 1 0 0 0 1 1 1 1 0 0 0 1 0 1 0 0 0 0 1 0 1 1 0 1 1 0 0 0 1 0 1 0 0 0 0 0 0 1 1 0 1 1 0 1 1 0 0 1 1 0 0 1 1 1 1 0 1 0 1 1 1 1 1 1 0 0 0 1 0 0 1 0 1 1 0 0
+W1[27]: 0 0 0 1 0 0 1 0 0 0 1 0 1 1 0 1 0 1 0 0 0 0 0 1 0 1 0 0 0 1 0 1 1 0 1 1 0 0 1 1 0 0 1 1 0 0 0 1 1 1 0 1 0 1 1 1 0 0 1 1 0 0 1 1 0 0 1 0 0 1 0 1 1 0 0 0 0 1 1 1 1 0 0 0 1 1 1 0 1 0 1 1 1 1 1 1 0 0 0 1 1 1 0 0 0 0 0 1 1 1 1 0 0 0 0 1 1 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 0 0 1 1 1 1 0 0 1 1 1 0 0 0 1 0 0 1 0 1 1 1 0 0 0 1 1 0 0 1 0 1 1 0 1 0 1 1 1 0 1 1 0 1 1 0 1 1 0 0 0 1 0 1 0 0 1 1 0 1 1 1 1
+W1[28]: 1 0 0 1 0 1 0 0 1 1 0 1 0 1 1 1 0 0 0 1 1 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 0 1 0 0 0 0 1 0 1 0 0 1 0 0 0 1 1 0 0 1 0 1 0 1 0 0 1 1 0 0 0 0 0 0 0 0 1 0 1 1 1 1 0 0 1 0 0 1 1 1 0 0 0 0 1 0 1 1 0 0 0 1 1 0 0 1 0 0 1 1 0 1 1 0 1 1 1 1 1 0 1 0 0 1 1 1 1 0 0 1 0 1 1 1 1 0 1 0 1 1 1 0 0 0 1 1 0 0 0 1 1 0 0 0 0 0 1 0 0 0 1 0 1 0 1 1 0 1 1 1 1 0 0 0 1 0
+W1[29]: 0 0 0 1 1 1 0 1 0 1 0 1 0 1 1 1 1 1 0 1 1 0 1 0 0 0 1 0 1 0 0 1 0 1 0 0 0 1 0 0 1 0 1 1 0 0 1 0 1 1 0 1 0 1 1 1 1 0 0 1 0 0 1 1 0 1 1 1 1 1 0 0 0 1 0 1 0 1 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 0 1 0 1 0 0 1 0 0 1 0 0 1 1 0 1 1 1 1 0 1 0 0 1 0 0 1 0 0 0 1 0 1 0 1 1 1 1 1 0 1 0 0 0 0 1 1 1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 1 0 1 1 1 0 0 0 1 0 0 0 1 1 1 0 0 1 0 0 1 1 1 1 1 0 0 0 1 0 1 0 1 1 1 1 0 1 1 0
+W1[30]: 0 0 0 1 0 1 0 1 0 1 0 1 1 0 1 0 0 0 0 1 1 0 1 0 0 0 0 0 0 1 0 0 1 0 0 1 0 1 0 0 1 1 1 0 1 0 1 1 0 1 1 1 1 0 0 1 1 1 1 0 1 0 1 1 0 0 1 0 0 1 0 1 1 1 1 0 1 1 1 0 1 0 0 1 1 0 1 0 0 0 0 0 0 1 1 0 0 0 0 1 0 0 0 0 1 1 0 1 0 1 0 1 0 0 0 1 1 0 0 1 1 0 1 1 0 0 1 0 1 0 0 1 0 0 1 1 1 0 0 0 0 0 1 1 0 1 1 0 0 1 0 0 0 0 1 1 0 1 1 1 1 0 1 0 1 1 0 1 1 0 1 1 0 0 1 1 1 0 1 0 0 0 1 1 1 0 1 1 1 0 0 0 1 1 0 1
+W1[31]: 1 1 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 0 1 0 1 0 1 1 1 0 0 0 1 1 0 1 1 1 0 0 0 1 0 0 1 1 0 1 1 0 0 0 1 1 0 0 0 0 0 0 0 1 0 1 1 0 0 1 0 1 0 1 0 1 1 0 1 0 0 0 0 1 0 1 0 1 0 0 0 0 0 0 0 1 0 1 1 1 0 1 0 0 1 1 1 0 1 1 0 1 1 0 1 1 0 0 1 0 1 1 0 1 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 1 1 0 1 0 0 0 0 1 0 0 1 0 0 1 1 0 0 0 0 1 1 0 1 1 0 0 1 0 1 0 0 1 1 0 1 1 0 1 0 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1 0 0 1 0
+
+--- Pesos finales W1 ---
+W1[00]: 0 0 0 1 1 1 1 0 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 1 1 0 0 1 1 0 1 0 1 0 0 0 0 0 0 1 0 1 1 1 1 1 0 0 0 0 0 0 0 1 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 1 1 1 0 1 1 1 1 1 1 1 1 0 0 0 0 1 0 0
+W1[01]: 1 0 1 0 0 0 0 1 1 1 0 0 1 1 1 0 1 1 0 1 0 0 0 0 0 1 0 1 1 1 0 1 0 0 0 1 0 1 0 1 1 1 0 0 0 0 0 0 0 1 1 0 1 0 1 1 0 0 1 1 0 0 1 1 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 1 1 1 0 0 0 1 1 1 1 0 0 1 0 0 0 1 0 1 0 0 1 0 0 0 1 1 1 1 1 0 1 0 0 0 0 1 0 1 1 0 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0 0 1 1 1 0 1 1 0 0 0 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 0 1 1 1 1 1 0 1 0 1 1 0 1 0 1 1 1 1 0 1 0 1 0 0 1 1 0 0 1 1 1 1
+W1[02]: 0 1 1 1 0 1 1 0 0 0 0 1 0 1 1 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 1 0 0 1 1 1 0 1 1 0 0 0 0 0 1 1 0 1 1 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 1 1 1 1 0 0 0 0 1 0 1 1 0 1 0 1 0 0 1 1 1 0 0 1 1 1 0 1 0 1 0 1 1 1 1 0 0 0 1 0 0 0 0 0 1 1 1 0 0 1 0 1 0 1 1 1 0 0 1 1 0 0 1 1 0 0 0 0 0 0 1 1 1 0 0 1 1 0 1 0 0 0 0 1 1 1 1 1 1 1 0 0 0 1 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 1
+W1[03]: 1 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 0 1 0 1 1 0 0 1 0 0 1 0 1 1 1 1 0 0 0 0 0 1 0 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 0 1 0 1 0 1 1 0 0 1 1 0 0 1 1 1 1 0 1 0 1
+W1[04]: 1 0 1 0 1 1 0 0 0 0 1 1 0 0 1 1 1 1 0 0 0 0 0 0 0 0 0 1 0 1 0 1 1 1 0 1 0 0 0 1 1 1 1 1 0 0 0 1 1 1 0 0 0 0 1 0 0 0 1 0 0 0 0 1 1 1 1 0 0 0 0 0 1 0 1 1 1 0 0 0 1 0 0 1 1 1 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 1 1 0 0 1 0 1 0 0 0 1 1 0 1 1 0 1 0 0 0 1 1 1 1 1 0 1 0 0 0 0 0 1 0 1 0 1 0 0 0 0 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1 0 1 1 0 0 0 1 0 1 0 1 1 0 1 0 1 1 1
+W1[05]: 0 0 0 0 0 1 1 0 1 0 0 0 1 0 0 1 1 0 1 0 0 1 0 1 1 0 0 0 0 1 1 1 0 1 1 1 0 1 1 0 0 0 1 0 1 0 0 1 1 0 1 1 0 1 0 1 1 0 1 1 1 0 1 0 0 0 1 0 0 0 0 0 1 1 0 1 0 1 1 1 0 0 1 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 1 1 0 0 1 1 0 0 1 1 0 0 1 0 1 1 0 1 0 1 0 1 1 0 0 0 1 0 1 1 1 1 0 0 1 1 0 1 1 1 1 0 0 0 1 1 1 0 1 1 1 0 1 1 0 0 0 1 1 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 1 1 1 0 1 0 1 1 0 1 0 0 0 1 1 0 0 1 0 1 0 0
+W1[06]: 0 0 1 1 1 1 1 1 0 1 1 0 1 0 1 0 1 0 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 0 1 1 0 1 1 0 0
+W1[07]: 0 1 0 1 1 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 1 1 1 0 1 0 1 0 0 1 0 1 1 1 1 0 0 1 0 0 1 0 1 1 0 0 1 1 0 1 1 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 0 0 1 0 1 0 1 1 1 0 1 0 0 1 0 0 0 0 0 1 0 1 1 0 0 1 0 1 1 1 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 1 1 1 1 0 1 1 1 1 1 1 0 1 0 1 1 0 1 0 0 0 0 1 1 1 0 0 0 0 0 1 1 0 0 1 0 0 1 0 1 0 0 1 1 0 0 0 0 1 0 1 1 1 1 0 0 1 0 1 1 1 0 1 0 1 1 1
+W1[08]: 1 1 0 0 1 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 0 0 1 0 1 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 1 0 0 0 1 1 1 1 1 0 0 1 0 0 0 0 0 0 0 1 0 1 0 1
+W1[09]: 0 0 0 0 0 0 0 1 0 1 1 0 0 1 0 0 1 1 1 1 1 1 0 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 1 1 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 0 0 1 0 1 0 0 0 1 0 1 1 0 0 0 0 0 1 0 0 1 0 1 1 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 1 0 0 1 1 1 1 0 0 0 1 1 0 0 0 0 1 0 1 1 0 0 0 1 1 0 1 0 1 0 0
+W1[10]: 0 1 0 0 0 1 1 0 0 1 0 0 1 0 0 1 0 1 1 1 1 0 1 0 0 1 0 0 1 1 0 0 1 0 1 0 0 0 1 1 1 1 0 1 0 1 0 1 0 1 0 0 1 0 0 1 1 0 0 1 1 0 0 1 0 0 1 0 0 0 1 0 1 0 0 0 1 1 0 0 1 1 1 1 1 0 0 1 1 0 1 1 1 0 1 0 1 0 1 1 0 0 1 1 0 0 0 1 1 0 1 1 1 0 0 0 0 1 0 1 1 0 0 0 0 0 1 0 1 0 1 0 1 1 1 0 1 0 1 1 0 0 0 0 1 0 1 0 0 1 0 1 1 0 0 0 1 0 1 0 1 1 1 1 1 0 1 0 0 0 0 1 1 1 1 1 0 1 0 1 1 1 1 0 1 1 1 1 0 1 1 0 1 1 1 1
+W1[11]: 0 0 1 1 0 1 0 1 0 1 1 1 0 1 1 0 1 1 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 1 0 0 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 0 1 1 1 1 0 1 0 1 1 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 0 1 1 0 1 0 0 0 1 1 0 0 0 0 0 1 0 0 1 1 0 1 1 1 1 1 0 1 0 0 0 1 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0 0 0 1 1 1 1 0 1 0 1 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 1 0 0 0 1 1 1 1 0 0 1 1
+W1[12]: 1 0 1 1 1 1 1 1 1 0 0 0 0 1 0 1 0 0 0 1 1 1 1 0 1 1 1 0 1 1 0 1 0 1 1 1 1 1 0 0 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 0 1 0 0 1 1 1 1 1 1 1 1 1 0 1 0 0 0 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 0 0 1 0 1 0 1 0 1 0 0 1 1 0 1 1 1 1 1 1 1
+W1[13]: 1 1 1 0 1 0 1 1 0 1 0 1 1 1 0 1 0 1 0 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 1 0 1 1 1 1 1 1 0 1 0 1
+W1[14]: 1 0 0 1 0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 0 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 0 1 1 1
+W1[15]: 1 0 0 1 0 0 0 1 1 0 0 1 0 1 1 1 1 0 1 1 1 0 1 1 1 0 0 0 0 0 0 0 1 1 1 1 1 1 0 1 0 1 0 0 0 0 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 0 1 0 0 0 1 0 0 1 1 0 1 1 0 1 0 0 1 0 1
+W1[16]: 1 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 0 1 0 0 1 1 1 1 1 1 1 1 0 0 0
+W1[17]: 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 0 1 1 0 0 1 1 1 1 1 1 1 1 1 0 0
+W1[18]: 0 0 0 0 1 1 0 0 1 0 1 1 1 1 0 1 1 0 1 0 0 1 1 0 0 1 1 0 0 0 0 1 0 0 1 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 1 0 1 0 0 0 1 1 0 0 1 0 1 1 0 0 1 0 0 1 0 1 0 1 1 0 0 1 1 1 1 0 1 0 0 0 1 1 0 1 0 1 1 1 1 0 1 1 1 1 0 0 1 0 1 1 1 0 1 0 1 0 0 1 1 1 0 0 0 1 0 0 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0 1 1 0 1 0 0 1 1 0 1 0 1 1 0 1 0 1 1 0 1 1 0 1 1 1 0 0 0 0 0
+W1[19]: 1 1 1 1 1 0 0 0 0 1 1 1 0 1 0 1 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0
+W1[20]: 0 1 1 0 0 1 1 1 1 1 0 0 0 0 0 1 0 1 1 1 1 1 1 1 0 1 1 0 0 0 1 0 1 1 1 1 1 1 0 1 0 0 1 0 1 1 1 1 1 1 1 1 0 1 0 0 0 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 0 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 0 1 0 1 1 1 1 1 0 0 0 0 0 1 0 0 1 1 0 1 0 1 1 0 0 1 1 0 1 0 0 1 1 1 0 0 0 1 1 1
+W1[21]: 1 0 1 1 1 1 1 1 0 0 0 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0 1 0 0 0 0 1 0 1 1 1 1 1 0 0 0 0 0 1 1 0 0 1 1 1 1 1 1 1 0 0 1 0 1 0 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 0 1 0 1 1 1 0 0 1 1 0 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 0 0 0 0 1 1 1 1 0 0 1 1 0 1 1 1 1 0 1 1 1 1 0 0 1 1 1 1 1 1 0 0 0 1 0 0 1 1 0 0 0 0
+W1[22]: 0 0 1 1 1 0 1 0 1 0 0 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 1 1 1 1 1 1 1 0 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1
+W1[23]: 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 1 1 0 1 1 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 0 1 1 1 1 1 1 1 1 1 1
+W1[24]: 1 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 0 0 1
+W1[25]: 0 0 1 1 0 0 1 1 0 1 0 1 0 0 1 0 0 1 1 1 1 0 0 1 0 1 1 1 1 0 1 0 1 1 1 0 0 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 0 0 1 1 1 0 1 1 1 1 1 1 1 1 0 1 0 0 1 0 1 1 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 1 1 1 1 1 0 1 0 1 0 1 1 0 1 0 1 1 1 0 0 1 0 1 0 1 0 0 0 1 0 1 0 1 1 0 0 0 1
+W1[26]: 0 0 0 0 0 1 0 1 1 1 0 0 1 0 1 1 1 0 1 0 1 0 1 1 1 0 0 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 0 0 1 0 1 1 0 0
+W1[27]: 0 0 0 1 0 0 1 0 0 0 1 0 1 1 0 1 0 1 1 1 1 1 1 1 1 1 0 0 0 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 0 1 1 1 1 1 1 1 1 1 1
+W1[28]: 1 0 0 1 0 1 0 0 1 1 0 1 0 1 1 1 0 0 1 1 1 1 1 1 0 1 0 0 1 0 0 1 1 1 1 1 1 1 1 0 1 0 0 0 0 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 0 1 1 1 1 1 1 1 1 1 0 1 0 1 1 0 1 1 1 1 0 0 0 1 0
+W1[29]: 0 0 0 1 1 1 0 1 0 1 0 1 0 1 1 1 1 1 0 1 1 0 1 0 0 0 1 0 1 0 0 1 1 1 1 1 1 1 0 0 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 0 1 0 1 1 0 1 0 1 1 1 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 1 1 1 1 0 1 0 0 1 1 1 1 1 1 0 1 0 1 0 1 1 1 1 1 1 1 1 1 1 0 1 1 1 0 0 0 1 1 1 1 1 1 1 0 1 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 0 1 0 1 1 1 1 0 1 1 0
+W1[30]: 0 0 0 1 0 1 0 1 0 1 0 1 1 0 1 0 0 0 1 1 1 1 1 1 1 0 0 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 0 1 1 1 1 1 1 1 1 0 1
+W1[31]: 1 1 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 0 1 1 1 0 1 1 1 0 0 0 1 1 0 1 1 1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 1 1 0 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 0 0 0 1 1 1 0 1 0 0 0 0 1 1 0 1 0 0 0 1 0 0 1 0
+
+--- Pesos Iniciales W2 ---
+W2[00]: 0 0 1 0 0 0 0 0 1 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 1 0 0 1
+W2[01]: 0 0 0 1 0 0 1 0 0 1 0 1 0 1 1 1 1 0 0 1 0 1 0 0 1 1 0 0 0 0 0 1
+W2[02]: 0 0 1 1 1 0 0 1 0 1 0 0 1 1 0 1 1 0 0 1 0 1 1 0 0 0 1 1 0 0 1 0
+W2[03]: 1 1 0 0 1 1 0 1 0 1 1 1 0 0 0 1 1 0 0 0 0 0 1 0 1 1 1 1 1 0 1 0
+W2[04]: 1 0 1 1 0 0 0 1 0 0 0 1 1 0 1 1 0 1 1 0 1 1 1 0 1 1 0 0 0 0 0 0
+W2[05]: 0 1 1 0 1 1 0 0 1 1 1 0 1 0 0 1 0 1 0 1 1 1 0 1 1 0 0 1 0 0 0 0
+W2[06]: 0 1 0 0 0 1 1 1 0 0 1 1 0 0 1 1 1 0 0 1 1 0 0 0 0 1 1 1 1 0 1 1
+W2[07]: 0 1 0 0 0 0 0 1 0 0 1 1 0 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 1 0 1
+W2[08]: 1 0 1 1 1 1 0 0 1 0 1 1 1 1 0 1 0 0 1 0 1 1 0 1 1 0 1 0 0 1 1 0
+W2[09]: 0 1 0 0 1 1 1 1 0 0 1 1 0 1 0 1 1 1 0 1 0 1 1 1 0 1 0 0 0 0 1 0
+
+--- Pesos finales W2 ---
+W2[00]: 0 0 1 0 0 0 0 0 1 1 0 0 0 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 1 0 0 1
+W2[01]: 0 0 0 1 0 0 1 0 0 1 0 1 0 1 1 1 1 0 0 1 0 1 0 0 1 1 0 0 0 0 0 1
+W2[02]: 0 0 1 1 1 0 0 1 0 1 0 0 1 1 0 1 1 0 0 1 0 1 1 0 0 0 1 1 0 0 1 0
+W2[03]: 1 1 0 0 1 1 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+W2[04]: 1 0 1 1 0 0 0 1 0 0 0 1 1 0 1 1 0 1 1 0 1 1 1 0 1 1 0 0 0 0 0 0
+W2[05]: 0 1 1 0 1 1 0 0 1 1 1 0 1 0 0 1 0 1 0 1 1 1 0 1 1 0 0 1 0 0 0 0
+W2[06]: 0 1 0 0 0 1 1 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1
+W2[07]: 0 1 0 0 0 0 0 1 0 0 1 1 0 1 0 0 1 0 1 0 0 1 1 0 0 1 0 1 0 1 0 1
+W2[08]: 1 0 1 1 1 1 0 0 1 0 1 1 0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 1 0 0
+W2[09]: 0 1 0 0 1 1 1 1 0 0 1 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 0 0 0 1 0
+
+Simulacion terminada correctamente: Pesos actualizados!
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 14.878 seconds; peak allocated memory: 265.148 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 20s
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 10.653 seconds; peak allocated memory: 265.184 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 16s

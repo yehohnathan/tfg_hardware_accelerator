@@ -17,10 +17,10 @@ constexpr int N_OUTPUT  = 10;    // número de neuronas de salida
 // ---------------------------------------------------------------------------
 // Tipos de datos
 // ---------------------------------------------------------------------------
-// bin_t   : representación binaria de pesos/activaciones, valores ±1
-// acc_t   : acumulador en punto fijo para la multiplicación y suma
-using bin_t = ap_fixed<8,8>;
-using acc_t = ap_fixed<12,12>;
+// bin_t : pesos/activaciones en {0,1}
+// acc_t : acumulador para productos y sumas
+using bin_t = int;   // 0-1
+using acc_t = int;       // entero con rango más que suficiente
 
 // ---------------------------------------------------------------------------
 // API de la librería

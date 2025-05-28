@@ -1,4 +1,0 @@
-Running: xsim.dir/train_step/xsimk.exe -simmode gui -wdb train_step.wdb -simrunnum 0 -socket 55041
-Design successfully loaded
-Design Loading Memory Usage: 32248 KB (Peak: 32248 KB)
-Design Loading CPU Usage: 890 ms
