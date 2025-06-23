@@ -3258,3 +3258,153 @@
 05/25/25 13:46:28: Socket received request to stop server.
 05/25/25 13:46:28: Dispatch Server: do_await_stop
 05/25/25 13:46:28: SERVER: destructor for server bound to port 62191
+06/10/25 16:27:09: Running xcd server. This server was built by gradle.
+06/10/25 16:27:09: Server was asked to start on port: '51482'
+06/10/25 16:27:09: Server is using token UUID: '780e9afb-fedd-415f-9478-1c03f97218e7'
+06/10/25 16:27:09: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+06/10/25 16:27:09: Attempting to start server on port '51482'
+06/10/25 16:27:09: Running Dispatch Server
+06/10/25 16:27:09: Version 2.2.0
+06/10/25 16:27:11: Dispatch Server: Accepted socket connection from client
+06/10/25 16:27:11: Starting Socket connection
+06/10/25 16:27:11: EXCHANGE_TOKEN received, server token: 780e9afb-fedd-415f-9478-1c03f97218e7, passed token: 780e9afb-fedd-415f-9478-1c03f97218e7
+06/10/25 16:27:11: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+06/10/25 16:27:11: SESSION_MGR: creating session with session uuid: '1af44dad-0db4-4fde-b550-f03292b135eb' and name 'vitis-run_compile_train_step'
+06/10/25 16:27:11: KERNEL_SVC: creating session with uuid: '1af44dad-0db4-4fde-b550-f03292b135eb' and name 'vitis-run_compile_train_step'
+06/10/25 16:27:11: GUIDANCE_SMGR: creating guidance session with uuid: '1af44dad-0db4-4fde-b550-f03292b135eb' and name 'vitis-run_compile_train_step'
+06/10/25 16:27:11: SYSTEM_DIAGRAM: creating session with uuid: '1af44dad-0db4-4fde-b550-f03292b135eb' and name 'vitis-run_compile_train_step'
+06/10/25 16:27:22: Dispatch Server: Accepted socket connection from client
+06/10/25 16:27:22: Starting Socket connection
+06/10/25 16:27:26: SESSION_MGR: closing session for UUID '1af44dad-0db4-4fde-b550-f03292b135eb' with name 'vitis-run_compile_train_step'
+06/10/25 16:27:26: KERNEL_SVC: closing session for UUID '1af44dad-0db4-4fde-b550-f03292b135eb' with name 'vitis-run_compile_train_step'
+06/10/25 16:27:26: GUIDANCE_SMGR: closing session for UUID '1af44dad-0db4-4fde-b550-f03292b135eb' with name 'vitis-run_compile_train_step'
+06/10/25 16:27:26: SYSTEM_DIAGRAM: closing session for UUID '1af44dad-0db4-4fde-b550-f03292b135eb' with name 'vitis-run_compile_train_step'
+06/10/25 16:27:27: STOP_SERVER received, server token: 780e9afb-fedd-415f-9478-1c03f97218e7, passed token: 780e9afb-fedd-415f-9478-1c03f97218e7
+06/10/25 16:27:27: Socket received request to stop server.
+06/10/25 16:27:27: Dispatch Server: do_await_stop
+06/10/25 16:27:27: SERVER: destructor for server bound to port 51482
+06/17/25 08:07:48: Running xcd server. This server was built by gradle.
+06/17/25 08:07:48: Server was asked to start on port: '62573'
+06/17/25 08:07:48: Server is using token UUID: '974920cf-53de-4b21-9835-6b1c00f7bf28'
+06/17/25 08:07:48: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+06/17/25 08:07:48: Attempting to start server on port '62573'
+06/17/25 08:07:48: Running Dispatch Server
+06/17/25 08:07:48: Version 2.2.0
+06/17/25 08:07:49: Dispatch Server: Accepted socket connection from client
+06/17/25 08:07:49: Starting Socket connection
+06/17/25 08:07:49: EXCHANGE_TOKEN received, server token: 974920cf-53de-4b21-9835-6b1c00f7bf28, passed token: 974920cf-53de-4b21-9835-6b1c00f7bf28
+06/17/25 08:07:49: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+06/17/25 08:07:49: SESSION_MGR: creating session with session uuid: '7777b2fa-4bfb-4f80-b1cb-2b1ef6610ae2' and name 'vitis-run_compile_train_step'
+06/17/25 08:07:49: KERNEL_SVC: creating session with uuid: '7777b2fa-4bfb-4f80-b1cb-2b1ef6610ae2' and name 'vitis-run_compile_train_step'
+06/17/25 08:07:49: GUIDANCE_SMGR: creating guidance session with uuid: '7777b2fa-4bfb-4f80-b1cb-2b1ef6610ae2' and name 'vitis-run_compile_train_step'
+06/17/25 08:07:49: SYSTEM_DIAGRAM: creating session with uuid: '7777b2fa-4bfb-4f80-b1cb-2b1ef6610ae2' and name 'vitis-run_compile_train_step'
+06/17/25 08:08:01: Dispatch Server: Accepted socket connection from client
+06/17/25 08:08:01: Starting Socket connection
+06/17/25 08:08:06: SESSION_MGR: closing session for UUID '7777b2fa-4bfb-4f80-b1cb-2b1ef6610ae2' with name 'vitis-run_compile_train_step'
+06/17/25 08:08:06: KERNEL_SVC: closing session for UUID '7777b2fa-4bfb-4f80-b1cb-2b1ef6610ae2' with name 'vitis-run_compile_train_step'
+06/17/25 08:08:06: GUIDANCE_SMGR: closing session for UUID '7777b2fa-4bfb-4f80-b1cb-2b1ef6610ae2' with name 'vitis-run_compile_train_step'
+06/17/25 08:08:06: SYSTEM_DIAGRAM: closing session for UUID '7777b2fa-4bfb-4f80-b1cb-2b1ef6610ae2' with name 'vitis-run_compile_train_step'
+06/17/25 08:08:06: STOP_SERVER received, server token: 974920cf-53de-4b21-9835-6b1c00f7bf28, passed token: 974920cf-53de-4b21-9835-6b1c00f7bf28
+06/17/25 08:08:06: Socket received request to stop server.
+06/17/25 08:08:06: Dispatch Server: do_await_stop
+06/17/25 08:08:06: SERVER: destructor for server bound to port 62573
+06/17/25 08:12:28: Running xcd server. This server was built by gradle.
+06/17/25 08:12:28: Server was asked to start on port: '60007'
+06/17/25 08:12:28: Server is using token UUID: '185a5b3d-358f-42dc-9929-959867d16af6'
+06/17/25 08:12:28: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+06/17/25 08:12:28: Attempting to start server on port '60007'
+06/17/25 08:12:28: Running Dispatch Server
+06/17/25 08:12:28: Version 2.2.0
+06/17/25 08:12:29: Dispatch Server: Accepted socket connection from client
+06/17/25 08:12:29: Starting Socket connection
+06/17/25 08:12:29: EXCHANGE_TOKEN received, server token: 185a5b3d-358f-42dc-9929-959867d16af6, passed token: 185a5b3d-358f-42dc-9929-959867d16af6
+06/17/25 08:12:29: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+06/17/25 08:12:29: SESSION_MGR: creating session with session uuid: '0fff61d1-ea85-4b2e-a0b0-a804360e8810' and name 'vitis-run_compile_train_step'
+06/17/25 08:12:29: KERNEL_SVC: creating session with uuid: '0fff61d1-ea85-4b2e-a0b0-a804360e8810' and name 'vitis-run_compile_train_step'
+06/17/25 08:12:29: GUIDANCE_SMGR: creating guidance session with uuid: '0fff61d1-ea85-4b2e-a0b0-a804360e8810' and name 'vitis-run_compile_train_step'
+06/17/25 08:12:29: SYSTEM_DIAGRAM: creating session with uuid: '0fff61d1-ea85-4b2e-a0b0-a804360e8810' and name 'vitis-run_compile_train_step'
+06/17/25 08:12:35: Dispatch Server: Accepted socket connection from client
+06/17/25 08:12:35: Starting Socket connection
+06/17/25 08:12:47: SESSION_MGR: closing session for UUID '0fff61d1-ea85-4b2e-a0b0-a804360e8810' with name 'vitis-run_compile_train_step'
+06/17/25 08:12:47: KERNEL_SVC: closing session for UUID '0fff61d1-ea85-4b2e-a0b0-a804360e8810' with name 'vitis-run_compile_train_step'
+06/17/25 08:12:47: GUIDANCE_SMGR: closing session for UUID '0fff61d1-ea85-4b2e-a0b0-a804360e8810' with name 'vitis-run_compile_train_step'
+06/17/25 08:12:47: SYSTEM_DIAGRAM: closing session for UUID '0fff61d1-ea85-4b2e-a0b0-a804360e8810' with name 'vitis-run_compile_train_step'
+06/17/25 08:12:47: STOP_SERVER received, server token: 185a5b3d-358f-42dc-9929-959867d16af6, passed token: 185a5b3d-358f-42dc-9929-959867d16af6
+06/17/25 08:12:47: Socket received request to stop server.
+06/17/25 08:12:47: Dispatch Server: do_await_stop
+06/17/25 08:12:47: SERVER: destructor for server bound to port 60007
+06/17/25 08:21:12: Running xcd server. This server was built by gradle.
+06/17/25 08:21:12: Server was asked to start on port: '49269'
+06/17/25 08:21:12: Server is using token UUID: '0e5efd7e-8622-4c0d-9cb3-f35389c5a2a5'
+06/17/25 08:21:12: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+06/17/25 08:21:12: Attempting to start server on port '49269'
+06/17/25 08:21:12: Running Dispatch Server
+06/17/25 08:21:12: Version 2.2.0
+06/17/25 08:21:14: Dispatch Server: Accepted socket connection from client
+06/17/25 08:21:14: Starting Socket connection
+06/17/25 08:21:14: EXCHANGE_TOKEN received, server token: 0e5efd7e-8622-4c0d-9cb3-f35389c5a2a5, passed token: 0e5efd7e-8622-4c0d-9cb3-f35389c5a2a5
+06/17/25 08:21:14: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+06/17/25 08:21:14: SESSION_MGR: creating session with session uuid: '06154921-925f-460b-b069-933d8b0d7a34' and name 'vitis-run_compile_train_step'
+06/17/25 08:21:14: KERNEL_SVC: creating session with uuid: '06154921-925f-460b-b069-933d8b0d7a34' and name 'vitis-run_compile_train_step'
+06/17/25 08:21:14: GUIDANCE_SMGR: creating guidance session with uuid: '06154921-925f-460b-b069-933d8b0d7a34' and name 'vitis-run_compile_train_step'
+06/17/25 08:21:14: SYSTEM_DIAGRAM: creating session with uuid: '06154921-925f-460b-b069-933d8b0d7a34' and name 'vitis-run_compile_train_step'
+06/17/25 08:21:20: Dispatch Server: Accepted socket connection from client
+06/17/25 08:21:20: Starting Socket connection
+06/17/25 08:21:29: SESSION_MGR: closing session for UUID '06154921-925f-460b-b069-933d8b0d7a34' with name 'vitis-run_compile_train_step'
+06/17/25 08:21:29: KERNEL_SVC: closing session for UUID '06154921-925f-460b-b069-933d8b0d7a34' with name 'vitis-run_compile_train_step'
+06/17/25 08:21:29: GUIDANCE_SMGR: closing session for UUID '06154921-925f-460b-b069-933d8b0d7a34' with name 'vitis-run_compile_train_step'
+06/17/25 08:21:29: SYSTEM_DIAGRAM: closing session for UUID '06154921-925f-460b-b069-933d8b0d7a34' with name 'vitis-run_compile_train_step'
+06/17/25 08:21:29: STOP_SERVER received, server token: 0e5efd7e-8622-4c0d-9cb3-f35389c5a2a5, passed token: 0e5efd7e-8622-4c0d-9cb3-f35389c5a2a5
+06/17/25 08:21:29: Socket received request to stop server.
+06/17/25 08:21:29: Dispatch Server: do_await_stop
+06/17/25 08:21:29: SERVER: destructor for server bound to port 49269
+06/17/25 09:33:53: Running xcd server. This server was built by gradle.
+06/17/25 09:33:53: Server was asked to start on port: '57948'
+06/17/25 09:33:53: Server is using token UUID: '6fb2be8a-901b-4293-b789-431fa269c7a5'
+06/17/25 09:33:53: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+06/17/25 09:33:53: Attempting to start server on port '57948'
+06/17/25 09:33:53: Running Dispatch Server
+06/17/25 09:33:53: Version 2.2.0
+06/17/25 09:33:55: Dispatch Server: Accepted socket connection from client
+06/17/25 09:33:55: Starting Socket connection
+06/17/25 09:33:55: EXCHANGE_TOKEN received, server token: 6fb2be8a-901b-4293-b789-431fa269c7a5, passed token: 6fb2be8a-901b-4293-b789-431fa269c7a5
+06/17/25 09:33:55: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+06/17/25 09:33:55: SESSION_MGR: creating session with session uuid: '41db3e14-6a5c-49f0-a9e8-150801364a08' and name 'vitis-run_compile_train_step'
+06/17/25 09:33:55: KERNEL_SVC: creating session with uuid: '41db3e14-6a5c-49f0-a9e8-150801364a08' and name 'vitis-run_compile_train_step'
+06/17/25 09:33:55: GUIDANCE_SMGR: creating guidance session with uuid: '41db3e14-6a5c-49f0-a9e8-150801364a08' and name 'vitis-run_compile_train_step'
+06/17/25 09:33:55: SYSTEM_DIAGRAM: creating session with uuid: '41db3e14-6a5c-49f0-a9e8-150801364a08' and name 'vitis-run_compile_train_step'
+06/17/25 09:34:04: Dispatch Server: Accepted socket connection from client
+06/17/25 09:34:04: Starting Socket connection
+06/17/25 09:34:15: SESSION_MGR: closing session for UUID '41db3e14-6a5c-49f0-a9e8-150801364a08' with name 'vitis-run_compile_train_step'
+06/17/25 09:34:15: KERNEL_SVC: closing session for UUID '41db3e14-6a5c-49f0-a9e8-150801364a08' with name 'vitis-run_compile_train_step'
+06/17/25 09:34:15: GUIDANCE_SMGR: closing session for UUID '41db3e14-6a5c-49f0-a9e8-150801364a08' with name 'vitis-run_compile_train_step'
+06/17/25 09:34:15: SYSTEM_DIAGRAM: closing session for UUID '41db3e14-6a5c-49f0-a9e8-150801364a08' with name 'vitis-run_compile_train_step'
+06/17/25 09:34:15: STOP_SERVER received, server token: 6fb2be8a-901b-4293-b789-431fa269c7a5, passed token: 6fb2be8a-901b-4293-b789-431fa269c7a5
+06/17/25 09:34:15: Socket received request to stop server.
+06/17/25 09:34:15: Dispatch Server: do_await_stop
+06/17/25 09:34:15: SERVER: destructor for server bound to port 57948
+06/17/25 09:57:50: Running xcd server. This server was built by gradle.
+06/17/25 09:57:50: Server was asked to start on port: '64210'
+06/17/25 09:57:50: Server is using token UUID: '8088c02a-a827-478a-b300-cfc4b19f7eeb'
+06/17/25 09:57:50: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+06/17/25 09:57:50: Attempting to start server on port '64210'
+06/17/25 09:57:50: Running Dispatch Server
+06/17/25 09:57:50: Version 2.2.0
+06/17/25 09:57:51: Dispatch Server: Accepted socket connection from client
+06/17/25 09:57:51: Starting Socket connection
+06/17/25 09:57:51: EXCHANGE_TOKEN received, server token: 8088c02a-a827-478a-b300-cfc4b19f7eeb, passed token: 8088c02a-a827-478a-b300-cfc4b19f7eeb
+06/17/25 09:57:52: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+06/17/25 09:57:52: SESSION_MGR: creating session with session uuid: '4682e5c7-1da9-439f-a5bd-932de067a519' and name 'vitis-run_compile_train_step'
+06/17/25 09:57:52: KERNEL_SVC: creating session with uuid: '4682e5c7-1da9-439f-a5bd-932de067a519' and name 'vitis-run_compile_train_step'
+06/17/25 09:57:52: GUIDANCE_SMGR: creating guidance session with uuid: '4682e5c7-1da9-439f-a5bd-932de067a519' and name 'vitis-run_compile_train_step'
+06/17/25 09:57:52: SYSTEM_DIAGRAM: creating session with uuid: '4682e5c7-1da9-439f-a5bd-932de067a519' and name 'vitis-run_compile_train_step'
+06/17/25 09:57:57: Dispatch Server: Accepted socket connection from client
+06/17/25 09:57:57: Starting Socket connection
+06/17/25 09:58:05: SESSION_MGR: closing session for UUID '4682e5c7-1da9-439f-a5bd-932de067a519' with name 'vitis-run_compile_train_step'
+06/17/25 09:58:05: KERNEL_SVC: closing session for UUID '4682e5c7-1da9-439f-a5bd-932de067a519' with name 'vitis-run_compile_train_step'
+06/17/25 09:58:05: GUIDANCE_SMGR: closing session for UUID '4682e5c7-1da9-439f-a5bd-932de067a519' with name 'vitis-run_compile_train_step'
+06/17/25 09:58:05: SYSTEM_DIAGRAM: closing session for UUID '4682e5c7-1da9-439f-a5bd-932de067a519' with name 'vitis-run_compile_train_step'
+06/17/25 09:58:05: STOP_SERVER received, server token: 8088c02a-a827-478a-b300-cfc4b19f7eeb, passed token: 8088c02a-a827-478a-b300-cfc4b19f7eeb
+06/17/25 09:58:05: Socket received request to stop server.
+06/17/25 09:58:05: Dispatch Server: do_await_stop
+06/17/25 09:58:05: SERVER: destructor for server bound to port 64210

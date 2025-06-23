@@ -224,6 +224,55 @@ def create_mnist_header(
         f.write(f"#endif // {guard}\n")
 
 
+def create_noise_header(
+    columns: int,
+    rows: int,
+    n_samples: int,
+    header_filename: str = "noise_data.hpp",
+    var_name: str = "noise_images",
+    seed: int | None = None,
+):
+    """
+    Genera 'n_samples' imágenes de ruido uniforme (uint8) de tamaño
+    rows×columns y escribe un header C++ SIN las constantes NUM_IMAGES
+    ni N_INPUT.
+
+    columns, rows : 4 – 28  (inclusive)
+    """
+    # Validaciones básicas
+    if not (4 <= columns <= 28) or not (4 <= rows <= 28):
+        raise ValueError("columns y rows deben estar entre 4 y 28 inclusive.")
+
+    rng = np.random.default_rng(seed)
+    x_noise = rng.integers(
+        low=0, high=256,
+        size=(n_samples, rows, columns),
+        dtype=np.uint8
+    )
+
+    # Escritura del .hpp
+    guard = header_filename.replace('.', '_').upper()
+
+    with open(header_filename, 'w', encoding='utf-8') as f:
+        f.write(f"// Auto-generated noise header: {header_filename}\n")
+        f.write(f"#ifndef {guard}\n")
+        f.write(f"#define {guard}\n\n")
+        f.write("#include <cstdint>  // uint8_t :"
+                "contentReference[oaicite:1]{index=1}\n\n")
+
+        # Declaración del arreglo sin otras constantes
+        f.write(f"static const uint8_t {var_name}[{n_samples}]"
+                f"[{rows * columns}] = {{\n")
+        for img in x_noise:
+            flat = img.reshape(rows * columns)
+            line = ", ".join(str(int(v)) for v in flat)
+            f.write(f"    {{ {line} }},\n")
+        f.write("};\n\n")
+        f.write(f"#endif // {guard}\n")
+
+    return x_noise  # opcional: el tensor de ruido en memoria
+
+
 # =================================== MAIN ================================== #
 if __name__ == '__main__':
     # 1. Carga MNIST
@@ -241,23 +290,12 @@ if __name__ == '__main__':
     create_mnist_header(x_tr_pil,
                         header_filename='mnist_train_data.hpp',
                         var_name='mnist_images_train')
-    """
-    x_te, y_te = samples_per_digit(x_test, y_test,
-                                   samples_per_digit=20,
-                                   seed=123)
 
-    x_te_resized = resize_data(x_te, columns=8, rows=8, method='mean')
-
-    create_mnist_header(x_te_resized,
-                        header_filename='mnist_test_data.hpp',
-                        var_name='mnist_images_test')
-    """
-
-    columns, rows = 14, 14
-    samples = 20 * 10
-
-    for samples in range(samples):
-        print(f"####### Número {y_tr[samples]} #######")
-        for i in range(rows):
-            print(" ".join(f"{x:3d}" for x in x_tr_pil[samples][i]))
-        print("\n")
+    # 5. Genera header para los datos negativos (ruido)
+    create_noise_header(
+        columns=14,
+        rows=14,
+        n_samples=len(x_tr_pil),          # Tamaño igual a los positivos
+        header_filename='noise_train_data.hpp',
+        var_name='noise_images_train',
+        seed=123)

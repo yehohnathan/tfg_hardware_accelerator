@@ -3,6 +3,7 @@
 #include <cassert>
 
 #include "d:/Proyectos/tfg_hardware_accelerator/data/mnist_train_data.hpp"
+#include "d:/Proyectos/tfg_hardware_accelerator/data/noise_train_data.hpp"
 #include "d:/Proyectos/tfg_hardware_accelerator/src/forward_fw.hpp"
 
 // Una época basta para la demo rápida
@@ -22,11 +23,6 @@ inline uint32_t prng32()
 inline uint8_t  prng8 () { return static_cast<uint8_t>(prng32() >> 24); }
 inline uint8_t  prngBit() { return prng8() & 1; }        // devuelve 0 ó 1
 
-// Genera una imagen de ruido uniforme (0–255) para la fase negativa
-inline void genNegativeData(uint8_t neg[N_INPUT])
-{
-    for (int i = 0; i < N_INPUT; ++i) neg[i] = prng8();
-}
 
 // ---------------------------------------------------------------------------
 // Programa principal de prueba
@@ -60,18 +56,9 @@ int main()
         std::printf("\n== Epoca %d ==\n", epoch + 1);
 
         for (int img = 0; img < NUM_IMAGES; ++img) {
-            uint8_t pos[N_INPUT];
-            uint8_t neg[N_INPUT];
 
-            // Copia la imagen real (fase positiva)
-            for (int i = 0; i < N_INPUT; ++i)
-                pos[i] = mnist_images_train[img][i];
-
-            // Genera la imagen negativa (ruido)
-            genNegativeData(neg);
-
-            // Paso de entrenamiento
-            train_step(pos, neg, img, W1, W2);
+            // Paso de entrenamiento: Una imagen positiva y otra imagen negativa
+            train_step(mnist_images_train[img], noise_images_train[img], img, W1, W2);
         }
     }
 
@@ -120,8 +107,12 @@ int main()
         for (int j = 0; j < N_HIDDEN; ++j)
             if (W2[k][j] != W2_init[k][j]) { changed2 = true; break; }
 
-    // assert(changed1 && "Ningun peso de W1 cambio durante el entrenamiento");
-    // assert(changed2 && "Ningun peso de W2 cambio durante el entrenamiento");
+    if (changed1 == false){
+        std::puts("\nNingun peso de W1 cambio durante el entrenamiento");
+    }
+    if (changed2 == false){
+        std::puts("\nNingun peso de W2 cambio durante el entrenamiento");
+    }
 
     std::puts("\nSimulacion terminada correctamente: Pesos actualizados!");
     return 0;
